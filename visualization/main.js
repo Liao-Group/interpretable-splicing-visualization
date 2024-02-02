@@ -37,4 +37,5 @@ svg_plot.append("rect")
 d3.csv("./data/deciphering_rna_splicing.csv", 
 function(data) {
     console.log(data);
+    //Add bar chart here
 })
