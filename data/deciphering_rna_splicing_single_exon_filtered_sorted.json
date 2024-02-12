@@ -1,0 +1,125 @@
+{
+  "name": "inclu_1",
+  "children": [
+    {
+      "name": "position_${row.position}",
+      "value": 1.1392611265182495
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.27465006709098816
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.09755171090364456
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 1.9490959644317627
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.3109075427055359
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 1.3422749042510986
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 2.6139957904815674
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.823002815246582
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.009590132161974907
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.15033987164497375
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.0015009408816695213
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.0024398418609052896
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.037411585450172424
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.06998592615127563
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.35583874583244324
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.01783192716538906
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.15040335059165955
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.0021847919560968876
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 2.6566646099090576
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.6954653263092041
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.02013954147696495
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.001391674391925335
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.0052227177657186985
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.0037549221888184547
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.3006797432899475
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.006916312966495752
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.4170752167701721
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.44951412081718445
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 2.551581382751465
+    },
+    {
+      "name": "position_${row.position}",
+      "value": 0.04898392781615257
+    }
+  ]
+}
