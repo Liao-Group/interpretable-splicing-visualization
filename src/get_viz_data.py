@@ -6,6 +6,7 @@ from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import Input
 from src.figutils import create_input_data, add_flanking
 import src.quad_model
+import json
 
 ## CONSTANTS
 
@@ -73,7 +74,7 @@ FILTER_NAMES = {
 MODEL_FNAME = f'model/custom_adjacency_regularizer_20210731_124_step3.h5'
 
 ## MAIN FUNCTION
-def get_deciphering_rna_splicing_data(exons, csv_file=None):
+def get_deciphering_rna_splicing_data(exons, json_file=None):
     N = len(exons)
     
     # Model
@@ -92,7 +93,7 @@ def get_deciphering_rna_splicing_data(exons, csv_file=None):
     data_incl_act, data_skip_act = activations_model.predict(create_input_data(sequences))
 
     # Compute forces
-    csv_data = []
+    json_data = []
     for idx in range(N):
         exon = exons[idx]
         incl_act = data_incl_act[idx]
@@ -124,23 +125,35 @@ def get_deciphering_rna_splicing_data(exons, csv_file=None):
         delta_force = incl_bias - skip_bias + iT.sum(axis=0).sum() - sT.sum(axis=0).sum()
         predicted_psi = custom_model.predict(create_input_data([sequences[idx]])).item()
 
-        csv_data.append(
-            [idx, exon, 0, predicted_psi, delta_force, incl_bias, skip_bias] 
-            + list(iT.iloc[0,:]) + list(sT.iloc[0,:])
-        )
-        for i in range(1, iT.shape[0]):
-            csv_data.append(
-                [idx, exon, i, 0, 0, 0, 0] + list(iT.iloc[i,:]) + list(sT.iloc[i,:])
-            )
 
-    csv_data = pd.DataFrame(csv_data, columns=[
-        "exon_id", "exon", "position","predicted_psi", "delta_force", "incl_bias", "skip_bias"] 
-        + [FILTER_NAMES[iT_column] for iT_column in iT.columns] 
-        + [FILTER_NAMES[sT_column] for sT_column in sT.columns]
-    )
-    if csv_file is not None:
-        csv_data.to_csv(csv_file, index=False)
-    return csv_data
+        exon_data = {
+            "exon_id": idx,
+            "exon": exon,
+            "predicted_psi": predicted_psi,
+            "delta_force": delta_force,
+            "incl_bias": incl_bias,
+            "skip_bias": skip_bias,
+            "activations": []
+        }
+
+        # Filter names
+        filter_names = (
+            [FILTER_NAMES[iT_column] for iT_column in iT.columns] 
+            + [FILTER_NAMES[sT_column] for sT_column in sT.columns]
+        )
+        
+        for i in range(iT.shape[0]):
+            position = {"position": i}
+            strengths = list(iT.iloc[i,:]) + list(sT.iloc[i,:])
+            activations = {filter_names[i]: strengths[i] for i in range(len(filter_names))}
+            exon_data["activations"].append({**position, **activations})
+
+        json_data.append(exon_data)
+
+    if json_file is not None:
+        with open(json_file, 'w') as f:
+            json.dump({"a": 1, "c": [{"b": 2}]}, f)
+    return json_data
 
 
 ## HELPERS
