@@ -15,12 +15,12 @@ html {
     height: 700px;
     display: grid;
     grid-template-areas:
-        'ev ev ev ev ev ev ez ez ez sv sv sv' 
-        'ev ev ev ev ev ev ez ez ez sv sv sv'
-        'ev ev ev ev ev ev ez ez ez sv sv sv'
-        'hf hs hs hs ht ht ht ht ht fl fl fl'
-        'hf hs hs hs ht ht ht ht ht fl fl fl'
-        'hf hs hs hs ht ht ht ht ht fl fl fl'
+        "ev ev ev ev ev ev ez ez ez sv sv sv" 
+        "ev ev ev ev ev ev ez ez ez sv sv sv"
+        "ev ev ev ev ev ev ez ez ez sv sv sv"
+        "hf hs hs hs ht ht ht ht ht fl fl fl"
+        "hf hs hs hs ht ht ht ht ht fl fl fl"
+        "hf hs hs hs ht ht ht ht ht fl fl fl"
     ;
     gap: 8px;
     background-color: white;

@@ -2,5 +2,5 @@
 
 To launch the webpage locally:
 ```
-python3 -m http.server
+python3 app.py
 ```

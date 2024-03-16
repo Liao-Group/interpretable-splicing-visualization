@@ -50,28 +50,28 @@ SKIP_SHITS = [
 
 # filter names
 FILTER_NAMES = {
-    'incl_seq_6_9_11_14'            : 'incl_1',
-    'incl_seq_4_5_8_16_17'          : 'incl_2',
-    'incl_seq_2_12_13'              : 'incl_3',
-    'incl_seq_3_10_15'              : 'incl_4',
-    'incl_seq_1_7'                  : 'incl_5',
-    'incl_seq_0_19'                 : 'incl_6',
-    'incl_seq_18'                   : 'incl_7',         # not in the paper
-    'incl_struct_0_1_2_3_4_5_6_7'   : 'incl_1_struct',  # not in the paper
-    'skip_seq_1_5_9_19'             : 'skip_7',
-    'skip_seq_3_10_14_15_18'        : 'skip_8',
-    'skip_seq_2_4_8_13'             : 'skip_9',
-    'skip_seq_0_17'                 : 'skip_10',
-    'skip_seq_6_7_12'               : 'skip_11',
-    'skip_seq_11_16'                : 'skip_12',        # not in the paper
-    'skip_struct_0_2_3'             : 'skip_s',         
-    'skip_struct_1'                 : 'skip_p',
-    'skip_struct_4'                 : 'skip_blank',     # not in the paper
-    'skip_struct_5_6_7'             : 'skip_dot',       # not in the paper
+    "incl_seq_6_9_11_14"            : "incl_1",
+    "incl_seq_4_5_8_16_17"          : "incl_2",
+    "incl_seq_2_12_13"              : "incl_3",
+    "incl_seq_3_10_15"              : "incl_4",
+    "incl_seq_1_7"                  : "incl_5",
+    "incl_seq_0_19"                 : "incl_6",
+    "incl_seq_18"                   : "incl_7",         # not in the paper
+    "incl_struct_0_1_2_3_4_5_6_7"   : "incl_1_struct",  # not in the paper
+    "skip_seq_1_5_9_19"             : "skip_7",
+    "skip_seq_3_10_14_15_18"        : "skip_8",
+    "skip_seq_2_4_8_13"             : "skip_9",
+    "skip_seq_0_17"                 : "skip_10",
+    "skip_seq_6_7_12"               : "skip_11",
+    "skip_seq_11_16"                : "skip_12",        # not in the paper
+    "skip_struct_0_2_3"             : "skip_s",         
+    "skip_struct_1"                 : "skip_p",
+    "skip_struct_4"                 : "skip_blank",     # not in the paper
+    "skip_struct_5_6_7"             : "skip_dot",       # not in the paper
 }
 
 # model
-MODEL_FNAME = f'model/custom_adjacency_regularizer_20210731_124_step3.h5'
+MODEL_FNAME = "model/custom_adjacency_regularizer_20210731_124_step3.h5"
 
 ## MAIN FUNCTION
 def get_deciphering_rna_splicing_data(exons, json_file=None):
@@ -79,7 +79,7 @@ def get_deciphering_rna_splicing_data(exons, json_file=None):
     
     # Model
     custom_model = load_model(MODEL_FNAME)
-    num_seq_filters = custom_model.get_layer('qc_incl').kernel.shape[2]
+    num_seq_filters = custom_model.get_layer("qc_incl").kernel.shape[2]
     link_midpoint = get_model_midpoint(custom_model)
 
     # Sequences
@@ -87,8 +87,8 @@ def get_deciphering_rna_splicing_data(exons, json_file=None):
 
     # Compute activations for given sequences
     activations_model = Model(inputs=custom_model.inputs, outputs=[
-        custom_model.get_layer('activation_2').output,
-        custom_model.get_layer('activation_3').output
+        custom_model.get_layer("activation_2").output,
+        custom_model.get_layer("activation_3").output
     ])
     data_incl_act, data_skip_act = activations_model.predict(create_input_data(sequences))
 
@@ -153,7 +153,7 @@ def get_deciphering_rna_splicing_data(exons, json_file=None):
         json_data.append(exon_data)
 
     if json_file is not None:
-        with open(json_file, 'w') as f:
+        with open(json_file, "w") as f:
             json.dump({"a": 1, "c": [{"b": 2}]}, f)
     return json_data
 
@@ -181,13 +181,13 @@ def get_link_midpoint(link_function, midpoint=0.5, epsilon=1e-5, lb=-100, ub=100
 
 def get_model_midpoint(model, midpoint=0.5):    
     """ 
-    Compute the midpoint using the model's link function. This is the negation of the basal strength. 
+    Compute the midpoint using the model"s link function. This is the negation of the basal strength. 
     I.e., positive value corresponds to a skipping basal strength. 
     """
     link_input = Input(shape=(1,))
-    w = model.get_layer('energy_seq_struct').w.numpy()
-    b = model.get_layer('energy_seq_struct').b.numpy()
-    link_output = model.get_layer('output_activation')(model.get_layer('gen_func')(w*link_input + b))
+    w = model.get_layer("energy_seq_struct").w.numpy()
+    b = model.get_layer("energy_seq_struct").b.numpy()
+    link_output = model.get_layer("output_activation")(model.get_layer("gen_func")(w*link_input + b))
     link_function = Model(inputs=link_input, outputs=link_output)
     return get_link_midpoint(link_function, midpoint)
 
