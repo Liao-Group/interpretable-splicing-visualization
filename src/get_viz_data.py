@@ -96,6 +96,7 @@ def get_deciphering_rna_splicing_data(exons, json_file=None):
     json_data = []
     for idx in range(N):
         exon = exons[idx]
+        sequence = sequences[idx]
         incl_act = data_incl_act[idx]
         skip_act = data_skip_act[idx]
 
@@ -129,6 +130,7 @@ def get_deciphering_rna_splicing_data(exons, json_file=None):
         exon_data = {
             "exon_id": idx,
             "exon": exon,
+            "sequence": sequence,
             "predicted_psi": predicted_psi,
             "delta_force": delta_force,
             "incl_bias": incl_bias,

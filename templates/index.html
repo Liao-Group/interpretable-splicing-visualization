@@ -14,6 +14,17 @@
   <body>
     <!-- Javascript code that use d3.js to draw figures -->
     <script type="text/javascript" src="static/main.js"></script>
+    <!-- Input exon -->
+    <form method="post">
+      <input
+        type="text" name="exon" id="exon" size="80" 
+        placeholder="Enter a 70-nucleotide exon" 
+        required maxlength="70" pattern="([ATUGCatugc]){70}"
+        oninvalid="this.setCustomValidity('Please enter a 70-nucleotide exon')"
+        oninput="this.setCustomValidity('')""
+      >
+      <input type="submit" value="Submit"> 
+    </form>
     <!-- Bento box layout -->
     <div class="grid-container">
       <div class="expandable-view">

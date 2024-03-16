@@ -31,5 +31,41 @@ html {
     background-color: #e4e4e4;
     text-align: center;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 12px;
+}
+
+form {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+input {
+    font-size: 12px;
+}
+
+input[type=text] {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #0e6f07;
+	background: rgba(#0e6f07, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #0e6f07;
+}
+
+input[type=submit] {
+	appearance: none;
+	border: .2em solid #0e6f07;
+	background: hsla(0, 0%, 100%, 0);
+	padding: .85em 1.5em;
+	color: #0e6f07;
+	border-radius: 0.85em;
+	transition: 1s;
+	&:hover, &:focus, &:active {
+		background: #0e6f07;
+		color: #fff;
+	}
+    margin-left: 1em;
 }
