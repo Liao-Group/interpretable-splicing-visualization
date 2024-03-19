@@ -6,7 +6,7 @@ from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import Input
 from figutils import extract_str_patches
 from sequence_logo import plot_logo
-import src.quad_model
+import quad_model
 import json
 from joblib import load
 
@@ -106,7 +106,7 @@ def get_logo_boundaries(logo_data, threshold=0.8):
     Define as from the leftmost position with information content > threshold
     to the rightmost position with information content > threshold
     """
-    if struct_logo_data is not None:
+    if logo_data is not None:
         num_filters, filter_width, num_nts = logo_data.shape
         boundaries = np.zeros((num_filters, 2))
         for fi in range(num_filters):
