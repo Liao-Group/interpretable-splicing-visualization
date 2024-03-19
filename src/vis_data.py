@@ -82,21 +82,13 @@ def get_vis_data(exon, json_file=None):
         skip_bias=skip_bias
     )
 
-    # nucleotide_activations = get_nucleotide_activations(
-    #     incl_acts=incl_acts, 
-    #     skip_acts=skip_acts, 
-    #     num_seq_filters=num_seq_filters, 
-    #     num_struct_filters=num_struct_filters,
-    #     seq_filter_width=seq_filter_width,
-    #     struct_filter_width=struct_filter_width,
-    #     incl_seq_groups=incl_seq_groups, 
-    #     skip_seq_groups=skip_seq_groups, 
-    #     incl_struct_groups=incl_struct_groups, 
-    #     skip_struct_groups=skip_struct_groups,
-    #     seq_logo_boundaries=seq_logo_boundaries, 
-    #     struct_logo_boundaries=struct_logo_boundaries,
-    #     sequence_length=len(sequence),
-    # )
+    nucleotide_activations = get_nucleotide_activations(
+        collapsed_seq_incl_acts=collapsed_seq_incl_acts,
+        collapsed_struct_incl_acts=collapsed_struct_incl_acts, 
+        collapsed_seq_skip_acts=collapsed_seq_skip_acts, 
+        collapsed_struct_skip_acts=collapsed_struct_skip_acts,
+        sequence_length=len(sequence),
+    )
 
     result = {
         "exon": exon,
@@ -105,8 +97,14 @@ def get_vis_data(exon, json_file=None):
         "delta_force": delta_force,
         "incl_bias": incl_bias,
         "skip_bias": skip_bias,
-        # "nucleotide_activations": nucleotide_activations,
-        "feature_activations": feature_activations,
+        "nucleotide_activations": {
+            "name": "nucleotide_activations",
+            "children": nucleotide_activations
+        },
+        "feature_activations": {
+            "name": "feature_activations",
+            "children": feature_activations
+        },
     }
 
     if json_file is not None:
@@ -184,20 +182,27 @@ def collapse_activations(incl_acts, skip_acts, incl_seq_groups, skip_seq_groups,
         collapsed_seq_incl_acts, collapsed_struct_incl_acts, 
         collapsed_seq_skip_acts, collapsed_struct_skip_acts
     )
+
+def transform(d, parent):
+    return (
+        {"name": parent, "value": d[parent]}
+            if not isinstance(d[parent], dict) else
+        {"name": parent,
+         "children": [transform(d[parent], child) for child in d[parent]]}
+    )
                 
 def get_feature_activations(collapsed_seq_incl_acts, collapsed_struct_incl_acts, 
-    collapsed_seq_skip_acts, collapsed_struct_skip_acts, sequence_length, incl_bias, skip_bias, threshold=0
+    collapsed_seq_skip_acts, collapsed_struct_skip_acts, sequence_length, incl_bias, skip_bias, 
+    threshold=0.0
 ):
     feature_activations = {
         "incl": {"incl_bias": {"strength": incl_bias}},
         "skip": {"skip_bias": {"strength": skip_bias}}
     }
-    total_strength = 0
     for fi in range(collapsed_seq_incl_acts.shape[1]):
         feature_activations["incl"][f"incl_{fi+1}"] = {}
         for i in range(sequence_length):
             if collapsed_seq_incl_acts[i,fi,0] > threshold:
-                total_strength += collapsed_seq_incl_acts[i,fi,0]
                 feature_activations["incl"][f"incl_{fi+1}"][f"pos_{i+1}"] = {
                     "strength": collapsed_seq_incl_acts[i,fi,0],
                     "length": int(collapsed_seq_incl_acts[i,fi,1]),
@@ -227,13 +232,44 @@ def get_feature_activations(collapsed_seq_incl_acts, collapsed_struct_incl_acts,
                     "length": int(collapsed_struct_skip_acts[i,fi,1]),
                 }
 
-    return feature_activations
+    return [
+        transform(feature_activations, "incl"),
+        transform(feature_activations, "skip"),
+    ]
 
-# def get_nucleotide_activations(incl_acts, skip_acts, num_seq_filters, num_struct_filters,
-#     seq_filter_width, struct_filter_width, incl_seq_groups, skip_seq_groups, 
-#     incl_struct_groups, skip_struct_groups, seq_logo_boundaries, struct_logo_boundaries, 
-#     sequence_length
-# ):
-#     nucleotide_activations = {}
-
-#     return nucleotide_activations
+def get_nucleotide_activations(collapsed_seq_incl_acts, collapsed_struct_incl_acts, 
+    collapsed_seq_skip_acts, collapsed_struct_skip_acts, sequence_length, 
+    threshold=0.0
+):
+    nucleotide_activations = {"incl": {}, "skip": {}}
+    for i in range(sequence_length):
+        nucleotide_activations["incl"][f"pos_{i+1}"] = {}
+        for fi in range(collapsed_seq_incl_acts.shape[1]):
+            if collapsed_seq_incl_acts[i,fi,0] > threshold:
+                nucleotide_activations["incl"][f"pos_{i+1}"][f"incl_{fi+1}"] = {
+                    "strength": collapsed_seq_incl_acts[i,fi,0],
+                    "length": int(collapsed_seq_incl_acts[i,fi,1]),
+                }
+        for fi in range(collapsed_struct_incl_acts.shape[1]):
+            if collapsed_struct_incl_acts[i,fi,0] > threshold:
+                nucleotide_activations["incl"][f"pos_{i+1}"][f"incl_struct_{fi+1}"] = {
+                    "strength": collapsed_struct_incl_acts[i,fi,0],
+                    "length": int(collapsed_struct_incl_acts[i,fi,1]),
+                }
+        nucleotide_activations["skip"][f"pos_{i+1}"] = {}
+        for fi in range(collapsed_seq_skip_acts.shape[1]):
+            if collapsed_seq_skip_acts[i,fi,0] > threshold:
+                nucleotide_activations["skip"][f"pos_{i+1}"][f"skip_{fi+1}"] = {
+                    "strength": collapsed_seq_skip_acts[i,fi,0],
+                    "length": int(collapsed_seq_skip_acts[i,fi,1]),
+                }
+        for fi in range(collapsed_struct_skip_acts.shape[1]):
+            if collapsed_struct_skip_acts[i,fi,0] > threshold:
+                nucleotide_activations["skip"][f"pos_{i+1}"][f"skip_struct_{fi+1}"] = {
+                    "strength": collapsed_struct_skip_acts[i,fi,0],
+                    "length": int(collapsed_struct_skip_acts[i,fi,1]),
+                }
+    return [
+        transform(nucleotide_activations, "incl"),
+        transform(nucleotide_activations, "skip"),
+    ]
