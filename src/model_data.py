@@ -213,5 +213,5 @@ if __name__ == "__main__":
     model_data["struct_logo_boundaries"] = get_logo_boundaries(struct_logo_data)
 
     with open(JSON_FILE, "w") as f:
-        json.dump(model_data, f)
+        json.dump(model_data, f, indent=2)
 

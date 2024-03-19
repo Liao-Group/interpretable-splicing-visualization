@@ -1,0 +1,106 @@
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ seq_input (InputLayer)      [(None, 90, 4)]              0         []                            
+                                                                                                  
+ struct_input (InputLayer)   [(None, 90, 3)]              0         []                            
+                                                                                                  
+ wobble_input (InputLayer)   [(None, 90, 1)]              0         []                            
+                                                                                                  
+ concatenate_1 (Concatenate  (None, 90, 8)                0         ['seq_input[0][0]',           
+ )                                                                   'struct_input[0][0]',        
+                                                                     'wobble_input[0][0]']        
+                                                                                                  
+ concatenate (Concatenate)   (None, 90, 8)                0         ['seq_input[0][0]',           
+                                                                     'struct_input[0][0]',        
+                                                                     'wobble_input[0][0]']        
+                                                                                                  
+ c_incl_struct (Conv1D)      (None, 90, 8)                1928      ['concatenate_1[0][0]']       
+                                                                                                  
+ c_skip_struct (Conv1D)      (None, 90, 8)                1928      ['concatenate[0][0]']         
+                                                                                                  
+ qc_incl (Conv1D)            (None, 85, 20)               500       ['seq_input[0][0]']           
+                                                                                                  
+ qc_skip (Conv1D)            (None, 85, 20)               500       ['seq_input[0][0]']           
+                                                                                                  
+ position_bias_incl_struct   (None, 90, 8)                720       ['c_incl_struct[0][0]']       
+ (RegularizedBiasLayer)                                                                           
+                                                                                                  
+ position_bias_skip_struct   (None, 90, 8)                720       ['c_skip_struct[0][0]']       
+ (RegularizedBiasLayer)                                                                           
+                                                                                                  
+ position_bias_incl (Regula  (None, 85, 20)               1700      ['qc_incl[0][0]']             
+ rizedBiasLayer)                                                                                  
+                                                                                                  
+ position_bias_skip (Regula  (None, 85, 20)               1700      ['qc_skip[0][0]']             
+ rizedBiasLayer)                                                                                  
+                                                                                                  
+ dropout_incl_struct (Dropo  (None, 90, 8)                0         ['position_bias_incl_struct[0]
+ ut)                                                                [0]']                         
+                                                                                                  
+ dropout_skip_struct (Dropo  (None, 90, 8)                0         ['position_bias_skip_struct[0]
+ ut)                                                                [0]']                         
+                                                                                                  
+ dropout_incl_seq (Dropout)  (None, 85, 20)               0         ['position_bias_incl[0][0]']  
+                                                                                                  
+ dropout_skip_seq (Dropout)  (None, 85, 20)               0         ['position_bias_skip[0][0]']  
+                                                                                                  
+ tf.__operators__.getitem_1  (None, 85, 8)                0         ['dropout_incl_struct[0][0]'] 
+  (SlicingOpLambda)                                                                               
+                                                                                                  
+ tf.__operators__.getitem (  (None, 85, 8)                0         ['dropout_skip_struct[0][0]'] 
+ SlicingOpLambda)                                                                                 
+                                                                                                  
+ concatenate_3 (Concatenate  (None, 85, 28)               0         ['dropout_incl_seq[0][0]',    
+ )                                                                   'tf.__operators__.getitem_1[0
+                                                                    ][0]']                        
+                                                                                                  
+ concatenate_2 (Concatenate  (None, 85, 28)               0         ['dropout_skip_seq[0][0]',    
+ )                                                                   'tf.__operators__.getitem[0][
+                                                                    0]']                          
+                                                                                                  
+ activation_2 (Activation)   (None, 85, 28)               0         ['concatenate_3[0][0]']       
+                                                                                                  
+ activation_3 (Activation)   (None, 85, 28)               0         ['concatenate_2[0][0]']       
+                                                                                                  
+ activation (Activation)     (None, 85, 20)               0         ['dropout_incl_seq[0][0]']    
+                                                                                                  
+ activation_1 (Activation)   (None, 85, 20)               0         ['dropout_skip_seq[0][0]']    
+                                                                                                  
+ activity_regularization_2   (None, 85, 28)               0         ['activation_2[0][0]']        
+ (ActivityRegularization)                                                                         
+                                                                                                  
+ activity_regularization_3   (None, 85, 28)               0         ['activation_3[0][0]']        
+ (ActivityRegularization)                                                                         
+                                                                                                  
+ activity_regularization (A  (None, 85, 20)               0         ['activation[0][0]']          
+ ctivityRegularization)                                                                           
+                                                                                                  
+ activity_regularization_1   (None, 85, 20)               0         ['activation_1[0][0]']        
+ (ActivityRegularization)                                                                         
+                                                                                                  
+ energy_seq_struct (SumDiff  (None, 1)                    2         ['activity_regularization_2[0]
+ )                                                                  [0]',                         
+                                                                     'activity_regularization_3[0]
+                                                                    [0]']                         
+                                                                                                  
+ energy_seq (SumDiff)        (None, 1)                    2         ['activity_regularization[0][0
+                                                                    ]',                           
+                                                                     'activity_regularization_1[0]
+                                                                    [0]']                         
+                                                                                                  
+ gen_func (ResidualTuner)    (None, 1)                    65        ['energy_seq_struct[0][0]']   
+                                                                                                  
+ output_selector (Selector)  (None, 1)                    3         ['energy_seq[0][0]',          
+                                                                     'energy_seq_struct[0][0]',   
+                                                                     'gen_func[0][0]']            
+                                                                                                  
+ output_activation (Activat  (None, 1)                    0         ['output_selector[0][0]']     
+ ion)                                                                                             
+                                                                                                  
+==================================================================================================
+Total params: 9768 (38.16 KB)
+Trainable params: 9749 (38.08 KB)
+Non-trainable params: 19 (76.00 Byte)
+__________________________________________________________________________________________________
