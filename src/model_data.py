@@ -6,7 +6,7 @@ from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import Input
 from figutils import extract_str_patches
 from sequence_logo import plot_logo
-import quad_model
+import src.quad_model
 import json
 from joblib import load
 
@@ -42,11 +42,13 @@ def get_model_midpoint(model, midpoint=0.5):
     link_function = Model(inputs=link_input, outputs=link_output)
     return get_link_midpoint(link_function, midpoint)
 
-def get_logo_data(model, num_seq_filters, num_struct_filters, xTr, npy_files, N=1000):
+def get_logo_data(model, xTr, npy_files, N=1000):
     """
     Compute the height for sequence logo for sequence filters and structure filters
     """
     # Model parameters
+    num_seq_filters = model.get_layer("qc_incl").kernel.shape[2]
+    num_struct_filters = model.get_layer("c_incl_struct").kernel.shape[2]
     seq_filter_width = model.get_layer("qc_incl").kernel.shape[0]
     struct_filter_width = model.get_layer("c_incl_struct").kernel.shape[0]
 
@@ -55,8 +57,6 @@ def get_logo_data(model, num_seq_filters, num_struct_filters, xTr, npy_files, N=
     xTr_seq_oh = xTr_seq_oh[:N]
     xTr_struct_oh = xTr_struct_oh[:N]
     xTr_wobble = xTr_wobble[:N]
-    nts = ["A", "C", "G", "U"]
-    xTr_seqs = ["".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_seq_oh]
 
     # Activations model
     activations_model = Model(inputs=model.inputs, outputs=[
@@ -64,41 +64,66 @@ def get_logo_data(model, num_seq_filters, num_struct_filters, xTr, npy_files, N=
         model.get_layer("activation_3").output
     ])
     incl_acts, skip_acts = activations_model.predict([xTr_seq_oh, xTr_struct_oh, xTr_wobble])
+    
+    nts = ["A", "C", "G", "U"]
+    xTr_seqs = ["".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_seq_oh]
+    seq_logo_data = get_fixed_width_logo_data(
+        xTr=xTr_seqs,
+        incl_data=incl_acts[..., :num_seq_filters],
+        skip_data=skip_acts[..., :num_seq_filters],
+        num_filters=num_seq_filters,
+        filter_width=seq_filter_width,
+        nts=nts,
+        npy_file=npy_files[0]
+    )
+    
+    nts = [ ".", "(", ")"]
+    xTr_structs = ["".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_struct_oh]
+    struct_logo_data = get_fixed_width_logo_data(
+        xTr=xTr_structs,
+        incl_data=incl_acts[..., num_seq_filters:],
+        skip_data=skip_acts[..., num_seq_filters:],
+        num_filters=num_struct_filters,
+        filter_width=struct_filter_width,
+        nts=[".", "(", ")"],
+        npy_file=npy_files[1]
+    )
 
+    return seq_logo_data, struct_logo_data
+
+def get_fixed_width_logo_data(xTr, incl_data, skip_data, num_filters, filter_width, nts, npy_file):
     # Extract sequence patches and activations
-    seq_patches = extract_str_patches(xTr_seqs, seq_filter_width)
+    patches = extract_str_patches(xTr, filter_width)
 
-    incl_acts_data_seq = [(c, *d) for a, b in zip(
-        seq_patches, incl_acts[:, :, :num_seq_filters]
-    ) for c, d in zip(a, b)]
-    skip_acts_data_seq = [(c, *d) for a, b in zip(
-        seq_patches, skip_acts[:, :, :num_seq_filters]
-    ) for c, d in zip(a, b)]
+    incl_acts_data_seq = [(c, *d) for a, b in zip(patches, incl_data) for c, d in zip(a, b)]
+    skip_acts_data_seq = [(c, *d) for a, b in zip(patches, skip_data) for c, d in zip(a, b)]
 
     incl_acts_df_seq = pd.DataFrame(
-        incl_acts_data_seq, columns=["input"] + [f"f{i}" for i in range(num_seq_filters)]
+        incl_acts_data_seq, columns=["input"] + [f"f{i}" for i in range(num_filters)]
     )
     skip_acts_df_seq = pd.DataFrame(
-        skip_acts_data_seq, columns=["input"] + [f"f{i}" for i in range(num_seq_filters)]
+        skip_acts_data_seq, columns=["input"] + [f"f{i}" for i in range(num_filters)]
     )
 
     # Create all sequence logo data
-    seq_logo_data = np.empty((num_seq_filters*2, seq_filter_width, len( nts)))
-    for i in range(num_seq_filters):
+    logo_data = np.empty((2, num_filters, filter_width, len(nts)))
+    for i in range(num_filters):
         dfS = incl_acts_df_seq[["input", f"f{i}"]]
         dfS.columns = ["input", "activation"]
         dfS = dfS.reset_index(drop=True)
-        seq_logo_data[i,...] = plot_logo(dfS, 1)
+        logo_data[0,i,...] = plot_logo(dfS, 1, nts=nts)
 
         dfS = skip_acts_df_seq[["input", f"f{i}"]]
         dfS.columns = ["input", "activation"]
         dfS = dfS.reset_index(drop=True)
-        seq_logo_data[i+num_seq_filters,...] = plot_logo(dfS, 1)
+        logo_data[1,i,...] = plot_logo(dfS, 1, nts=nts)
 
     # Save to numpy file
-    with open(npy_files[0], "wb") as f:
-        np.save(f, seq_logo_data)
-    return seq_logo_data, None # TODO
+    with open(npy_file, "wb") as f:
+        np.save(f, logo_data)
+
+    return logo_data
+
 
 def get_logo_boundaries(logo_data, threshold=0.8):
     """
@@ -106,32 +131,32 @@ def get_logo_boundaries(logo_data, threshold=0.8):
     Define as from the leftmost position with information content > threshold
     to the rightmost position with information content > threshold
     """
-    if logo_data is not None:
-        num_filters, filter_width, num_nts = logo_data.shape
-        boundaries = np.zeros((num_filters, 2))
+    _, num_filters, filter_width, num_nts = logo_data.shape
+    boundaries = np.zeros((2, num_filters, 2))
+    for i in range(2):
         for fi in range(num_filters):
-            logo_info_content = logo_data[fi].sum(axis=1)
+            logo_info_content = logo_data[i,fi].sum(axis=1)
             for p in range(filter_width):
                 if logo_info_content[p] > threshold:
-                    boundaries[fi,0] = p
+                    boundaries[i,fi,0] = p
                     break
             for p in range(filter_width-1,-1,-1):
                 if logo_info_content[p] > threshold:
-                    boundaries[fi,1] = p
+                    boundaries[i,fi,1] = p
                     break
-    else: #TODO
-        num_filters = 8
-        filter_width = 30
-        boundaries = np.hstack([
-            np.zeros((num_filters, 1)),
-            np.full((num_filters, 1), filter_width-1),
-        ])
+    if num_nts == 3: #TODO: structure
+        boundaries = np.zeros((2, num_filters, 2))
+        boundaries[...,1] = filter_width-1
 
-    result = []
+    result = {"incl": [], "skip": []}
     for i in range(num_filters):
-        result.append({
-            "left": boundaries[i,0],
-            "right": boundaries[i,1]
+        result["incl"].append({
+            "left": boundaries[0,i,0],
+            "right": boundaries[0,i,1]
+        })
+        result["skip"].append({
+            "left": boundaries[1,i,0],
+            "right": boundaries[1,i,1]
         })
     return result
 
@@ -148,13 +173,6 @@ if __name__ == "__main__":
 
     # Model"s link midpoint
     model_data["link_midpoint"] = get_model_midpoint(model)
-
-    # Number of filters
-    num_seq_filters = model.get_layer("qc_incl").kernel.shape[2]
-    num_struct_filters = model.get_layer("c_incl_struct").kernel.shape[2]
-
-    model_data["num_seq_filters"] = num_seq_filters
-    model_data["num_struct_filters"] = num_struct_filters
 
     # Group filters from manual inspections
     model_data["incl_seq_groups"] = {
@@ -186,8 +204,7 @@ if __name__ == "__main__":
 
     # Get logo data
     xTr = load(f"{DATA_DIR}/xTr_ES7_HeLa_ABC.pkl.gz")
-    seq_logo_data, struct_logo_data = get_logo_data(
-        model, num_seq_filters, num_struct_filters, xTr, 
+    seq_logo_data, struct_logo_data = get_logo_data(model, xTr, 
         npy_files=[f"{DATA_DIR}/seq_logo_data.npy", f"{DATA_DIR}/struct_logo_data.npy"]
     )
 
