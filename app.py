@@ -28,7 +28,7 @@ def homepage():
         exons=[exon], json_file="data/deciphering_rna_splicing.json"
     )
     data.data = json_data
-    return render_template("index.html")
+    return render_template("./index.html")
 
 @app.route("/get-data",methods=["GET","POST"])
 def get_data():
