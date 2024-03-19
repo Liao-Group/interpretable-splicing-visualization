@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import Input
-from figutils import extract_str_patches
-from sequence_logo import plot_logo
+from src.figutils import extract_str_patches
+from src.sequence_logo import plot_logo
 import src.quad_model
 import json
 from joblib import load
@@ -42,7 +42,7 @@ def get_model_midpoint(model, midpoint=0.5):
     link_function = Model(inputs=link_input, outputs=link_output)
     return get_link_midpoint(link_function, midpoint)
 
-def get_logo_data(model, xTr, npy_files, N=1000):
+def get_all_logo_data(model, xTr, npy_files, N=1000):
     """
     Compute the height for sequence logo for sequence filters and structure filters
     """
@@ -65,9 +65,12 @@ def get_logo_data(model, xTr, npy_files, N=1000):
     ])
     incl_acts, skip_acts = activations_model.predict([xTr_seq_oh, xTr_struct_oh, xTr_wobble])
     
+    # Get logo data
     nts = ["A", "C", "G", "U"]
-    xTr_seqs = ["".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_seq_oh]
-    seq_logo_data = get_fixed_width_logo_data(
+    xTr_seqs = [
+        "".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_seq_oh
+    ]
+    seq_logo_data = get_logo_data(
         xTr=xTr_seqs,
         incl_data=incl_acts[..., :num_seq_filters],
         skip_data=skip_acts[..., :num_seq_filters],
@@ -78,8 +81,10 @@ def get_logo_data(model, xTr, npy_files, N=1000):
     )
     
     nts = [ ".", "(", ")"]
-    xTr_structs = ["".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_struct_oh]
-    struct_logo_data = get_fixed_width_logo_data(
+    xTr_structs = [
+        "".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_struct_oh
+    ]
+    struct_logo_data = get_logo_data(
         xTr=xTr_structs,
         incl_data=incl_acts[..., num_seq_filters:],
         skip_data=skip_acts[..., num_seq_filters:],
@@ -91,37 +96,32 @@ def get_logo_data(model, xTr, npy_files, N=1000):
 
     return seq_logo_data, struct_logo_data
 
-def get_fixed_width_logo_data(xTr, incl_data, skip_data, num_filters, filter_width, nts, npy_file):
-    # Extract sequence patches and activations
-    patches = extract_str_patches(xTr, filter_width)
-
-    incl_acts_data_seq = [(c, *d) for a, b in zip(patches, incl_data) for c, d in zip(a, b)]
-    skip_acts_data_seq = [(c, *d) for a, b in zip(patches, skip_data) for c, d in zip(a, b)]
-
-    incl_acts_df_seq = pd.DataFrame(
-        incl_acts_data_seq, columns=["input"] + [f"f{i}" for i in range(num_filters)]
-    )
-    skip_acts_df_seq = pd.DataFrame(
-        skip_acts_data_seq, columns=["input"] + [f"f{i}" for i in range(num_filters)]
-    )
-
-    # Create all sequence logo data
+def get_incl_skip_logo_data(xTr, incl_data, skip_data, num_filters, filter_width, nts, npy_file):
+    """
+    Get logo data for both skipping and inclusion
+    """
     logo_data = np.empty((2, num_filters, filter_width, len(nts)))
-    for i in range(num_filters):
-        dfS = incl_acts_df_seq[["input", f"f{i}"]]
-        dfS.columns = ["input", "activation"]
-        dfS = dfS.reset_index(drop=True)
-        logo_data[0,i,...] = plot_logo(dfS, 1, nts=nts)
-
-        dfS = skip_acts_df_seq[["input", f"f{i}"]]
-        dfS.columns = ["input", "activation"]
-        dfS = dfS.reset_index(drop=True)
-        logo_data[1,i,...] = plot_logo(dfS, 1, nts=nts)
-
-    # Save to numpy file
+    logo_data[0,...] = get_logo_data(xTr, incl_data, num_filters, filter_width, nts)
+    logo_data[1,...] = get_logo_data(xTr, skip_data, num_filters, filter_width, nts)
     with open(npy_file, "wb") as f:
         np.save(f, logo_data)
+    return logo_data
 
+def get_logo_data(xTr, data, num_filters, filter_width, nts):
+    """
+    Get sequence logo heights
+    """
+    patches = extract_str_patches(xTr, filter_width)
+    acts_data_seq = [(c, *d) for a, b in zip(patches, data) for c, d in zip(a, b)]
+    acts_df_seq = pd.DataFrame(
+        acts_data_seq, columns=["input"] + [f"f{i}" for i in range(num_filters)]
+    )
+    logo_data = np.empty((num_filters, filter_width, len(nts)))
+    for i in range(num_filters):
+        dfS = acts_df_seq[["input", f"f{i}"]]
+        dfS.columns = ["input", "activation"]
+        dfS = dfS.reset_index(drop=True)
+        logo_data[i,...] = plot_logo(dfS, 1, nts=nts)
     return logo_data
 
 
@@ -152,19 +152,19 @@ def get_logo_boundaries(logo_data, threshold=0.8):
     for i in range(num_filters):
         result["incl"].append({
             "left": boundaries[0,i,0],
-            "right": boundaries[0,i,1]
+            "right": boundaries[0,i,1],
+            "length": boundaries[0,i,1] - boundaries[0,i,0] + 1
         })
         result["skip"].append({
             "left": boundaries[1,i,0],
-            "right": boundaries[1,i,1]
+            "right": boundaries[1,i,1],
+            "length": boundaries[1,i,1] - boundaries[1,i,0] + 1
         })
     return result
 
-
-if __name__ == "__main__":
-
-    DATA_DIR = "../data"
-    MODEL_DIR = "../model"
+def main():
+    DATA_DIR = "data"
+    MODEL_DIR = "model"
     JSON_FILE = f"{DATA_DIR}/model_data.json"
     MODEL_FNAME = f"{MODEL_DIR}/custom_adjacency_regularizer_20210731_124_step3.h5"
 
@@ -204,7 +204,7 @@ if __name__ == "__main__":
 
     # Get logo data
     xTr = load(f"{DATA_DIR}/xTr_ES7_HeLa_ABC.pkl.gz")
-    seq_logo_data, struct_logo_data = get_logo_data(model, xTr, 
+    seq_logo_data, struct_logo_data = get_all_logo_data(model, xTr, 
         npy_files=[f"{DATA_DIR}/seq_logo_data.npy", f"{DATA_DIR}/struct_logo_data.npy"]
     )
 
@@ -215,3 +215,5 @@ if __name__ == "__main__":
     with open(JSON_FILE, "w") as f:
         json.dump(model_data, f, indent=2)
 
+if __name__ == "__main__":
+    main()
