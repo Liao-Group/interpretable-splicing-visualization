@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import Input
-from src.figutils import create_input_data, add_flanking
-import src.quad_model
+from figutils import create_input_data, add_flanking
+import quad_model
 import json
 
 ## CONSTANTS
@@ -71,7 +71,7 @@ FILTER_NAMES = {
 }
 
 # model
-MODEL_FNAME = "model/custom_adjacency_regularizer_20210731_124_step3.h5"
+MODEL_FNAME = "src/model/custom_adjacency_regularizer_20210731_124_step3.h5"
 
 ## MAIN FUNCTION
 def get_deciphering_rna_splicing_data(exons, json_file=None):
