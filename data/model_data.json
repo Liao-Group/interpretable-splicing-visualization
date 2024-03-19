@@ -1,5 +1,7 @@
 {
   "link_midpoint": -21.80809438066695,
+  "num_seq_filters": 20,
+  "num_struct_filters": 8,
   "incl_seq_groups": {
     "1": [
       6,

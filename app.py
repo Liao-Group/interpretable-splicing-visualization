@@ -5,7 +5,7 @@ from flask import (request, jsonify,
 )
 import pandas as pd
 import json
-from src.get_viz_data import get_deciphering_rna_splicing_data
+from src.vis_data import get_vis_data
 
 # Declare application
 app = Flask(__name__)
@@ -24,8 +24,8 @@ def homepage():
         "GCGGCACCTACTACAATGTCCCCCGCTGCATACACTCGGAGCCAATAGGGCGCCTATAGAGTGTAGTCCT"
     )
     exon = exon.upper().replace("U", "T")
-    json_data = get_deciphering_rna_splicing_data(
-        exons=[exon], json_file="data/deciphering_rna_splicing.json"
+    json_data = get_vis_data(
+        exon=exon, json_file="data/exon.json"
     )
     data.data = json_data
     return render_template("index.html")

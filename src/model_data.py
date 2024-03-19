@@ -70,7 +70,7 @@ def get_all_logo_data(model, xTr, npy_files, N=1000):
     xTr_seqs = [
         "".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_seq_oh
     ]
-    seq_logo_data = get_logo_data(
+    seq_logo_data = get_incl_skip_logo_data(
         xTr=xTr_seqs,
         incl_data=incl_acts[..., :num_seq_filters],
         skip_data=skip_acts[..., :num_seq_filters],
@@ -84,7 +84,7 @@ def get_all_logo_data(model, xTr, npy_files, N=1000):
     xTr_structs = [
         "".join([nts[np.where(one_hot == 1)[0].item()] for one_hot in row]) for row in xTr_struct_oh
     ]
-    struct_logo_data = get_logo_data(
+    struct_logo_data = get_incl_skip_logo_data(
         xTr=xTr_structs,
         incl_data=incl_acts[..., num_seq_filters:],
         skip_data=skip_acts[..., num_seq_filters:],
@@ -173,6 +173,10 @@ def main():
 
     # Model"s link midpoint
     model_data["link_midpoint"] = get_model_midpoint(model)
+
+    # Get number of filters
+    model_data["num_seq_filters"] = model.get_layer("qc_incl").kernel.shape[2]
+    model_data["num_struct_filters"] = model.get_layer("c_incl_struct").kernel.shape[2]
 
     # Group filters from manual inspections
     model_data["incl_seq_groups"] = {
