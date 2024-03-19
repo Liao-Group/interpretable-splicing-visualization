@@ -71,7 +71,7 @@ FILTER_NAMES = {
 }
 
 # model
-MODEL_FNAME = "model/custom_adjacency_regularizer_20210731_124_step3.h5"
+MODEL_FNAME = "../model/custom_adjacency_regularizer_20210731_124_step3.h5"
 
 ## MAIN FUNCTION
 def get_deciphering_rna_splicing_data(exons, json_file=None):
@@ -154,7 +154,7 @@ def get_deciphering_rna_splicing_data(exons, json_file=None):
 
     if json_file is not None:
         with open(json_file, "w") as f:
-            json.dump({"a": 1, "c": [{"b": 2}]}, f)
+            json.dump(json_data, f)
     return json_data
 
 
