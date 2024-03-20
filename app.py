@@ -5,7 +5,7 @@ from flask import (request, jsonify,
 )
 import pandas as pd
 import json
-from get_viz_data import get_deciphering_rna_splicing_data
+from src.get_viz_data import get_deciphering_rna_splicing_data
 
 # Declare application
 app = Flask(__name__)

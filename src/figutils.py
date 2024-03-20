@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 from itertools import product
 import tensorflow as tf
 import pandas as pd
-import RNAutils as RNAutils
+import src.RNAutils as RNAutils
 import matplotlib.pyplot as plt
 import scipy.stats
 from matplotlib import cm
