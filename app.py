@@ -25,7 +25,7 @@ def homepage():
     )
     exon = exon.upper().replace("U", "T")
     json_data = get_vis_data(
-        exon=exon, json_file="data/exon.json"
+        exon=exon, json_file="data/exon.json", threshold=0.001
     )
     data.data = json_data
     return render_template("index.html")

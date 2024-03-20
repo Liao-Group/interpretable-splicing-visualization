@@ -177,6 +177,8 @@ def main():
     # Get number of filters
     model_data["num_seq_filters"] = model.get_layer("qc_incl").kernel.shape[2]
     model_data["num_struct_filters"] = model.get_layer("c_incl_struct").kernel.shape[2]
+    model_data["seq_filter_width"] = model.get_layer("qc_incl").kernel.shape[0]
+    model_data["struct_filter_width"] = model.get_layer("c_incl_struct").kernel.shape[0]
 
     # Group filters from manual inspections
     model_data["incl_seq_groups"] = {
