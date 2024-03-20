@@ -191,10 +191,13 @@ def collapse_activations(incl_acts, skip_acts, incl_seq_groups, skip_seq_groups,
 
 def transform(d, parent):
     return (
-        {"name": parent, "value": d[parent]}
-            if not isinstance(d[parent], dict) else
-        {"name": parent,
-         "children": [transform(d[parent], child) for child in d[parent]]}
+        {"name": parent, "strength": d[parent]["strength"], "length": d[parent]["length"]}
+            if "strength" in d[parent].keys() else
+        {"children": [transform(d[parent], child) for child in d[parent]]}
+        # {"name": parent, "value": d[parent]}
+        #     if not isinstance(d[parent], dict) else
+        # {"name": parent,
+        #  "children": [transform(d[parent], child) for child in d[parent]]}
     )
 
 def get_feature_activations_helper(collapsed_acts, acts_dict, name, sequence_length, threshold):
@@ -214,8 +217,8 @@ def get_feature_activations(collapsed_seq_incl_acts, collapsed_struct_incl_acts,
     threshold=0.001
 ):
     feature_activations = {
-        "incl": {"incl_bias": {"strength": incl_bias}},
-        "skip": {"skip_bias": {"strength": skip_bias}}
+        "incl": {"incl_bias": {"strength": incl_bias, "length": 0}},
+        "skip": {"skip_bias": {"strength": skip_bias, "length": 0}}
     }
     get_feature_activations_helper(collapsed_seq_incl_acts, feature_activations["incl"], 
         "incl", sequence_length, threshold)
