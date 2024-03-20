@@ -1,14 +1,3 @@
-// Color palette
-const inclusion_color = "#c5d6fb";
-const inclusion_highlight_color = "#669aff";
-const skipping_color = "#f6c3c2";
-const skipping_highlight_color = "#ff6666";
-
-const background_color = "#e4e4e4";
-const background_model_color = "#e4f2e3"
-const line_color = "#6b6b6b";
-const strength_difference_color = "#dad7cd";
-
 // // Temp sample data
 // const data = [
 //     {category: 'incl_1', value: 30},
@@ -81,6 +70,21 @@ const strength_difference_color = "#dad7cd";
   
 // }
 
-d3.json("/get-data", function(error, data){
+// d3.json("/get-data", function(error, data){
+//   console.log(data);
+// });
+
+// Color palette
+const inclusion_color = "#c5d6fb";
+const inclusion_highlight_color = "#669aff";
+const skipping_color = "#f6c3c2";
+const skipping_highlight_color = "#ff6666";
+
+const background_color = "#e4e4e4";
+const background_model_color = "#e4f2e3"
+const line_color = "#6b6b6b";
+const strength_difference_color = "#dad7cd";
+
+d3.json("../data/exon.json", function(data){
   console.log(data);
-});
+})
