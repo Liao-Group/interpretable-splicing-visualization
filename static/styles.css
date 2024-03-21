@@ -2,25 +2,25 @@ html {
     font-family: "arial";
 }
 
-.expandable-view { grid-area: ev; }
-.expandable-zoom { grid-area: ez; }
+.nucleotide-view { grid-area: nv; }
+.nucleotide-zoom { grid-area: nz; }
 .structure-view { grid-area: sv; }
-.hierarchical-view-1 { grid-area: hf; }
-.hierarchical-view-2 { grid-area: hs; }
-.hierarchical-view-3 { grid-area: ht; }
-.filter-legend { grid-area: fl; }
+.feature-view-1 { grid-area: f1; }
+.feature-view-2 { grid-area: f2; }
+.feature-view-3 { grid-area: f3; }
+.feature-legend { grid-area: fl; }
 
 .grid-container {
     width: 1600px;
     height: 700px;
     display: grid;
     grid-template-areas:
-        "hf hs hs hs ht ht ht ht ht fl fl fl"
-        "hf hs hs hs ht ht ht ht ht fl fl fl"
-        "hf hs hs hs ht ht ht ht ht fl fl fl"
-        "ev ev ev ev ev ev ev ev ev ez ez ez" 
-        "ev ev ev ev ev ev ev ev ev ez ez ez"
-        "ev ev ev ev ev ev ev ev ev ez ez ez"
+        "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
+        "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
+        "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
+        "nv nv nv nv nv nv nv nv nv nz nz nz" 
+        "nv nv nv nv nv nv nv nv nv nz nz nz"
+        "nv nv nv nv nv nv nv nv nv nz nz nz"
     ;
     gap: 8px;
     background-color: white;

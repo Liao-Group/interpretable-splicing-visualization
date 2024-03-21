@@ -193,7 +193,7 @@ def transform(d, parent):
     return (
         {"name": parent, "strength": d[parent]["strength"], "length": d[parent]["length"]}
             if "strength" in d[parent].keys() else
-        {"children": [transform(d[parent], child) for child in d[parent]]}
+        {"name": parent, "children": [transform(d[parent], child) for child in d[parent]]}
         # {"name": parent, "value": d[parent]}
         #     if not isinstance(d[parent], dict) else
         # {"name": parent,
@@ -269,6 +269,11 @@ def get_nucleotide_activations(collapsed_seq_incl_acts, collapsed_struct_incl_ac
         "skip", sequence_length, seq_filter_width, threshold)
     get_nucleotide_activations_helper(collapsed_struct_skip_acts, nucleotide_activations["skip"], 
         "skip_struct", sequence_length, struct_filter_width, threshold)
+    for i in range(sequence_length):
+        if len(nucleotide_activations["incl"][f"pos_{i+1}"]) == 0:
+            nucleotide_activations["incl"].pop(f"pos_{i+1}")
+        if len(nucleotide_activations["skip"][f"pos_{i+1}"]) == 0:
+            nucleotide_activations["skip"].pop(f"pos_{i+1}")
     return [
         transform(nucleotide_activations, "incl"),
         transform(nucleotide_activations, "skip"),

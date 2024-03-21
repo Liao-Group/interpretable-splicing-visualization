@@ -85,6 +85,24 @@ const background_model_color = "#e4f2e3"
 const line_color = "#6b6b6b";
 const strength_difference_color = "#dad7cd";
 
-d3.json("../data/exon.json", function(data){
+d3.json("./get-data", function(data){
   console.log(data);
+  nucleotide_view(data.nucleotide_activations);
 })
+
+function nucleotide_view(data){
+  console.log(data)
+  var margin = {top: 10, right: 30, bottom: 20, left: 50};
+  var width = d3.select("svg.nucleotide-view").style("width");
+  var height = d3.select("svg.nucleotide-view").style("height");
+  var svg_view = d3.select("svg.nucleotide-view");
+
+  // // Add X axis
+  // var x = d3.scaleBand()
+  //           .domain(groups)
+  //           .range([0, width])
+  //           .padding([0.2])
+  // svg.append("g")
+  //   .attr("transform", "translate(0," + height + ")")
+  //   .call(d3.axisBottom(x).tickSizeOuter(0));
+}
