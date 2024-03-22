@@ -399,7 +399,7 @@ function nucleotide_zoom(sequence, structs, svg_nucl, pos, margin, width, height
                       .attr("fill", inclusion_color)
                       .attr("opacity", 0.5);
               svg_zoom.selectAll(".incl.annotate")
-                      .attr("opacity", 0.5);
+                      .attr("opacity", 0);
               var feature_class = d3.select(this).attr("class").split(" ")[3];
               if(!(d3.select(this).classed("focus"))){
                 d3.select(this)
@@ -421,7 +421,7 @@ function nucleotide_zoom(sequence, structs, svg_nucl, pos, margin, width, height
                   .lower()
                   .transition()
                     .duration(300)
-                    .attr("opacity", 0.5);
+                    .attr("opacity", 0);
                 d3.select(this)
                   .classed("focus", false)
                   .lower()
@@ -467,7 +467,7 @@ function nucleotide_zoom(sequence, structs, svg_nucl, pos, margin, width, height
                       .attr("fill", skipping_color)
                       .attr("opacity", 0.5);
               svg_zoom.selectAll(".skip.annotate")
-                      .attr("opacity", 0.5);
+                      .attr("opacity", 0);
               var feature_class = d3.select(this).attr("class").split(" ")[3];
               if(!(d3.select(this).classed("focus"))){
                 d3.select(this)
@@ -489,7 +489,7 @@ function nucleotide_zoom(sequence, structs, svg_nucl, pos, margin, width, height
                   .lower()
                   .transition()
                     .duration(300)
-                    .attr("opacity", 0.5);
+                    .attr("opacity", 0);
                 d3.select(this)
                   .classed("focus", false)
                   .lower()
@@ -526,7 +526,7 @@ function nucleotide_zoom(sequence, structs, svg_nucl, pos, margin, width, height
             .lower()
             .transition()
               .duration(1000)
-              .attr("opacity", 0.5);
+              .attr("opacity", 0);
 
   svg_zoom.selectAll("skip-feature-text")
           .data(skip_data)
@@ -548,7 +548,7 @@ function nucleotide_zoom(sequence, structs, svg_nucl, pos, margin, width, height
             .lower()
             .transition()
               .duration(1000)
-              .attr("opacity", 0.5);
+              .attr("opacity", 0);
 
   // Add borders
   left_border.raise()
