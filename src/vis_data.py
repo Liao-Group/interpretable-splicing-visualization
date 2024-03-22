@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import Input
-from src.figutils import create_input_data, add_flanking
+from src.figutils import create_input_data, add_flanking, rna_fold_structs
 import src.quad_model
 import json
 
@@ -43,6 +43,8 @@ def get_vis_data(exon, json_file=None, threshold=0.001):
 
     # Sequences
     sequence = add_flanking(exon, 10)
+    structs, _ = rna_fold_structs([sequence])
+    structs = structs[0]
     predicted_psi = model.predict(create_input_data([sequence])).item()
 
     # Compute activations
@@ -99,17 +101,18 @@ def get_vis_data(exon, json_file=None, threshold=0.001):
     result = {
         "exon": exon,
         "sequence": sequence,
+        "structs": structs,
         "predicted_psi": predicted_psi,
         "delta_force": delta_force,
         "incl_bias": incl_bias,
         "skip_bias": skip_bias,
-        "nucleotide_activations": {
-            "name": "nucleotide_activations",
-            "children": nucleotide_activations
-        },
         "feature_activations": {
             "name": "feature_activations",
             "children": feature_activations
+        },
+        "nucleotide_activations": {
+            "name": "nucleotide_activations",
+            "children": nucleotide_activations
         },
     }
 

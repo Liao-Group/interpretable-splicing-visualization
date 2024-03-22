@@ -18,13 +18,15 @@ html {
         "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
         "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
         "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
-        "nv nv nv nv nv nv nv nv nv nz nz nz" 
-        "nv nv nv nv nv nv nv nv nv nz nz nz"
-        "nv nv nv nv nv nv nv nv nv nz nz nz"
+        "nv nv nv nv nv nv nv nv nv nv nz nz" 
+        "nv nv nv nv nv nv nv nv nv nv nz nz"
+        "nv nv nv nv nv nv nv nv nv nv nz nz"
     ;
     gap: 8px;
     background-color: white;
     padding: 8px;
+   grid-auto-columns: minmax(0, 1fr);
+   grid-auto-flow: column;
 }
 
 .grid-container > div {
