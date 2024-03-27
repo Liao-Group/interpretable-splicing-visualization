@@ -4,7 +4,7 @@ const inclusion_highlight_color = "#669aff";
 const skipping_color = "#f6c3c2";
 const skipping_highlight_color = "#ff6666";
 
-const background_color = "#e4e4e4";
+const background_color = "whitesmoke"; // "#e4e4e4";
 const background_model_color = "#e4f2e3"
 const line_color = "#6b6b6b";
 const strength_difference_color = "#dad7cd";
@@ -313,13 +313,13 @@ function nucleotide_zoom(sequence, structs, svg_nucl, pos, margin, width, height
 
   // Add X axis
   xInclAxis.tickFormat(function (d) { 
-              return Array.from(structs.slice(int_pos-5, int_pos+6))[d+5];
+              return Array.from(structs.slice(int_pos-6, int_pos+5))[d+5];
             });
   xSkipAxis.tickFormat(function (d) {
               return int_pos + d;
             });;
   xNuAxis.tickFormat(function (d) {
-            return Array.from(sequence.slice(int_pos-5, int_pos+6))[d+5];
+            return Array.from(sequence.slice(int_pos-6, int_pos+5))[d+5];
           });
   gxIncl.transition().duration(800).call(xInclAxis);
   gxSkip.transition().duration(800).call(xSkipAxis);
