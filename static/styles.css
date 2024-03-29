@@ -3,34 +3,38 @@ html {
 }
 
 .nucleotide-view { grid-area: nv; }
+.nucleotide-sort { grid-area: ns; }
 .nucleotide-zoom { grid-area: nz; }
 .structure-view { grid-area: sv; }
 .feature-view-1 { grid-area: f1; }
 .feature-view-2 { grid-area: f2; }
 .feature-view-3 { grid-area: f3; }
 .feature-legend { grid-area: fl; }
+.psi-view { grid-area: pv; }
 
 .grid-container {
     width: 1600px;
-    height: 700px;
+    height: 900px;
     display: grid;
     grid-template-areas:
-        "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
-        "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
-        "f1 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl"
-        "nv nv nv nv nv nv nv nv nv nv nz nz" 
-        "nv nv nv nv nv nv nv nv nv nv nz nz"
-        "nv nv nv nv nv nv nv nv nv nv nz nz"
+        "pv pv f1 f1 f2 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl fl"
+        "pv pv f1 f1 f2 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl fl"
+        "pv pv f1 f1 f2 f2 f2 f2 f3 f3 f3 f3 f3 fl fl fl fl"
+        "nv nv nv nv nv nv nv nv nv nv nv nv nv ns ns nz nz" 
+        "nv nv nv nv nv nv nv nv nv nv nv nv nv ns ns nz nz" 
+        "nv nv nv nv nv nv nv nv nv nv nv nv nv ns ns nz nz" 
+        "nv nv nv nv nv nv nv nv nv nv nv nv nv ns ns nz nz" 
+        "nv nv nv nv nv nv nv nv nv nv nv nv nv ns ns nz nz" 
     ;
     gap: 8px;
     background-color: white;
     padding: 8px;
    grid-auto-columns: minmax(0, 1fr);
-   grid-auto-flow: column;
+   grid-auto-rows: minmax(0, 1fr);
 }
 
 .grid-container > div {
-    background-color: whitesmoke;
+    background-color: white;
     text-align: center;
     border-radius: 5px;
     font-size: 12px;

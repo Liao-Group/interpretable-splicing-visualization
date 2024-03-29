@@ -21,7 +21,7 @@ data = DataStore()
 def homepage():
     exon = request.form.get(
         "exon", 
-        "GCGGCACCTACTACAATGTCCCCCGCTGCATACACTCGGAGCCAATAGGGCGCCTATAGAGTGTAGTCCT"
+        "GAGUCCCGCUUACCAUUGCAUUUAAGAAAGCGGCCAUACGCCGCUAAGACCCUACUCUUCAGAAUACCAG"
     )
     exon = exon.upper().replace("U", "T")
     json_data = get_vis_data(
