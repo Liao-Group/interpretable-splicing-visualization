@@ -542,8 +542,9 @@ const HierarchicalBarChart3 = (data, parentName) => {
       console.log(d3.select("svg.nucleotide-view").selectAll(".obj.bar"));
       console.log(d);
       d3.select("svg.nucleotide-view").selectAll(".obj.bar." + d.data.name)
+        .raise()
         .transition()
-        .duration(100)
+        .duration(300)
         .attr("fill", highlightColor);
     })
     .on("mouseout", function (d) {

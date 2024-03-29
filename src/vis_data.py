@@ -210,8 +210,11 @@ def get_feature_activations_helper(collapsed_acts, acts_dict, name, sequence_len
         for i in range(sequence_length):
             feature_strength = collapsed_acts[i,fi,0]
             feature_length = int(collapsed_acts[i,fi,1])
+            pos_ind = i+1
+            if "struct" in name:
+                pos_ind = pos_ind - 12
             if feature_strength > threshold:
-                acts_dict[f"{name}_{fi+1}"][f"pos_{i+1}"] = {
+                acts_dict[f"{name}_{fi+1}"][f"pos_{pos_ind}"] = {
                     "strength": feature_strength,
                     "length": feature_length,
                 }
