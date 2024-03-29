@@ -1,4 +1,5 @@
 Flask==3.0.2
+joblib==1.3.2
 logomaker==0.8
 matplotlib==3.7.1
 numpy==1.26.4
