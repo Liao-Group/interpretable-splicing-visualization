@@ -43,7 +43,9 @@ const PSIview = (value) => {
   const yAxis = d3.axisLeft(yScale).ticks(5);
 
   const yScale2 = d3.scaleLinear().domain([0, 1]).range([chartHeight, 0]);
-  const yAxis2 = d3.axisRight(yScale2).ticks(4);
+  const yAxis2 = d3.axisRight(yScale2).ticks(4).tickFormat(function(d){
+    if(d == 0) { return }
+  });
 
   svg.attr('width', width).attr('height', height);
 

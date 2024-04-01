@@ -6,6 +6,8 @@
   "delta_force": -13.903689982126025,
   "incl_bias": 21.80809438066695,
   "skip_bias": 0,
+  "incl_strength": 72.11872517900679,
+  "skip_strength": 86.02241516113281,
   "feature_activations": {
     "name": "feature_activations",
     "children": [

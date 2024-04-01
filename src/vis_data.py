@@ -56,7 +56,9 @@ def get_vis_data(exon, json_file=None, threshold=0.001):
     data_incl_acts, data_skip_acts = activations_model.predict(create_input_data([sequence]))
     incl_acts = data_incl_acts[0]
     skip_acts = data_skip_acts[0]
-    delta_force = incl_bias - skip_bias + incl_acts.sum() - skip_acts.sum()
+    incl_strength = incl_bias + incl_acts.sum()
+    skip_strength = skip_bias + skip_acts.sum()
+    delta_force = incl_strength - skip_strength
 
     # Collapse filters
     (
@@ -107,6 +109,8 @@ def get_vis_data(exon, json_file=None, threshold=0.001):
         "delta_force": delta_force,
         "incl_bias": incl_bias,
         "skip_bias": skip_bias,
+        "incl_strength": incl_strength,
+        "skip_strength": skip_strength,
         "feature_activations": {
             "name": "feature_activations",
             "children": feature_activations
