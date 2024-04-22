@@ -5,7 +5,7 @@ from flask import (request, jsonify,
 )
 import pandas as pd
 import json
-from src.vis_data import get_vis_data
+# from src.vis_data import get_vis_data
 
 # Declare application
 app = Flask(__name__)
@@ -19,14 +19,18 @@ data = DataStore()
 
 @app.route("/",methods=["GET","POST"])
 def homepage():
-    exon = request.form.get(
-        "exon", 
-        "GAGUCCCGCUUACCAUUGCAUUUAAGAAAGCGGCCAUACGCCGCUAAGACCCUACUCUUCAGAAUACCAG"
-    )
-    exon = exon.upper().replace("U", "T")
-    json_data = get_vis_data(
-        exon=exon, json_file="data/exon.json", threshold=0.001
-    )
+    # exon = request.form.get(
+    #     "exon", 
+    #     "GAGUCCCGCUUACCAUUGCAUUUAAGAAAGCGGCCAUACGCCGCUAAGACCCUACUCUUCAGAAUACCAG"
+    # )
+    # exon = exon.upper().replace("U", "T")
+    # json_data = get_vis_data(
+    #     exon=exon, json_file="data/exon.json", threshold=0.001
+    # )
+
+    with open('data/exon_s1.json', 'r') as file:
+        file = file.read()
+    json_data = json.loads(file)
     data.data = json_data
     return render_template("./index.html")
 

@@ -1,15 +1,121 @@
 // Color palette
 
-const inclusion_color = "#c5d6fb";
-const inclusion_highlight_color = "#669aff";
-const skipping_color = "#f6c3c2";
-const skipping_highlight_color = "#ff6666";
-
+// background colors
 const background_color = "whitesmoke"; // "#e4e4e4";
 const background_model_color = "#e4f2e3"
 const line_color = "#6b6b6b";
 const strength_difference_color = "#dad7cd";
 const nucleotide_color = "black";
+
+// bar colors
+var inclusion_color = "";
+var inclusion_highlight_color = "";
+var skipping_color = "";
+var skipping_highlight_color = "";
+// org colors
+const org_inclusion_color = "#c5d6fb";
+const org_inclusion_highlight_color = "#669aff";
+const org_skipping_color = "#f6c3c2";
+const org_skipping_highlight_color = "#ff6666";
+//alternative colors
+const ltr_inclusion_color = "#3BBAE2";
+const ltr_skipping_color = "#F16A92";
+const ltr_inclusion_highlight_color = "#B2DAEF";
+const ltr_skipping_highlight_color = "#F9C4D2";
+
+// toggle button
+let defaultSetting = "off";
+// toggle outline
+const toggleButton = document.createElement('button');
+Object.assign(toggleButton.style, {
+  width: '42px',
+  minWidth: '42px',
+  height: '22px',
+  display: 'block',
+  padding: '2px',
+  border: '0.5px black solid',
+  borderRadius: '30px',
+  transition: 'background-color 0.5s',
+  position: 'fixed',
+  top: '27px',
+  left: '1200px',
+  overflow: 'hidden',
+  backgroundColor: 'white'
+});
+// toggle circle
+const toggleSwitchCircle = document.createElement('div');
+Object.assign(toggleSwitchCircle.style, {
+  width: '20px',
+  height: '20px',
+  border: '0.5px black solid',
+  borderRadius: '50%',
+  backgroundColor: 'white',
+  position: 'absolute',
+  left: '0px',
+  bottom: '0px',
+  transition: 'transform 0.5s'
+});
+// assign circle to outline
+toggleButton.appendChild(toggleSwitchCircle);
+
+// check for toggel state before refreshing
+document.addEventListener('DOMContentLoaded', function() {
+  defaultSetting = localStorage.getItem('defaultSetting') || "off";
+  if (defaultSetting === "on") {
+    toggleSwitchCircle.style.transform = 'translateX(20px)';
+    toggleButton.style.backgroundColor = '#0e6f07';
+
+    // Change to ltr colors
+    inclusion_color = ltr_inclusion_color;
+    inclusion_highlight_color = ltr_inclusion_highlight_color;
+    skipping_color = ltr_skipping_color;
+    skipping_highlight_color = ltr_skipping_highlight_color;
+  } 
+  else {
+    toggleSwitchCircle.style.transform = 'translateX(0)';
+    toggleButton.style.backgroundColor = 'white';
+
+    // Change to org colors
+    inclusion_color = org_inclusion_color;
+    inclusion_highlight_color = org_inclusion_highlight_color;
+    skipping_color = org_skipping_color;
+    skipping_highlight_color = org_skipping_highlight_color;
+  }
+});
+
+// click functionality
+toggleButton.addEventListener('click', function() {
+  if (defaultSetting === "off") {
+    defaultSetting = "on";
+    toggleSwitchCircle.style.transform = 'translateX(20px)';
+    toggleButton.style.backgroundColor = '#0e6f07';
+  } 
+  
+  else {
+    defaultSetting = "off";
+    toggleSwitchCircle.style.transform = 'translateX(0)';
+    toggleButton.style.backgroundColor = 'white';
+  }
+
+  // save toggle state and refresh
+  localStorage.setItem('defaultSetting', defaultSetting);
+  location.reload();
+});
+
+// append toggle button and text
+document.body.appendChild(toggleButton);
+
+// add text for toggle button
+const textElement = document.createElement('span');
+textElement.textContent = "Alt- Colors";
+textElement.style.position = 'fixed';
+textElement.style.top = '31px';
+textElement.style.left = '1135px';
+textElement.style.color = 'black';
+textElement.style.fontSize = '12px';
+textElement.style.textAlign = 'center';
+
+document.body.appendChild(textElement);
 
 d3.json("./get-data", function (data) {
   sequence_length = data.sequence.length;
@@ -94,7 +200,7 @@ const PSIview = (value) => {
 
   const barHeight = Math.abs(deltaForce) * (chartHeight / 40);
 
-  const barColor = predictedPSI < 0.5 ? "#f6c3c2" : "#c5d6fb";
+  const barColor = predictedPSI < 0.5 ? skipping_color : inclusion_color;
 
   const bar = chartGroup
     .append('rect')
@@ -167,16 +273,16 @@ const HierarchicalBarChart = (parent, data) => {
 
   const getFillColor = (node) => {
     if (typeof node === "number") {
-      return node === 1 ? "#f6c3c2" : "#c5d6fb";
+      return node === 1 ? skipping_color : inclusion_color;
     } else if (node) {
-      return node.data.name === "skip" ? "#f6c3c2" : "#c5d6fb";
+      return node.data.name === "skip" ? skipping_color : inclusion_color;
     } else {
-      return "#c5d6fb"; // Default color if node is neither a number nor an object
+      return inclusion_color; // Default color if node is neither a number nor an object
     }
   };
 
   const getHighlightColor = (node) => {
-    return node === 1 ? "#ff6666" : "#669aff";
+    return node === 1 ? skipping_highlight_color : inclusion_highlight_color;
   };
   const svgElement = d3.select("svg.feature-view-1");
   // console.log(svgElement);
@@ -283,9 +389,9 @@ const HierarchicalBarChart2 = (parent, data) => {
   const getFillColor = (data) => {
     // Custom logic for color
     if (data.name === 'incl') {
-      return "#c5d6fb";
+      return inclusion_color;
     } else {
-      return "#f6c3c2";
+      return skipping_color;
     }
   };
 
@@ -293,9 +399,9 @@ const HierarchicalBarChart2 = (parent, data) => {
 
     // Custom logic for color
     if (data.name === 'incl') {
-      return "#669aff";
+      return inclusion_highlight_color;
     } else {
-      return "#ff6666";
+      return skipping_highlight_color;
     }
   };
 
@@ -432,18 +538,18 @@ const HierarchicalBarChart3 = (data, parentName) => {
     // Custom logic for color
     // console.log(typeof (String(name)))
     if (String(name).split("_")[0] === 'incl') {
-      return "#c5d6fb";
+      return inclusion_color;
     } else {
-      return "#f6c3c2";
+      return skipping_color;
     }
   };
 
   const getHighlightColor = (name) => {
     // Custom logic for color
     if (String(name).split("_")[0] === 'incl') {
-      return "#669aff";
+      return inclusion_highlight_color;
     } else {
-      return "#ff6666";
+      return skipping_highlight_color;
     }
   };
   const color = getFillColor(parentName);
