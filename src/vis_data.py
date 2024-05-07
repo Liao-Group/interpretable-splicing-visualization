@@ -15,10 +15,12 @@ MODEL_FNAME = "model/custom_adjacency_regularizer_20210731_124_step3.h5"
 MODEL_DATA_FNAME = "data/model_data.json"
 
 ## MAIN FUNCTION
-def get_vis_data(exon, json_file=None, threshold=0.001):
+def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False):
     exon = exon.replace("T", "U")
     # Model
     model = load_model(MODEL_FNAME)
+    if use_new_grouping:
+        MODEL_DATA_FNAME = "data/model_data_18.json"
     with open(MODEL_DATA_FNAME, "r") as f:
         model_data = json.load(f)
 

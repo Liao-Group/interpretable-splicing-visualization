@@ -9,6 +9,7 @@ from src.sequence_logo import plot_logo
 import src.quad_model
 import json
 from joblib import load
+import argparse
 
 def get_link_midpoint(link_function, midpoint=0.5, epsilon=1e-5, lb=-100, ub=100, max_iters=50):
     """
@@ -163,9 +164,15 @@ def get_logo_boundaries(logo_data, threshold=0.8):
     return result
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--use-new-grouping", action="store_true", default=False)
+    args = parser.parse_args()
+
     DATA_DIR = "data"
     MODEL_DIR = "model"
     JSON_FILE = f"{DATA_DIR}/model_data.json"
+    if args.use_new_grouping:
+        JSON_FILE = f"{DATA_DIR}/model_data_18.json"
     MODEL_FNAME = f"{MODEL_DIR}/custom_adjacency_regularizer_20210731_124_step3.h5"
 
     model_data = {}
@@ -207,6 +214,29 @@ def main():
         3: [5, 6, 7], 
         4: [4]
     }
+    if args.use_new_grouping:
+        model_data["incl_seq_groups"] = {
+            1: [6, 9, 11, 14],
+            3: [4, 5, 8, 16, 17],
+            5: [3, 10, 15],
+            6: [1, 7],
+            2: [0, 19],
+            4: [18],
+            7: [2],
+            8: [12],
+            9: [13],
+        }
+        model_data["skip_seq_groups"] = {
+            6: [1, 5], 
+            4: [3, 10, 14, 15, 18],  
+            3: [2, 4, 8, 13],     
+            5: [6, 7],     
+            1: [0, 17],                    
+            2: [11, 16], 
+            7: [12],
+            8: [9],
+            9: [19],                  
+        }
 
     # Get logo data
     xTr = load(f"{DATA_DIR}/xTr_ES7_HeLa_ABC.pkl.gz")
