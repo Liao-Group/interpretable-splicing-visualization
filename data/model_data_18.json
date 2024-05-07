@@ -365,9 +365,9 @@
     ],
     "skip": [
       {
-        "left": 0.0,
-        "right": 29.0,
-        "length": 30.0
+        "left": 3.0,
+        "right": 17.0,
+        "length": 15.0
       },
       {
         "left": 0.0,
@@ -375,14 +375,14 @@
         "length": 30.0
       },
       {
-        "left": 0.0,
-        "right": 29.0,
-        "length": 30.0
+        "left": 5.0,
+        "right": 16.0,
+        "length": 12.0
       },
       {
-        "left": 0.0,
-        "right": 29.0,
-        "length": 30.0
+        "left": 5.0,
+        "right": 25.0,
+        "length": 21.0
       },
       {
         "left": 0.0,
