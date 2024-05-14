@@ -12,13 +12,13 @@ import json
 
 # model
 MODEL_FNAME = "model/custom_adjacency_regularizer_20210731_124_step3.h5"
-MODEL_DATA_FNAME = "data/model_data.json"
 
 ## MAIN FUNCTION
 def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False):
     exon = exon.replace("T", "U")
     # Model
     model = load_model(MODEL_FNAME)
+    MODEL_DATA_FNAME = "data/model_data.json"
     if use_new_grouping:
         MODEL_DATA_FNAME = "data/model_data_18.json"
     with open(MODEL_DATA_FNAME, "r") as f:
@@ -48,14 +48,14 @@ def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False):
     sequence = add_flanking(exon, 10)
     structs, _ = rna_fold_structs([sequence])
     structs = structs[0]
-    predicted_psi = model.predict(create_input_data([sequence])).item()
+    predicted_psi = model.predict(create_input_data([sequence]), verbose=0).item()
 
     # Compute activations
     activations_model = Model(inputs=model.inputs, outputs=[
         model.get_layer("activation_2").output,
         model.get_layer("activation_3").output
     ])
-    data_incl_acts, data_skip_acts = activations_model.predict(create_input_data([sequence]))
+    data_incl_acts, data_skip_acts = activations_model.predict(create_input_data([sequence]), verbose=0)
     incl_acts = data_incl_acts[0]
     skip_acts = data_skip_acts[0]
     incl_strength = incl_bias + incl_acts.sum()
