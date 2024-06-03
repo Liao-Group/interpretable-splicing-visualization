@@ -1,14 +1,18 @@
 # Import libraries
-from flask import (request, jsonify,
-    Flask, flash, redirect, render_template, session, 
-    abort, send_from_directory, send_file
-)
+from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import json
+import logging
 from src.vis_data import get_vis_data
+
+# Configure logging
+logging.basicConfig(level=logging.DEBUG)
 
 # Declare application
 app = Flask(__name__)
+
+# Configuration from environment variables for better security and flexibility
+app.config['DEBUG'] = True
 
 # Create datastore variable
 class DataStore():
@@ -17,26 +21,25 @@ class DataStore():
 
 data = DataStore()
 
-@app.route("/",methods=["GET","POST"])
+@app.route("/", methods=["GET", "POST"])
 def homepage():
-    exon = request.form.get(
-        "exon", 
-        "GAGUCCCGCUUACCAUUGCAUUUAAGAAAGCGGCCAUACGCCGCUAAGACCCUACUCUUCAGAAUACCAG"
-    )
-    exon = exon.upper().replace("U", "T")
-    json_data = get_vis_data(
-        exon=exon, json_file="data/exon.json", threshold=0.001
-    )
+    try:
+        # Default RNA sequence, replaced 'U' with 'T' and made uppercase.
+        exon = request.form.get("exon", "GAGTCCCGCTTACCATTGCAUTUAAGAAAGCGGCATACGCCGCTAAGACCCTACTCTTCAGAATACCAG").upper().replace("U", "T")
+        json_data = get_vis_data(exon=exon, json_file="data/exon.json", threshold=0.001)
+        data.data = json_data
+        return render_template("./index.html")
+    except Exception as e:
+        logging.error(f"Failed to process exon data: {e}")
+        return jsonify({"error": "Failed to process data"}), 500
 
-    # with open('data/exon_s1.json', 'r') as file:
-    #     file = file.read()
-    # json_data = json.loads(file)
-    data.data = json_data
-    return render_template("./index.html")
-
-@app.route("/get-data",methods=["GET","POST"])
+@app.route("/get-data", methods=["GET", "POST"])
 def get_data():
-    return jsonify(data.data)
+    if data.data:
+        return jsonify(data.data)
+    else:
+        return jsonify({"error": "Data not found"}), 404
 
 if __name__ == "__main__":
-    app.run(debug=False,host='0.0.0.0')
+    app.run(host='0.0.0.0')
+
