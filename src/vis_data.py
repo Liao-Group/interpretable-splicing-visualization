@@ -104,6 +104,7 @@ def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False):
     )
 
     result = {
+        "use_new_grouping": int(use_new_grouping),
         "exon": exon,
         "sequence": sequence,
         "structs": structs,
@@ -155,41 +156,68 @@ def collapse_activations(incl_acts, skip_acts, incl_seq_groups, skip_seq_groups,
     
     struct_incl_shifts = [struct_logo_boundaries["incl"][i]["left"] for i in range(num_struct_filters)]
     struct_skip_shifts = [struct_logo_boundaries["skip"][i]["left"] for i in range(num_struct_filters)]
-    
-    incl_shifts = seq_incl_shifts + struct_incl_shifts
-    skip_shifts = seq_skip_shifts + struct_skip_shifts
 
-    shifted_incl_acts = np.array([
+    # Separate activations
+    seq_incl_acts = incl_acts[:,:num_seq_filters]
+    seq_skip_acts = skip_acts[:,:num_seq_filters]
+
+    struct_incl_acts = incl_acts[:,num_seq_filters:]
+    struct_skip_acts = skip_acts[:,num_seq_filters:]
+
+    # Shift activations
+    shifted_seq_incl_acts = np.array([
         shift_row(row, row_shift, sequence_length) 
-        for row, row_shift in zip(incl_acts.T, incl_shifts)
+        for row, row_shift in zip(seq_incl_acts.T, seq_incl_shifts)
     ]).T
-    shifted_skip_acts = np.array([
+    shifted_seq_skip_acts = np.array([
         shift_row(row, row_shift, sequence_length) 
-        for row, row_shift in zip(skip_acts.T, skip_shifts)
+        for row, row_shift in zip(seq_skip_acts.T, seq_skip_shifts)
     ]).T
+
+    left_padding_struct_incl_acts = np.copy(struct_incl_acts[:12,:])
+    right_padding_struct_incl_acts = np.copy(struct_incl_acts[-12:,:])
+    struct_incl_acts[:12,:] = 0.
+    struct_incl_acts[-12:,:] = 0.
+    shifted_struct_incl_acts = np.array([
+        shift_row(row, row_shift, sequence_length) 
+        for row, row_shift in zip(struct_incl_acts.T, struct_incl_shifts)
+    ]).T
+    shifted_struct_incl_acts[:12,:] += left_padding_struct_incl_acts
+    shifted_struct_incl_acts[-12:,:] += right_padding_struct_incl_acts
+
+    left_padding_struct_skip_acts = np.copy(struct_skip_acts[:12,:])
+    right_padding_struct_skip_acts = np.copy(struct_skip_acts[-12:,:])
+    struct_skip_acts[:12,:] = 0.
+    struct_skip_acts[-12:,:] = 0.
+    shifted_struct_skip_acts = np.array([
+        shift_row(row, row_shift, sequence_length) 
+        for row, row_shift in zip(struct_skip_acts.T, struct_skip_shifts)
+    ]).T
+    shifted_struct_skip_acts[:12,:] += left_padding_struct_skip_acts
+    shifted_struct_skip_acts[-12:,:] += right_padding_struct_skip_acts
 
     # Combine strength; Save the length of strongest filter
     collapsed_seq_incl_acts = collapse(
         groups=incl_seq_groups,
-        shifted_acts=shifted_incl_acts[:,:num_seq_filters],
+        shifted_acts=shifted_seq_incl_acts,
         logo_boundaries=seq_logo_boundaries["incl"],
         sequence_length=sequence_length
     )
     collapsed_struct_incl_acts = collapse(
         groups=incl_struct_groups,
-        shifted_acts=shifted_incl_acts[:,num_seq_filters:],
+        shifted_acts=shifted_struct_incl_acts,
         logo_boundaries=struct_logo_boundaries["incl"],
         sequence_length=sequence_length
     )
     collapsed_seq_skip_acts = collapse(
         groups=skip_seq_groups,
-        shifted_acts=shifted_skip_acts[:,:num_seq_filters],
+        shifted_acts=shifted_seq_skip_acts,
         logo_boundaries=seq_logo_boundaries["skip"],
         sequence_length=sequence_length
     )
     collapsed_struct_skip_acts = collapse(
         groups=skip_struct_groups,
-        shifted_acts=shifted_skip_acts[:,num_seq_filters:],
+        shifted_acts=shifted_struct_skip_acts,
         logo_boundaries=struct_logo_boundaries["skip"],
         sequence_length=sequence_length
     )
@@ -204,10 +232,6 @@ def transform(d, parent):
         {"name": parent, "strength": d[parent]["strength"], "length": d[parent]["length"]}
             if "strength" in d[parent].keys() else
         {"name": parent, "children": [transform(d[parent], child) for child in d[parent]]}
-        # {"name": parent, "value": d[parent]}
-        #     if not isinstance(d[parent], dict) else
-        # {"name": parent,
-        #  "children": [transform(d[parent], child) for child in d[parent]]}
     )
 
 def get_feature_activations_helper(collapsed_acts, acts_dict, name, sequence_length, threshold):
@@ -217,8 +241,12 @@ def get_feature_activations_helper(collapsed_acts, acts_dict, name, sequence_len
             feature_strength = collapsed_acts[i,fi,0]
             feature_length = int(collapsed_acts[i,fi,1])
             pos_ind = i+1
-            if "struct" in name:
-                pos_ind = pos_ind - 12
+            if "struct" in name: 
+                # Ignore the first 12 and the last 12 struct act
+                if i < 12 or i > 77:
+                    feature_length = 1
+                else:
+                    pos_ind -= 12
             if feature_strength > threshold:
                 acts_dict[f"{name}_{fi+1}"][f"pos_{pos_ind}"] = {
                     "strength": feature_strength,
@@ -251,17 +279,24 @@ def get_nucleotide_activations_helper(collapsed_acts, acts_dict, name, sequence_
 ):
     for i in range(sequence_length):
         for fi in range(collapsed_acts.shape[1]):
+            fix_feature_length = sequence_length
+            pos_ind = i + 1
             if "struct" in name:
-                first_start_ind = i-filter_width+1
+                # Ignore the first 12 and the last 12 struct act
+                if i < 12 or i > 77:
+                    first_start_ind = i
+                    fix_feature_length = 1
+                else:
+                    first_start_ind = max(12, i-filter_width+1)
             else:
                 first_start_ind = max(0, i-filter_width+1)
             for start_ind in range(first_start_ind,i+1):
                 feature_strength = collapsed_acts[start_ind,fi,0]
-                feature_length = int(collapsed_acts[start_ind,fi,1])
+                feature_length = min(fix_feature_length, int(collapsed_acts[start_ind,fi,1]))
                 if feature_strength > threshold and start_ind + feature_length > i:
-                    if f"{name}_{fi+1}" not in acts_dict[f"pos_{i+1}"].keys():
-                        acts_dict[f"pos_{i+1}"][f"{name}_{fi+1}"] = {}
-                    acts_dict[f"pos_{i+1}"][f"{name}_{fi+1}"][f"feature_pos_{i-start_ind+1}"] = {
+                    if f"{name}_{fi+1}" not in acts_dict[f"pos_{pos_ind}"].keys():
+                        acts_dict[f"pos_{pos_ind}"][f"{name}_{fi+1}"] = {}
+                    acts_dict[f"pos_{pos_ind}"][f"{name}_{fi+1}"][f"feature_pos_{i-start_ind+1}"] = {
                         "strength": feature_strength/feature_length,
                         "length": feature_length,
                     }
