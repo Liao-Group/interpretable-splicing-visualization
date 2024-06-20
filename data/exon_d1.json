@@ -1,6 +1,5 @@
 {
   "use_new_grouping": 1,
-  "exon_length": 70,
   "exon": "GACUAUGAGCCCCAACGAACAAGCUCCUAUCUGGGAACUCUUUUCUGCAGACUUUAACCCUACCCCCAGA",
   "sequence": "CATCCAGGTTGACUAUGAGCCCCAACGAACAAGCUCCUAUCUGGGAACUCUUUUCUGCAGACUUUAACCCUACCCCCAGACAGGTCTGAC",
   "structs": "......((((.......))))..........((..(((.((((((.............................)))))).))).))...",

@@ -1,7 +1,32 @@
 {
-    "ES7": {
-        "basal_shift": 0,
-        "pre_flanking_sequence": "CATCCAGGTT",
-        "post_flanking_sequence": "CAGGTCTGAC"
-    }
+  "ES7": {
+    "basal_shift": 0,
+    "pre_flanking_sequence": "CATCCAGGTT",
+    "post_flanking_sequence": "CAGGTCTGAC"
+  },
+  "WT1_exon_5": {
+    "basal_shift": -5.8,
+    "pre_flanking_sequence": "TTTCTAG",
+    "post_flanking_sequence": "GTGAGTG"
+  },
+  "FAS_exon_6": {
+    "basal_shift": 2.4,
+    "pre_flanking_sequence": "GATCCAGATCTAACTTG",
+    "post_flanking_sequence": "TAATTGTTTGGG"
+  },
+  "SMN2_exon_7": {
+    "basal_shift": 5.2,
+    "pre_flanking_sequence": "AACTTCCTTTATTTTCCTTACAG",
+    "post_flanking_sequence": "GTAAGTCTGCC"
+  },
+  "BRCA2_exon_7": {
+    "basal_shift": 8.0,
+    "pre_flanking_sequence": "TTTCTTTCCTCCCAG",
+    "post_flanking_sequence": "ATAGCAAAT"
+  },
+  "CFTR_exon_13": {
+    "basal_shift": 7.0,
+    "pre_flanking_sequence": "CCATTTTCTTTTTAG",
+    "post_flanking_sequence": "TCTTTGAAT"
+  }
 }
