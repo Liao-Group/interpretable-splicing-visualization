@@ -261,5 +261,7 @@ PRE_SEQUENCE = "TCTGCCTATGTCTTTCTCTGCCATCCAGGTT"
 POST_SEQUENCE = "CAGGTCTGACTATGGGACCCTTGATGTTTT"
 
 
-def add_flanking(nts, flanking_len):
-    return PRE_SEQUENCE[-flanking_len:] + nts + POST_SEQUENCE[:flanking_len]
+def add_flanking(nts, flanking_len=None, pre_flanking_sequence=None, post_flanking_sequence=None):
+    if flanking_len is not None:
+        return PRE_SEQUENCE[-flanking_len:] + nts + POST_SEQUENCE[:flanking_len]
+    return pre_flanking_sequence + nts + post_flanking_sequence

@@ -1,0 +1,7 @@
+{
+    "ES7": {
+        "basal_shift": 0,
+        "pre_flanking_sequence": "CATCCAGGTT",
+        "post_flanking_sequence": "CAGGTCTGAC"
+    }
+}
