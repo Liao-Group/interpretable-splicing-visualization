@@ -1,4 +1,6 @@
 {
+  "use_new_grouping": 1,
+  "exon_length": 70,
   "exon": "GCGGCACCUACUACAAUGUCCCCCGCUGCAUACACUCGGAGCCAAUAGGGCGCCUAUAGAGUGUAGUCCU",
   "sequence": "CATCCAGGTTGCGGCACCUACUACAAUGUCCCCCGCUGCAUACACUCGGAGCCAAUAGGGCGCCUAUAGAGUGUAGUCCUCAGGTCTGAC",
   "structs": "....((((.((((((....((......)).....))))))(((((((((.(((.....))).))....))))))).........))))..",
@@ -1592,61 +1594,6 @@
             "name": "skip_struct_1",
             "children": [
               {
-                "name": "pos_-11",
-                "strength": 0.006624224130064249,
-                "length": 30
-              },
-              {
-                "name": "pos_-10",
-                "strength": 0.002541211200878024,
-                "length": 30
-              },
-              {
-                "name": "pos_-9",
-                "strength": 0.015759754925966263,
-                "length": 30
-              },
-              {
-                "name": "pos_-8",
-                "strength": 0.0035285400226712227,
-                "length": 30
-              },
-              {
-                "name": "pos_-7",
-                "strength": 0.0019789421930909157,
-                "length": 30
-              },
-              {
-                "name": "pos_-6",
-                "strength": 0.08223211020231247,
-                "length": 30
-              },
-              {
-                "name": "pos_-5",
-                "strength": 0.00824230257421732,
-                "length": 30
-              },
-              {
-                "name": "pos_-4",
-                "strength": 0.12566383183002472,
-                "length": 30
-              },
-              {
-                "name": "pos_-3",
-                "strength": 0.011962225660681725,
-                "length": 30
-              },
-              {
-                "name": "pos_-2",
-                "strength": 0.05139557272195816,
-                "length": 30
-              },
-              {
-                "name": "pos_0",
-                "strength": 0.0073813446797430515,
-                "length": 30
-              },
-              {
                 "name": "pos_1",
                 "strength": 0.0836649090051651,
                 "length": 30
@@ -1697,13 +1644,13 @@
                 "length": 30
               },
               {
-                "name": "pos_11",
-                "strength": 0.24291673302650452,
+                "name": "pos_12",
+                "strength": 0.03793269023299217,
                 "length": 30
               },
               {
-                "name": "pos_12",
-                "strength": 0.03793269023299217,
+                "name": "pos_11",
+                "strength": 0.24291673302650452,
                 "length": 30
               },
               {
@@ -1852,9 +1799,9 @@
                 "length": 30
               },
               {
-                "name": "pos_63",
+                "name": "pos_80",
                 "strength": 0.0018391533521935344,
-                "length": 30
+                "length": 1
               }
             ]
           },
@@ -1862,19 +1809,14 @@
             "name": "skip_struct_2",
             "children": [
               {
-                "name": "pos_-6",
-                "strength": 0.007988496714721904,
-                "length": 21
+                "name": "pos_1",
+                "strength": 0.007988480052928239,
+                "length": 1
               },
               {
-                "name": "pos_4",
-                "strength": 0.182401940670542,
-                "length": 12
-              },
-              {
-                "name": "pos_5",
-                "strength": 0.0023807110007080337,
-                "length": 12
+                "name": "pos_11",
+                "strength": 0.18240194065221407,
+                "length": 1
               },
               {
                 "name": "pos_12",
@@ -2002,19 +1944,19 @@
                 "length": 12
               },
               {
-                "name": "pos_69",
-                "strength": 0.002256763301196227,
-                "length": 21
+                "name": "pos_81",
+                "strength": 0.0022567632986465478,
+                "length": 1
               },
               {
-                "name": "pos_71",
-                "strength": 1.1098058089296423,
-                "length": 21
+                "name": "pos_83",
+                "strength": 1.109805808856257,
+                "length": 1
               },
               {
-                "name": "pos_72",
-                "strength": 0.0014274045326345686,
-                "length": 21
+                "name": "pos_84",
+                "strength": 0.0014272935961858202,
+                "length": 1
               }
             ]
           },
@@ -2061,29 +2003,29 @@
                 "length": 30
               },
               {
-                "name": "pos_67",
+                "name": "pos_84",
                 "strength": 0.1092170849442482,
-                "length": 30
+                "length": 1
               },
               {
-                "name": "pos_70",
+                "name": "pos_87",
                 "strength": 0.001107043121010065,
-                "length": 30
+                "length": 1
               },
               {
-                "name": "pos_71",
+                "name": "pos_88",
                 "strength": 0.18591910600662231,
-                "length": 30
+                "length": 1
               },
               {
-                "name": "pos_72",
+                "name": "pos_89",
                 "strength": 1.4874869585037231,
-                "length": 30
+                "length": 1
               },
               {
-                "name": "pos_73",
+                "name": "pos_90",
                 "strength": 3.5778496265411377,
-                "length": 30
+                "length": 1
               }
             ]
           }
@@ -6684,49 +6626,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
+                    "strength": 0.006624224130064249,
+                    "length": 1
                   }
                 ]
               },
@@ -6734,49 +6636,9 @@
                 "name": "skip_struct_2",
                 "children": [
                   {
-                    "name": "feature_pos_11",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "name": "feature_pos_1",
+                    "strength": 0.007988480052928239,
+                    "length": 1
                   }
                 ]
               }
@@ -6789,99 +6651,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.002541211200878024,
+                    "length": 1
                   }
                 ]
               }
@@ -6894,99 +6666,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_29",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.015759754925966263,
+                    "length": 1
                   }
                 ]
               }
@@ -6999,104 +6681,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.0035285400226712227,
+                    "length": 1
                   }
                 ]
               }
@@ -7109,104 +6696,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_29",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.0019789421930909157,
+                    "length": 1
                   }
                 ]
               }
@@ -7219,114 +6711,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_1",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.08223211020231247,
+                    "length": 1
                   }
                 ]
               }
@@ -7349,114 +6736,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.00824230257421732,
+                    "length": 1
                   }
                 ]
               }
@@ -7484,114 +6766,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.12566383183002472,
+                    "length": 1
                   }
                 ]
               }
@@ -7644,114 +6821,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.011962225660681725,
+                    "length": 1
                   }
                 ]
               }
@@ -7809,114 +6881,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_26",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "strength": 0.05139557272195816,
+                    "length": 1
                   }
                 ]
               }
@@ -7971,117 +6938,12 @@
                 ]
               },
               {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_2",
                 "children": [
                   {
-                    "name": "feature_pos_21",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "name": "feature_pos_1",
+                    "strength": 0.18240194065221407,
+                    "length": 1
                   }
                 ]
               }
@@ -8124,64 +6986,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_28",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
+                    "strength": 0.0073813446797430515,
+                    "length": 1
                   }
                 ]
               },
@@ -8189,49 +6996,9 @@
                 "name": "skip_struct_2",
                 "children": [
                   {
-                    "name": "feature_pos_20",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "name": "feature_pos_1",
+                    "strength": 0.0023807110008044184,
+                    "length": 1
                   }
                 ]
               }
@@ -8269,118 +7036,8 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_29",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
                     "strength": 0.00278883030017217,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -8429,66 +7086,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_2",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -8496,51 +7093,6 @@
                   {
                     "name": "feature_pos_1",
                     "strength": 0.000503349956125021,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -8584,61 +7136,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_15",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_3",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -8651,46 +7148,6 @@
                   {
                     "name": "feature_pos_1",
                     "strength": 0.020703689257303873,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -8744,61 +7201,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_16",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_4",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -8816,51 +7218,6 @@
                   {
                     "name": "feature_pos_1",
                     "strength": 0.0010827571153640748,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_1",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -8914,61 +7271,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_17",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_5",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -8991,56 +7293,6 @@
                   {
                     "name": "feature_pos_1",
                     "strength": 0.002109581232070923,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_1",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -9109,61 +7361,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_18",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_6",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -9191,56 +7388,6 @@
                   {
                     "name": "feature_pos_1",
                     "strength": 0.00032481132075190544,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -9324,61 +7471,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_19",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_7",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -9411,51 +7503,6 @@
                   {
                     "name": "feature_pos_1",
                     "strength": 0.0007310224076112112,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -9534,61 +7581,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_20",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_8",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -9626,51 +7618,6 @@
                   {
                     "name": "feature_pos_1",
                     "strength": 0.0011683767040570577,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -9749,61 +7696,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_21",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_9",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -9846,51 +7738,6 @@
                   {
                     "name": "feature_pos_1",
                     "strength": 0.004170079032580058,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.11926165421803793,
                     "length": 30
                   }
                 ]
@@ -9964,61 +7811,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_22",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_10",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -10071,43 +7863,8 @@
                 ]
               },
               {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_4",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.11926165421803793,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_1",
                     "strength": 0.07715624173482259,
@@ -10194,61 +7951,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_23",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_11",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -10306,38 +8008,8 @@
                 ]
               },
               {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_4",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.11926165421803793,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_2",
                     "strength": 0.07715624173482259,
@@ -10454,61 +8126,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_24",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_12",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -10574,21 +8191,6 @@
                 "name": "skip_struct_2",
                 "children": [
                   {
-                    "name": "feature_pos_19",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  },
-                  {
                     "name": "feature_pos_1",
                     "strength": 0.0013840510749912405,
                     "length": 21
@@ -10598,11 +8200,6 @@
               {
                 "name": "skip_struct_4",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.11926165421803793,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_3",
                     "strength": 0.07715624173482259,
@@ -10699,61 +8296,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_25",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_13",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -10823,21 +8365,6 @@
               {
                 "name": "skip_struct_2",
                 "children": [
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  },
                   {
                     "name": "feature_pos_2",
                     "strength": 0.0013840510749912405,
@@ -10959,61 +8486,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_26",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_14",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -11088,21 +8560,6 @@
               {
                 "name": "skip_struct_2",
                 "children": [
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.00038040460546294783,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  },
                   {
                     "name": "feature_pos_3",
                     "strength": 0.0013840510749912405,
@@ -11234,61 +8691,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_27",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_15",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -11368,16 +8770,6 @@
               {
                 "name": "skip_struct_2",
                 "children": [
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.015200161722545166,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  },
                   {
                     "name": "feature_pos_4",
                     "strength": 0.0013840510749912405,
@@ -11504,61 +8896,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_28",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_16",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -11643,11 +8980,6 @@
               {
                 "name": "skip_struct_2",
                 "children": [
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.00019839258339233613,
-                    "length": 12
-                  },
                   {
                     "name": "feature_pos_5",
                     "strength": 0.0013840510749912405,
@@ -11773,61 +9105,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_17",
                     "strength": 0.00278883030017217,
@@ -11998,61 +9275,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.00022080747100214164,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_18",
                     "strength": 0.00278883030017217,
@@ -12233,56 +9455,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 8.470704002926747e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_19",
                     "strength": 0.00278883030017217,
@@ -12469,51 +9641,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 0.0005253251641988754,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_20",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -12689,46 +9816,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 0.00011761800075570742,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_21",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -12899,41 +9986,6 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 6.59647397696972e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_22",
                     "strength": 0.00278883030017217,
                     "length": 30
@@ -13098,36 +10150,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.0027410703400770823,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_23",
                     "strength": 0.00278883030017217,
@@ -13298,31 +10320,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.0002747434191405773,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_24",
                     "strength": 0.00278883030017217,
@@ -13503,26 +10500,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.004188794394334157,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_25",
                     "strength": 0.00278883030017217,
@@ -13713,21 +10690,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.0003987408553560575,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_26",
                     "strength": 0.00278883030017217,
@@ -13943,16 +10905,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.0017131857573986053,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_27",
                     "strength": 0.00278883030017217,
@@ -14198,11 +11150,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_28",
                     "strength": 0.00278883030017217,
@@ -14458,11 +11405,6 @@
               {
                 "name": "skip_struct_1",
                 "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.0002460448226581017,
-                    "length": 30
-                  },
                   {
                     "name": "feature_pos_29",
                     "strength": 0.00278883030017217,
@@ -22792,11 +19734,6 @@
                     "name": "feature_pos_6",
                     "strength": 7.48761851961414e-05,
                     "length": 30
-                  },
-                  {
-                    "name": "feature_pos_1",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
                   }
                 ]
               },
@@ -23042,11 +19979,6 @@
                     "name": "feature_pos_7",
                     "strength": 7.48761851961414e-05,
                     "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
                   }
                 ]
               },
@@ -23267,11 +20199,6 @@
                     "name": "feature_pos_8",
                     "strength": 7.48761851961414e-05,
                     "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
                   }
                 ]
               },
@@ -23467,11 +20394,6 @@
                     "name": "feature_pos_9",
                     "strength": 7.48761851961414e-05,
                     "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
                   }
                 ]
               },
@@ -23589,131 +20511,6 @@
                     "length": 6
                   }
                 ]
-              },
-              {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 3.829856092731158e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0008767377585172653,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0001961928326636553,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.008126745124657948,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.00013678631124397118,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 4.5403388018409414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.00012366720057159839,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.03316897589032427,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.14057897960340854,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.002536840202328842,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0019111218328339656,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.0021794450845111137,
-                    "length": 12
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 3.82209235491852e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_1",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  }
-                ]
               }
             ]
           },
@@ -23759,124 +20556,9 @@
                 "name": "skip_struct_1",
                 "children": [
                   {
-                    "name": "feature_pos_30",
-                    "strength": 3.829856092731158e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0008767377585172653,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0001961928326636553,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.008126745124657948,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.00013678631124397118,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 4.5403388018409414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.00012366720057159839,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.03316897589032427,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.14057897960340854,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.002536840202328842,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0019111218328339656,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0021794450845111137,
-                    "length": 12
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 3.82209235491852e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
+                    "name": "feature_pos_1",
+                    "strength": 0.0018391533521935344,
+                    "length": 1
                   }
                 ]
               }
@@ -23911,127 +20593,12 @@
                 ]
               },
               {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.0008767377585172653,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.0001961928326636553,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.008126745124657948,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.00013678631124397118,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 4.5403388018409414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_2",
                 "children": [
                   {
-                    "name": "feature_pos_18",
-                    "strength": 0.00012366720057159839,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.03316897589032427,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.14057897960340854,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.002536840202328842,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.0019111218328339656,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0021794450845111137,
-                    "length": 12
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 3.82209235491852e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
+                    "strength": 0.0022567632986465478,
+                    "length": 1
                   }
                 ]
               }
@@ -24047,131 +20614,6 @@
                     "name": "feature_pos_3",
                     "strength": 0.00023751210480485398,
                     "length": 6
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.0001961928326636553,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.008126745124657948,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.00013678631124397118,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 4.5403388018409414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.00012366720057159839,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.03316897589032427,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.14057897960340854,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.002536840202328842,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.0019111218328339656,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.0021794450845111137,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 3.82209235491852e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_1",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
                   }
                 ]
               }
@@ -24191,132 +20633,12 @@
                 ]
               },
               {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.008126745124657948,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 0.00013678631124397118,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 4.5403388018409414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_2",
                 "children": [
                   {
-                    "name": "feature_pos_20",
-                    "strength": 0.00012366720057159839,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.03316897589032427,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 0.14057897960340854,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.002536840202328842,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.0019111218328339656,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.0021794450845111137,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 3.82209235491852e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_1",
-                    "strength": 0.006197303533554077,
-                    "length": 30
+                    "strength": 1.109805808856257,
+                    "length": 1
                   }
                 ]
               }
@@ -24336,102 +20658,12 @@
                 ]
               },
               {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 0.00013678631124397118,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 4.5403388018409414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_2",
                 "children": [
                   {
-                    "name": "feature_pos_21",
-                    "strength": 0.00012366720057159839,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.03316897589032427,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 0.14057897960340854,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.0019111218328339656,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 0.0021794450845111137,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
+                    "strength": 0.0014272935961858202,
+                    "length": 1
                   }
                 ]
               },
@@ -24439,24 +20671,9 @@
                 "name": "skip_struct_4",
                 "children": [
                   {
-                    "name": "feature_pos_6",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
                     "name": "feature_pos_1",
-                    "strength": 0.04958289861679077,
-                    "length": 30
+                    "strength": 0.1092170849442482,
+                    "length": 1
                   }
                 ]
               }
@@ -24474,216 +20691,6 @@
                     "length": 6
                   }
                 ]
-              },
-              {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_30",
-                    "strength": 4.5403388018409414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_11",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 0.14057897960340854,
-                    "length": 15
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 0.0021794450845111137,
-                    "length": 12
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_1",
-                    "strength": 0.11926165421803793,
-                    "length": 30
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "pos_86",
-            "children": [
-              {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_17",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_12",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_4",
-                "children": [
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_2",
-                    "strength": 0.11926165421803793,
-                    "length": 30
-                  }
-                ]
               }
             ]
           },
@@ -24691,97 +20698,12 @@
             "name": "pos_87",
             "children": [
               {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_18",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_13",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_4",
                 "children": [
                   {
-                    "name": "feature_pos_9",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_3",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "name": "feature_pos_1",
+                    "strength": 0.001107043121010065,
+                    "length": 1
                   }
                 ]
               }
@@ -24791,97 +20713,12 @@
             "name": "pos_88",
             "children": [
               {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_19",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_14",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_4",
                 "children": [
                   {
-                    "name": "feature_pos_10",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_4",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "name": "feature_pos_1",
+                    "strength": 0.18591910600662231,
+                    "length": 1
                   }
                 ]
               }
@@ -24891,97 +20728,12 @@
             "name": "pos_89",
             "children": [
               {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_27",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_25",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_20",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_15",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_4",
                 "children": [
                   {
-                    "name": "feature_pos_11",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_5",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "name": "feature_pos_1",
+                    "strength": 1.4874869585037231,
+                    "length": 1
                   }
                 ]
               }
@@ -24991,97 +20743,12 @@
             "name": "pos_90",
             "children": [
               {
-                "name": "skip_struct_1",
-                "children": [
-                  {
-                    "name": "feature_pos_29",
-                    "strength": 6.424847912664214e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_28",
-                    "strength": 0.0006842145696282387,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_26",
-                    "strength": 0.00010876256662110488,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_24",
-                    "strength": 0.00019293239650626978,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_23",
-                    "strength": 0.00010408691596239806,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_22",
-                    "strength": 0.00019712426389257114,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_21",
-                    "strength": 7.48761851961414e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_16",
-                    "strength": 6.130511173978448e-05,
-                    "length": 30
-                  }
-                ]
-              },
-              {
-                "name": "skip_struct_2",
-                "children": [
-                  {
-                    "name": "feature_pos_10",
-                    "strength": 0.00010746491910458224,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.052847895663316304,
-                    "length": 21
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 6.797164441116994e-05,
-                    "length": 21
-                  }
-                ]
-              },
-              {
                 "name": "skip_struct_4",
                 "children": [
                   {
-                    "name": "feature_pos_12",
-                    "strength": 0.0036405694981416067,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_9",
-                    "strength": 3.690143736700217e-05,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_8",
-                    "strength": 0.006197303533554077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_7",
-                    "strength": 0.04958289861679077,
-                    "length": 30
-                  },
-                  {
-                    "name": "feature_pos_6",
-                    "strength": 0.11926165421803793,
-                    "length": 30
+                    "name": "feature_pos_1",
+                    "strength": 3.5778496265411377,
+                    "length": 1
                   }
                 ]
               }
