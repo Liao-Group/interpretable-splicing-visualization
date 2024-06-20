@@ -5,6 +5,7 @@ import numpy as np
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import Input
 from src.figutils import create_input_data, add_flanking, rna_fold_structs
+from src.generate_custom_model import generate_custom_model
 import src.quad_model
 import json
 
@@ -14,7 +15,7 @@ import json
 MODEL_FNAME = "model/custom_adjacency_regularizer_20210731_124_step3.h5"
 
 ## MAIN FUNCTION
-def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False):
+def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False, dataset="ES7"):
     exon = exon.replace("T", "U")
     # Model
     model = load_model(MODEL_FNAME)
@@ -23,6 +24,16 @@ def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False):
         MODEL_DATA_FNAME = "data/model_data_18.json"
     with open(MODEL_DATA_FNAME, "r") as f:
         model_data = json.load(f)
+    DATASET_DATA_FNAME = "data/datasets_data.json"
+    with open(DATASET_DATA_FNAME, "r") as f:
+        dataset_data = json.load(f)[dataset]
+        pre_flanking_sequence = dataset_data["pre_flanking_sequence"]
+        post_flanking_sequence = dataset_data["post_flanking_sequence"]
+        basal_shift = dataset_data["basal_shift"]
+    model = generate_custom_model(
+        new_input_length=len(exon) + len(pre_flanking_sequence) + len(post_flanking_sequence), 
+        delta_basal=basal_shift
+    )
 
     # Bias
     link_midpoint = model_data["link_midpoint"]
@@ -45,7 +56,10 @@ def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False):
     struct_logo_boundaries = model_data["struct_logo_boundaries"]
 
     # Sequences
-    sequence = add_flanking(exon, 10)
+    sequence = add_flanking(exon, 
+        pre_flanking_sequence=pre_flanking_sequence, 
+        post_flanking_sequence=post_flanking_sequence
+    )
     structs, _ = rna_fold_structs([sequence])
     structs = structs[0]
     predicted_psi = model.predict(create_input_data([sequence]), verbose=0).item()
