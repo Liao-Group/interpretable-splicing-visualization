@@ -1,10 +1,12 @@
-# Author: Mukund Sudarshan
+# Author: Mukund Sudarshan, Nhi Nguyen
 
 ## The generate_custom_model function will generate a model with a custom exon length by Lanczos resampling of the position bias coefficients. It also allows to modify the bias term in the SumDiff layer.
 
 import numpy as np
 from src.quad_model import *
 from tensorflow.keras.models import Model, load_model
+from scipy.stats import linregress
+from src.figutils import create_input_data
 
 ORIG_MODEL_FILE_NAME = 'model/custom_adjacency_regularizer_20210731_124_step3.h5'
 
@@ -61,3 +63,36 @@ def generate_custom_model(new_input_length, delta_basal):
     new_model.get_layer("energy_seq_struct").set_weights([original_sumdiff_weights[0]+delta_basal,original_sumdiff_weights[1]])
     
     return new_model
+
+# Fit a custom model to a new dataset
+def fit_new_dataset(new_dataset):
+    input_to_model = create_input_data(list(new_dataset.sequence))
+    seq_len = len(new_dataset.sequence.iloc[0])
+    best_rmse = 1000
+    r2 = None
+    for basal_shift in np.arange(-10,10,0.2):
+        basal_shift = np.round(basal_shift,1)
+        custom_model = generate_custom_model(seq_len, basal_shift)
+        predictions = custom_model(input_to_model).numpy().flatten()
+        rmse = ((new_dataset.PSI-predictions)**2).mean()
+        if (rmse<best_rmse):
+            best_basal_shift = basal_shift
+            best_rmse = rmse
+            r2 = r2_score(new_dataset.PSI, predictions)
+    sequence = new_dataset.sequence.iloc[0]
+    exon = new_dataset.exon.iloc[0]
+    pre_flanking_sequence = sequence[:sequence.find(exon)]
+    post_flanking_sequence = sequence[(sequence.find(exon)+len(exon)):]
+    return {
+        "basal_shift": best_basal_shift,
+        "pre_flanking_sequence": pre_flanking_sequence,
+        "post_flanking_sequence": post_flanking_sequence,
+        "number_of_datapoints": len(new_dataset),
+        "exon_length": len(new_dataset.exon.iloc[0]),
+        "sequence_length": seq_len,
+        "r_squared": r2
+    }
+
+def r2_score(y_true, y_pred):
+    slope, intercept, r_value, p_value, std_err = linregress(y_pred, y_true)
+    return r_value
