@@ -11,12 +11,18 @@ Files copied straight from the original paper's repository [regev-lab/interpreta
 import src.quad_model
 ```
 
-3. [`generate_custom_model.py`](./generate_custom_model.py): Generate a modified version of the original model for different length exon and with different bias. We only care about the main function
+3. [`generate_custom_model.py`](./generate_custom_model.py): Generate a modified version of the original model for different length exon and with different bias. We only care about 2 main functions
 ```
 generate_custom_model(new_input_length, delta_basal)
 ```
 
 When given a different dataset in the format of a dataframe `df` with columns `[exon, sequence, PSI]`, we can perform a line search to find the `delta_basal` that create a custom model that best predict the measured PSI for this dataset. Example of how this is done can be found in notebook [`generate_custom_model.ipynb`](../notebooks/generate_custom_model.ipynb). The best basal shift for datasets studied in the original paper is saved in [`datasets_data.json`](../data/datasets_data.json), in addition to a few other statistics.
+
+```
+fit_new_dataset(new_dataset)
+```
+
+Given a dataframe in pandas form with columns `["exon", "sequence", "PSI"]`, the function return the finetuning data for the new dataset in the same format as those saved in `datasets_data.json`.
 
 4. [`RNAutils.py`](./RNAutils.py): Use in [`figutils.py`](./figutils.py) to estimate the structure of exon in the dot-bracket (.()) notation. Don't have to use this file outside of [`figutils.py`](./figutils.py) in general.
 
@@ -131,7 +137,7 @@ get_vis_data(
     json_file=None,             # where to save the results
     threshold=0.001,            # filter for feature strengths that are too weak
     use_new_grouping=False,     # using 13 or 18 features
-    dataset="ES7"               # which dataset is the model trained no
+    dataset_name="ES7"               # which dataset is the model trained no
 )
 ```
 
