@@ -1,31 +1,31 @@
 # Documentation
 
-## 1. What does each files in `src` do?
+## 1. What does each files in [`src`](.) do?
 
 Files copied straight from the original paper's repository [regev-lab/interpretable-splicing-model](https://github.com/regev-lab/interpretable-splicing-model)
 
-1. `vis_data.py`: The main file to generate the json files. Will explain in [Section 5](#how-to-get-visualization-json-files?).
+1. [`vis_data.py`](./vis_data.py): The main file to generate the json files. Will explain in [Section 5](#how-to-get-visualization-json-files?).
 
-2. `quad_model.py`: Define the architecture of the model. We don't have to directly call anything from this file. Just always include
+2. [`quad_model.py`](./quad_model.py): Define the architecture of the model. We don't have to directly call anything from this file. Just always include
 ```
 import src.quad_model
 ```
 
-3. `generate_custom_model.py`: Generate a modified version of the original model for different length exon and with different bias. We only care about the main function
+3. [`generate_custom_model.py`](./generate_custom_model.py): Generate a modified version of the original model for different length exon and with different bias. We only care about the main function
 ```
 generate_custom_model(new_input_length, delta_basal)
 ```
 
-When given a different dataset in the format of a dataframe `df` with columns `[exon, sequence, PSI]`, we can perform a line search to find the `delta_basal` that create a custom model that best predict the measured PSI for this dataset. Example of how this is done can be found in notebook `notebooks/generate_custom_model.ipynb`. The best basal shift for datasets studied in the original paper is saved in `datasets_data.json`, in addition to a few other statistics.
+When given a different dataset in the format of a dataframe `df` with columns `[exon, sequence, PSI]`, we can perform a line search to find the `delta_basal` that create a custom model that best predict the measured PSI for this dataset. Example of how this is done can be found in notebook [`generate_custom_model.ipynb`](../notebooks/generate_custom_model.ipynb). The best basal shift for datasets studied in the original paper is saved in [`datasets_data.json`](../data/datasets_data.json), in addition to a few other statistics.
 
-4. `RNAutils.py`: Use in `figutils.py` to estimate the structure of exon in the dot-bracket (.()) notation. Don't have to use this file outside of `figutils.py` in general.
+4. [`RNAutils.py`](./RNAutils.py): Use in [`figutils.py`](./figutils.py) to estimate the structure of exon in the dot-bracket (.()) notation. Don't have to use this file outside of [`figutils.py`](./figutils.py) in general.
 
-5. `figutils.py`: Important functions are
+5. [`figutils.py`](./figutils.py): Important functions are
 
 ```
 rna_fold_structs(seq_nts)
 ```
-Take in a list of string input such as ["ATG...", ...] and return the dot-bracket structures. Bypass the need to access `RNAutils.py` outside of `figutils.py`.
+Take in a list of string input such as ["ATG...", ...] and return the dot-bracket structures. Bypass the need to access `RNAutils.py` outside of [`figutils.py`](./figutils.py)`.
 
 ```
 add_flanking(nts, ...)
@@ -40,16 +40,16 @@ Given a list of string inputs ["ATG...", ...] with N elements of length L, retur
 - `struct_oh` (shape (N,L,3)): one-hot vector representation of the dot-bracket structure. Notice that the shape is (L, 3) because there are 3 different symbols ".", "(", and ")".
 - `wobbles` (shape (N,L,)): represent the confidence about each nucleotide position (e.g., whether a recorded A is actually an A)
 
-6. `pnas_vis.py`: Code from the original paper that is the basis of the main file `vis_data.py`. Don't have to use this file. 
+6. [`pnas_vis.py`](./pnas_vis.py): Code from the original paper that is the basis of the main file [`vis_data.py`](./vis_data.py). Don't have to use this file. 
 
-7. `model_data.py`: Use to generate the metatdata saved in `model_data.json` and `model_data_18.json`. This includes straightforward information such as 
+7. [`model_data.py`](./model_data.py): Use to generate the metatdata saved in [`model_data.json`](../data/model_data.json) and [`model_data_18.json`](../data/model_data_18.json). This includes straightforward information such as 
 - the inclusion bias (which is called `link_midpoint`)
 - number of sequence/structure (i.e. short/long) kernels
 - width of sequence/structure kernels
 - manual groupings of kernels into features
 - boundaries of the kernels, which represent the middle most active part of a kernel. For example the first feature legend logl look like `C__C__`, so the boundaries would be the first 4 positions in the kernel, represented as the dictionary `{"left": 0, "right", 3, "length": 4}`
 
-8. `sequence_logo.py`: The only import function is
+8. [`sequence_logo.py`](./sequence_logo.py): The only import function is
 ```
 plot_logo(
     df=None,
@@ -61,7 +61,7 @@ plot_logo(
 )
 ```
 
-Essentially, given a specifically formated dataframe `df` and strength threshold `threshold`, the function return a plot and a `data` that represent the height of each `nts` at each position in the logo. The `data` for all sequence kernels (short kernels) have been computed and saved in `seq_logo_data.npy`. The shape of this numpy object is `(2, 20, ...)`, where the first dimension separate inclusion and skipping, 20 are the number of sequence (short) kernels, and the rest of the dimension is for storing the logo data. Then plotting the logo for sequence skipping feature `i` is simply as
+Essentially, given a specifically formated dataframe `df` and strength threshold `threshold`, the function return a plot and a `data` that represent the height of each `nts` at each position in the logo. The `data` for all sequence kernels (short kernels) have been computed and saved in [`seq_logo_data.npy`](../data/seq_logo_data.npy). The shape of this numpy object is `(2, 20, ...)`, where the first dimension separate inclusion and skipping, 20 are the number of sequence (short) kernels, and the rest of the dimension is for storing the logo data. Then plotting the logo for sequence skipping feature `i` is simply as
 ```
 seq_logo_data = np.load("data/seq_logo_data.npy")
 data = pd.DataFrame(seq_logo_data[1,i,...], columns=["A", "C", "G", "U"])
@@ -78,16 +78,18 @@ nts = ['.', '(', ')']
 
 ## 2. Important metadata files
 
-1. `model_data_18.json` (see point 7 in Section 1)
-2. `seq_logo_data.npy` (see point 8 in Section 1)
-3. `datasets_data.json` (see point 3 in Section 1)
+1. [`model_data_18.json`](../data/model_data_18.json) (see point 7 in Section 1)
+2. [`seq_logo_data.npy`](../data/seq_logo_data.json) (see point 8 in Section 1)
+3. [`datasets_data.json`](../data/datasets_data.json) (see point 3 in Section 1)
 
 ## 3. How to predict using the pretrained model?
 
-In combination with the trained model's parameters `model/custom_adjacency_regularizer_20210731_124_step3`, we can generate output from the model using the following code chunk
+In combination with the trained model's parameters [`custom_adjacency_regularizer_20210731_124_step3.h5`](../model/custom_adjacency_regularizer_20210731_124_step3.h5), we can generate output from the model using the following code chunk
 ```
+import src.quad_model
+
 # Load pretrained model
-model_file_name = f"../model/custom_adjacency_regularizer_20210731_124_step3.h5"
+model_file_name = f"model/custom_adjacency_regularizer_20210731_124_step3.h5"
 model = tensorflow.keras.models.load_model(model_file_name)
 
 # Convert input to proper format
@@ -101,10 +103,12 @@ predictions = model(input_to_model)
 
 ## 4. How to get the activations of the pretrained model?
 
-The architecture of the original model can be found at `model/model_summary.txt`. The activation we are interested in is in layers `activation_2` (for inclusion) and `activation_3` (for skipping). To get the activation of the model given some input, we can use the following code chunk
+The architecture of the original model can be found at [`model_summary.txt`](../model/model_summary.txt). The activation we are interested in is in layers `activation_2` (for inclusion) and `activation_3` (for skipping). To get the activation of the model given some input, we can use the following code chunk
 ```
+
+
 # Create a custom activation model
-activations_model = Model(inputs=model.inputs, outputs=[
+activations_model = tensorflow.keras.models.Model(inputs=model.inputs, outputs=[
     model.get_layer("activation_2").output,
     model.get_layer("activation_3").output
 ])
@@ -131,18 +135,18 @@ get_vis_data(
 )
 ```
 
-Examples of how to use `get_vis_data()` for to generate json files can be found in `notebooks/vis_data.ipynb`. Below, I describe the flow of the code in `vis_data.py`.
+Examples of how to use `get_vis_data()` for to generate json files can be found in [`vis_data.ipynb`](../notebooks/vis_data.ipynb). Below, I describe the flow of the code in [`vis_data.py`](./vis_data.py).
 
 1. Load the pretrain model and customize the model to the length of the exon and the specified dataset
 ```
-model = load_model(MODEL_FNAME)
+model = load_model("model/custom_adjacency_regularizer_20210731_124_step3.h5")
 model = generate_custom_model(
     new_input_length=exon_len+pre_flanking_len+post_flanking_len, 
     delta_basal=basal_shift
 )
 ```
 
-2. Get the metadata about the model from `data/model_data_18.json`. The most important values are
+2. Get the metadata about the model from [`model_data_18.json`](../data/model_data_18.json). The most important values are
 ```
 # Filter groups
 incl_seq_groups = model_data["incl_seq_groups"]
@@ -211,7 +215,7 @@ The resulting `collapsed_[...]_[...]_acts` has 3 dimensions (N, #number of group
 - N (= 90) is the number of positions
 - For each (grouped) feature F at position P, we save 2 values: the strength S and the length K. That mean feature F has a strength S that spread from position P to position P+K-1.
 
-7. Structure data into hierarchical format for Feature view and Exon view. The structure of the final data can be seen in the json files.
+7. Structure data into hierarchical format for Feature view and Exon view. The structure of the final data can be seen in the json files in [data](../data) folder.
 ```
 # Get hierarchical data
 feature_activations = get_feature_activations(
