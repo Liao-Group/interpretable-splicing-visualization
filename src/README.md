@@ -4,7 +4,7 @@
 
 Files copied straight from the original paper's repository [regev-lab/interpretable-splicing-model](https://github.com/regev-lab/interpretable-splicing-model)
 
-1. `vis_data.py`: The main file to generate the json files. Will explain in Section 4.
+1. `vis_data.py`: The main file to generate the json files. Will explain in [Section 5](#how-to-get-visualization-json-files?).
 
 2. `quad_model.py`: Define the architecture of the model. We don't have to directly call anything from this file. Just always include
 ```
@@ -15,6 +15,8 @@ import src.quad_model
 ```
 generate_custom_model(new_input_length, delta_basal)
 ```
+
+When given a different dataset in the format of a dataframe `df` with columns `[exon, sequence, PSI]`, we can perform a line search to find the `delta_basal` that create a custom model that best predict the measured PSI for this dataset. Example of how this is done can be found in notebook `notebooks/generate_custom_model.ipynb`. The best basal shift for datasets studied in the original paper is saved in `datasets_data.json`, in addition to a few other statistics.
 
 4. `RNAutils.py`: Use in `figutils.py` to estimate the structure of exon in the dot-bracket (.()) notation. Don't have to use this file outside of `figutils.py` in general.
 
@@ -40,11 +42,47 @@ Given a list of string inputs ["ATG...", ...] with N elements of length L, retur
 
 6. `pnas_vis.py`: Code from the original paper that is the basis of the main file `vis_data.py`. Don't have to use this file. 
 
-7. `model_data.py`: #TODO
+7. `model_data.py`: Use to generate the metatdata saved in `model_data.json` and `model_data_18.json`. This includes straightforward information such as 
+- the inclusion bias (which is called `link_midpoint`)
+- number of sequence/structure (i.e. short/long) kernels
+- width of sequence/structure kernels
+- manual groupings of kernels into features
+- boundaries of the kernels, which represent the middle most active part of a kernel. For example the first feature legend logl look like `C__C__`, so the boundaries would be the first 4 positions in the kernel, represented as the dictionary `{"left": 0, "right", 3, "length": 4}`
 
-8. `sequence_logo.py`: #TODO
+8. `sequence_logo.py`: The only import function is
+```
+plot_logo(
+    df=None,
+    threshold=None,
+    ax=None,
+    color_map={"A": "#00dc33", "C": "#1c1cd5", "G": "#f2a93c", "U": "#ff1525"},
+    nts=["A", "C", "G", "U"],
+    data=None,
+)
+```
 
-## 2. How to predict using the pretrained model?
+Essentially, given a specifically formated dataframe `df` and strength threshold `threshold`, the function return a plot and a `data` that represent the height of each `nts` at each position in the logo. The `data` for all sequence kernels (short kernels) have been computed and saved in `seq_logo_data.npy`. The shape of this numpy object is `(2, 20, ...)`, where the first dimension separate inclusion and skipping, 20 are the number of sequence (short) kernels, and the rest of the dimension is for storing the logo data. Then plotting the logo for sequence skipping feature `i` is simply as
+```
+seq_logo_data = np.load("data/seq_logo_data.npy")
+data = pd.DataFrame(seq_logo_data[1,i,...], columns=["A", "C", "G", "U"])
+sequence_logo.plot_logo(data=data, ax=a)
+```
+
+For detail on how the dataframe `df` should be created when `data` is saved yet (specifically for structure kernels), see [this notebook](https://github.com/regev-lab/splicing_library_analysis/blob/e17c9ff422b0a2270358cf347511253d045228e8/2021_11_26_figures/EDLogo_playground.ipynb) from the original paper.
+
+The `color_map` and `nts` are fixed and self-explanatory. An alternative set for dot-bracket structure logo is
+```
+color_map = {".": "#1f6933", "(": "#1c1cd5", ")": "#f2a93c"}
+nts = ['.', '(', ')']
+```
+
+## 2. Important metadata files
+
+1. `model_data_18.json` (see point 7 in Section 1)
+2. `seq_logo_data.npy` (see point 8 in Section 1)
+3. `datasets_data.json` (see point 3 in Section 1)
+
+## 3. How to predict using the pretrained model?
 
 In combination with the trained model's parameters `model/custom_adjacency_regularizer_20210731_124_step3`, we can generate output from the model using the following code chunk
 ```
@@ -61,7 +99,7 @@ input_to_model = figutils.create_input_data([sequence])
 predictions = model(input_to_model)
 ```
 
-## 3. How to get the activations of the pretrained model?
+## 4. How to get the activations of the pretrained model?
 
 The architecture of the original model can be found at `model/model_summary.txt`. The activation we are interested in is in layers `activation_2` (for inclusion) and `activation_3` (for skipping). To get the activation of the model given some input, we can use the following code chunk
 ```
@@ -80,7 +118,7 @@ skip_acts = data_skip_acts[0]
 For an input with length 90 (per original paper), `incl_acts` and `skip_acts` both have shape (85, 28), where 85 is the number of windows the convolution kernel slides through (note that the convolution kernel has size 6 in this case), and 28 represents the 20 short sequence convolution kernels (of size 6) and 8 long structure convolution kernels (of size 30). The first 20 kernels are sequence kernels, and the last 8 kernels are structure kernels.
 
 
-## 4. How to get visualization json files?
+## 5. How to get visualization json files?
 
 The main function to get the visualization json files is
 ```
@@ -129,7 +167,7 @@ structs = structs[0]
 input_to_model = create_input_data([sequence])
 ```
 
-4. Get the activations following Section 3
+4. Get the activations following [Section 4](#how-to-get-the-activations-of-the-pretrained-model?)
 ```
 activations_model = Model(inputs=model.inputs, outputs=[
     model.get_layer("activation_2").output,
@@ -169,7 +207,11 @@ delta_force = incl_strength - skip_strength
 )
 ```
 
-7. Structure data into hierarchical format for Feature view and Exon view
+The resulting `collapsed_[...]_[...]_acts` has 3 dimensions (N, #number of grouped features, 2), where
+- N (= 90) is the number of positions
+- For each (grouped) feature F at position P, we save 2 values: the strength S and the length K. That mean feature F has a strength S that spread from position P to position P+K-1.
+
+7. Structure data into hierarchical format for Feature view and Exon view. The structure of the final data can be seen in the json files.
 ```
 # Get hierarchical data
 feature_activations = get_feature_activations(
@@ -194,15 +236,3 @@ nucleotide_activations = get_nucleotide_activations(
     threshold=threshold
 )
 ```
-
-## 5. How to draw sequence logos?
-
-#TODO
-
-## 6. Important metadata: 
-
-#TODO
-
-1. `model_data_18.json`
-2. `seq_logo_data.npy`
-3. `datasets_data.json`
