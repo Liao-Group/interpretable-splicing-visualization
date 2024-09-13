@@ -60,7 +60,6 @@ oauthlib==3.2.2
 opt-einsum==3.3.0
 packaging==24.0
 pandas==1.5.3
-pangolin @ file:///Users/mateusaragao/interpretable-splicing-visualization/Pangolin
 parso==0.8.4
 pathspec==0.12.1
 pexpect==4.9.0
