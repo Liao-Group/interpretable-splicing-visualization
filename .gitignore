@@ -1,3 +1,7 @@
 src/__pycache__
 myenv
 data/exon.json
+Pangolin/
+notebooks
+model_architecture.png
+.vscode/
