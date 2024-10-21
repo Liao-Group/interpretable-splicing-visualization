@@ -15,7 +15,7 @@ import json
 MODEL_FNAME = "model/custom_adjacency_regularizer_20210731_124_step3.h5"
 
 ## MAIN FUNCTION
-def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False, dataset_name="ES7", new_dataset=None):
+def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False, dataset_name="BRCA2_exon_7", new_dataset=None):
     exon = exon.replace("T", "U")
     # Model
     model = load_model(MODEL_FNAME)
@@ -38,7 +38,8 @@ def get_vis_data(exon, json_file=None, threshold=0.001, use_new_grouping=False, 
     )
 
     # Bias
-    link_midpoint = model_data["link_midpoint"]
+    link_midpoint = model_data["link_midpoint"] + basal_shift
+    print(link_midpoint)
     incl_bias, skip_bias = (np.abs(link_midpoint), 0) if link_midpoint < 0 else (0, np.abs(link_midpoint))
 
     # Number of filters

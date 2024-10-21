@@ -18,7 +18,7 @@
     "r_squared": 0.7756628909179489
   },
   "FAS_exon_6": {
-    "basal_shift": 2.4,
+    "basal_shift": 3.6,
     "pre_flanking_sequence": "",
     "post_flanking_sequence": "",
     "number_of_datapoints": 794,
@@ -27,7 +27,7 @@
     "r_squared": 0.9020387508616958
   },
   "SMN2_exon_7": {
-    "basal_shift": 5.2,
+    "basal_shift": -0.2,
     "pre_flanking_sequence": "AACTTCCTTTATTTTCCTTACAG",
     "post_flanking_sequence": "GTAAGTCTGCC",
     "number_of_datapoints": 56,
@@ -36,7 +36,7 @@
     "r_squared": 0.6485961639623267
   },
   "BRCA2_exon_7": {
-    "basal_shift": 8.0,
+    "basal_shift": 3.8,
     "pre_flanking_sequence": "TTTCTTTCCTCCCAG",
     "post_flanking_sequence": "GTAATAATAGCAAAT",
     "number_of_datapoints": 31,
@@ -45,7 +45,7 @@
     "r_squared": 0.6915058670445455
   },
   "CFTR_exon_13": {
-    "basal_shift": 7.0,
+    "basal_shift": 4.8,
     "pre_flanking_sequence": "CCATTTTCTTTTTAG",
     "post_flanking_sequence": "GTATGTTCTTTGAAT",
     "number_of_datapoints": 22,

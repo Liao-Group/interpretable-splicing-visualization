@@ -40,6 +40,16 @@ def get_data():
     else:
         return jsonify({"error": "Data not found"}), 404
 
+@app.route("/prediction", methods=["GET", "POST"])
+def prediction():
+    try:
+        # Default RNA sequence, replaced 'U' with 'T' and made uppercase.
+        exon = request.form.get("exon", "GGTCGTCAGACACCAAAACATATTTCTGAAAGTCTAGGAGCTGAGGTGGATCCTGATATGTCTTGGTCAAGTTCTTTAGCTACACCACCCACCCTTAGTTCTACTGTGCTCATAG").upper().replace("U", "T")
+        json_data = get_vis_data(exon=exon, json_file="data/exon.json",new_dataset='BRCA2_exon_7', threshold=0.001)
+        return jsonify(json_data)
+    except Exception as e:
+        logging.error(f"Failed to process exon data: {e}")
+        return jsonify({"error": "Failed to process data"}), 500
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=5050,debug=True)
+    app.run(host='0.0.0.0',port=5001,debug=True)
 
