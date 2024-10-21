@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__struct__utils__benchmark" kind="group">
+    <compoundname>struct_utils_benchmark</compoundname>
+    <title>Benchmark measures for Secondary Structure Predictions</title>
+    <innerclass refid="structvrna__score__s" prot="public">vrna_score_s</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__struct__utils__benchmark_1ga1fb1540256fbcd9543c602b111c3f512" prot="public" static="no">
+        <type>struct <ref refid="structvrna__score__s" kindref="compound">vrna_score_s</ref></type>
+        <definition>typedef struct vrna_score_s vrna_score_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_score_t</name>
+        <briefdescription>
+<para>Typename for the score data structure <ref refid="structvrna__score__s" kindref="compound">vrna_score_s</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/benchmark.h" line="23" column="27" bodyfile="ViennaRNA/structures/benchmark.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__struct__utils__benchmark_1gaa53c5b340fbb175e9b25fda06bdb5c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__struct__utils__benchmark_1ga1fb1540256fbcd9543c602b111c3f512" kindref="member">vrna_score_t</ref></type>
+        <definition>vrna_score_t vrna_score_from_confusion_matrix</definition>
+        <argsstring>(int TP, int TN, int FP, int FN)</argsstring>
+        <name>vrna_score_from_confusion_matrix</name>
+        <param>
+          <type>int</type>
+          <declname>TP</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>TN</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>FP</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>FN</declname>
+        </param>
+        <briefdescription>
+<para>Construct score data structure from given confusion matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True positive count </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True negative count </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>False positive count </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>False negative count </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The score data structure to write </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/benchmark.h" line="58" column="1" declfile="ViennaRNA/structures/benchmark.h" declline="58" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils__benchmark_1gafd537fdc762e2f20afabf699e7e74bcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__struct__utils__benchmark_1ga1fb1540256fbcd9543c602b111c3f512" kindref="member">vrna_score_t</ref></type>
+        <definition>vrna_score_t vrna_compare_structure_pt</definition>
+        <argsstring>(const short *pt_gold, const short *pt_other, int fuzzy)</argsstring>
+        <name>vrna_compare_structure_pt</name>
+        <param>
+          <type>const short *</type>
+          <declname>pt_gold</declname>
+        </param>
+        <param>
+          <type>const short *</type>
+          <declname>pt_other</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fuzzy</declname>
+        </param>
+        <briefdescription>
+<para>Return statistic of two structure (in pair table) comparaison. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__struct__utils__benchmark_1ga12495e49a4214b0bdab3fa37f542a9db" kindref="member">vrna_compare_structure</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt_gold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gold standard structure in pair table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pt_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure to compare in pair table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fuzzy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allows for base pair slippage. Hence, for any base pair (i,j) in the gold standard, a base pair (p, q) in the second structure is considered a true positive, if i - fuzzy &lt;= p &lt;= i + fuzzy, and j - fuzzy &lt;= q &lt;= j + fuzzy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="structvrna__score__s" kindref="compound">vrna_score_s</ref> data structure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/benchmark.h" line="75" column="1" declfile="ViennaRNA/structures/benchmark.h" declline="75" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils__benchmark_1ga12495e49a4214b0bdab3fa37f542a9db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__struct__utils__benchmark_1ga1fb1540256fbcd9543c602b111c3f512" kindref="member">vrna_score_t</ref></type>
+        <definition>vrna_score_t vrna_compare_structure</definition>
+        <argsstring>(const char *structure_gold, const char *structure_other, int fuzzy, unsigned int options)</argsstring>
+        <name>vrna_compare_structure</name>
+        <param>
+          <type>const char *</type>
+          <declname>structure_gold</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure_other</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fuzzy</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Return statistic of two structure (in dbn) comparaison. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt_gold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gold standard structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pt_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fuzzy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allows for base pair slippage. Hence, for any base pair (i,j) in the gold standard, a base pair (p, q) in the second structure is considered a true positive, if i - fuzzy &lt;= p &lt;= i + fuzzy, and j - fuzzy &lt;= q &lt;= j + fuzzy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A bitmask to specify which brackets are recognized during conversion to pair table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="structvrna__score__s" kindref="compound">vrna_score_s</ref> data structure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/benchmark.h" line="90" column="1" declfile="ViennaRNA/structures/benchmark.h" declline="90" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

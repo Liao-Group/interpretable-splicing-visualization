@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G-Quadruplexes &mdash; ViennaRNA Package</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=c1a09ec4" />
+
+  
+    <link rel="shortcut icon" href="../_static/vrna_32.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dfec817d"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Post-transcriptional Base Modifications" href="../modified_bases.html" />
+    <link rel="prev" title="Pseudoknots" href="pseudoknots.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ViennaRNA
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Usage and Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manpages.html">Manpages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using_rnalib.html">Using RNAlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io.html">I/O Formats</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RNAlib API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">Concepts and Algorithms</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../eval.html">Free Energy Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grammar.html">The RNA Folding Grammar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../landscape.html">The RNA Secondary Structure Landscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mfe.html">Minimum Free Energy (MFE) Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pf_fold.html">Partition Function and Equilibrium Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../subopt_and_representatives.html">Suboptimals and Representative Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cofold.html">RNA-RNA Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_fold.html">Classified Dynamic Programming Variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../inverse.html">Inverse Folding (Design)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../probing_data.html">Experimental Structure Probing Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ligand_binding.html">Ligands Binding to RNA Structures</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../paired_modules.html">Structure Modules and Pseudoknots</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pseudoknots.html">Pseudoknots</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">G-Quadruplexes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energy-evaluation">Energy Evaluation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-programming-matrices">Dynamic Programming Matrices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backtracking">Backtracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parsing">Parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other">Other</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deprecated">Deprecated</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modified_bases.html">Post-transcriptional Base Modifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vrna_3.0.html">RNAlib API v3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../callbacks.html">Callback Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecated.html">Deprecated List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wrappers.html">SWIG Wrappers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_python.html">Python API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">What's new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Links
+            
+            </span>
+        </p>
+        <ul>
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/ViennaRNA/ViennaRNA"><i class="fa fa-github fa-fw"></i> Source code</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/ViennaRNA/ViennaRNA/issues"><i class="fa fa-bug fa-fw"></i> Issue tracker</a></li>
+                
+            
+        </ul>
+    
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ViennaRNA</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">Concepts and Algorithms</a></li>
+          <li class="breadcrumb-item"><a href="../paired_modules.html">Structure Modules and Pseudoknots</a></li>
+      <li class="breadcrumb-item active">G-Quadruplexes</li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="g-quadruplexes">
+<h1>G-Quadruplexes<a class="headerlink" href="#g-quadruplexes" title="Link to this heading"></a></h1>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction" id="id1">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#energy-evaluation" id="id2">Energy Evaluation</a></p></li>
+<li><p><a class="reference internal" href="#dynamic-programming-matrices" id="id3">Dynamic Programming Matrices</a></p></li>
+<li><p><a class="reference internal" href="#backtracking" id="id4">Backtracking</a></p></li>
+<li><p><a class="reference internal" href="#parsing" id="id5">Parsing</a></p></li>
+<li><p><a class="reference internal" href="#other" id="id6">Other</a></p></li>
+<li><p><a class="reference internal" href="#deprecated" id="id7">Deprecated</a></p></li>
+</ul>
+</nav>
+<section id="introduction">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group__gquads"></span></dt>
+<dd></dd></dl>
+
+</section>
+<section id="energy-evaluation">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Energy Evaluation</a><a class="headerlink" href="#energy-evaluation" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group__gquad__eval"></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_E_gquad">
+<span class="target" id="group__gquad__eval_1ga6099c24a2d443663900a0d760d316adb"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_E_gquad</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_param_t" title="vrna_param_t"><span class="n"><span class="pre">vrna_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">P</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_E_gquad" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/eval/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_exp_E_gquad">
+<span class="target" id="group__gquad__eval_1ga1daa2f705ee53a594bfb152f1b1a3fb9"></span><a class="reference internal" href="../utils/data_structures.html#c.FLT_OR_DBL" title="FLT_OR_DBL"><span class="n"><span class="pre">FLT_OR_DBL</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_exp_E_gquad</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_exp_param_t" title="vrna_exp_param_t"><span class="n"><span class="pre">vrna_exp_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">pf</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_exp_E_gquad" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/eval/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_E_consensus_gquad">
+<span class="target" id="group__gquad__eval_1gacb841661b5b9c317075867257d3d1930"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_E_consensus_gquad</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">position</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">length</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">n_seq</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">a2s</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_param_t" title="vrna_param_t"><span class="n"><span class="pre">vrna_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">P</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">en</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_E_consensus_gquad" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/eval/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_exp_E_consensus_gquad">
+<span class="target" id="group__gquad__eval_1ga6ed678416327818e0a138c1345064f57"></span><a class="reference internal" href="../utils/data_structures.html#c.FLT_OR_DBL" title="FLT_OR_DBL"><span class="n"><span class="pre">FLT_OR_DBL</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_exp_E_consensus_gquad</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_exp_param_t" title="vrna_exp_param_t"><span class="n"><span class="pre">vrna_exp_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">pf</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">position</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">length</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">n_seq</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">a2s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_exp_E_consensus_gquad" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/eval/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_mfe_gquad_internal_loop">
+<span class="target" id="group__gquad__eval_1ga0e8f6ff0e41e3357793aa708ac333548"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_mfe_gquad_internal_loop</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_mfe_gquad_internal_loop" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/mfe/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gq_int_loop_pf">
+<span class="target" id="group__gquad__eval_1gaa7160e13dd918148218eb6fe9e12d7f1"></span><a class="reference internal" href="../utils/data_structures.html#c.FLT_OR_DBL" title="FLT_OR_DBL"><span class="n"><span class="pre">FLT_OR_DBL</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gq_int_loop_pf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gq_int_loop_pf" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c">
+<span class="target" id="group__gquad__eval_1ga4f36fa702f3093b40608739b301aea4b"></span><span class="sig-name descname"><span class="pre">vrna_array</span> <span class="pre">(int)</span> <span class="pre">vrna_gq_int_loop_subopt(vrna_fold_compound_t</span> <span class="pre">*fc</span></span></dt>
+<dd><em>#include &lt;ViennaRNA/subopt/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c">
+<span class="target" id="group__gquad__eval_1ga130361cb32eef69a9328d3905204e7ee"></span><span class="sig-name descname"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">vrna_array</span> <span class="pre">(unsigned</span> <span class="pre">int)</span> <span class="pre">*p_p</span></span></dt>
+<dd><em>#include &lt;ViennaRNA/subopt/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.get_gquad_pattern_exhaustive">
+<span class="target" id="group__gquad__eval_1ga923f5fdb6c20d10173de569ff12e0cb8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_gquad_pattern_exhaustive</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_param_t" title="vrna_param_t"><span class="n"><span class="pre">vrna_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">P</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">l</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">threshold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.get_gquad_pattern_exhaustive" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/subopt/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.get_gquad_count">
+<span class="target" id="group__gquad__eval_1gadb40cbddf9b804f2d66dcdf1e949e218"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_gquad_count</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.get_gquad_count" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/subopt/gquad.h&gt;</em></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="c var">
+<dt class="sig sig-object c" id="c.i">
+<span class="target" id="group__gquad__eval_1gac8936188af0c1d2f8b9d0cd25fde43b2"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i</span></span></span><a class="headerlink" href="#c.i" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c.j">
+<span class="target" id="group__gquad__eval_1ga91987e5c353e383e19752470ba07fd02"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">j</span></span></span><a class="headerlink" href="#c.j" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c var">
+<dt class="sig sig-object c" id="c.threshold">
+<span class="target" id="group__gquad__eval_1ga087bd9245b41288266b8401c8b4b45eb"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">threshold</span></span></span><a class="headerlink" href="#c.threshold" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="dynamic-programming-matrices">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Dynamic Programming Matrices</a><a class="headerlink" href="#dynamic-programming-matrices" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group__gquad__dp"></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gq_pos_pf">
+<span class="target" id="group__gquad__dp_1gaf4400fdc6c626db0110a950e5ed80eb4"></span><span class="n"><span class="pre">vrna_smx_csr_FLT_OR_DBL_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gq_pos_pf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gq_pos_pf" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="backtracking">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Backtracking</a><a class="headerlink" href="#backtracking" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group__gquad__backtrack"></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_bt_gquad">
+<span class="target" id="group__gquad__backtrack_1ga9699cac31927e3d271e9ff24a77ce291"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_bt_gquad</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_bt_gquad" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/backtrack/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_bt_gquad_mfe">
+<span class="target" id="group__gquad__backtrack_1gac542f3f770bd31d08209bb36ee3e0d1a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_bt_gquad_mfe</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <a class="reference internal" href="../utils/data_structures.html#c.vrna_bps_t" title="vrna_bps_t"><span class="n"><span class="pre">vrna_bps_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">bp_stack</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_bt_gquad_mfe" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/backtrack/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_bt_gquad_internal">
+<span class="target" id="group__gquad__backtrack_1ga45599114af03f0149d2a35b544a2b8cc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_bt_gquad_internal</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">en</span></span>, <a class="reference internal" href="../utils/data_structures.html#c.vrna_bps_t" title="vrna_bps_t"><span class="n"><span class="pre">vrna_bps_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">bp_stack</span></span>, <a class="reference internal" href="../utils/data_structures.html#c.vrna_bts_t" title="vrna_bts_t"><span class="n"><span class="pre">vrna_bts_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">bt_stack</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_bt_gquad_internal" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/backtrack/gquad.h&gt;</em></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="parsing">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Parsing</a><a class="headerlink" href="#parsing" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group__gquad__parse"></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.get_gquad_pattern_pf">
+<span class="target" id="group__gquad__parse_1gaafaf18c4a262d12f6698df72c071f641"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_gquad_pattern_pf</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_exp_param_t" title="vrna_exp_param_t"><span class="n"><span class="pre">vrna_exp_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">pf</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.get_gquad_pattern_pf" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_get_gquad_pattern_pf">
+<span class="target" id="group__gquad__parse_1ga35b2caacf5a95f0a69351680524a8a1c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_get_gquad_pattern_pf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_get_gquad_pattern_pf" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gq_parse">
+<span class="target" id="group__gquad__parse_1gaef509be75de5e229c3e710cd819dc4ca"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gq_parse</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">db_string</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gq_parse" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/structures/dotbracket.h&gt;</em><p>Parse a G-Quadruplex from a dot-bracket structure string. </p>
+<p>Given a dot-bracket structure (possibly) containing gquads encoded by ‘+’ signs (and an optional ‘~’ end sign, find first gquad, return end position (1-based) or 0 if none found. Upon return L and l[] contain the number of stacked layers, as well as the lengths of the linker regions.</p>
+<p>
+To parse a string with many gquads, call <a class="reference internal" href="#group__gquad__parse_1gaef509be75de5e229c3e710cd819dc4ca"><span class="std std-ref">vrna_gq_parse()</span></a> repeatedly e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">end1</span> <span class="o">=</span> <span class="n">vrna_gq_parse</span><span class="p">(</span><span class="n">struc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span> <span class="n">l</span><span class="p">);</span> <span class="o">...</span> <span class="p">;</span>
+<span class="n">end2</span> <span class="o">=</span> <span class="n">vrna_gq_parse</span><span class="p">(</span><span class="n">struc</span><span class="o">+</span><span class="n">end1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span> <span class="n">l</span><span class="p">);</span> <span class="n">end2</span><span class="o">+=</span><span class="n">end1</span><span class="p">;</span> <span class="o">...</span> <span class="p">;</span>
+<span class="n">end3</span> <span class="o">=</span> <span class="n">vrna_gq_parse</span><span class="p">(</span><span class="n">struc</span><span class="o">+</span><span class="n">end2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span> <span class="n">l</span><span class="p">);</span> <span class="n">end3</span><span class="o">+=</span><span class="n">end2</span><span class="p">;</span> <span class="o">...</span> <span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For circular RNAs and G-Quadruplexes spanning the n,1-junction the sum of linkers and g-runs is lower than the end position. This condition can be used to check whether or not to accept a G-Quadruplex parsed from the dot-bracket string. Also note, that such n,1-junction spanning G-Quadruplexes must end with a <code class="docutils literal notranslate"><span class="pre">~</span></code> sign, to be unambigous.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db_string</strong> – The input structure in dot-bracket notation </p></li>
+<li><p><strong>L</strong> – A pointer to an unsigned integer to store the layer (stack) size </p></li>
+<li><p><strong>l</strong> – An array of three values to store the respective linker lenghts </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The end position of the G-Quadruplex (1-based) or 0 if not found </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_db_insert_gq">
+<span class="target" id="group__gquad__parse_1ga6f638cdadc96a4f3b9f7cce77ad44bfc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_db_insert_gq</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">db</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_db_insert_gq" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/structures/dotbracket.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.get_plist_gquad_from_db">
+<span class="target" id="group__gquad__parse_1ga402d9d287ceec5161c5be65b721eec8a"></span><a class="reference internal" href="../utils/data_structures.html#c.plist" title="plist"><span class="n"><span class="pre">plist</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_plist_gquad_from_db</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">structure</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n"><span class="pre">pr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.get_plist_gquad_from_db" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/structures/problist.h&gt;</em></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="other">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Other</a><a class="headerlink" href="#other" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group__gquad__other"></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt class="sig sig-object c">
+<span class="target" id="group__gquad__other_1gad01f5003335cfcd6416777a322600a3b"></span><span class="sig-name descname"><span class="pre">plist</span> <span class="pre">*</span> <span class="pre">get_plist_gquad_from_pr</span> <span class="pre">(short</span> <span class="pre">*S,</span> <span class="pre">int</span> <span class="pre">gi,</span> <span class="pre">int</span> <span class="pre">gj,</span> <span class="pre">vrna_smx_csr(FLT_OR_DBL)</span> <span class="pre">*q_gq,</span> <span class="pre">FLT_OR_DBL</span> <span class="pre">*probs,</span> <span class="pre">FLT_OR_DBL</span> <span class="pre">*scale,</span> <span class="pre">vrna_exp_param_t</span> <span class="pre">*pf)</span></span></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_plist_gquad_from_pr">
+<span class="target" id="group__gquad__other_1ga3051b222f25a1b657b477b1f312a910b"></span><a class="reference internal" href="../utils/struct/plist.html#c.vrna_ep_t" title="vrna_ep_t"><span class="n"><span class="pre">vrna_ep_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_plist_gquad_from_pr</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">gi</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">gj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_plist_gquad_from_pr" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c">
+<span class="target" id="group__gquad__other_1gae07258394eadce6c706dad5574978757"></span><span class="sig-name descname"><span class="pre">plist</span> <span class="pre">*</span> <span class="pre">get_plist_gquad_from_pr_max</span> <span class="pre">(short</span> <span class="pre">*S,</span> <span class="pre">int</span> <span class="pre">gi,</span> <span class="pre">int</span> <span class="pre">gj,</span> <span class="pre">vrna_smx_csr(FLT_OR_DBL)</span> <span class="pre">*q_gq,</span> <span class="pre">FLT_OR_DBL</span> <span class="pre">*probs,</span> <span class="pre">FLT_OR_DBL</span> <span class="pre">*scale,</span> <span class="pre">int</span> <span class="pre">*L,</span> <span class="pre">int</span> <span class="pre">l[3],</span> <span class="pre">vrna_exp_param_t</span> <span class="pre">*pf)</span></span></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_plist_gquad_from_pr_max">
+<span class="target" id="group__gquad__other_1gad4770d540c1fbd44edf58d30b1889eb6"></span><a class="reference internal" href="../utils/struct/plist.html#c.vrna_ep_t" title="vrna_ep_t"><span class="n"><span class="pre">vrna_ep_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_plist_gquad_from_pr_max</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">gi</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">gj</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">Lmax</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">lmax</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_plist_gquad_from_pr_max" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="deprecated">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Deprecated</a><a class="headerlink" href="#deprecated" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group__gquad__deprecated"></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_BT_gquad_mfe">
+<span class="target" id="group__gquad__deprecated_1gaf7ef6d7e7cee7f16c12da54b40421286"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_BT_gquad_mfe</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <a class="reference internal" href="../utils/data_structures.html#c.vrna_bp_stack_t" title="vrna_bp_stack_t"><span class="n"><span class="pre">vrna_bp_stack_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bp_stack</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">stack_count</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_BT_gquad_mfe" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/backtrack/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_BT_gquad_int">
+<span class="target" id="group__gquad__deprecated_1ga4feaa3ff6fdebda24a79a68b19f9f9b4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_BT_gquad_int</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">en</span></span>, <a class="reference internal" href="../utils/data_structures.html#c.vrna_bp_stack_t" title="vrna_bp_stack_t"><span class="n"><span class="pre">vrna_bp_stack_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bp_stack</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">stack_count</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_BT_gquad_int" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/backtrack/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.backtrack_GQuad_IntLoop_L">
+<span class="target" id="group__gquad__deprecated_1gac9a3d9ff012dd997ff4723fbf9cf5c82"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">backtrack_GQuad_IntLoop_L</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">c</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span>, <span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">ggg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">maxdist</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">p</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">q</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_param_t" title="vrna_param_t"><span class="n"><span class="pre">vrna_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">P</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.backtrack_GQuad_IntLoop_L" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/backtrack/gquad.h&gt;</em><p>backtrack an internal loop like enclosed g-quadruplex with closing pair (i,j) with underlying Lfold matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c</strong> – The total contribution the loop should resemble </p></li>
+<li><p><strong>i</strong> – position i of enclosing pair </p></li>
+<li><p><strong>j</strong> – position j of enclosing pair </p></li>
+<li><p><strong>type</strong> – base pair type of enclosing pair (must be reverse type) </p></li>
+<li><p><strong>S</strong> – integer encoded sequence </p></li>
+<li><p><strong>ggg</strong> – triangular matrix containing g-quadruplex contributions </p></li>
+<li><p><strong>p</strong> – here the 5’ position of the gquad is stored </p></li>
+<li><p><strong>q</strong> – here the 3’ position of the gquad is stored </p></li>
+<li><p><strong>P</strong> – the datastructure containing the precalculated contibutions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>1 on success, 0 if no gquad found </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.backtrack_GQuad_IntLoop_L_comparative">
+<span class="target" id="group__gquad__deprecated_1gad3fe318c9c3c3b427ded108c9640679d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">backtrack_GQuad_IntLoop_L_comparative</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">c</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">type</span></span>, <span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S_cons</span></span>, <span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S5</span></span>, <span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S3</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">a2s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">ggg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">p</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">q</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">n_seq</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_param_t" title="vrna_param_t"><span class="n"><span class="pre">vrna_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">P</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.backtrack_GQuad_IntLoop_L_comparative" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/backtrack/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.E_gquad">
+<span class="target" id="group__gquad__deprecated_1gaa6c187f30e29d3aa29c5b537d0f7293f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">E_gquad</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_param_t" title="vrna_param_t"><span class="n"><span class="pre">vrna_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">P</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.E_gquad" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/eval/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.exp_E_gquad">
+<span class="target" id="group__gquad__deprecated_1ga4dbda5faf903ca987b296a7629764221"></span><a class="reference internal" href="../utils/data_structures.html#c.FLT_OR_DBL" title="FLT_OR_DBL"><span class="n"><span class="pre">FLT_OR_DBL</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exp_E_gquad</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_exp_param_t" title="vrna_exp_param_t"><span class="n"><span class="pre">vrna_exp_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">pf</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.exp_E_gquad" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/eval/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.E_gquad_ali_en">
+<span class="target" id="group__gquad__deprecated_1gaedc9ac79fe7fbf9661ac4d6e023c292b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">E_gquad_ali_en</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">a2s</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">n_seq</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_param_t" title="vrna_param_t"><span class="n"><span class="pre">vrna_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">P</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">en</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.E_gquad_ali_en" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/eval/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.exp_E_gquad_ali">
+<span class="target" id="group__gquad__deprecated_1ga28c87a8ad36380f7fa3dfb0cf1e366ed"></span><a class="reference internal" href="../utils/data_structures.html#c.FLT_OR_DBL" title="FLT_OR_DBL"><span class="n"><span class="pre">FLT_OR_DBL</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exp_E_gquad_ali</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">S</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">a2s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">n_seq</span></span>, <a class="reference internal" href="../eval/energy_parameters.html#c.vrna_exp_param_t" title="vrna_exp_param_t"><span class="n"><span class="pre">vrna_exp_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">pf</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.exp_E_gquad_ali" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/eval/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c">
+<span class="target" id="group__gquad__deprecated_1ga6b712f9a75251d87fc0a1720289aa61e"></span><span class="sig-name descname"><span class="pre">DEPRECATED</span> <span class="pre">(FLT_OR_DBL</span> <span class="pre">*get_gquad_pf_matrix(short</span> <span class="pre">*S,</span> <span class="pre">FLT_OR_DBL</span> <span class="pre">*scale,</span> <span class="pre">vrna_exp_param_t</span> <span class="pre">*pf),</span> <span class="pre">&quot;Use</span> <span class="pre">vrna_gq_pos_pf()</span> <span class="pre">instead&quot;)</span></span></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c">
+<span class="target" id="group__gquad__deprecated_1ga56221834e3f702984961958f584db1d2"></span><span class="sig-name descname"><span class="pre">DEPRECATED</span> <span class="pre">(FLT_OR_DBL</span> <span class="pre">*get_gquad_pf_matrix_comparative(unsigned</span> <span class="pre">int</span> <span class="pre">n,</span> <span class="pre">short</span> <span class="pre">*S_cons,</span> <span class="pre">short</span> <span class="pre">**S,</span> <span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">**a2s,</span> <span class="pre">FLT_OR_DBL</span> <span class="pre">*scale,</span> <span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">n_seq,</span> <span class="pre">vrna_exp_param_t</span> <span class="pre">*pf),</span> <span class="pre">&quot;Use</span> <span class="pre">vrna_gq_pos_pf()</span> <span class="pre">instead&quot;)</span></span></dt>
+<dd><em>#include &lt;ViennaRNA/partfunc/gquad.h&gt;</em></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.parse_gquad">
+<span class="target" id="group__gquad__deprecated_1gae41763215b9c64d2a7b67f0df8a28078"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parse_gquad</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">struc</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">L</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.parse_gquad" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/structures/dotbracket.h&gt;</em><p>Parse a G-Quadruplex from a dot-bracket structure string. </p>
+<p>Given a dot-bracket structure (possibly) containing gquads encoded by ‘+’ signs, find first gquad, return end position or 0 if none found Upon return L and l[] contain the number of stacked layers, as well as the lengths of the linker regions. To parse a string with many gquads, call parse_gquad repeatedly e.g. end1 = parse_gquad(struc, &amp;L, l); … ; end2 = parse_gquad(struc+end1, &amp;L, l); end2+=end1; … ; end3 = parse_gquad(struc+end2, &amp;L, l); end3+=end2; … ; </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pseudoknots.html" class="btn btn-neutral float-left" title="Pseudoknots" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../modified_bases.html" class="btn btn-neutral float-right" title="Post-transcriptional Base Modifications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 1994 - 2024, Ronny Lorenz, Ivo L. Hofacker, et al..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

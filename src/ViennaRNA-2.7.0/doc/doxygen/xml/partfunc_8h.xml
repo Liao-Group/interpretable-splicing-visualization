@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="partfunc_8h" kind="file" language="C++">
+    <compoundname>partfunc.h</compoundname>
+    <includes refid="fold__compound_8h" local="no">ViennaRNA/fold_compound.h</includes>
+    <includes refid="datastructures_2basic_8h" local="no">ViennaRNA/datastructures/basic.h</includes>
+    <includes refid="array_8h" local="no">ViennaRNA/datastructures/array.h</includes>
+    <includes refid="grammar_2basic_8h" local="no">ViennaRNA/grammar/basic.h</includes>
+    <includedby refid="grammar_8h" local="no">ViennaRNA/grammar.h</includedby>
+    <incdepgraph>
+      <node id="18">
+        <label>ViennaRNA/constraints/basic.h</label>
+        <link refid="constraints_2basic_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>ViennaRNA/constraints/hard.h</label>
+        <link refid="hard_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ViennaRNA/constraints/soft.h</label>
+        <link refid="soft_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ViennaRNA/datastructures/array.h</label>
+        <link refid="array_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/datastructures/basic.h</label>
+        <link refid="datastructures_2basic_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ViennaRNA/datastructures/dp_matrices.h</label>
+        <link refid="datastructures_2dp__matrices_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/datastructures/sparse_mx.h</label>
+        <link refid="sparse__mx_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ViennaRNA/fold_compound.h</label>
+        <link refid="fold__compound_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ViennaRNA/grammar/basic.h</label>
+        <link refid="grammar_2basic_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/grammar/partfunc.h</label>
+        <link refid="partfunc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/model.h</label>
+        <link refid="model_8h"/>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/params/basic.h</label>
+        <link refid="params_2basic_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ViennaRNA/params/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>ViennaRNA/sequences/sequence.h</label>
+        <link refid="sequences_2sequence_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ViennaRNA/structured_domains.h</label>
+        <link refid="structured__domains_8h"/>
+      </node>
+      <node id="24">
+        <label>ViennaRNA/structures/dotbracket.h</label>
+        <link refid="dotbracket_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>ViennaRNA/structures/helix.h</label>
+        <link refid="helix_8h"/>
+      </node>
+      <node id="26">
+        <label>ViennaRNA/structures/metrics.h</label>
+        <link refid="metrics_8h"/>
+      </node>
+      <node id="23">
+        <label>ViennaRNA/structures/pairtable.h</label>
+        <link refid="pairtable_8h"/>
+      </node>
+      <node id="22">
+        <label>ViennaRNA/structures/problist.h</label>
+        <link refid="problist_8h"/>
+      </node>
+      <node id="25">
+        <label>ViennaRNA/structures/utils.h</label>
+        <link refid="structures_2utils_8h"/>
+      </node>
+      <node id="21">
+        <label>ViennaRNA/unstructured_domains.h</label>
+        <link refid="unstructured__domains_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ViennaRNA/utils/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>ViennaRNA/zscore/basic.h</label>
+        <link refid="zscore_2basic_8h_source"/>
+      </node>
+      <node id="6">
+        <label>limits.h</label>
+      </node>
+      <node id="15">
+        <label>stdarg.h</label>
+      </node>
+      <node id="12">
+        <label>stddef.h</label>
+      </node>
+      <node id="14">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>stdlib.h</label>
+      </node>
+      <node id="16">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ViennaRNA/grammar.h</label>
+        <link refid="grammar_8h"/>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/grammar/partfunc.h</label>
+        <link refid="partfunc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="typedef">
+      <member refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kind="typedef"><name>vrna_gr_inside_exp_f</name></member>
+      <member refid="group__grammar_1gabb020faa05e85ab50ef339f0c41b6d07" kind="typedef"><name>vrna_gr_outside_exp_f</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kind="function"><name>vrna_gr_add_aux_exp_f</name></member>
+      <member refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kind="function"><name>vrna_gr_add_aux_exp_c</name></member>
+      <member refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kind="function"><name>vrna_gr_add_aux_exp_m</name></member>
+      <member refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kind="function"><name>vrna_gr_add_aux_exp_m1</name></member>
+      <member refid="group__grammar_1gafdef70e67cd64016ccbe24085d88a0ea" kind="function"><name>vrna_gr_add_aux_exp_m2</name></member>
+      <member refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kind="function"><name>vrna_gr_add_aux_exp</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Implementations for the RNA folding grammar. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_GRAMMAR_PARTFUNC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_GRAMMAR_PARTFUNC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fold__compound_8h" kindref="compound">ViennaRNA/fold_compound.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="datastructures_2basic_8h" kindref="compound">ViennaRNA/datastructures/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="array_8h" kindref="compound">ViennaRNA/datastructures/array.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="grammar_2basic_8h" kindref="compound">ViennaRNA/grammar/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>(*<ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref>)(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>(*vrna_gr_outside_exp_f)(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" refkind="member"><highlight class="normal"><ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref><sp/><sp/><sp/><sp/>cb,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrna_gr_outside_exp_f<sp/><sp/><sp/>cb_out,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref><sp/><sp/>data_prepare,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref><sp/><sp/><sp/><sp/><sp/>data_release);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" refkind="member"><highlight class="normal"><ref refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kindref="member">vrna_gr_add_aux_exp_c</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref><sp/><sp/><sp/><sp/>cb,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrna_gr_outside_exp_f<sp/><sp/><sp/>cb_out,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref><sp/><sp/>data_prepare,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref><sp/><sp/><sp/><sp/><sp/>data_release);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" refkind="member"><highlight class="normal"><ref refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kindref="member">vrna_gr_add_aux_exp_m</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref><sp/><sp/><sp/><sp/>cb,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrna_gr_outside_exp_f<sp/><sp/><sp/>cb_out,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref><sp/><sp/>data_prepare,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref><sp/><sp/><sp/><sp/><sp/>data_release);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" refkind="member"><highlight class="normal"><ref refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kindref="member">vrna_gr_add_aux_exp_m1</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref><sp/><sp/><sp/>cb,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrna_gr_outside_exp_f<sp/><sp/>cb_out,</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref><sp/>data_prepare,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref><sp/><sp/><sp/><sp/>data_release);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="group__grammar_1gafdef70e67cd64016ccbe24085d88a0ea" refkind="member"><highlight class="normal"><ref refid="group__grammar_1gafdef70e67cd64016ccbe24085d88a0ea" kindref="member">vrna_gr_add_aux_exp_m2</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref><sp/><sp/><sp/>cb,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrna_gr_outside_exp_f<sp/><sp/>cb_out,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref><sp/>data_prepare,</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref><sp/><sp/><sp/><sp/>data_release);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" refkind="member"><highlight class="normal"><ref refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kindref="member">vrna_gr_add_aux_exp</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref><sp/><sp/><sp/><sp/>cb,</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrna_gr_outside_exp_f<sp/><sp/><sp/>cb_out,</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data,</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref><sp/><sp/>data_prepare,</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref><sp/><sp/><sp/><sp/><sp/>data_release);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/grammar/partfunc.h"/>
+  </compounddef>
+</doxygen>

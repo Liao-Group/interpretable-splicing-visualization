@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__soft__constraints__st" kind="group">
+    <compoundname>soft_constraints_st</compoundname>
+    <title>Soft Constraints (base pair stacks)</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__soft__constraints__st_1ga2d90fcdce380fdfcd5a07401e11de808" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_set_stack</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const FLT_OR_DBL *constraints, unsigned int options)</argsstring>
+        <name>vrna_sc_set_stack</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>constraints</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="747" column="1" declfile="ViennaRNA/constraints/soft.h" declline="747" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__st_1gaf3f922162af18078b36a34da5e8bcd6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_set_stack_comparative</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const FLT_OR_DBL **constraints, unsigned int options)</argsstring>
+        <name>vrna_sc_set_stack_comparative</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> **</type>
+          <declname>constraints</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="753" column="1" declfile="ViennaRNA/constraints/soft.h" declline="753" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__st_1ga0be025267262747d45dbadf60333c035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_set_stack_comparative_seq</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int s, const FLT_OR_DBL *constraints, unsigned int options)</argsstring>
+        <name>vrna_sc_set_stack_comparative_seq</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>constraints</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="759" column="1" declfile="ViennaRNA/constraints/soft.h" declline="759" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__st_1ga216af281ec6bb6bea24184900762e447" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_stack</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, FLT_OR_DBL energy, unsigned int options)</argsstring>
+        <name>vrna_sc_add_stack</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="765" column="1" declfile="ViennaRNA/constraints/soft.h" declline="765" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__st_1ga1c0a325d51a6cf93944a8e244018a8f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_stack_comparative</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int *is, const FLT_OR_DBL *energies, unsigned int options)</argsstring>
+        <name>vrna_sc_add_stack_comparative</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>energies</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="772" column="1" declfile="ViennaRNA/constraints/soft.h" declline="772" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__st_1ga35c2f99b91e77504042b3368b7b3099d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_stack_comparative_seq</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int s, unsigned int i, FLT_OR_DBL energy, unsigned int options)</argsstring>
+        <name>vrna_sc_add_stack_comparative_seq</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="779" column="1" declfile="ViennaRNA/constraints/soft.h" declline="779" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

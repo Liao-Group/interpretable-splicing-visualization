@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structvrna__log__event__s" kind="struct" language="C++" prot="public">
+    <compoundname>vrna_log_event_s</compoundname>
+    <includes refid="log_8h" local="no">ViennaRNA/utils/log.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvrna__log__event__s_1a3f0dbd1dfbf253b9336f906289c5bc1e" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* vrna_log_event_s::format_string</definition>
+        <argsstring></argsstring>
+        <name>format_string</name>
+        <qualifiedname>vrna_log_event_s::format_string</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The printf-like format string containing the log information </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="50" column="21" bodyfile="ViennaRNA/utils/log.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__log__event__s_1ac00de781b2700fa137f1bb8e826cf8e9" prot="public" static="no" mutable="no">
+        <type>va_list</type>
+        <definition>va_list vrna_log_event_s::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <qualifiedname>vrna_log_event_s::params</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The parameters for the printf-like format string </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="51" column="21" bodyfile="ViennaRNA/utils/log.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__log__event__s_1a52d0386aeac058c7257ec0eac2d4dbb8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" kindref="member">vrna_log_levels_e</ref></type>
+        <definition>vrna_log_levels_e vrna_log_event_s::level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <qualifiedname>vrna_log_event_s::level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The log level </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="52" column="21" bodyfile="ViennaRNA/utils/log.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__log__event__s_1ae21c19435f281ab0423de138925b1f37" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vrna_log_event_s::line_number</definition>
+        <argsstring></argsstring>
+        <name>line_number</name>
+        <qualifiedname>vrna_log_event_s::line_number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The source code line number that issued the log </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="53" column="21" bodyfile="ViennaRNA/utils/log.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__log__event__s_1aa9cae9641c8afa5a943e07ec3a3ec602" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* vrna_log_event_s::file_name</definition>
+        <argsstring></argsstring>
+        <name>file_name</name>
+        <qualifiedname>vrna_log_event_s::file_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The source code file that issued the log </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="54" column="21" bodyfile="ViennaRNA/utils/log.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A log event. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/utils/log.h" line="49" column="1" bodyfile="ViennaRNA/utils/log.h" bodystart="49" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structvrna__log__event__s_1aa9cae9641c8afa5a943e07ec3a3ec602" prot="public" virt="non-virtual"><scope>vrna_log_event_s</scope><name>file_name</name></member>
+      <member refid="structvrna__log__event__s_1a3f0dbd1dfbf253b9336f906289c5bc1e" prot="public" virt="non-virtual"><scope>vrna_log_event_s</scope><name>format_string</name></member>
+      <member refid="structvrna__log__event__s_1a52d0386aeac058c7257ec0eac2d4dbb8" prot="public" virt="non-virtual"><scope>vrna_log_event_s</scope><name>level</name></member>
+      <member refid="structvrna__log__event__s_1ae21c19435f281ab0423de138925b1f37" prot="public" virt="non-virtual"><scope>vrna_log_event_s</scope><name>line_number</name></member>
+      <member refid="structvrna__log__event__s_1ac00de781b2700fa137f1bb8e826cf8e9" prot="public" virt="non-virtual"><scope>vrna_log_event_s</scope><name>params</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__eval__loops__ext" kind="group">
+    <compoundname>eval_loops_ext</compoundname>
+    <title>Exterior Loops</title>
+    <innerfile refid="eval_2exterior_8h">exterior.h</innerfile>
+    <innerfile refid="partfunc_2exterior_8h">exterior.h</innerfile>
+    <sectiondef kind="user-defined">
+      <header>Boltzmann weight (partition function) interface</header>
+      <memberdef kind="typedef" id="group__eval__loops__ext_1gaf9d5160c11ffad3ec258124a77fee13c" prot="public" static="no">
+        <type>struct vrna_mx_pf_aux_el_s *</type>
+        <definition>typedef struct vrna_mx_pf_aux_el_s* vrna_mx_pf_aux_el_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_mx_pf_aux_el_t</name>
+        <briefdescription>
+<para>Auxiliary helper arrays for fast exterior loop computations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>vrna_exp_E_ext_fast_init(), vrna_exp_E_ext_fast_rotate(), vrna_exp_E_ext_fast_free(), vrna_exp_E_ext_fast() </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/exterior.h" line="49" column="34" bodyfile="ViennaRNA/partfunc/exterior.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1ga88bf7b86f25fff9d828008df48779539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__eval__loops__ext_1gaf9d5160c11ffad3ec258124a77fee13c" kindref="member">vrna_mx_pf_aux_el_t</ref></type>
+        <definition>vrna_mx_pf_aux_el_t vrna_exp_E_ext_fast_init</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_exp_E_ext_fast_init</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/exterior.h" line="53" column="1" declfile="ViennaRNA/partfunc/exterior.h" declline="53" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1ga560d6123a175af3c8fb668885da8b78c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_exp_E_ext_fast_rotate</definition>
+        <argsstring>(vrna_mx_pf_aux_el_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ext_fast_rotate</name>
+        <param>
+          <type><ref refid="group__eval__loops__ext_1gaf9d5160c11ffad3ec258124a77fee13c" kindref="member">vrna_mx_pf_aux_el_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/exterior.h" line="57" column="1" declfile="ViennaRNA/partfunc/exterior.h" declline="57" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1ga90c23338dfb678853d34e4ca91cda370" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_exp_E_ext_fast_free</definition>
+        <argsstring>(vrna_mx_pf_aux_el_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ext_fast_free</name>
+        <param>
+          <type><ref refid="group__eval__loops__ext_1gaf9d5160c11ffad3ec258124a77fee13c" kindref="member">vrna_mx_pf_aux_el_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/exterior.h" line="61" column="1" declfile="ViennaRNA/partfunc/exterior.h" declline="61" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1ga1522bbee3c068632367decfcdbeeeb74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_ext_fast</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j, vrna_mx_pf_aux_el_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ext_fast</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="group__eval__loops__ext_1gaf9d5160c11ffad3ec258124a77fee13c" kindref="member">vrna_mx_pf_aux_el_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/exterior.h" line="65" column="1" declfile="ViennaRNA/partfunc/exterior.h" declline="65" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1gaf371b09437ca36067620b9bab14baa86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_exp_E_ext_fast_update</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int j, vrna_mx_pf_aux_el_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ext_fast_update</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="group__eval__loops__ext_1gaf9d5160c11ffad3ec258124a77fee13c" kindref="member">vrna_mx_pf_aux_el_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/exterior.h" line="72" column="1" declfile="ViennaRNA/partfunc/exterior.h" declline="72" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Basic free energy interface</header>
+      <memberdef kind="function" id="group__eval__loops__ext_1gad15211d536d971e3c335813a75897a26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_exterior_stem</definition>
+        <argsstring>(unsigned int type, int n5d, int n3d, vrna_param_t *p)</argsstring>
+        <name>vrna_E_exterior_stem</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n5d</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n3d</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate a stem branching off the exterior loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a base pair <formula id="22">$(i,j)$</formula> encoded by <emphasis>type</emphasis>, compute the energy contribution including dangling-end/terminal-mismatch contributions. Instead of returning the energy contribution per-se, this function returns the corresponding Boltzmann factor. If either of the adjacent nucleotides <formula id="52">$(i - 1)$</formula> and <formula id="53">$(j+1)$</formula> must not contribute stacking energy, the corresponding encoding must be <formula id="54">$-1$</formula>.</para>
+<para><simplesect kind="note"><para>By default, terminal mismatch energies are applied that correspond to the neighboring nucleotides provided by their encodings <computeroutput>n5d</computeroutput> and <computeroutput>n3d</computeroutput>. Whenever the encodings are negative, the implementation switches to usage of dangling end energies (for the non-negative base). If both encodings are negative, no terminal mismatch contributions are added.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__eval__loops__ext_1ga70e734a0dc46f049ff2de13d38d6ea69" kindref="member">vrna_exp_E_exterior_stem()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair encoding </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n5d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded nucleotide directly adjacent at the 5&apos; side of the base pair (may be -1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n3d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded nucleotide directly adjacent at the 3&apos; side of the base pair (may be -1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pre-computed energy parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The energy contribution of the introduced exterior-loop stem </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/exterior.h" line="66" column="1" declfile="ViennaRNA/eval/exterior.h" declline="66" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1ga30c30a9e744f0f1800fe2144fe27570c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_exterior_loop</definition>
+        <argsstring>(unsigned int n, vrna_md_t *md)</argsstring>
+        <name>vrna_E_exterior_loop</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="group__model__details_1ga1f8a10e12a0a1915f2a4eff0b28ea17c" kindref="member">vrna_md_t</ref> *</type>
+          <declname>md</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/exterior.h" line="73" column="1" declfile="ViennaRNA/eval/exterior.h" declline="73" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1ga36e1e6bcccc386233e8fed845c810905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_eval_exterior_stem</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, unsigned int options)</argsstring>
+        <name>vrna_eval_exterior_stem</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the free energy of a base pair in the exterior loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Evalue the free energy of a base pair connecting two nucleotides in the exterior loop and take hard constraints into account.</para>
+<para>Typically, this is simply dangling end contributions of the adjacent nucleotides, potentially a terminal A-U mismatch penalty, and maybe some generic soft constraint contribution for that decomposition.</para>
+<para><simplesect kind="note"><para>For dangles == 1 || 3 this function also evaluates the three additional pairs (i + 1, j), (i, j - 1), and (i + 1, j - 1) and returns the minimum for all four possibilities in total.</para>
+</simplesect>
+<simplesect kind="note"><para>By default, all user-supplied hard- and soft constraints will be taken into account! Use the VRNA_EVAL_LOOP_NO_HC and VRNA_EVAL_LOOP_NO_SC bit flags as input for <computeroutput>options</computeroutput> to change the default behavior if necessary.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__eval__loops__ext_1gad15211d536d971e3c335813a75897a26" kindref="member">vrna_E_exterior_stem()</ref>, VRNA_EVAL_LOOP_NO_HC, VRNA_EVAL_LOOP_NO_SC, VRNA_EVAL_LOOP_NO_CONSTRAINTS</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fold compound to work on (defines the model and parameters) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>5&apos; position of the base pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3&apos; position of the base pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A bit-field that specifies which aspects (not) to consider during evaluation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Free energy for the terminal base pair of a stem branching off the exterior loop in deka-kal/mol or INF if the pair is forbidden </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/exterior.h" line="105" column="1" declfile="ViennaRNA/eval/exterior.h" declline="105" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Boltzmann weight (partition function) interface</header>
+      <memberdef kind="function" id="group__eval__loops__ext_1ga70e734a0dc46f049ff2de13d38d6ea69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_exterior_stem</definition>
+        <argsstring>(unsigned int type, int n5d, int n3d, vrna_exp_param_t *p)</argsstring>
+        <name>vrna_exp_E_exterior_stem</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n5d</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n3d</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate a stem branching off the exterior loop (Boltzmann factor version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a base pair <formula id="22">$(i,j)$</formula> encoded by <emphasis>type</emphasis>, compute the energy contribution including dangling-end/terminal-mismatch contributions. Instead of returning the energy contribution per-se, this function returns the corresponding Boltzmann factor.</para>
+<para><simplesect kind="note"><para>By default, terminal mismatch energies are applied that correspond to the neighboring nucleotides provided by their encodings <computeroutput>n5d</computeroutput> and <computeroutput>n3d</computeroutput>. Whenever the encodings are negative, the implementation switches to usage of dangling end energies (for the non-negative base). If both encodings are negative, no terminal mismatch contributions are added.</para>
+</simplesect>
+<simplesect kind="see"><para>vrna_E_exterior()</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair encoding </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n5d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded nucleotide directly adjacent at the 5&apos; side of the base pair (may be -1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n3d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded nucleotide directly adjacent at the 3&apos; side of the base pair (may be -1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pre-computed energy parameters (Boltzmann factor version) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Boltzmann weighted energy contribution of the introduced exterior-loop stem </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/exterior.h" line="143" column="1" declfile="ViennaRNA/eval/exterior.h" declline="143" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1gadf68e289ab189c1b72fdd9fc6b1d655d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_exterior_loop</definition>
+        <argsstring>(unsigned int n, vrna_md_t *md)</argsstring>
+        <name>vrna_exp_E_exterior_loop</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="group__model__details_1ga1f8a10e12a0a1915f2a4eff0b28ea17c" kindref="member">vrna_md_t</ref> *</type>
+          <declname>md</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/exterior.h" line="150" column="1" declfile="ViennaRNA/eval/exterior.h" declline="150" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Minimum Free Energy API</header>
+      <memberdef kind="function" id="group__eval__loops__ext_1gad073ff02a357aca9fc4509fd31134c67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_exterior_f5</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_mfe_exterior_f5</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/exterior.h" line="42" column="1" declfile="ViennaRNA/mfe/exterior.h" declline="42" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1gaf2849d0912db24c009dc00de8c16ae05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_exterior_f3</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i)</argsstring>
+        <name>vrna_mfe_exterior_f3</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/exterior.h" line="46" column="1" declfile="ViennaRNA/mfe/exterior.h" declline="46" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__eval__loops__ext_1gad26689b27fcaab5a1dcbd0d37d27ad5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_ext_loop_5</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_E_ext_loop_5</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/exterior.h" line="57" column="17" declfile="ViennaRNA/mfe/exterior.h" declline="57" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__ext_1ga1bb6bad9f5639a4ad0996debdbd72455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_ext_loop_3</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_E_ext_loop_3</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/exterior.h" line="62" column="17" declfile="ViennaRNA/mfe/exterior.h" declline="62" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

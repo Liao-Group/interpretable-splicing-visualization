@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__gquad__deprecated" kind="group">
+    <compoundname>gquad_deprecated</compoundname>
+    <title>Depreacted G-Quadruplex API</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__gquad__deprecated_1gaf7ef6d7e7cee7f16c12da54b40421286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_gquad_mfe</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j, vrna_bp_stack_t *bp_stack, unsigned int *stack_count)</argsstring>
+        <name>vrna_BT_gquad_mfe</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>stack_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/gquad.h" line="63" column="17" declfile="ViennaRNA/backtrack/gquad.h" declline="63" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1ga4feaa3ff6fdebda24a79a68b19f9f9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_gquad_int</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j, int en, vrna_bp_stack_t *bp_stack, unsigned int *stack_count)</argsstring>
+        <name>vrna_BT_gquad_int</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>en</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>stack_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/gquad.h" line="73" column="17" declfile="ViennaRNA/backtrack/gquad.h" declline="73" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1gac9a3d9ff012dd997ff4723fbf9cf5c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int backtrack_GQuad_IntLoop_L</definition>
+        <argsstring>(int c, int i, int j, int type, short *S, int **ggg, int maxdist, int *p, int *q, vrna_param_t *P)</argsstring>
+        <name>backtrack_GQuad_IntLoop_L</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>short *</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>ggg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxdist</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>backtrack an internal loop like enclosed g-quadruplex with closing pair (i,j) with underlying Lfold matrix</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total contribution the loop should resemble </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position i of enclosing pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position j of enclosing pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base pair type of enclosing pair (must be reverse type) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integer encoded sequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ggg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangular matrix containing g-quadruplex contributions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>here the 5&apos; position of the gquad is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>here the 3&apos; position of the gquad is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the datastructure containing the precalculated contibutions</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 if no gquad found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/gquad.h" line="103" column="17" declfile="ViennaRNA/backtrack/gquad.h" declline="103" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1gad3fe318c9c3c3b427ded108c9640679d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int backtrack_GQuad_IntLoop_L_comparative</definition>
+        <argsstring>(int c, int i, int j, unsigned int *type, short *S_cons, short **S5, short **S3, unsigned int **a2s, int **ggg, int *p, int *q, int n_seq, vrna_param_t *P)</argsstring>
+        <name>backtrack_GQuad_IntLoop_L_comparative</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>short *</type>
+          <declname>S_cons</declname>
+        </param>
+        <param>
+          <type>short **</type>
+          <declname>S5</declname>
+        </param>
+        <param>
+          <type>short **</type>
+          <declname>S3</declname>
+        </param>
+        <param>
+          <type>unsigned int **</type>
+          <declname>a2s</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>ggg</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/gquad.h" line="120" column="17" declfile="ViennaRNA/backtrack/gquad.h" declline="120" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1gaa6c187f30e29d3aa29c5b537d0f7293f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int E_gquad</definition>
+        <argsstring>(int L, int l[3], vrna_param_t *P)</argsstring>
+        <name>E_gquad</name>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/gquad.h" line="93" column="17" declfile="ViennaRNA/eval/gquad.h" declline="93" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1ga4dbda5faf903ca987b296a7629764221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL exp_E_gquad</definition>
+        <argsstring>(int L, int l[3], vrna_exp_param_t *pf)</argsstring>
+        <name>exp_E_gquad</name>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>pf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/gquad.h" line="100" column="24" declfile="ViennaRNA/eval/gquad.h" declline="100" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1gaedc9ac79fe7fbf9661ac4d6e023c292b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void E_gquad_ali_en</definition>
+        <argsstring>(int i, int L, int l[3], const short **S, unsigned int **a2s, unsigned int n_seq, vrna_param_t *P, int en[2])</argsstring>
+        <name>E_gquad_ali_en</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>const short **</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>unsigned int **</type>
+          <declname>a2s</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>en</declname>
+          <array>[2]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/gquad.h" line="112" column="18" declfile="ViennaRNA/eval/gquad.h" declline="112" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1ga28c87a8ad36380f7fa3dfb0cf1e366ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL exp_E_gquad_ali</definition>
+        <argsstring>(int i, int L, int l[3], short **S, unsigned int **a2s, int n_seq, vrna_exp_param_t *pf)</argsstring>
+        <name>exp_E_gquad_ali</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>short **</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>unsigned int **</type>
+          <declname>a2s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>pf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/gquad.h" line="123" column="24" declfile="ViennaRNA/eval/gquad.h" declline="123" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1ga6b712f9a75251d87fc0a1720289aa61e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DEPRECATED</definition>
+        <argsstring>(FLT_OR_DBL *get_gquad_pf_matrix(short *S, FLT_OR_DBL *scale, vrna_exp_param_t *pf), &quot;Use vrna_gq_pos_pf() instead&quot;)</argsstring>
+        <name>DEPRECATED</name>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>get_gquad_pf_matrix</declname>
+          <array>short *S, FLT_OR_DBL *scale, vrna_exp_param_t *pf</array>
+        </param>
+        <param>
+          <type>&quot;Use vrna_gq_pos_pf() instead&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="121" column="1" declfile="ViennaRNA/partfunc/gquad.h" declline="121" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1ga56221834e3f702984961958f584db1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DEPRECATED</definition>
+        <argsstring>(FLT_OR_DBL *get_gquad_pf_matrix_comparative(unsigned int n, short *S_cons, short **S, unsigned int **a2s, FLT_OR_DBL *scale, unsigned int n_seq, vrna_exp_param_t *pf), &quot;Use vrna_gq_pos_pf() instead&quot;)</argsstring>
+        <name>DEPRECATED</name>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>get_gquad_pf_matrix_comparative</declname>
+          <array>unsigned int n, short *S_cons, short **S, unsigned int **a2s, FLT_OR_DBL *scale, unsigned int n_seq, vrna_exp_param_t *pf</array>
+        </param>
+        <param>
+          <type>&quot;Use vrna_gq_pos_pf() instead&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="127" column="1" declfile="ViennaRNA/partfunc/gquad.h" declline="127" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__deprecated_1gae41763215b9c64d2a7b67f0df8a28078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int parse_gquad</definition>
+        <argsstring>(const char *struc, int *L, int l[3])</argsstring>
+        <name>parse_gquad</name>
+        <param>
+          <type>const char *</type>
+          <declname>struc</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Parse a G-Quadruplex from a dot-bracket structure string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a dot-bracket structure (possibly) containing gquads encoded by &apos;+&apos; signs, find first gquad, return end position or 0 if none found Upon return L and l[] contain the number of stacked layers, as well as the lengths of the linker regions. To parse a string with many gquads, call parse_gquad repeatedly e.g. end1 = parse_gquad(struc, &amp;L, l); ... ; end2 = parse_gquad(struc+end1, &amp;L, l); end2+=end1; ... ; end3 = parse_gquad(struc+end2, &amp;L, l); end3+=end2; ... ; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="519" column="17" declfile="ViennaRNA/structures/dotbracket.h" declline="519" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

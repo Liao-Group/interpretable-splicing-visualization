@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__global__deprecated" kind="group">
+    <compoundname>global_deprecated</compoundname>
+    <title>Global_deprecated</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__global__deprecated_1ga84ab10e86f7814b1b71b58ecf01929dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_ext_loop_f5</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int *k, int *i, int *j, vrna_bp_stack_t *bp_stack, unsigned int *stack_count)</argsstring>
+        <name>vrna_BT_ext_loop_f5</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>stack_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/exterior.h" line="81" column="17" declfile="ViennaRNA/backtrack/exterior.h" declline="81" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__global__deprecated_1gafa7121068b6d1ea29d0bf2c304d10701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_ext_loop_f3</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int *k, int maxdist, int *i, int *j, vrna_bp_stack_t *bp_stack, unsigned int *stack_count)</argsstring>
+        <name>vrna_BT_ext_loop_f3</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxdist</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>stack_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/exterior.h" line="92" column="17" declfile="ViennaRNA/backtrack/exterior.h" declline="92" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__global__deprecated_1gaf5360c7f7f85f5d557592a3336bef945" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_ext_loop_f3_pp</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int *i, int maxdist)</argsstring>
+        <name>vrna_BT_ext_loop_f3_pp</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxdist</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/exterior.h" line="99" column="17" declfile="ViennaRNA/backtrack/exterior.h" declline="99" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__global__deprecated_1gacc57451acadb38bccbef5bdbb75b6bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_hp_loop</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j, int en, vrna_bp_stack_t *bp_stack, unsigned int *stack_count)</argsstring>
+        <name>vrna_BT_hp_loop</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>en</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>stack_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/hairpin.h" line="70" column="17" declfile="ViennaRNA/backtrack/hairpin.h" declline="70" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__global__deprecated_1gac58c9006be8b0a58f325607cec610393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_stack</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int *i, int *j, int *en, vrna_bp_stack_t *bp_stack, unsigned int *stack_count)</argsstring>
+        <name>vrna_BT_stack</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>en</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>stack_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/internal.h" line="81" column="17" declfile="ViennaRNA/backtrack/internal.h" declline="81" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__global__deprecated_1gaf162d0cc9b238b893a736f6c491c5047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_int_loop</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int *i, int *j, int en, vrna_bp_stack_t *bp_stack, unsigned int *stack_count)</argsstring>
+        <name>vrna_BT_int_loop</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>en</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>stack_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/internal.h" line="91" column="17" declfile="ViennaRNA/backtrack/internal.h" declline="91" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__global__deprecated_1gad6969bd5ccd6913f558a6349691af290" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_mb_loop</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int *i, int *j, int *k, int en, unsigned int *component1, unsigned int *component2)</argsstring>
+        <name>vrna_BT_mb_loop</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>en</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>component1</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>component2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/multibranch.h" line="95" column="17" declfile="ViennaRNA/backtrack/multibranch.h" declline="95" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__global__deprecated_1ga8008a6aa3993ce662b4f1de6b7e45d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_BT_mb_loop_split</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int *i, int *j, int *k, int *l, unsigned int *component1, unsigned int *component2, vrna_bp_stack_t *bp_stack, unsigned int *stack_count)</argsstring>
+        <name>vrna_BT_mb_loop_split</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>component1</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>component2</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>stack_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/multibranch.h" line="108" column="17" declfile="ViennaRNA/backtrack/multibranch.h" declline="108" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

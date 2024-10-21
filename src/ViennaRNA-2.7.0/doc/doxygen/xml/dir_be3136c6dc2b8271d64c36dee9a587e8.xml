@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_be3136c6dc2b8271d64c36dee9a587e8" kind="dir">
+    <compoundname>ViennaRNA/zscore</compoundname>
+    <innerfile refid="zscore_2basic_8h">basic.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/zscore/"/>
+  </compounddef>
+</doxygen>

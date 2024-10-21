@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__data__structures__bt" kind="group">
+    <compoundname>data_structures_bt</compoundname>
+    <title>Backtracking-related Structures</title>
+    <innerclass refid="structvrna__sect__s" prot="public">vrna_sect_s</innerclass>
+    <innerclass refid="structvrna__basepair__s" prot="public">vrna_basepair_s</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" prot="public" static="no">
+        <type>struct vrna_bt_stack_s *</type>
+        <definition>typedef struct vrna_bt_stack_s* vrna_bts_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_bts_t</name>
+        <briefdescription>
+<para>The backtrack stack data structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__data__structures__bt_1ga0282b54896b38d6d53c8c3e42bfb6aff" kindref="member">vrna_bts_init()</ref>, <ref refid="group__data__structures__bt_1ga7cdef67681eff2cb6ef8b8be7bc9536a" kindref="member">vrna_bts_free()</ref>, <ref refid="group__data__structures__bt_1ga9f5687d82e4b2b4213431ed50c69985c" kindref="member">vrna_bts_push()</ref>, <ref refid="group__data__structures__bt_1ga7b0647a270f155c274a2b1a31dfbe303" kindref="member">vrna_bts_top()</ref>, <ref refid="group__data__structures__bt_1ga1f5f641d9db2419f26c8d11e735a828c" kindref="member">vrna_bts_pop()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="102" column="30" bodyfile="ViennaRNA/datastructures/basic.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" prot="public" static="no">
+        <type>struct vrna_bp_stack_s *</type>
+        <definition>typedef struct vrna_bp_stack_s* vrna_bps_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_bps_t</name>
+        <briefdescription>
+<para>The basepair stack data structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__data__structures__bt_1ga34fafe57ae3fccaa6e6328bbd78c7b38" kindref="member">vrna_bps_init()</ref>, <ref refid="group__data__structures__bt_1ga76a6d13504ea3a9321a2fd8477d34039" kindref="member">vrna_bps_free()</ref>, <ref refid="group__data__structures__bt_1ga84c9b0f7fe3b7664eb00222320316050" kindref="member">vrna_bps_push()</ref>, <ref refid="group__data__structures__bt_1ga506a606916ee51789a7f3b899ae68adb" kindref="member">vrna_bps_top()</ref>, <ref refid="group__data__structures__bt_1ga1fc5da8296944496d5d9082bbd30a297" kindref="member">vrna_bps_pop()</ref>, <ref refid="group__data__structures__bt_1ga6ca54e333c6f0ad6d93c115e472ace40" kindref="member">vrna_bps_at()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="111" column="30" bodyfile="ViennaRNA/datastructures/basic.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" prot="public" static="no">
+        <type>struct <ref refid="structvrna__basepair__s" kindref="compound">vrna_basepair_s</ref></type>
+        <definition>typedef struct vrna_basepair_s vrna_bp_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_bp_t</name>
+        <briefdescription>
+<para>Typename for the base pair repesenting data structure <ref refid="structvrna__basepair__s" kindref="compound">vrna_basepair_s</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="115" column="30" bodyfile="ViennaRNA/datastructures/basic.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" prot="public" static="no">
+        <type>struct <ref refid="structvrna__sect__s" kindref="compound">vrna_sect_s</ref></type>
+        <definition>typedef struct vrna_sect_s vrna_sect_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_sect_t</name>
+        <briefdescription>
+<para>Typename for stack of partial structures <ref refid="structvrna__sect__s" kindref="compound">vrna_sect_s</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="118" column="26" bodyfile="ViennaRNA/datastructures/basic.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__data__structures__bt_1ga0282b54896b38d6d53c8c3e42bfb6aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" kindref="member">vrna_bts_t</ref></type>
+        <definition>vrna_bts_t vrna_bts_init</definition>
+        <argsstring>(size_t n)</argsstring>
+        <name>vrna_bts_init</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Get an initialized backtrack stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function yields an initialized backtracking stack that holds all elements that need to be further evaluated. The individual elements stored in the stack are of type <ref refid="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" kindref="member">vrna_sect_t</ref> and store the sequence delimiters and corresponding backtrack DP matrix flag.</para>
+<para><simplesect kind="note"><para>Memory for the stack must be released via the <ref refid="group__data__structures__bt_1ga7cdef67681eff2cb6ef8b8be7bc9536a" kindref="member">vrna_bts_free()</ref> function.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" kindref="member">vrna_bts_t</ref>, <ref refid="group__data__structures__bt_1ga7cdef67681eff2cb6ef8b8be7bc9536a" kindref="member">vrna_bts_free()</ref>, <ref refid="group__data__structures__bt_1ga9f5687d82e4b2b4213431ed50c69985c" kindref="member">vrna_bts_push()</ref>, <ref refid="group__data__structures__bt_1ga7b0647a270f155c274a2b1a31dfbe303" kindref="member">vrna_bts_top()</ref>,<ref refid="group__data__structures__bt_1ga1f5f641d9db2419f26c8d11e735a828c" kindref="member">vrna_bts_pop()</ref>, <ref refid="group__data__structures__bt_1gab04c05287617c6a62372040e57e5baef" kindref="member">vrna_bts_size()</ref>,</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial size of the backtrack stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An initialized backtrack stack, ready for usage in backtracking functions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="372" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="372" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga7cdef67681eff2cb6ef8b8be7bc9536a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_bts_free</definition>
+        <argsstring>(vrna_bts_t bts)</argsstring>
+        <name>vrna_bts_free</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" kindref="member">vrna_bts_t</ref></type>
+          <declname>bts</declname>
+        </param>
+        <briefdescription>
+<para>Release memory occupied by a backtrack stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backtrack stack that should be free&apos;d </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="380" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="380" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga9f5687d82e4b2b4213431ed50c69985c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t vrna_bts_push</definition>
+        <argsstring>(vrna_bts_t bts, vrna_sect_t element)</argsstring>
+        <name>vrna_bts_push</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" kindref="member">vrna_bts_t</ref></type>
+          <declname>bts</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" kindref="member">vrna_sect_t</ref></type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+<para>Push a new interval onto the backtrack stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function pushes a new sequence interval for backtracking onto the backstracking stack <computeroutput>bts</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backtrack stack </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence interval and corresponding DP matrix flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The size of the backtrack stack after pushing the new interval </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="394" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="394" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga7b0647a270f155c274a2b1a31dfbe303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" kindref="member">vrna_sect_t</ref></type>
+        <definition>vrna_sect_t vrna_bts_top</definition>
+        <argsstring>(vrna_bts_t bts)</argsstring>
+        <name>vrna_bts_top</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" kindref="member">vrna_bts_t</ref></type>
+          <declname>bts</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the top element of the backtrack stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the last element put onto the stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" kindref="member">vrna_sect_t</ref> structure. The latter is returned on error or when topping an empty stack.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backtrack stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The top element of the backtrack stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" kindref="member">vrna_sect_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="409" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="409" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga1f5f641d9db2419f26c8d11e735a828c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" kindref="member">vrna_sect_t</ref></type>
+        <definition>vrna_sect_t vrna_bts_pop</definition>
+        <argsstring>(vrna_bts_t bts)</argsstring>
+        <name>vrna_bts_pop</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" kindref="member">vrna_bts_t</ref></type>
+          <declname>bts</declname>
+        </param>
+        <briefdescription>
+<para>Pop last element of from backtrack stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves and removes the last element put onto the stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" kindref="member">vrna_sect_t</ref> structure. The latter is returned on error or when topping an empty stack.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backtrack stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The top element of the backtrack stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1gacc9cdae790dac75a7024e7069c0d4400" kindref="member">vrna_sect_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="423" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="423" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1gab04c05287617c6a62372040e57e5baef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t vrna_bts_size</definition>
+        <argsstring>(vrna_bts_t bts)</argsstring>
+        <name>vrna_bts_size</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" kindref="member">vrna_bts_t</ref></type>
+          <declname>bts</declname>
+        </param>
+        <briefdescription>
+<para>Get the size of the backtrack stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backtrack stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The size of the backtracking stack </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="432" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="432" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga34fafe57ae3fccaa6e6328bbd78c7b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+        <definition>vrna_bps_t vrna_bps_init</definition>
+        <argsstring>(size_t n)</argsstring>
+        <name>vrna_bps_init</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Get an initialized base pair stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Base pair stacks are used in the backtracking procedure to store all base pairs and structural elements that have been identified so far. Thos function returns an initialized backtracking stack with initial size <computeroutput>n</computeroutput>. Individual elements stored in this stack are of type <ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref>.</para>
+<para><simplesect kind="note"><para>Memory for the stack must be released via the <ref refid="group__data__structures__bt_1ga76a6d13504ea3a9321a2fd8477d34039" kindref="member">vrna_bps_free()</ref> function.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial size of the base pair stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An initialized base pair stack </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="451" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="451" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga76a6d13504ea3a9321a2fd8477d34039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_bps_free</definition>
+        <argsstring>(vrna_bps_t bps)</argsstring>
+        <name>vrna_bps_free</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+<para>Release memory of a base pair stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair stack to be free&apos;d </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="460" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="460" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga84c9b0f7fe3b7664eb00222320316050" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t vrna_bps_push</definition>
+        <argsstring>(vrna_bps_t bps, vrna_bp_t pair)</argsstring>
+        <name>vrna_bps_push</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bps</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref></type>
+          <declname>pair</declname>
+        </param>
+        <briefdescription>
+<para>Put a new base pair element on top of the stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair stack </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pair</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair to be put onto the stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The size of the base pair stack after pushing the base pair </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="471" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="471" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga506a606916ee51789a7f3b899ae68adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref></type>
+        <definition>vrna_bp_t vrna_bps_top</definition>
+        <argsstring>(vrna_bps_t bps)</argsstring>
+        <name>vrna_bps_top</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the top element of the base pair stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the last element put onto the stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref> structure. The latter is returned on error or when topping an empty stack.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The top element of the base pair stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="486" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="486" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga1fc5da8296944496d5d9082bbd30a297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref></type>
+        <definition>vrna_bp_t vrna_bps_pop</definition>
+        <argsstring>(vrna_bps_t bps)</argsstring>
+        <name>vrna_bps_pop</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+<para>Pop last element of from base pair stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves and removes the last element put onto the stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref> structure. The latter is returned on error or when topping an empty stack.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The top element of the backtrack stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="500" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="500" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga6ca54e333c6f0ad6d93c115e472ace40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref></type>
+        <definition>vrna_bp_t vrna_bps_at</definition>
+        <argsstring>(vrna_bps_t bps, size_t n)</argsstring>
+        <name>vrna_bps_at</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bps</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the n&apos;th element of the base pair stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the n&apos;th element counted from the bottom of the stack (0-based), or a zero&apos;d out <ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref> structure. The latter is returned on error or when <computeroutput>n</computeroutput> is outside the size of the stack.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair stack </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position within the stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The n&apos;th element of the base pair stack, or a zero&apos;d out <ref refid="group__data__structures__bt_1ga01442581d60780d905993768e2efa98d" kindref="member">vrna_bp_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="515" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="515" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__data__structures__bt_1ga52014fbb171f9c1a06edbf8f0300fc71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t vrna_bps_size</definition>
+        <argsstring>(vrna_bps_t bps)</argsstring>
+        <name>vrna_bps_size</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+<para>Get the size of the base pair stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The size of the base pair stack </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/datastructures/basic.h" line="525" column="1" declfile="ViennaRNA/datastructures/basic.h" declline="525" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

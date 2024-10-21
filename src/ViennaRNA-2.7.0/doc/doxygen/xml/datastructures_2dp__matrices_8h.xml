@@ -1,0 +1,1710 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="datastructures_2dp__matrices_8h" kind="file" language="C++">
+    <compoundname>dp_matrices.h</compoundname>
+    <includes refid="datastructures_2basic_8h" local="no">ViennaRNA/datastructures/basic.h</includes>
+    <includes refid="sparse__mx_8h" local="no">ViennaRNA/datastructures/sparse_mx.h</includes>
+    <includes refid="fold__compound_8h" local="no">ViennaRNA/fold_compound.h</includes>
+    <includedby refid="datastructures_2basic_8h" local="no">ViennaRNA/datastructures/basic.h</includedby>
+    <includedby refid="dp__matrices_8h" local="no">ViennaRNA/dp_matrices.h</includedby>
+    <includedby refid="fold__compound_8h" local="no">ViennaRNA/fold_compound.h</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>ViennaRNA/constraints/basic.h</label>
+        <link refid="constraints_2basic_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/constraints/hard.h</label>
+        <link refid="hard_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ViennaRNA/constraints/soft.h</label>
+        <link refid="soft_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ViennaRNA/datastructures/array.h</label>
+        <link refid="array_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ViennaRNA/datastructures/basic.h</label>
+        <link refid="datastructures_2basic_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/datastructures/dp_matrices.h</label>
+        <link refid="datastructures_2dp__matrices_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ViennaRNA/datastructures/sparse_mx.h</label>
+        <link refid="sparse__mx_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ViennaRNA/fold_compound.h</label>
+        <link refid="fold__compound_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ViennaRNA/grammar/basic.h</label>
+        <link refid="grammar_2basic_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ViennaRNA/model.h</label>
+        <link refid="model_8h"/>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/params/basic.h</label>
+        <link refid="params_2basic_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/params/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ViennaRNA/sequences/sequence.h</label>
+        <link refid="sequences_2sequence_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ViennaRNA/structured_domains.h</label>
+        <link refid="structured__domains_8h"/>
+      </node>
+      <node id="25">
+        <label>ViennaRNA/structures/dotbracket.h</label>
+        <link refid="dotbracket_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>ViennaRNA/structures/helix.h</label>
+        <link refid="helix_8h"/>
+      </node>
+      <node id="27">
+        <label>ViennaRNA/structures/metrics.h</label>
+        <link refid="metrics_8h"/>
+      </node>
+      <node id="24">
+        <label>ViennaRNA/structures/pairtable.h</label>
+        <link refid="pairtable_8h"/>
+      </node>
+      <node id="22">
+        <label>ViennaRNA/structures/problist.h</label>
+        <link refid="problist_8h"/>
+      </node>
+      <node id="26">
+        <label>ViennaRNA/structures/utils.h</label>
+        <link refid="structures_2utils_8h"/>
+      </node>
+      <node id="21">
+        <label>ViennaRNA/unstructured_domains.h</label>
+        <link refid="unstructured__domains_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ViennaRNA/utils/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>ViennaRNA/zscore/basic.h</label>
+        <link refid="zscore_2basic_8h_source"/>
+      </node>
+      <node id="4">
+        <label>limits.h</label>
+      </node>
+      <node id="18">
+        <label>stdarg.h</label>
+      </node>
+      <node id="15">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="19">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>ViennaRNA/2Dfold.h</label>
+        <link refid="2Dfold_8h"/>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/2Dpfold.h</label>
+        <link refid="2Dpfold_8h"/>
+      </node>
+      <node id="5">
+        <label>ViennaRNA/LPfold.h</label>
+        <link refid="LPfold_8h"/>
+      </node>
+      <node id="66">
+        <label>ViennaRNA/Lfold.h</label>
+        <link refid="Lfold_8h"/>
+      </node>
+      <node id="82">
+        <label>ViennaRNA/MEA.h</label>
+        <link refid="MEA_8h"/>
+      </node>
+      <node id="6">
+        <label>ViennaRNA/PKplex.h</label>
+        <link refid="PKplex_8h_source"/>
+      </node>
+      <node id="122">
+        <label>ViennaRNA/PS_dot.h</label>
+        <link refid="PS__dot_8h"/>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/ali_plex.h</label>
+        <link refid="ali__plex_8h_source"/>
+      </node>
+      <node id="8">
+        <label>ViennaRNA/alifold.h</label>
+        <link refid="alifold_8h"/>
+      </node>
+      <node id="99">
+        <label>ViennaRNA/aln_util.h</label>
+        <link refid="aln__util_8h"/>
+      </node>
+      <node id="102">
+        <label>ViennaRNA/alphabet.h</label>
+        <link refid="alphabet_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/backtrack/exterior.h</label>
+        <link refid="backtrack_2exterior_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ViennaRNA/backtrack/global.h</label>
+        <link refid="backtrack_2global_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>ViennaRNA/backtrack/gquad.h</label>
+        <link refid="backtrack_2gquad_8h_source"/>
+      </node>
+      <node id="18">
+        <label>ViennaRNA/backtrack/hairpin.h</label>
+        <link refid="backtrack_2hairpin_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>ViennaRNA/backtrack/internal.h</label>
+        <link refid="backtrack_2internal_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ViennaRNA/backtrack/multibranch.h</label>
+        <link refid="backtrack_2multibranch_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>ViennaRNA/boltzmann_sampling.h</label>
+        <link refid="boltzmann__sampling_8h"/>
+      </node>
+      <node id="107">
+        <label>ViennaRNA/centroid.h</label>
+        <link refid="centroid_8h"/>
+      </node>
+      <node id="27">
+        <label>ViennaRNA/cofold.h</label>
+        <link refid="cofold_8h"/>
+      </node>
+      <node id="36">
+        <label>ViennaRNA/combinatorics.h</label>
+        <link refid="combinatorics_8h"/>
+      </node>
+      <node id="35">
+        <label>ViennaRNA/combinatorics/basic.h</label>
+        <link refid="combinatorics_2basic_8h_source"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>ViennaRNA/commands.h</label>
+        <link refid="commands_8h"/>
+      </node>
+      <node id="71">
+        <label>ViennaRNA/concentrations.h</label>
+        <link refid="concentrations_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ViennaRNA/constraints.h</label>
+        <link refid="constraints_8h"/>
+      </node>
+      <node id="93">
+        <label>ViennaRNA/constraints/SHAPE.h</label>
+        <link refid="constraints_2SHAPE_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>ViennaRNA/constraints/basic.h</label>
+        <link refid="constraints_2basic_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>ViennaRNA/constraints/hard.h</label>
+        <link refid="hard_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>ViennaRNA/constraints/ligand.h</label>
+        <link refid="ligand_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ViennaRNA/constraints/soft.h</label>
+        <link refid="soft_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>ViennaRNA/constraints_SHAPE.h</label>
+        <link refid="constraints__SHAPE_8h"/>
+      </node>
+      <node id="39">
+        <label>ViennaRNA/constraints_hard.h</label>
+        <link refid="constraints__hard_8h"/>
+      </node>
+      <node id="30">
+        <label>ViennaRNA/constraints_ligand.h</label>
+        <link refid="constraints__ligand_8h"/>
+      </node>
+      <node id="32">
+        <label>ViennaRNA/constraints_soft.h</label>
+        <link refid="constraints__soft_8h"/>
+      </node>
+      <node id="112">
+        <label>ViennaRNA/data_structures.h</label>
+        <link refid="data__structures_8h"/>
+      </node>
+      <node id="2">
+        <label>ViennaRNA/datastructures/basic.h</label>
+        <link refid="datastructures_2basic_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/datastructures/dp_matrices.h</label>
+        <link refid="datastructures_2dp__matrices_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>ViennaRNA/dp_matrices.h</label>
+        <link refid="dp__matrices_8h"/>
+      </node>
+      <node id="113">
+        <label>ViennaRNA/duplex.h</label>
+        <link refid="duplex_8h"/>
+      </node>
+      <node id="79">
+        <label>ViennaRNA/equilibrium_probs.h</label>
+        <link refid="equilibrium__probs_8h"/>
+      </node>
+      <node id="47">
+        <label>ViennaRNA/eval.h</label>
+        <link refid="eval_8h"/>
+      </node>
+      <node id="41">
+        <label>ViennaRNA/eval/exterior.h</label>
+        <link refid="eval_2exterior_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>ViennaRNA/eval/gquad.h</label>
+        <link refid="eval_2gquad_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>ViennaRNA/eval/hairpin.h</label>
+        <link refid="eval_2hairpin_8h_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>ViennaRNA/eval/internal.h</label>
+        <link refid="eval_2internal_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>ViennaRNA/eval/multibranch.h</label>
+        <link refid="eval_2multibranch_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>ViennaRNA/eval/structures.h</label>
+        <link refid="eval_2structures_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ViennaRNA/exterior_loops.h</label>
+        <link refid="exterior__loops_8h"/>
+      </node>
+      <node id="118">
+        <label>ViennaRNA/file_formats.h</label>
+        <link refid="file__formats_8h"/>
+      </node>
+      <node id="55">
+        <label>ViennaRNA/findpath.h</label>
+        <link refid="findpath_8h"/>
+      </node>
+      <node id="15">
+        <label>ViennaRNA/fold.h</label>
+        <link refid="fold_8h"/>
+      </node>
+      <node id="34">
+        <label>ViennaRNA/fold_compound.h</label>
+        <link refid="fold__compound_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>ViennaRNA/fold_vars.h</label>
+        <link refid="fold__vars_8h"/>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>ViennaRNA/gquad.h</label>
+        <link refid="gquad_8h"/>
+      </node>
+      <node id="49">
+        <label>ViennaRNA/grammar.h</label>
+        <link refid="grammar_8h"/>
+      </node>
+      <node id="48">
+        <label>ViennaRNA/grammar/basic.h</label>
+        <link refid="grammar_2basic_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>ViennaRNA/grammar/mfe.h</label>
+        <link refid="grammar_2mfe_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>ViennaRNA/grammar/partfunc.h</label>
+        <link refid="partfunc_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ViennaRNA/hairpin_loops.h</label>
+        <link refid="hairpin__loops_8h"/>
+      </node>
+      <node id="116">
+        <label>ViennaRNA/heat_capacity.h</label>
+        <link refid="heat__capacity_8h"/>
+      </node>
+      <node id="23">
+        <label>ViennaRNA/interior_loops.h</label>
+        <link refid="interior__loops_8h"/>
+      </node>
+      <node id="52">
+        <label>ViennaRNA/io/commands.h</label>
+        <link refid="io_2commands_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>ViennaRNA/io/file_formats.h</label>
+        <link refid="io_2file__formats_8h"/>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>ViennaRNA/landscape/findpath.h</label>
+        <link refid="landscape_2findpath_8h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>ViennaRNA/landscape/neighbor.h</label>
+        <link refid="landscape_2neighbor_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>ViennaRNA/landscape/paths.h</label>
+        <link refid="paths_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>ViennaRNA/landscape/walk.h</label>
+        <link refid="landscape_2walk_8h"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ViennaRNA/loop_energies.h</label>
+        <link refid="loop__energies_8h"/>
+      </node>
+      <node id="12">
+        <label>ViennaRNA/loops/all.h</label>
+        <link refid="all_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ViennaRNA/loops/external.h</label>
+        <link refid="external_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ViennaRNA/loops/hairpin.h</label>
+        <link refid="loops_2hairpin_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ViennaRNA/loops/internal.h</label>
+        <link refid="loops_2internal_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ViennaRNA/loops/multibranch.h</label>
+        <link refid="loops_2multibranch_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ViennaRNA/mfe.h</label>
+        <link refid="mfe_8h"/>
+      </node>
+      <node id="61">
+        <label>ViennaRNA/mfe/exterior.h</label>
+        <link refid="mfe_2exterior_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>ViennaRNA/mfe/global.h</label>
+        <link refid="mfe_2global_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>ViennaRNA/mfe/gquad.h</label>
+        <link refid="mfe_2gquad_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>ViennaRNA/mfe/internal.h</label>
+        <link refid="mfe_2internal_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>ViennaRNA/mfe/local.h</label>
+        <link refid="mfe_2local_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>ViennaRNA/mfe/multibranch.h</label>
+        <link refid="mfe_2multibranch_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>ViennaRNA/mfe_window.h</label>
+        <link refid="mfe__window_8h"/>
+      </node>
+      <node id="69">
+        <label>ViennaRNA/mm.h</label>
+        <link refid="mm_8h"/>
+      </node>
+      <node id="26">
+        <label>ViennaRNA/multibranch_loops.h</label>
+        <link refid="multibranch__loops_8h"/>
+      </node>
+      <node id="57">
+        <label>ViennaRNA/neighbor.h</label>
+        <link refid="neighbor_8h"/>
+      </node>
+      <node id="115">
+        <label>ViennaRNA/pair_mat.h</label>
+        <link refid="pair__mat_8h_source"/>
+      </node>
+      <node id="73">
+        <label>ViennaRNA/params.h</label>
+        <link refid="params_8h"/>
+      </node>
+      <node id="70">
+        <label>ViennaRNA/params/basic.h</label>
+        <link refid="params_2basic_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>ViennaRNA/params/salt.h</label>
+        <link refid="salt_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>ViennaRNA/part_func.h</label>
+        <link refid="part__func_8h"/>
+      </node>
+      <node id="72">
+        <label>ViennaRNA/part_func_co.h</label>
+        <link refid="part__func__co_8h"/>
+      </node>
+      <node id="119">
+        <label>ViennaRNA/part_func_up.h</label>
+        <link refid="part__func__up_8h"/>
+      </node>
+      <node id="87">
+        <label>ViennaRNA/part_func_window.h</label>
+        <link refid="part__func__window_8h"/>
+      </node>
+      <node id="74">
+        <label>ViennaRNA/partfunc/exterior.h</label>
+        <link refid="partfunc_2exterior_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>ViennaRNA/partfunc/global.h</label>
+        <link refid="partfunc_2global_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>ViennaRNA/partfunc/gquad.h</label>
+        <link refid="partfunc_2gquad_8h"/>
+      </node>
+      <node id="40">
+        <label>ViennaRNA/partfunc/internal.h</label>
+        <link refid="partfunc_2internal_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>ViennaRNA/partfunc/local.h</label>
+        <link refid="partfunc_2local_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>ViennaRNA/partfunc/multibranch.h</label>
+        <link refid="partfunc_2multibranch_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>ViennaRNA/partfunc/multifold.h</label>
+        <link refid="multifold_8h_source"/>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>ViennaRNA/perturbation_fold.h</label>
+        <link refid="perturbation__fold_8h"/>
+      </node>
+      <node id="89">
+        <label>ViennaRNA/pf_multifold.h</label>
+        <link refid="pf__multifold_8h"/>
+      </node>
+      <node id="91">
+        <label>ViennaRNA/pk_plex.h</label>
+        <link refid="pk__plex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>ViennaRNA/plex.h</label>
+        <link refid="plex_8h_source"/>
+      </node>
+      <node id="123">
+        <label>ViennaRNA/plot_layouts.h</label>
+        <link refid="plot__layouts_8h"/>
+      </node>
+      <node id="125">
+        <label>ViennaRNA/plot_structure.h</label>
+        <link refid="plot__structure_8h"/>
+      </node>
+      <node id="128">
+        <label>ViennaRNA/plot_utils.h</label>
+        <link refid="plot__utils_8h"/>
+      </node>
+      <node id="121">
+        <label>ViennaRNA/plotting/layouts.h</label>
+        <link refid="layouts_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+      </node>
+      <node id="126">
+        <label>ViennaRNA/plotting/probabilities.h</label>
+        <link refid="probabilities_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>ViennaRNA/plotting/structures.h</label>
+        <link refid="plotting_2structures_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>ViennaRNA/plotting/utils.h</label>
+        <link refid="plotting_2utils_8h"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>ViennaRNA/probabilities/basepairs.h</label>
+        <link refid="basepairs_8h"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>ViennaRNA/probabilities/structures.h</label>
+        <link refid="probabilities_2structures_8h"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>ViennaRNA/probing/SHAPE.h</label>
+        <link refid="probing_2SHAPE_8h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>ViennaRNA/probing/basic.h</label>
+        <link refid="probing_2basic_8h"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>ViennaRNA/profiledist.h</label>
+        <link refid="profiledist_8h"/>
+      </node>
+      <node id="96">
+        <label>ViennaRNA/sampling/basic.h</label>
+        <link refid="sampling_2basic_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>ViennaRNA/sequence.h</label>
+        <link refid="sequence_8h"/>
+      </node>
+      <node id="98">
+        <label>ViennaRNA/sequences/alignments.h</label>
+        <link refid="sequences_2alignments_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>ViennaRNA/sequences/alphabet.h</label>
+        <link refid="sequences_2alphabet_8h"/>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>ViennaRNA/sequences/sequence.h</label>
+        <link refid="sequences_2sequence_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>ViennaRNA/snofold.h</label>
+        <link refid="snofold_8h_source"/>
+      </node>
+      <node id="131">
+        <label>ViennaRNA/snoop.h</label>
+        <link refid="snoop_8h_source"/>
+      </node>
+      <node id="138">
+        <label>ViennaRNA/string_utils.h</label>
+        <link refid="string__utils_8h"/>
+      </node>
+      <node id="133">
+        <label>ViennaRNA/structure_utils.h</label>
+        <link refid="structure__utils_8h"/>
+      </node>
+      <node id="132">
+        <label>ViennaRNA/structures/benchmark.h</label>
+        <link refid="benchmark_8h"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>ViennaRNA/structures/centroid.h</label>
+        <link refid="structures_2centroid_8h"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>ViennaRNA/structures/mea.h</label>
+        <link refid="mea_8h_source"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>ViennaRNA/subopt.h</label>
+        <link refid="subopt_8h"/>
+      </node>
+      <node id="108">
+        <label>ViennaRNA/subopt/gquad.h</label>
+        <link refid="subopt_2gquad_8h"/>
+      </node>
+      <node id="83">
+        <label>ViennaRNA/subopt/wuchty.h</label>
+        <link refid="wuchty_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>ViennaRNA/subopt/zuker.h</label>
+        <link refid="zuker_8h_source"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>ViennaRNA/subopt_zuker.h</label>
+        <link refid="subopt__zuker_8h"/>
+      </node>
+      <node id="111">
+        <label>ViennaRNA/unstructured_domains.h</label>
+        <link refid="unstructured__domains_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>ViennaRNA/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="100">
+        <label>ViennaRNA/utils/alignments.h</label>
+        <link refid="utils_2alignments_8h"/>
+      </node>
+      <node id="135">
+        <label>ViennaRNA/utils/basic.h</label>
+        <link refid="utils_2basic_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="137">
+        <label>ViennaRNA/utils/strings.h</label>
+        <link refid="strings_8h"/>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>ViennaRNA/utils/structures.h</label>
+        <link refid="utils_2structures_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>ViennaRNA/walk.h</label>
+        <link refid="walk_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structvrna__mx__mfe__s" prot="public">vrna_mx_mfe_s</innerclass>
+    <innerclass refid="structvrna__mx__pf__s" prot="public">vrna_mx_pf_s</innerclass>
+    <sectiondef kind="define">
+      <member refid="group__dp__matrices_1gaa797b9c111d5c468629029911d933c40" kind="define"><name>VRNA_MX_FLAG_F5</name></member>
+      <member refid="group__dp__matrices_1ga76151f2c1b5a3c0155c341f346a7ceb1" kind="define"><name>VRNA_MX_FLAG_F3</name></member>
+      <member refid="group__dp__matrices_1ga5334d5e321bc9a096e126145752aa11f" kind="define"><name>VRNA_MX_FLAG_C</name></member>
+      <member refid="group__dp__matrices_1ga1c521f69d87df6bc5fc332280a2c1f5b" kind="define"><name>VRNA_MX_FLAG_M</name></member>
+      <member refid="group__dp__matrices_1ga60499f7396d732778305679be66787b1" kind="define"><name>VRNA_MX_FLAG_M2</name></member>
+      <member refid="group__dp__matrices_1gae8642a41d6ea120ab6621981695e40cd" kind="define"><name>VRNA_MX_FLAG_M1</name></member>
+      <member refid="group__dp__matrices_1gadef396bf2d97171ee41b941637c4777a" kind="define"><name>VRNA_MX_FLAG_MS5</name></member>
+      <member refid="group__dp__matrices_1ga3536e4dc8a51b05e14ce1b7722836fae" kind="define"><name>VRNA_MX_FLAG_MS3</name></member>
+      <member refid="group__dp__matrices_1ga4d7aba42cdaadc24467c79c53e430702" kind="define"><name>VRNA_MX_FLAG_G</name></member>
+      <member refid="group__dp__matrices_1ga99cc7324644e78d92c7090ff462fa2ad" kind="define"><name>VRNA_MX_FLAG_MAX</name></member>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group__dp__matrices_1ga6042ea1d58d01931e959791be6d89343" kind="enum"><name>vrna_mx_type_e</name></member>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <member refid="group__dp__matrices_1gae5aef35d016475e758f619b7bcb534f9" kind="typedef"><name>vrna_mx_mfe_t</name></member>
+      <member refid="group__dp__matrices_1ga68729ab3fed26bdd1806fa814f172fc1" kind="typedef"><name>vrna_mx_pf_t</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__dp__matrices_1ga87ffa61e95e5dd3ad34d8c6fa95d4514" kind="function"><name>vrna_mx_add</name></member>
+      <member refid="group__dp__matrices_1gadc9f35c77623d8a20401f8993940aef3" kind="function"><name>vrna_mx_mfe_add</name></member>
+      <member refid="group__dp__matrices_1ga4adb243d6ca034254e183877308a9aee" kind="function"><name>vrna_mx_pf_add</name></member>
+      <member refid="group__dp__matrices_1ga09585cfd149c9a20f0f13ad2ec3825ea" kind="function"><name>vrna_mx_prepare</name></member>
+      <member refid="group__dp__matrices_1gaf429b1838e68cb677db6aef7e8f0ffc8" kind="function"><name>vrna_mx_mfe_free</name></member>
+      <member refid="group__dp__matrices_1gab9d4eaceb36345b71d349b12787c5e0a" kind="function"><name>vrna_mx_pf_free</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Functions to deal with standard dynamic programming (DP) matrices. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_DP_MATRICES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_DP_MATRICES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_F5<sp/><sp/><sp/><sp/><sp/>0U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_F3<sp/><sp/><sp/><sp/><sp/>7U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_C<sp/><sp/><sp/><sp/><sp/><sp/>2U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_M<sp/><sp/><sp/><sp/><sp/><sp/>1U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_M2<sp/><sp/><sp/><sp/><sp/>8U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_M1<sp/><sp/><sp/><sp/><sp/>3U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_MS5<sp/><sp/><sp/><sp/>4U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_MS3<sp/><sp/><sp/><sp/>5U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_G<sp/><sp/><sp/><sp/><sp/><sp/>6U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>following<sp/>define<sp/>should<sp/>indicate<sp/>the<sp/>maximum<sp/>matrix<sp/>flag<sp/>we<sp/>use<sp/>internally</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/>User-provided<sp/>auxiliary<sp/>grammar<sp/>rules<sp/>will<sp/>then<sp/>be<sp/>assigned<sp/>numbers<sp/>above<sp/>this</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/>threshold</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_MX_FLAG_MAX<sp/><sp/><sp/><sp/>31U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="group__dp__matrices_1gae5aef35d016475e758f619b7bcb534f9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/><sp/></highlight><highlight class="normal"><ref refid="structvrna__mx__mfe__s" kindref="compound">vrna_mx_mfe_s</ref><sp/><ref refid="structvrna__mx__mfe__s" kindref="compound">vrna_mx_mfe_t</ref>;</highlight></codeline>
+<codeline lineno="38" refid="group__dp__matrices_1ga68729ab3fed26bdd1806fa814f172fc1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/><sp/></highlight><highlight class="normal"><ref refid="structvrna__mx__pf__s" kindref="compound">vrna_mx_pf_s</ref><sp/><ref refid="structvrna__mx__pf__s" kindref="compound">vrna_mx_pf_t</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="datastructures_2basic_8h" kindref="compound">ViennaRNA/datastructures/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ViennaRNA/datastructures/sparse_mx.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fold__compound_8h" kindref="compound">ViennaRNA/fold_compound.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="group__dp__matrices_1ga6042ea1d58d01931e959791be6d89343" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51" refid="group__dp__matrices_1gga6042ea1d58d01931e959791be6d89343aafa2568956dab79595521e20c49a5f75" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="group__dp__matrices_1gga6042ea1d58d01931e959791be6d89343aafa2568956dab79595521e20c49a5f75" kindref="member">VRNA_MX_DEFAULT</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="group__dp__matrices_1gga6042ea1d58d01931e959791be6d89343a2ea5d5947f6ec02544934b0ff2785e99" kindref="member">VRNA_MX_WINDOW</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="group__dp__matrices_1gga6042ea1d58d01931e959791be6d89343ae656f8391445ff71bed8a597a0a19417" kindref="member">VRNA_MX_2DFOLD</ref><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="group__dp__matrices_1gga6042ea1d58d01931e959791be6d89343ae656f8391445ff71bed8a597a0a19417" refkind="member"><highlight class="normal">}<sp/><ref refid="group__dp__matrices_1ga6042ea1d58d01931e959791be6d89343" kindref="member">vrna_mx_type_e</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structvrna__mx__mfe__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvrna__mx__mfe__s" kindref="compound">vrna_mx_mfe_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="68" refid="structvrna__mx__mfe__s_1a9292754662fd36235ee949c6849932f5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__dp__matrices_1ga6042ea1d58d01931e959791be6d89343" kindref="member">vrna_mx_type_e</ref><sp/><sp/><ref refid="structvrna__mx__mfe__s_1a9292754662fd36235ee949c6849932f5" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structvrna__mx__mfe__s_1a1f92a8406fc1fb721dbf9193c34ad826" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvrna__mx__mfe__s_1a1f92a8406fc1fb721dbf9193c34ad826" kindref="member">length</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structvrna__mx__mfe__s_1a913f00490cd92f47cd726060743baeb8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvrna__mx__mfe__s_1a913f00490cd92f47cd726060743baeb8" kindref="member">strands</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_C11_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>C11<sp/>support<sp/>for<sp/>unnamed<sp/>unions/structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="85" refid="structvrna__mx__mfe__s_1a60a511fd42905ee4f046c56a76865bf9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1a60a511fd42905ee4f046c56a76865bf9" kindref="member">c</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="structvrna__mx__mfe__s_1abebad693be987c2701d64477ab858039" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1abebad693be987c2701d64477ab858039" kindref="member">f5</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="structvrna__mx__mfe__s_1a4ea4595a93733adef047ece8e6f5da52" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1a4ea4595a93733adef047ece8e6f5da52" kindref="member">f3</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="structvrna__mx__mfe__s_1ae4f5e14d105d8e8dc3509c8e837f6a5c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**<ref refid="structvrna__mx__mfe__s_1ae4f5e14d105d8e8dc3509c8e837f6a5c" kindref="member">fms5</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="structvrna__mx__mfe__s_1ac2a7cc51cf8c069259faf8d923a8f02d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**<ref refid="structvrna__mx__mfe__s_1ac2a7cc51cf8c069259faf8d923a8f02d" kindref="member">fms3</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="structvrna__mx__mfe__s_1a103995e4ab8e21e7f8bc36a6edcb1331" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1a103995e4ab8e21e7f8bc36a6edcb1331" kindref="member">fML</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="structvrna__mx__mfe__s_1ae4e598d601f5ece6b8b4ffffcae2db06" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1ae4e598d601f5ece6b8b4ffffcae2db06" kindref="member">fM1</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="structvrna__mx__mfe__s_1ad29106e37d485b3f20b7be468e6c179c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1ad29106e37d485b3f20b7be468e6c179c" kindref="member">fM2</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="structvrna__mx__mfe__s_1a355bf57576fd63bea0bb95482802b667" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1a355bf57576fd63bea0bb95482802b667" kindref="member">fM1_new</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="structvrna__mx__mfe__s_1af4724eeb875323dd41fbad8391a0aa2d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1af4724eeb875323dd41fbad8391a0aa2d" kindref="member">fM2_real</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>vrna_smx_csr(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>*c_gq;<sp/></highlight></codeline>
+<codeline lineno="96" refid="structvrna__mx__mfe__s_1ac6a22d71c6a0eccedf978372b19b458a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvrna__mx__mfe__s_1ac6a22d71c6a0eccedf978372b19b458a" kindref="member">Fc</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="structvrna__mx__mfe__s_1a1ba03c53ee2a32eaf8b46c0eb259e0c4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvrna__mx__mfe__s_1a1ba03c53ee2a32eaf8b46c0eb259e0c4" kindref="member">FcH</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="structvrna__mx__mfe__s_1a96ac173770c9745a30823fa17fe0b7f4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvrna__mx__mfe__s_1a96ac173770c9745a30823fa17fe0b7f4" kindref="member">FcI</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="structvrna__mx__mfe__s_1a9a4bf70926f79372388eccc7e73759e9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvrna__mx__mfe__s_1a9a4bf70926f79372388eccc7e73759e9" kindref="member">FcM</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_C11_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>C11<sp/>support<sp/>for<sp/>unnamed<sp/>unions/structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="114" refid="structvrna__mx__mfe__s_1a116c677ece0832e6ab9cc2fd1ebfe452" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**<ref refid="structvrna__mx__mfe__s_1a116c677ece0832e6ab9cc2fd1ebfe452" kindref="member">c_local</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="structvrna__mx__mfe__s_1a6eae0a2b696b0c63bbaa78a70b950600" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvrna__mx__mfe__s_1a6eae0a2b696b0c63bbaa78a70b950600" kindref="member">f3_local</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="structvrna__mx__mfe__s_1ad37d705240a8e6b1e9a4e4ea19e74003" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**<ref refid="structvrna__mx__mfe__s_1ad37d705240a8e6b1e9a4e4ea19e74003" kindref="member">fML_local</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="structvrna__mx__mfe__s_1afd3ea65bc8f06559f7f1ea79072fa385" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**<ref refid="structvrna__mx__mfe__s_1afd3ea65bc8f06559f7f1ea79072fa385" kindref="member">ggg_local</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ggg_local_shift;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_C11_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>C11<sp/>support<sp/>for<sp/>unnamed<sp/>unions/structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***E_F5;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_min_F5;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_max_F5;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_min_F5;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_max_F5;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***E_F3;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_min_F3;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_max_F3;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_min_F3;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_max_F3;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***E_C;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_min_C;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_max_C;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_min_C;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_max_C;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***E_M;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_min_M;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_max_M;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_min_M;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_max_M;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***E_M1;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_min_M1;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_max_M1;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_min_M1;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_max_M1;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***E_M2;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_min_M2;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**l_max_M2;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_min_M2;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k_max_M2;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**E_Fc;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*l_min_Fc;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*l_max_Fc;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_min_Fc;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_max_Fc;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**E_FcH;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*l_min_FcH;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*l_max_FcH;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_min_FcH;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_max_FcH;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**E_FcI;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*l_min_FcI;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*l_max_FcI;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_min_FcI;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_max_FcI;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**E_FcM;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*l_min_FcM;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*l_max_FcM;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_min_FcM;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_max_FcM;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>auxilary<sp/>arrays<sp/>for<sp/>remaining<sp/>set<sp/>of<sp/>coarse<sp/>graining<sp/>(k,l)<sp/>&gt;<sp/>(k_max,<sp/>l_max)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*E_F5_rem;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*E_F3_rem;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*E_C_rem;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*E_M_rem;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*E_M1_rem;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*E_M2_rem;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>E_Fc_rem;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>E_FcH_rem;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>E_FcI_rem;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>E_FcM_rem;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>COUNT_STATES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>***N_F5;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>***N_C;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>***N_M;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>***N_M1;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_C11_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>C11<sp/>support<sp/>for<sp/>unnamed<sp/>unions/structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="structvrna__mx__pf__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvrna__mx__pf__s" kindref="compound">vrna_mx_pf_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="231" refid="structvrna__mx__pf__s_1af3ef433500adebc8ca0a35b5e2bfccfa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__dp__matrices_1ga6042ea1d58d01931e959791be6d89343" kindref="member">vrna_mx_type_e</ref><sp/><sp/><ref refid="structvrna__mx__pf__s_1af3ef433500adebc8ca0a35b5e2bfccfa" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="232" refid="structvrna__mx__pf__s_1a798f72ece3f3f970bb0de2120600ad63" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvrna__mx__pf__s_1a798f72ece3f3f970bb0de2120600ad63" kindref="member">length</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233" refid="structvrna__mx__pf__s_1a133ac57938cb0969da254a594572baf8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structvrna__mx__pf__s_1a133ac57938cb0969da254a594572baf8" kindref="member">scale</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234" refid="structvrna__mx__pf__s_1ae18e83833416f62943d5dd7be1cc038f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structvrna__mx__pf__s_1ae18e83833416f62943d5dd7be1cc038f" kindref="member">expMLbase</ref>;<sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_C11_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>C11<sp/>support<sp/>for<sp/>unnamed<sp/>unions/structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*q;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*qb;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*qm;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*qm1;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*probs;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*q1k;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*qln;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>vrna_smx_csr(<ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref>)<sp/>*q_gq;<sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>vrna_smx_csr(<ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref>)<sp/>*p_gq;<sp/></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>qo;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*qm2;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*qm2_real;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*qm1_new;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>qho;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>qio;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>qmo;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_C11_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>C11<sp/>support<sp/>for<sp/>unnamed<sp/>unions/structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**q_local;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**qb_local;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**qm_local;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**pR;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**qm2_local;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**QI5;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**q2l;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**qmb;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**G_local;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_C11_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>C11<sp/>support<sp/>for<sp/>unnamed<sp/>unions/structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>***Q;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_min_Q;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_max_Q;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_min_Q;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_max_Q;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>***Q_B;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_min_Q_B;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_max_Q_B;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_min_Q_B;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_max_Q_B;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>***Q_M;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_min_Q_M;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_max_Q_M;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_min_Q_M;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_max_Q_M;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>***Q_M1;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_min_Q_M1;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_max_Q_M1;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_min_Q_M1;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_max_Q_M1;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>***Q_M2;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_min_Q_M2;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>**l_max_Q_M2;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_min_Q_M2;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k_max_Q_M2;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**Q_c;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*l_min_Q_c;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*l_max_Q_c;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k_min_Q_c;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k_max_Q_c;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**Q_cH;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*l_min_Q_cH;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*l_max_Q_cH;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k_min_Q_cH;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k_max_Q_cH;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**Q_cI;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*l_min_Q_cI;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*l_max_Q_cI;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k_min_Q_cI;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k_max_Q_cI;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>**Q_cM;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*l_min_Q_cM;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*l_max_Q_cM;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k_min_Q_cM;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k_max_Q_cM;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>auxilary<sp/>arrays<sp/>for<sp/>remaining<sp/>set<sp/>of<sp/>coarse<sp/>graining<sp/>(k,l)<sp/>&gt;<sp/>(k_max,<sp/>l_max)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*Q_rem;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*Q_B_rem;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*Q_M_rem;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*Q_M1_rem;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>*Q_M2_rem;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>Q_c_rem;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>Q_cH_rem;</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>Q_cI_rem;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref><sp/>Q_cM_rem;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_C11_FEATURES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>C11<sp/>support<sp/>for<sp/>unnamed<sp/>unions/structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="381"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="415" refid="group__dp__matrices_1ga87ffa61e95e5dd3ad34d8c6fa95d4514" refkind="member"><highlight class="normal"><ref refid="group__dp__matrices_1ga87ffa61e95e5dd3ad34d8c6fa95d4514" kindref="member">vrna_mx_add</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__dp__matrices_1ga6042ea1d58d01931e959791be6d89343" kindref="member">vrna_mx_type_e</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type,</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal">vrna_mx_mfe_add(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__dp__matrices_1ga6042ea1d58d01931e959791be6d89343" kindref="member">vrna_mx_type_e</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx_type,</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options);</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal">vrna_mx_pf_add(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc,</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__dp__matrices_1ga6042ea1d58d01931e959791be6d89343" kindref="member">vrna_mx_type_e</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx_type,</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal">vrna_mx_prepare(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445" refid="group__dp__matrices_1gaf429b1838e68cb677db6aef7e8f0ffc8" refkind="member"><highlight class="normal"><ref refid="group__dp__matrices_1gaf429b1838e68cb677db6aef7e8f0ffc8" kindref="member">vrna_mx_mfe_free</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc);</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456" refid="group__dp__matrices_1gab9d4eaceb36345b71d349b12787c5e0a" refkind="member"><highlight class="normal"><ref refid="group__dp__matrices_1gab9d4eaceb36345b71d349b12787c5e0a" kindref="member">vrna_mx_pf_free</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/datastructures/dp_matrices.h"/>
+  </compounddef>
+</doxygen>

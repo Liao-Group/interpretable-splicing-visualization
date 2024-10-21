@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__gquads" kind="group">
+    <compoundname>gquads</compoundname>
+    <title>G-Quadruplexes</title>
+    <innerfile refid="eval_2gquad_8h">gquad.h</innerfile>
+    <innerfile refid="mfe_2gquad_8h">gquad.h</innerfile>
+    <innerfile refid="partfunc_2gquad_8h">gquad.h</innerfile>
+    <innerfile refid="subopt_2gquad_8h">gquad.h</innerfile>
+    <innergroup refid="group__gquad__eval">Energy Evaluation for G-quadruplexes</innergroup>
+    <innergroup refid="group__gquad__dp">Construction of G-quadruplex Dynamic Programming Matrices</innergroup>
+    <innergroup refid="group__gquad__parse">Parsing of G-quadruplexes</innergroup>
+    <innergroup refid="group__gquad__backtrack">Backtracking of G-quadruplexes</innergroup>
+    <innergroup refid="group__gquad__other">Ungrouped functions related to G-quadruplexes</innergroup>
+    <innergroup refid="group__gquad__deprecated">Depreacted G-Quadruplex API</innergroup>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

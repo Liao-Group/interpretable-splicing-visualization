@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_0b563e2bd8d31d98bf451e60bc02121b" kind="dir">
+    <compoundname>ViennaRNA/combinatorics</compoundname>
+    <innerfile refid="combinatorics_2basic_8h">basic.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/combinatorics/"/>
+  </compounddef>
+</doxygen>

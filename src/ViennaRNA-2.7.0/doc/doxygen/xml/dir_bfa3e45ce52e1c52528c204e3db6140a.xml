@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_bfa3e45ce52e1c52528c204e3db6140a" kind="dir">
+    <compoundname>ViennaRNA/grammar</compoundname>
+    <innerfile refid="grammar_2basic_8h">basic.h</innerfile>
+    <innerfile refid="grammar_2mfe_8h">mfe.h</innerfile>
+    <innerfile refid="partfunc_8h">partfunc.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/grammar/"/>
+  </compounddef>
+</doxygen>

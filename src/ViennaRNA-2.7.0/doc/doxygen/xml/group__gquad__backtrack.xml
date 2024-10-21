@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__gquad__backtrack" kind="group">
+    <compoundname>gquad_backtrack</compoundname>
+    <title>Backtracking of G-quadruplexes</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__gquad__backtrack_1ga9699cac31927e3d271e9ff24a77ce291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_bt_gquad</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, unsigned int *L, unsigned int l[3])</argsstring>
+        <name>vrna_bt_gquad</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/gquad.h" line="25" column="1" declfile="ViennaRNA/backtrack/gquad.h" declline="25" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__backtrack_1gac542f3f770bd31d08209bb36ee3e0d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_bt_gquad_mfe</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, vrna_bps_t bp_stack)</argsstring>
+        <name>vrna_bt_gquad_mfe</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bp_stack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/gquad.h" line="32" column="1" declfile="ViennaRNA/backtrack/gquad.h" declline="32" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__backtrack_1ga45599114af03f0149d2a35b544a2b8cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_bt_gquad_internal</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, int en, vrna_bps_t bp_stack, vrna_bts_t bt_stack)</argsstring>
+        <name>vrna_bt_gquad_internal</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>en</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga79fec76412a4fd843e3d4baf87118f14" kindref="member">vrna_bts_t</ref></type>
+          <declname>bt_stack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/backtrack/gquad.h" line="39" column="1" declfile="ViennaRNA/backtrack/gquad.h" declline="39" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

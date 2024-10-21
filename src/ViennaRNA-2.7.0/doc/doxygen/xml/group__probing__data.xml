@@ -1,0 +1,941 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__probing__data" kind="group">
+    <compoundname>probing_data</compoundname>
+    <title>Experimental Structure Probing Data</title>
+    <innerfile refid="probing_2basic_8h">basic.h</innerfile>
+    <innergroup refid="group__SHAPE__reactivities">SHAPE Reactivity Data</innergroup>
+    <innergroup refid="group__perturbation">Generate Soft Constraints from Data</innergroup>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" prot="public" static="no">
+        <type>struct vrna_probing_data_s *</type>
+        <definition>typedef struct vrna_probing_data_s* vrna_probing_data_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_probing_data_t</name>
+        <briefdescription>
+<para>A data structure that contains RNA structure probing data and specifies how this data is to be integrated into structure predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref>, <ref refid="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" kindref="member">vrna_probing_data_free()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="28" column="34" bodyfile="ViennaRNA/probing/basic.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_probing</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_probing_data_t data)</argsstring>
+        <name>vrna_sc_probing</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Apply probing data (e.g. SHAPE) to guide the structure prediction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref>, <ref refid="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" kindref="member">vrna_probing_data_free()</ref>, <ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" kindref="member">vrna_probing_data_Eddy2014_2()</ref>, <ref refid="group__probing__data_1gaafbab72832aa117e8634130578bf16a5" kindref="member">vrna_probing_data_Eddy2014_2_comparative()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the probing data should be applied to in subsequent computations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prepared probing data and probing data integration strategy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of probing data sets applied, 0 upon any error</para>
+</simplesect>
+<xrefsect id="wrappers_1_wrappers000164"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is attached as method <bold>sc_probing()</bold> to objects of type <bold>fold_compound</bold>. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.fold_compound.sc_probing()` in the :doc:`/api_python` </verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="170" column="1" declfile="ViennaRNA/probing/basic.h" declline="170" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref></type>
+        <definition>vrna_probing_data_t vrna_probing_data_Deigan2009</definition>
+        <argsstring>(const double *reactivities, unsigned int n, double m, double b)</argsstring>
+        <name>vrna_probing_data_Deigan2009</name>
+        <param>
+          <type>const double *</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Prepare probing data according to Deigan et al. 2009 method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Prepares a data structure to be used with <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> to directed RNA folding using the simple linear ansatz</para>
+<para><formula id="116">\[ \Delta G_{\text{SHAPE}}(i) = m \ln(\text{SHAPE reactivity}(i)+1)+ b \]</formula></para>
+<para>to convert probing data, e.g. SHAPE reactivity values, to pseudo energies whenever a nucleotide <formula id="42">$ i $</formula> contributes to a stacked pair. A positive slope <formula id="117">$ m $</formula> penalizes high reactivities in paired regions, while a negative intercept <formula id="118">$ b $</formula> results in a confirmatory `<lsquo/>bonus<rsquo/>&apos; free energy for correctly predicted base pairs. Since the energy evaluation of a base pair stack involves two pairs, the pseudo energies are added for all four contributing nucleotides. Consequently, the energy term is applied twice for pairs inside a helix and only once for pairs adjacent to other structures. For all other loop types the energy model remains unchanged even when the experimental data highly disagrees with a certain motif.</para>
+<para><simplesect kind="note"><para>For further details, we refer to  <verbatim>embed:rst:inline  :cite:t:`deigan:2009` </verbatim>.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref>, <ref refid="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" kindref="member">vrna_probing_data_free()</ref>, <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" kindref="member">vrna_probing_data_Eddy2014_2()</ref>, <ref refid="group__probing__data_1gaafbab72832aa117e8634130578bf16a5" kindref="member">vrna_probing_data_Eddy2014_2_comparative()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1-based array of per-nucleotide probing data, e.g. SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the <computeroutput>reactivities</computeroutput> list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slope used for the probing data to soft constraints conversion strategy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The intercept used for the probing data to soft constraints conversion strategy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a data structure containing the probing data and any preparations necessary to use it in <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> according to the method of  <verbatim>embed:rst:inline  :cite:t:`deigan:2009` </verbatim> or <bold>NULL</bold> on any error.</para>
+</simplesect>
+<xrefsect id="wrappers_1_wrappers000165"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function exists in two forms, (i) as overloaded function <bold>probing_data_Deigan2009()</bold> and (ii) as constructor of the <bold>probing_data</bold> object. For the former the second argument <computeroutput>n</computeroutput> can be omitted since the length of the <computeroutput>reactivities</computeroutput> list is determined from the list itself. When the #vrna_probing_data_s constructor is called with the three parameters <computeroutput>reactivities</computeroutput>, <computeroutput>m</computeroutput> and <computeroutput>b</computeroutput>, it will automatically create a prepared data structure for the Deigan et al. 2009 method. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.probing_data_Deigan2009()` and :py:meth:`RNA.probing_data()` in the :doc:`/api_python` </verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="208" column="1" declfile="ViennaRNA/probing/basic.h" declline="208" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__probing__data_1ga25652778747587fceb6b709689427696" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref></type>
+        <definition>vrna_probing_data_t vrna_probing_data_Deigan2009_comparative</definition>
+        <argsstring>(const double **reactivities, const unsigned int *n, unsigned int n_seq, double *ms, double *bs, unsigned int multi_params)</argsstring>
+        <name>vrna_probing_data_Deigan2009_comparative</name>
+        <param>
+          <type>const double **</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>const unsigned int *</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>ms</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>bs</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>multi_params</declname>
+        </param>
+        <briefdescription>
+<para>Prepare (multiple) probing data according to Deigan et al. 2009 method for comparative structure predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Similar to <ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, this function prepares a data structure to be used with <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> to directed RNA folding using the simple linear ansatz</para>
+<para><formula id="116">\[ \Delta G_{\text{SHAPE}}(i) = m \ln(\text{SHAPE reactivity}(i)+1)+ b \]</formula></para>
+<para>to convert probing data, e.g. SHAPE reactivity values, to pseudo energies whenever a nucleotide <formula id="42">$ i $</formula> contributes to a stacked pair. This functions purpose is to allow for adding multiple probing data as required for comparative structure predictions over multiple sequence alignments (MSA) with <computeroutput>n_seq</computeroutput> sequences. For that purpose, <computeroutput>reactivities</computeroutput> can be provided for any of the sequences in the MSA. Individual probing data is always expected to be specified in sequence coordinates, i.e. without considering gaps in the MSA. Therefore, each set of <computeroutput>reactivities</computeroutput> may have a different length as specified the parameter <computeroutput>n</computeroutput>. In addition, each set of probing data may undergo the conversion using different parameters <formula id="117">$ m $</formula> and <formula id="118">$ b $</formula>. Whether or not multiple sets of conversion parameters are provided must be specified using the <computeroutput>multi_params</computeroutput> flag parameter. Use <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref> to indicate that <computeroutput>ms</computeroutput> points to an array of slopes for each sequence. Along with that, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref> indicates that <computeroutput>bs</computeroutput> is pointing to an array of intercepts for each sequence. Bitwise-OR of the two values renders both parameters to be sequence specific.</para>
+<para><simplesect kind="note"><para>For further details, we refer to  <verbatim>embed:rst:inline  :cite:t:`deigan:2009` </verbatim>.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref>, <ref refid="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" kindref="member">vrna_probing_data_free()</ref>, <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref>, <ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" kindref="member">vrna_probing_data_Eddy2014_2()</ref>, <ref refid="group__probing__data_1gaafbab72832aa117e8634130578bf16a5" kindref="member">vrna_probing_data_Eddy2014_2_comparative()</ref>, <ref refid="group__probing__data_1gaf5db9deaaa290d8147aaa047fc5116ee" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_0</ref>, <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref>, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref>, <ref refid="group__probing__data_1ga79617a4098fe287edcee01ca0992e3f9" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_DEFAULT</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of 1-based arrays of per-nucleotide probing data, e.g. SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of lengths of the <computeroutput>reactivities</computeroutput> lists </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of sequences in the MSA </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of the slopes used for the probing data to soft constraints conversion strategy or the address of a single slope value to be applied for all data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of the intercepts used for the probing data to soft constraints conversion strategy or the address of a single intercept value to be applied for all data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multi_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating what is passed through parameters <computeroutput>ms</computeroutput> and <computeroutput>bs</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a data structure containing the probing data and any preparations necessary to use it in <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> according to the method of  <verbatim>embed:rst:inline  :cite:t:`deigan:2009` </verbatim> or <bold>NULL</bold> on any error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="257" column="1" declfile="ViennaRNA/probing/basic.h" declline="257" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref></type>
+        <definition>vrna_probing_data_t vrna_probing_data_Zarringhalam2012</definition>
+        <argsstring>(const double *reactivities, unsigned int n, double beta, const char *pr_conversion, double pr_default)</argsstring>
+        <name>vrna_probing_data_Zarringhalam2012</name>
+        <param>
+          <type>const double *</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pr_conversion</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pr_default</declname>
+        </param>
+        <briefdescription>
+<para>Prepare probing data according to Zarringhalam et al. 2012 method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Prepares a data structure to be used with <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> to directed RNA folding using the method of  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim>.</para>
+<para>This method first converts the observed probing data of nucleotide <formula id="42">$ i $</formula> into a probability <formula id="119">$ q_i $</formula> that position <formula id="42">$ i $</formula> is unpaired by means of a non-linear map. Then pseudo-energies of the form</para>
+<para><formula id="120">\[ \Delta G_{\text{SHAPE}}(x,i) = \beta\ |x_i - q_i| \]</formula></para>
+<para>are computed, where <formula id="121">$ x_i=0 $</formula> if position <formula id="42">$ i $</formula> is unpaired and <formula id="122">$ x_i=1 $</formula> if <formula id="42">$ i $</formula> is paired in a given secondary structure. The parameter <formula id="123">$ \beta $</formula> serves as scaling factor. The magnitude of discrepancy between prediction and experimental observation is represented by <formula id="124">$ |x_i - q_i| $</formula>.</para>
+<para><simplesect kind="note"><para>For further details, we refer to  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim></para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref>, <ref refid="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" kindref="member">vrna_probing_data_free()</ref>, <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" kindref="member">vrna_probing_data_Eddy2014_2()</ref>, <ref refid="group__probing__data_1gaafbab72832aa117e8634130578bf16a5" kindref="member">vrna_probing_data_Eddy2014_2_comparative()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1-based array of per-nucleotide probing data, e.g. SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the <computeroutput>reactivities</computeroutput> list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>beta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scaling factor <formula id="123">$ \beta $</formula> of the conversion function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pr_conversion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag that specifies how to convert reactivities to probabilities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pr_default</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default probability for a nucleotide where reactivity data is missing for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a data structure containing the probing data and any preparations necessary to use it in <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> according to the method of  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim> or <bold>NULL</bold> on any error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="299" column="1" declfile="ViennaRNA/probing/basic.h" declline="299" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref></type>
+        <definition>vrna_probing_data_t vrna_probing_data_Zarringhalam2012_comparative</definition>
+        <argsstring>(const double **reactivities, unsigned int *n, unsigned int n_seq, double *betas, const char **pr_conversions, double *pr_defaults, unsigned int multi_params)</argsstring>
+        <name>vrna_probing_data_Zarringhalam2012_comparative</name>
+        <param>
+          <type>const double **</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>betas</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>pr_conversions</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>pr_defaults</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>multi_params</declname>
+        </param>
+        <briefdescription>
+<para>Prepare probing data according to Zarringhalam et al. 2012 method for comparative structure predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Similar to <ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, this function prepares a data structure to be used with <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> to guide RNA folding using the method of  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim>.</para>
+<para>This functions purpose is to allow for adding multiple probing data as required for comparative structure predictions over multiple sequence alignments (MSA) with <computeroutput>n_seq</computeroutput> sequences. For that purpose, <computeroutput>reactivities</computeroutput> can be provided for any of the sequences in the MSA. Individual probing data is always expected to be specified in sequence coordinates, i.e. without considering gaps in the MSA. Therefore, each set of <computeroutput>reactivities</computeroutput> may have a different length as specified the parameter <computeroutput>n</computeroutput>. In addition, each set of probing data may undergo the conversion using different parameters <formula id="125">$ beta $</formula>. Additionally, the probing data to probability conversions strategy and default values for missing data can be specified in a sequence-based manner. Whether or not multiple conversion parameters are provided must be specified using the <computeroutput>multi_params</computeroutput> flag parameter. Use <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref> to indicate that <computeroutput>betas</computeroutput> points to an array of <formula id="125">$ beta $</formula> values for each sequence. <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref> indicates that <computeroutput>pr_conversions</computeroutput> is pointing to an array of probing data to probability conversion strategies, and <ref refid="group__probing__data_1gad76a1f9cfbfc795980bbe9c87ec92c5c" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_3</ref> indicates multiple default probabilities for missing data. Bitwise-OR of the three values renders all of them to be sequence specific.</para>
+<para><simplesect kind="note"><para>For further details, we refer to  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim></para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref>, <ref refid="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" kindref="member">vrna_probing_data_free()</ref>, <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" kindref="member">vrna_probing_data_Eddy2014_2()</ref>, <ref refid="group__probing__data_1gaafbab72832aa117e8634130578bf16a5" kindref="member">vrna_probing_data_Eddy2014_2_comparative()</ref>, <ref refid="group__probing__data_1gaf5db9deaaa290d8147aaa047fc5116ee" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_0</ref>, <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref>, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref>, <ref refid="group__probing__data_1gad76a1f9cfbfc795980bbe9c87ec92c5c" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_3</ref>, <ref refid="group__probing__data_1ga79617a4098fe287edcee01ca0992e3f9" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_DEFAULT</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of 1-based arrays of per-nucleotide probing data, e.g. SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of lengths of the <computeroutput>reactivities</computeroutput> lists </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of sequences in the MSA </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>betas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array with scaling factors <formula id="123">$ \beta $</formula> of the conversion function or the address of a scaling factor to be applied for all data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pr_conversions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of flags that specifies how to convert reactivities to probabilities or the address of a conversion strategy to be applied for all data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pr_defaults</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of default probabilities for a nucleotide where reactivity data is missing for or the address of a single default probability to be applied for all data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multi_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating what is passed through parameters <computeroutput>betas</computeroutput>, <computeroutput>pr_conversions</computeroutput>, and <computeroutput>pr_defaults</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a data structure containing the probing data and any preparations necessary to use it in <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> according to the method of  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim> or <bold>NULL</bold> on any error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="350" column="1" declfile="ViennaRNA/probing/basic.h" declline="350" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref></type>
+        <definition>vrna_probing_data_t vrna_probing_data_Eddy2014_2</definition>
+        <argsstring>(const double *reactivities, unsigned int n, const double *unpaired_data, unsigned int unpaired_len, const double *paired_data, unsigned int paired_len)</argsstring>
+        <name>vrna_probing_data_Eddy2014_2</name>
+        <param>
+          <type>const double *</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>unpaired_data</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>unpaired_len</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>paired_data</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>paired_len</declname>
+        </param>
+        <briefdescription>
+<para>Add probing data as soft constraints (Eddy/RNAprob-2 method) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This approach of probing data directed RNA folding uses the probability framework proposed by  <verbatim>embed:rst:inline  :cite:t:`eddy:2014` </verbatim>:</para>
+<para><formula id="126">\[ \Delta G_{\text{data}}(i) = - RT\ln(\mathbb{P}(\text{data}(i)\mid x_i\pi_i)) \]</formula></para>
+<para>to convert probing data to pseudo energies for given nucleotide <formula id="127">$ x_i $</formula> and class probability <formula id="128">$ \pi_i $</formula> at position <formula id="42">$ i $</formula>. The conditional probability is taken from a prior-distribution of probing data for the respective classes.</para>
+<para>Here, the method distinguishes exactly two different classes of structural context, (i) unpaired and (ii) paired positions, following the lines of the RNAprob-2 method of  <verbatim>embed:rst:inline  :cite:t:`deng:2016` </verbatim>. The reactivity distribution is computed using Gaussian kernel density estimation (KDE) with bandwidth <formula id="129">$ h $</formula> computed using Scott factor</para>
+<para><formula id="130">\[ h = n^{-\frac{1}{5}} \]</formula></para>
+<para>where <formula id="131">$ n $</formula> is the number of data points of the prior distribution.</para>
+<para><simplesect kind="note"><para>For further details, we refer to  <verbatim>embed:rst:inline  :cite:t:`eddy:2014` </verbatim> and  <verbatim>embed:rst:inline  :cite:t:`deng:2016` </verbatim>.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref>, <ref refid="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" kindref="member">vrna_probing_data_free()</ref>, <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref>, <ref refid="group__probing__data_1gaafbab72832aa117e8634130578bf16a5" kindref="member">vrna_probing_data_Eddy2014_2_comparative()</ref>, <ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>,</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 1-based vector of probing data, e.g. normalized SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>reactivities</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unpaired_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of probing data for unpaired nucleotides </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unpaired_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>unpaired_data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paired_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of probing data for paired nucleotides </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paired_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>paired_data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a data structure containing the probing data and any preparations necessary to use it in <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> according to the method of  <verbatim>embed:rst:inline  :cite:t:`eddy:2014` </verbatim> or <bold>NULL</bold> on any error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="400" column="1" declfile="ViennaRNA/probing/basic.h" declline="400" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__probing__data_1gaafbab72832aa117e8634130578bf16a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref></type>
+        <definition>vrna_probing_data_t vrna_probing_data_Eddy2014_2_comparative</definition>
+        <argsstring>(const double **reactivities, unsigned int *n, unsigned int n_seq, const double **unpaired_datas, unsigned int *unpaired_lens, const double **paired_datas, unsigned int *paired_lens, unsigned int multi_params)</argsstring>
+        <name>vrna_probing_data_Eddy2014_2_comparative</name>
+        <param>
+          <type>const double **</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type>const double **</type>
+          <declname>unpaired_datas</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>unpaired_lens</declname>
+        </param>
+        <param>
+          <type>const double **</type>
+          <declname>paired_datas</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>paired_lens</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>multi_params</declname>
+        </param>
+        <briefdescription>
+<para>Add probing data as soft constraints (Eddy/RNAprob-2 method) for comparative structure predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Similar to <ref refid="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" kindref="member">vrna_probing_data_Eddy2014_2()</ref>, this function prepares a data structure for probing data directed RNA folding. It uses the probability framework proposed by  <verbatim>embed:rst:inline  :cite:t:`eddy:2014` </verbatim>:</para>
+<para><formula id="126">\[ \Delta G_{\text{data}}(i) = - RT\ln(\mathbb{P}(\text{data}(i)\mid x_i\pi_i)) \]</formula></para>
+<para>to convert probing data to pseudo energies for given nucleotide <formula id="127">$ x_i $</formula> and class probability <formula id="128">$ \pi_i $</formula> at position <formula id="42">$ i $</formula>. The conditional probability is taken from a prior-distribution of probing data for the respective classes.</para>
+<para>This functions purpose is to allow for adding multiple probing data as required for comparative structure predictions over multiple sequence alignments (MSA) with <computeroutput>n_seq</computeroutput> sequences. For that purpose, <computeroutput>reactivities</computeroutput> can be provided for any of the sequences in the MSA. Individual probing data is always expected to be specified in sequence coordinates, i.e. without considering gaps in the MSA. Therefore, each set of <computeroutput>reactivities</computeroutput> may have a different length as specified the parameter <computeroutput>n</computeroutput>. In addition, each set of probing data may undergo the conversion using different prior distributions for unpaired and paired nucleotides. Whether or not multiple sets of conversion priors are provided must be specified using the <computeroutput>multi_params</computeroutput> flag parameter. Use <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref> to indicate that <computeroutput>unpaired_datas</computeroutput> points to an array of unpaired probing data for each sequence. Similarly, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref> indicates that <computeroutput>paired_datas</computeroutput> is pointing to an array paired probing data for each sequence. Bitwise-OR of the two values renders both parameters to be sequence specific.</para>
+<para><simplesect kind="note"><para>For further details, we refer to  <verbatim>embed:rst:inline  :cite:t:`eddy:2014` </verbatim> and  <verbatim>embed:rst:inline  :cite:t:`deng:2016` </verbatim>.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref>, <ref refid="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" kindref="member">vrna_probing_data_free()</ref>, <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref>, <ref refid="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" kindref="member">vrna_probing_data_Eddy2014_2()</ref>, <ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1gaf5db9deaaa290d8147aaa047fc5116ee" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_0</ref>, <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref>, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref>, <ref refid="group__probing__data_1ga79617a4098fe287edcee01ca0992e3f9" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_DEFAULT</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of 1-based arrays of per-nucleotide probing data, e.g. SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of lengths of the <computeroutput>reactivities</computeroutput> lists </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of sequences in the MSA </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unpaired_datas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of 0-based arrays with probing data for unpaired nucleotides or address of a single array of such data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unpaired_lens</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of lengths for each probing data array in <computeroutput>unpaired_datas</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paired_datas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of 0-based arrays with probing data for paired nucleotides or address of a single array of such data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paired_lens</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0-based array of lengths for each probing data array in <computeroutput>paired_data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multi_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag indicating what is passed through parameters <computeroutput>unpaired_datas</computeroutput> and <computeroutput>paired_datas</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a data structure containing the probing data and any preparations necessary to use it in <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref> according to the method of  <verbatim>embed:rst:inline  :cite:t:`eddy:2014` </verbatim> or <bold>NULL</bold> on any error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="458" column="1" declfile="ViennaRNA/probing/basic.h" declline="458" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__probing__data_1ga8c8e987c91b357fd09913f356f5d25da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_probing_data_free</definition>
+        <argsstring>(vrna_probing_data_t d)</argsstring>
+        <name>vrna_probing_data_free</name>
+        <param>
+          <type><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Free memory occupied by the (prepared) probing data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1gae981b94d5dabe6a32cbe74cd5dd7f925" kindref="member">vrna_probing_data_t</ref>, <ref refid="group__probing__data_1gaea5dded27f3e993c69ff617ff0f09648" kindref="member">vrna_sc_probing()</ref>, <ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga0658e4900d62cf170a5a9326fcb509ea" kindref="member">vrna_probing_data_Eddy2014_2()</ref>, <ref refid="group__probing__data_1gaafbab72832aa117e8634130578bf16a5" kindref="member">vrna_probing_data_Eddy2014_2_comparative()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="477" column="1" declfile="ViennaRNA/probing/basic.h" declline="477" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__probing__data_1ga988b71c2c52fd79547f2ee08761bbc00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double **</type>
+        <definition>double ** vrna_probing_data_load_n_distribute</definition>
+        <argsstring>(unsigned int n_seq, unsigned int *ns, const char **sequences, const char **file_names, const int *file_name_association, unsigned int options)</argsstring>
+        <name>vrna_probing_data_load_n_distribute</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>sequences</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>file_names</declname>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>file_name_association</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="503" column="1" declfile="ViennaRNA/probing/basic.h" declline="503" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__probing__data_1gae8454b72db56f8888788fa08de79b884" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_DEIGAN2009</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+<para>A flag indicating probing data conversion method of  <verbatim>embed:rst:inline  :cite:t:`deigan:2009` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="34" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga8b922b6927f28ffd655f76ad8b59bdde" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_DEIGAN2009_DEFAULT_m</name>
+        <initializer>1.8</initializer>
+        <briefdescription>
+<para>Default parameter for slope <computeroutput>m</computeroutput> as used in method of  <verbatim>embed:rst:inline  :cite:t:`deigan:2009` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1gaa1e9ca9fd6bf9a013909d919e6823297" kindref="member">VRNA_PROBING_METHOD_DEIGAN2009_DEFAULT_b</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="42" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1gaa1e9ca9fd6bf9a013909d919e6823297" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_DEIGAN2009_DEFAULT_b</name>
+        <initializer>-0.6</initializer>
+        <briefdescription>
+<para>Default parameter for intercept <computeroutput>b</computeroutput> as used in method of  <verbatim>embed:rst:inline  :cite:t:`deigan:2009` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga61d0ed331813bfe657777f27e4b0fbf9" kindref="member">vrna_probing_data_Deigan2009()</ref>, <ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1ga8b922b6927f28ffd655f76ad8b59bdde" kindref="member">VRNA_PROBING_METHOD_DEIGAN2009_DEFAULT_m</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="51" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1gaa08c2eb33dafb756c0c7b7d265d47fe0" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_ZARRINGHALAM2012</name>
+        <initializer>2U</initializer>
+        <briefdescription>
+<para>A flag indicating probing data conversion method of  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="57" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga00d6900fbbe3551e9337d1994d7a5437" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_beta</name>
+        <initializer>0.89</initializer>
+        <briefdescription>
+<para>Default parameter <computeroutput>beta</computeroutput> as used in method of  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga3b178e5bf91ba23c345c0dad0ebf9f6e" kindref="member">VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_conversion</ref>, <ref refid="group__probing__data_1ga73a94e419762f42dc05007fb6f7fe101" kindref="member">VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_probability</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="66" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga3b178e5bf91ba23c345c0dad0ebf9f6e" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_conversion</name>
+        <initializer>&quot;Os1.6i-2.29&quot;</initializer>
+        <briefdescription>
+<para>Default conversion method of probing data into probabilities as used in method of  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga00d6900fbbe3551e9337d1994d7a5437" kindref="member">VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_beta</ref>, <ref refid="group__probing__data_1ga73a94e419762f42dc05007fb6f7fe101" kindref="member">VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_probability</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="75" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga73a94e419762f42dc05007fb6f7fe101" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_probability</name>
+        <initializer>0.5</initializer>
+        <briefdescription>
+<para>Default probability value for missing data in method of  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga69edb23a6f761ae2d581acf4d445761d" kindref="member">vrna_probing_data_Zarringhalam2012()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga00d6900fbbe3551e9337d1994d7a5437" kindref="member">VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_beta</ref>, <ref refid="group__probing__data_1ga3b178e5bf91ba23c345c0dad0ebf9f6e" kindref="member">VRNA_PROBING_METHOD_ZARRINGHALAM2012_DEFAULT_conversion</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="84" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga441b61e1d99fea5008438805d0a9671c" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_WASHIETL2012</name>
+        <initializer>3U</initializer>
+        <briefdescription>
+<para>A flag indicating probing data conversion method of  <verbatim>embed:rst:inline  :cite:t:`washietl:2012` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="89" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1gacfc99cc0048652022bb654f34a2c32d9" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_EDDY2014_2</name>
+        <initializer>4U</initializer>
+        <briefdescription>
+<para>A flag indicating probing data conversion method of  <verbatim>embed:rst:inline  :cite:t:`eddy:2014` </verbatim>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This flag indicates to use an implementation that distinguishes two classes of structural context, in particular paired and unpaired positions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="98" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1gaf5db9deaaa290d8147aaa047fc5116ee" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_MULTI_PARAMS_0</name>
+        <initializer>0U</initializer>
+        <briefdescription>
+<para>probing data conversion flag for comparative structure predictions indicating no parameter to be sequence specific </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref>, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref>, <ref refid="group__probing__data_1gad76a1f9cfbfc795980bbe9c87ec92c5c" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_3</ref>, <ref refid="group__probing__data_1ga79617a4098fe287edcee01ca0992e3f9" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_DEFAULT</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="108" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga06223ef2a11bb23461916bd269081949" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_MULTI_PARAMS_1</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+<para>probing data conversion flag for comparative structure predictions indicating 1st parameter to be sequence specific </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1gaf5db9deaaa290d8147aaa047fc5116ee" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_0</ref>, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref>, <ref refid="group__probing__data_1gad76a1f9cfbfc795980bbe9c87ec92c5c" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_3</ref>, <ref refid="group__probing__data_1ga79617a4098fe287edcee01ca0992e3f9" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_DEFAULT</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="118" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_MULTI_PARAMS_2</name>
+        <initializer>2U</initializer>
+        <briefdescription>
+<para>probing data conversion flag for comparative structure predictions indicating 2nd parameter to be sequence specific </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1gaf5db9deaaa290d8147aaa047fc5116ee" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_0</ref>, <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref>, <ref refid="group__probing__data_1gad76a1f9cfbfc795980bbe9c87ec92c5c" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_3</ref>, <ref refid="group__probing__data_1ga79617a4098fe287edcee01ca0992e3f9" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_DEFAULT</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="128" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1gad76a1f9cfbfc795980bbe9c87ec92c5c" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_MULTI_PARAMS_3</name>
+        <initializer>4U</initializer>
+        <briefdescription>
+<para>probing data conversion flag for comparative structure predictions indicating 3rd parameter to be sequence specific </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref>, <ref refid="group__probing__data_1gaf5db9deaaa290d8147aaa047fc5116ee" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_0</ref>, <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref>, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref>, <ref refid="group__probing__data_1ga79617a4098fe287edcee01ca0992e3f9" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_DEFAULT</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="138" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga79617a4098fe287edcee01ca0992e3f9" prot="public" static="no">
+        <name>VRNA_PROBING_METHOD_MULTI_PARAMS_DEFAULT</name>
+        <initializer><ref refid="group__probing__data_1gaf5db9deaaa290d8147aaa047fc5116ee" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_0</ref></initializer>
+        <briefdescription>
+<para>probing data conversion flag for comparative structure predictions indicating default parameter settings </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Essentially, this setting indicates that all probing data is to be converted using the same parameters. Use any combination of <ref refid="group__probing__data_1ga06223ef2a11bb23461916bd269081949" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_1</ref>, <ref refid="group__probing__data_1ga3f95e63f8c11768a4c146b8471296a27" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_2</ref>, <ref refid="group__probing__data_1gad76a1f9cfbfc795980bbe9c87ec92c5c" kindref="member">VRNA_PROBING_METHOD_MULTI_PARAMS_3</ref>, and so on to indicate that the first, second, third, or other parameter is sequence specific.</para>
+<para><simplesect kind="see"><para><ref refid="group__probing__data_1ga25652778747587fceb6b709689427696" kindref="member">vrna_probing_data_Deigan2009_comparative()</ref>, <ref refid="group__probing__data_1gacefd5018911a740a3152d907ed0474b9" kindref="member">vrna_probing_data_Zarringhalam2012_comparative()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="151" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__probing__data_1ga10cd3f02aec34b7e763cae23a56dfa75" prot="public" static="no">
+        <name>VRNA_PROBING_DATA_CHECK_SEQUENCE</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="154" column="9" bodyfile="ViennaRNA/probing/basic.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Include Experimental Structure Probing Data to Guide Structure Predictions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

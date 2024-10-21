@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="strings_8h" kind="file" language="C++">
+    <compoundname>strings.h</compoundname>
+    <includes local="no">stdarg.h</includes>
+    <includes refid="datastructures_2basic_8h" local="no">ViennaRNA/datastructures/basic.h</includes>
+    <includes refid="sequences_2utils_8h" local="no">ViennaRNA/sequences/utils.h</includes>
+    <includedby refid="string__utils_8h" local="no">ViennaRNA/string_utils.h</includedby>
+    <includedby refid="utils_8h" local="no">ViennaRNA/utils.h</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>ViennaRNA/constraints/basic.h</label>
+        <link refid="constraints_2basic_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ViennaRNA/constraints/hard.h</label>
+        <link refid="hard_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ViennaRNA/constraints/soft.h</label>
+        <link refid="soft_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ViennaRNA/datastructures/array.h</label>
+        <link refid="array_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/datastructures/basic.h</label>
+        <link refid="datastructures_2basic_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ViennaRNA/datastructures/dp_matrices.h</label>
+        <link refid="datastructures_2dp__matrices_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ViennaRNA/datastructures/sparse_mx.h</label>
+        <link refid="sparse__mx_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ViennaRNA/fold_compound.h</label>
+        <link refid="fold__compound_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>ViennaRNA/grammar/basic.h</label>
+        <link refid="grammar_2basic_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/model.h</label>
+        <link refid="model_8h"/>
+      </node>
+      <node id="8">
+        <label>ViennaRNA/params/basic.h</label>
+        <link refid="params_2basic_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/params/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/sequences/sequence.h</label>
+        <link refid="sequences_2sequence_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ViennaRNA/sequences/utils.h</label>
+        <link refid="sequences_2utils_8h"/>
+      </node>
+      <node id="22">
+        <label>ViennaRNA/structured_domains.h</label>
+        <link refid="structured__domains_8h"/>
+      </node>
+      <node id="27">
+        <label>ViennaRNA/structures/dotbracket.h</label>
+        <link refid="dotbracket_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>ViennaRNA/structures/helix.h</label>
+        <link refid="helix_8h"/>
+      </node>
+      <node id="29">
+        <label>ViennaRNA/structures/metrics.h</label>
+        <link refid="metrics_8h"/>
+      </node>
+      <node id="26">
+        <label>ViennaRNA/structures/pairtable.h</label>
+        <link refid="pairtable_8h"/>
+      </node>
+      <node id="24">
+        <label>ViennaRNA/structures/problist.h</label>
+        <link refid="problist_8h"/>
+      </node>
+      <node id="28">
+        <label>ViennaRNA/structures/utils.h</label>
+        <link refid="structures_2utils_8h"/>
+      </node>
+      <node id="23">
+        <label>ViennaRNA/unstructured_domains.h</label>
+        <link refid="unstructured__domains_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ViennaRNA/utils/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/utils/strings.h</label>
+        <link refid="strings_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ViennaRNA/zscore/basic.h</label>
+        <link refid="zscore_2basic_8h_source"/>
+      </node>
+      <node id="5">
+        <label>limits.h</label>
+      </node>
+      <node id="2">
+        <label>stdarg.h</label>
+      </node>
+      <node id="14">
+        <label>stddef.h</label>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="17">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ViennaRNA/string_utils.h</label>
+        <link refid="string__utils_8h"/>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/utils/strings.h</label>
+        <link refid="strings_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="strings_8h_1aab347a3c03fbe8e7319551b9fa0cce4a" prot="public" static="no">
+        <name>DEPRECATED</name>
+        <param><defname>func   </defname></param>
+        <param><defname>msg</defname></param>
+        <initializer>func</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/strings.h" line="13" column="11" bodyfile="ViennaRNA/utils/strings.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <member refid="group__string__utils_1ga03943706e48069237cd57f2d35ca987e" kind="define"><name>XSTR</name></member>
+      <member refid="group__string__utils_1ga6388870e639eee9c0a69446876f1f8cc" kind="define"><name>STR</name></member>
+      <member refid="group__string__utils_1gafb228174279df9486a5cb56ac0bc79a3" kind="define"><name>FILENAME_MAX_LENGTH</name></member>
+      <member refid="group__string__utils_1ga33c3b1826b8e2739f09f111ec719ded5" kind="define"><name>FILENAME_ID_LENGTH</name></member>
+      <member refid="group__string__utils_1ga658ff8ea3e4ae6838d77ece7024a583f" kind="define"><name>VRNA_TRIM_LEADING</name></member>
+      <member refid="group__string__utils_1ga4b551fba1b2bbecafd335471b2c002dd" kind="define"><name>VRNA_TRIM_TRAILING</name></member>
+      <member refid="group__string__utils_1gac500a0f17fff9c60ac98ed178f0a8fa3" kind="define"><name>VRNA_TRIM_IN_BETWEEN</name></member>
+      <member refid="group__string__utils_1ga974e5e82e496e20290ec0f54c0e1d1da" kind="define"><name>VRNA_TRIM_SUBST_BY_FIRST</name></member>
+      <member refid="group__string__utils_1gab6272ec12f482870fa81d3d84d9b7370" kind="define"><name>VRNA_TRIM_DEFAULT</name></member>
+      <member refid="group__string__utils_1ga2ad8cad99ec119999964dd6e245cbb73" kind="define"><name>VRNA_TRIM_ALL</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__string__utils_1ga8429d7d84d7b0c7d77cda7c4ceff0947" kind="function"><name>vrna_strdup_printf</name></member>
+      <member refid="group__string__utils_1ga84a3a0400df93050b650a0d31afd1e54" kind="function"><name>vrna_strdup_vprintf</name></member>
+      <member refid="group__string__utils_1gac0771ec71316023067f2aae61a5aa0fb" kind="function"><name>vrna_strcat_printf</name></member>
+      <member refid="group__string__utils_1ga122df216996ba62fd5056b7743e3131a" kind="function"><name>vrna_strcat_vprintf</name></member>
+      <member refid="group__string__utils_1gad4a36bfad05f22ad5d33d00d45aa9b01" kind="function"><name>vrna_strtrim</name></member>
+      <member refid="group__string__utils_1gaf1bdff12ea8383c5d8eef5f9ef9fcefe" kind="function"><name>vrna_strsplit</name></member>
+      <member refid="group__string__utils_1ga1dabf4436772a90f050a21e128b7c7fb" kind="function"><name>vrna_strjoin</name></member>
+      <member refid="group__string__utils_1gab4714ab789de302ee19e0e7ea0766a3e" kind="function"><name>vrna_random_string</name></member>
+      <member refid="group__string__utils_1ga301798b43b6f66687985c725efd14f32" kind="function"><name>vrna_hamming_distance</name></member>
+      <member refid="group__string__utils_1ga5d1c2271e79d9bcb52d4e68360763fb9" kind="function"><name>vrna_hamming_distance_bound</name></member>
+      <member refid="group__string__utils_1ga4f44dca03c9d708d68e64c0610bb9091" kind="function"><name>vrna_seq_toupper</name></member>
+      <member refid="group__string__utils_1gae15cbc5999a67c90f45538e42c3201fe" kind="function"><name>vrna_seq_reverse</name></member>
+      <member refid="group__string__utils_1ga458d5a8cbec709665426372e3aee93b8" kind="function"><name>vrna_cut_point_insert</name></member>
+      <member refid="group__string__utils_1gaea2daba17812f6581f559afda27fcbf8" kind="function"><name>vrna_cut_point_remove</name></member>
+      <member refid="group__string__utils_1gac90f8463f175ad2f289a89e2fdc6a956" kind="function"><name>vrna_strchr</name></member>
+      <memberdef kind="function" id="strings_8h_1a17b796b806f96b70382077fb5bc519bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void str_uppercase</definition>
+        <argsstring>(char *sequence)</argsstring>
+        <name>str_uppercase</name>
+        <param>
+          <type>char *</type>
+          <declname>sequence</declname>
+        </param>
+        <briefdescription>
+<para>Convert an input sequence to uppercase. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000250"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__string__utils_1ga4f44dca03c9d708d68e64c0610bb9091" kindref="member">vrna_seq_toupper()</ref> instead! </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/strings.h" line="426" column="18" declfile="ViennaRNA/utils/strings.h" declline="426" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="strings_8h_1ad8f94747caa62f84fa50ae3c39c2cd91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * random_string</definition>
+        <argsstring>(int l, const char symbols[])</argsstring>
+        <name>random_string</name>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const char</type>
+          <declname>symbols</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Create a random string using characters from a specified symbol set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000251"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__string__utils_1gab4714ab789de302ee19e0e7ea0766a3e" kindref="member">vrna_random_string()</ref> instead! </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/strings.h" line="435" column="7" declfile="ViennaRNA/utils/strings.h" declline="435" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="strings_8h_1ad9dc7bfc9aa664dc6698f17ce07fc7e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hamming</definition>
+        <argsstring>(const char *s1, const char *s2)</argsstring>
+        <name>hamming</name>
+        <param>
+          <type>const char *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Calculate hamming distance between two sequences. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000252"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__string__utils_1ga301798b43b6f66687985c725efd14f32" kindref="member">vrna_hamming_distance()</ref> instead! </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/strings.h" line="445" column="17" declfile="ViennaRNA/utils/strings.h" declline="445" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="strings_8h_1a96d3c36717d624514055ce201cab1542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hamming_bound</definition>
+        <argsstring>(const char *s1, const char *s2, int n)</argsstring>
+        <name>hamming_bound</name>
+        <param>
+          <type>const char *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Calculate hamming distance between two sequences up to a specified length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000253"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__string__utils_1ga5d1c2271e79d9bcb52d4e68360763fb9" kindref="member">vrna_hamming_distance_bound()</ref> instead! </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/strings.h" line="456" column="17" declfile="ViennaRNA/utils/strings.h" declline="456" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>General utility- and helper-functions for RNA sequence and structure strings used throughout the ViennaRNA Package. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>, </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_STRING_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_STRING_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>VRNA_WARN_DEPRECATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>if<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func<sp/>__attribute__<sp/>((deprecated(&quot;&quot;,<sp/>msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>elif<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func<sp/>__attribute__<sp/>((deprecated(msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="datastructures_2basic_8h" kindref="compound">ViennaRNA/datastructures/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="sequences_2utils_8h" kindref="compound">ViennaRNA/sequences/utils.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="group__string__utils_1ga03943706e48069237cd57f2d35ca987e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XSTR(s)<sp/>STR(s)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="group__string__utils_1ga6388870e639eee9c0a69446876f1f8cc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STR(s)<sp/>#s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FILENAME_MAX_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="group__string__utils_1gafb228174279df9486a5cb56ac0bc79a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILENAME_MAX_LENGTH<sp/><sp/><sp/>80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="group__string__utils_1ga33c3b1826b8e2739f09f111ec719ded5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILENAME_ID_LENGTH<sp/><sp/><sp/><sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONFIG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HAVE_STRDUP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">strdup(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="90" refid="group__string__utils_1ga8429d7d84d7b0c7d77cda7c4ceff0947" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga8429d7d84d7b0c7d77cda7c4ceff0947" kindref="member">vrna_strdup_printf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="109" refid="group__string__utils_1ga84a3a0400df93050b650a0d31afd1e54" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga84a3a0400df93050b650a0d31afd1e54" kindref="member">vrna_strdup_vprintf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*format,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_list<sp/><sp/><sp/><sp/><sp/>argp);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="group__string__utils_1gac0771ec71316023067f2aae61a5aa0fb" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1gac0771ec71316023067f2aae61a5aa0fb" kindref="member">vrna_strcat_printf</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**dest,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="group__string__utils_1ga122df216996ba62fd5056b7743e3131a" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga122df216996ba62fd5056b7743e3131a" kindref="member">vrna_strcat_vprintf</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**dest,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*format,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_list<sp/><sp/><sp/><sp/><sp/>args);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="group__string__utils_1ga658ff8ea3e4ae6838d77ece7024a583f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_TRIM_LEADING<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="group__string__utils_1ga4b551fba1b2bbecafd335471b2c002dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_TRIM_TRAILING<sp/><sp/><sp/><sp/><sp/><sp/>2U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="group__string__utils_1gac500a0f17fff9c60ac98ed178f0a8fa3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_TRIM_IN_BETWEEN<sp/><sp/><sp/><sp/>4U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="group__string__utils_1ga974e5e82e496e20290ec0f54c0e1d1da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_TRIM_SUBST_BY_FIRST<sp/><sp/>8U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="group__string__utils_1gab6272ec12f482870fa81d3d84d9b7370" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_TRIM_DEFAULT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>VRNA_TRIM_LEADING<sp/>|<sp/>VRNA_TRIM_TRAILING<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="group__string__utils_1ga2ad8cad99ec119999964dd6e245cbb73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_TRIM_ALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>VRNA_TRIM_DEFAULT<sp/>|<sp/>VRNA_TRIM_IN_BETWEEN<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="group__string__utils_1gad4a36bfad05f22ad5d33d00d45aa9b01" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1gad4a36bfad05f22ad5d33d00d45aa9b01" kindref="member">vrna_strtrim</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/>*delimiters,</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keep,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>options);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**</highlight></codeline>
+<codeline lineno="290" refid="group__string__utils_1gaf1bdff12ea8383c5d8eef5f9ef9fcefe" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1gaf1bdff12ea8383c5d8eef5f9ef9fcefe" kindref="member">vrna_strsplit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*delimiter);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">vrna_strjoin(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**strings,</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*delimiter);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="307" refid="group__string__utils_1gab4714ab789de302ee19e0e7ea0766a3e" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1gab4714ab789de302ee19e0e7ea0766a3e" kindref="member">vrna_random_string</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l,</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>symbols[]);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="group__string__utils_1ga301798b43b6f66687985c725efd14f32" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga301798b43b6f66687985c725efd14f32" kindref="member">vrna_hamming_distance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*s1,</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*s2);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334" refid="group__string__utils_1ga5d1c2271e79d9bcb52d4e68360763fb9" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga5d1c2271e79d9bcb52d4e68360763fb9" kindref="member">vrna_hamming_distance_bound</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*s1,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*s2,</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345" refid="group__string__utils_1ga4f44dca03c9d708d68e64c0610bb9091" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga4f44dca03c9d708d68e64c0610bb9091" kindref="member">vrna_seq_toupper</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sequence);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363" refid="group__string__utils_1gae15cbc5999a67c90f45538e42c3201fe" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1gae15cbc5999a67c90f45538e42c3201fe" kindref="member">vrna_seq_reverse</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sequence);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="378" refid="group__string__utils_1ga458d5a8cbec709665426372e3aee93b8" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga458d5a8cbec709665426372e3aee93b8" kindref="member">vrna_cut_point_insert</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cp);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="395" refid="group__string__utils_1gaea2daba17812f6581f559afda27fcbf8" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1gaea2daba17812f6581f559afda27fcbf8" kindref="member">vrna_cut_point_remove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*cp);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="409" refid="group__string__utils_1gac90f8463f175ad2f289a89e2fdc6a956" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1gac90f8463f175ad2f289a89e2fdc6a956" kindref="member">vrna_strchr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c,</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n);</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_BACKWARD_COMPATIBILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="strings_8h_1a17b796b806f96b70382077fb5bc519bb" kindref="member">str_uppercase</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sequence),</highlight></codeline>
+<codeline lineno="426" refid="strings_8h_1a17b796b806f96b70382077fb5bc519bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_seq_toupper()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="strings_8h_1ad8f94747caa62f84fa50ae3c39c2cd91" kindref="member">random_string</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>symbols[]),</highlight></codeline>
+<codeline lineno="435" refid="strings_8h_1ad8f94747caa62f84fa50ae3c39c2cd91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_random_string()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="strings_8h_1ad9dc7bfc9aa664dc6698f17ce07fc7e7" kindref="member">hamming</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s1,</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s2),</highlight></codeline>
+<codeline lineno="445" refid="strings_8h_1ad9dc7bfc9aa664dc6698f17ce07fc7e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_hamming_distance()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="strings_8h_1a96d3c36717d624514055ce201cab1542" kindref="member">hamming_bound</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s1,</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s2,</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n),</highlight></codeline>
+<codeline lineno="456" refid="strings_8h_1a96d3c36717d624514055ce201cab1542" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_hamming_distance_bound()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/utils/strings.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="shapes_8h" kind="file" language="C++">
+    <compoundname>shapes.h</compoundname>
+    <includedby refid="structure__utils_8h" local="no">ViennaRNA/structure_utils.h</includedby>
+    <includedby refid="utils_2structures_8h" local="no">ViennaRNA/utils/structures.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>ViennaRNA/structure_utils.h</label>
+        <link refid="structure__utils_8h"/>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/structures/shapes.h</label>
+        <link refid="shapes_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/utils/structures.h</label>
+        <link refid="utils_2structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <member refid="group__struct__utils__abstract__shapes_1gafca0add98ede22bf2c22608878c61b22" kind="function"><name>vrna_abstract_shapes</name></member>
+      <member refid="group__struct__utils__abstract__shapes_1ga2fd59087e1c4e3d460e5823ba6d693b4" kind="function"><name>vrna_abstract_shapes_pt</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Abstract shapes of secondary structures. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_STRUCTURES_SHAPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_STRUCTURES_SHAPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="28" refid="group__struct__utils__abstract__shapes_1gafca0add98ede22bf2c22608878c61b22" refkind="member"><highlight class="normal"><ref refid="group__struct__utils__abstract__shapes_1gafca0add98ede22bf2c22608878c61b22" kindref="member">vrna_abstract_shapes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>level);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="48" refid="group__struct__utils__abstract__shapes_1ga2fd59087e1c4e3d460e5823ba6d693b4" refkind="member"><highlight class="normal"><ref refid="group__struct__utils__abstract__shapes_1ga2fd59087e1c4e3d460e5823ba6d693b4" kindref="member">vrna_abstract_shapes_pt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/>*pt,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>abstract<sp/>shapes<sp/>interface<sp/>*/</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/structures/shapes.h"/>
+  </compounddef>
+</doxygen>

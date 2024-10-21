@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_3ecf86c5604999cb2cdddf38a511a9e1" kind="dir">
+    <compoundname>ViennaRNA/sequences</compoundname>
+    <innerfile refid="sequences_2alignments_8h">alignments.h</innerfile>
+    <innerfile refid="sequences_2alphabet_8h">alphabet.h</innerfile>
+    <innerfile refid="sequences_2sequence_8h">sequence.h</innerfile>
+    <innerfile refid="sequences_2utils_8h">utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/sequences/"/>
+  </compounddef>
+</doxygen>

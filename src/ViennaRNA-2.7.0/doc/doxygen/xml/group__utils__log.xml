@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__utils__log" kind="group">
+    <compoundname>utils_log</compoundname>
+    <title>Utils_log</title>
+    <innerfile refid="log_8h">log.h</innerfile>
+    <innerclass refid="structvrna__log__event__s" prot="public">vrna_log_event_s</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vrna_log_levels_e</name>
+        <enumvalue id="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a3d1b09b0cc98705cec10599fc0234a20" prot="public">
+          <name>VRNA_LOG_LEVEL_UNKNOWN</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Unknown log level </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a2651d575907d3749dbd453d026c2411f" prot="public">
+          <name>VRNA_LOG_LEVEL_DEBUG</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Debug log level </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a16ed934eb3a5e5574d0c5a8cf67d8844" prot="public">
+          <name>VRNA_LOG_LEVEL_INFO</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Info log level </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5ac65a94f879c32ea9cba6f802282e1782" prot="public">
+          <name>VRNA_LOG_LEVEL_WARNING</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Warning log level </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a61d49fcf37e5e038c408848bf8accfea" prot="public">
+          <name>VRNA_LOG_LEVEL_ERROR</name>
+          <initializer>= 40</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error log level </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5af5c0086c8b657fb6f864e51ee72891f0" prot="public">
+          <name>VRNA_LOG_LEVEL_CRITICAL</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Critical log level </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a9659020fbb8c003ded6b6851ce84713e" prot="public">
+          <name>VRNA_LOG_LEVEL_SILENT</name>
+          <initializer>= 999</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Silent log level </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The log levels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="35" column="1" bodyfile="ViennaRNA/utils/log.h" bodystart="35" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__utils__log_1ga720c609c1cf01b84acccfc7f05aa2503" prot="public" static="no">
+        <type>struct <ref refid="structvrna__log__event__s" kindref="compound">vrna_log_event_s</ref></type>
+        <definition>typedef struct vrna_log_event_s vrna_log_event_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_log_event_t</name>
+        <briefdescription>
+<para>A log event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="55" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__utils__log_1gade7fb3fd3cb72285b6d54433110dc6ef" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* vrna_log_lock_f) (int lock, void *lock_data)</definition>
+        <argsstring>)(int lock, void *lock_data)</argsstring>
+        <name>vrna_log_lock_f</name>
+        <briefdescription>
+<para>The lock function prototype that may be passed to the logging system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gac3e50c155e6c83bbea514b08667679dc" kindref="member">vrna_log_lock_set()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter indicating whether to lock (lock != 0) or unlock (lock == 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lock_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary user-defined data pointer for the user-defined locking system </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="66" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__utils__log_1ga5a8ee4bbb7cbea84f873004637366a30" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* vrna_log_cb_f) (vrna_log_event_t *event, void *log_data)</definition>
+        <argsstring>)(vrna_log_event_t *event, void *log_data)</argsstring>
+        <name>vrna_log_cb_f</name>
+        <briefdescription>
+<para>The log callback function prototype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga33b9ec42fad191287c897d8d2d0560fc" kindref="member">vrna_log_cb_add()</ref>, <ref refid="group__utils__log_1gaf2dc5eec0bf290726762096964b5733f" kindref="member">vrna_log_cb_num()</ref>, <ref refid="group__utils__log_1ga9d2d579de30cb3930c6c45333034b0fc" kindref="member">vrna_log_cb_remove()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary user-defined data pointer for the user-define log message receiver </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="78" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__utils__log_1ga9a6c7f7f077e6badc6c78b3bc0c3ed29" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* vrna_logdata_free_f) (void *data)</definition>
+        <argsstring>)(void *data)</argsstring>
+        <name>vrna_logdata_free_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="81" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_log</definition>
+        <argsstring>(vrna_log_levels_e level, const char *file_name, int line_number, const char *format_string,...)</argsstring>
+        <name>vrna_log</name>
+        <param>
+          <type><ref refid="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" kindref="member">vrna_log_levels_e</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line_number</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format_string</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Issue a log message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the low-level log message function. Usually, you don&apos;t want to call it directly but rather call one of the following high-level macros instead:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="group__utils__log_1gaedb368d5ebfe358fd5a342f8fafc99a5" kindref="member">vrna_log_debug</ref></para>
+</listitem><listitem><para><ref refid="group__utils__log_1ga74ffae709f4db9d02cbd07b1e09b8f50" kindref="member">vrna_log_info</ref></para>
+</listitem><listitem><para><ref refid="group__utils__log_1ga0cd0cd19f100942b3a0e3911b9aa94b9" kindref="member">vrna_log_warning</ref></para>
+</listitem><listitem><para><ref refid="group__utils__log_1ga8da5560f12f62e4afc523e3ee26e8017" kindref="member">vrna_log_error</ref></para>
+</listitem><listitem><para><ref refid="group__utils__log_1ga3e7827622006ced28203eb4a4bb8ff11" kindref="member">vrna_log_critical</ref></para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gaedb368d5ebfe358fd5a342f8fafc99a5" kindref="member">vrna_log_debug</ref>, <ref refid="group__utils__log_1ga74ffae709f4db9d02cbd07b1e09b8f50" kindref="member">vrna_log_info</ref>, <ref refid="group__utils__log_1ga0cd0cd19f100942b3a0e3911b9aa94b9" kindref="member">vrna_log_warning</ref>, <ref refid="group__utils__log_1ga8da5560f12f62e4afc523e3ee26e8017" kindref="member">vrna_log_error</ref>, <ref refid="group__utils__log_1ga3e7827622006ced28203eb4a4bb8ff11" kindref="member">vrna_log_critical</ref>, <ref refid="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" kindref="member">vrna_log_level_set()</ref>, <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1ga0d44217cabbef157eedfc43568a762fb" kindref="member">vrna_log_fp_set()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log level </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source code file name of the file that issued the log </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source code line number that issued the log </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format_string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The printf-like format string containing the log message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable argument list for the printf-like <computeroutput>format_string</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="246" column="1" declfile="ViennaRNA/utils/log.h" declline="246" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1ga2292e9291581033e9b85b9eac2b912fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" kindref="member">vrna_log_levels_e</ref></type>
+        <definition>vrna_log_levels_e vrna_log_level</definition>
+        <argsstring>(void)</argsstring>
+        <name>vrna_log_level</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the current default log level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" kindref="member">vrna_log_level_set()</ref>, <ref refid="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" kindref="member">vrna_log_levels_e</ref></para>
+</simplesect>
+<simplesect kind="return"><para>The current default log level </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="261" column="1" declfile="ViennaRNA/utils/log.h" declline="261" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_log_level_set</definition>
+        <argsstring>(vrna_log_levels_e level)</argsstring>
+        <name>vrna_log_level_set</name>
+        <param>
+          <type><ref refid="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" kindref="member">vrna_log_levels_e</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>Set the default log level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the log level for the default log output system. Any user-defined log callback mechanism will not be affected...</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga2292e9291581033e9b85b9eac2b912fb" kindref="member">vrna_log_level()</ref>, <ref refid="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" kindref="member">vrna_log_levels_e</ref>, <ref refid="group__utils__log_1ga33b9ec42fad191287c897d8d2d0560fc" kindref="member">vrna_log_cb_add()</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new log level for the default logging system </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The (updated) log level of the default logging system </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="277" column="1" declfile="ViennaRNA/utils/log.h" declline="277" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1gaa0a7d1ded4b90393b30f5846678164eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_log_options</definition>
+        <argsstring>(void)</argsstring>
+        <name>vrna_log_options</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the current log options of the default logging system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1gaff999d3136dec0e925f3fb13ce35f0e9" kindref="member">VRNA_LOG_OPTION_QUIET</ref>, <ref refid="group__utils__log_1ga4de8a041041d9a3348aa691390720aa4" kindref="member">VRNA_LOG_OPTION_TRACE_TIME</ref> <ref refid="group__utils__log_1gac04736ea32823851f207a787f12f3a7e" kindref="member">VRNA_LOG_OPTION_TRACE_CALL</ref>, <ref refid="group__utils__log_1ga677e6803a3701e8c6038c71831564d07" kindref="member">VRNA_LOG_OPTION_DEFAULT</ref></para>
+</simplesect>
+<simplesect kind="return"><para>The current options for the default logging system </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="290" column="1" declfile="ViennaRNA/utils/log.h" declline="290" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_log_options_set</definition>
+        <argsstring>(unsigned int options)</argsstring>
+        <name>vrna_log_options_set</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Set the log options for the default logging system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gaa0a7d1ded4b90393b30f5846678164eb" kindref="member">vrna_log_options()</ref>, <ref refid="group__utils__log_1gaff999d3136dec0e925f3fb13ce35f0e9" kindref="member">VRNA_LOG_OPTION_QUIET</ref>, <ref refid="group__utils__log_1ga4de8a041041d9a3348aa691390720aa4" kindref="member">VRNA_LOG_OPTION_TRACE_TIME</ref> <ref refid="group__utils__log_1gac04736ea32823851f207a787f12f3a7e" kindref="member">VRNA_LOG_OPTION_TRACE_CALL</ref>, <ref refid="group__utils__log_1ga677e6803a3701e8c6038c71831564d07" kindref="member">VRNA_LOG_OPTION_DEFAULT</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new options for the default logging system </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="303" column="1" declfile="ViennaRNA/utils/log.h" declline="303" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1ga46fad9fd637e17de30ba9e2d7b2b3b45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILE *</type>
+        <definition>FILE * vrna_log_fp</definition>
+        <argsstring>(void)</argsstring>
+        <name>vrna_log_fp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the output file pointer for the default logging system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The file pointer where the default logging system will print log messages to </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="312" column="1" declfile="ViennaRNA/utils/log.h" declline="312" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1ga0d44217cabbef157eedfc43568a762fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_log_fp_set</definition>
+        <argsstring>(FILE *fp)</argsstring>
+        <name>vrna_log_fp_set</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+<para>Set the output file pointer for the default logging system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file pointer where the default logging system should print log messages to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="321" column="1" declfile="ViennaRNA/utils/log.h" declline="321" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1ga33b9ec42fad191287c897d8d2d0560fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t vrna_log_cb_add</definition>
+        <argsstring>(vrna_log_cb_f cb, void *data, vrna_logdata_free_f data_release, vrna_log_levels_e level)</argsstring>
+        <name>vrna_log_cb_add</name>
+        <param>
+          <type><ref refid="group__utils__log_1ga5a8ee4bbb7cbea84f873004637366a30" kindref="member">vrna_log_cb_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>vrna_logdata_free_f</type>
+          <declname>data_release</declname>
+        </param>
+        <param>
+          <type><ref refid="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" kindref="member">vrna_log_levels_e</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>Add a user-defined log message callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will add the user-defined callback <computeroutput>cb</computeroutput> to the logging system that will receive log messages from RNAlib. The callback will be called for each issued message that has a level of at least <computeroutput>level</computeroutput>. The pointer <computeroutput>data</computeroutput> will be passed-through to the callback and may store arbitrary data required for the callback.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga5a8ee4bbb7cbea84f873004637366a30" kindref="member">vrna_log_cb_f</ref>, <ref refid="group__utils__log_1gaf2dc5eec0bf290726762096964b5733f" kindref="member">vrna_log_cb_num()</ref>, <ref refid="group__utils__log_1ga9d2d579de30cb3930c6c45333034b0fc" kindref="member">vrna_log_cb_remove()</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data passed through to the callback function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A function that releases memory occupied by <computeroutput>data</computeroutput> (maybe NULL) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log level threshold for this callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of log message callbacks stored in the logging system </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="342" column="1" declfile="ViennaRNA/utils/log.h" declline="342" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1gaf2dc5eec0bf290726762096964b5733f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t vrna_log_cb_num</definition>
+        <argsstring>(void)</argsstring>
+        <name>vrna_log_cb_num</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the current number of log message callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current number of log message callbacks stored in the logging system </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="354" column="1" declfile="ViennaRNA/utils/log.h" declline="354" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1ga9d2d579de30cb3930c6c45333034b0fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t vrna_log_cb_remove</definition>
+        <argsstring>(vrna_log_cb_f cb, void *data)</argsstring>
+        <name>vrna_log_cb_remove</name>
+        <param>
+          <type><ref refid="group__utils__log_1ga5a8ee4bbb7cbea84f873004637366a30" kindref="member">vrna_log_cb_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Remove a log message callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function removes the log message callback <computeroutput>cb</computeroutput> from the logging system. It does so by searching through the list of known log message callbacks and comparing function (and data) addresses.</para>
+<para><simplesect kind="warning"><para>The first callback stored in the logging system that matches <computeroutput>cb</computeroutput> will be removed! If <computeroutput>data</computeroutput> is supplied as well, the first callback that matches both, function and data address will be removed.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__utils__log_1ga5a8ee4bbb7cbea84f873004637366a30" kindref="member">vrna_log_cb_f</ref>, <ref refid="group__utils__log_1gaf2dc5eec0bf290726762096964b5733f" kindref="member">vrna_log_cb_num()</ref>, <ref refid="group__utils__log_1ga33b9ec42fad191287c897d8d2d0560fc" kindref="member">vrna_log_cb_add()</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function to remove </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data that goes along with the callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on any error, e.g. if the callback was not found, non-zero if it was removed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="375" column="1" declfile="ViennaRNA/utils/log.h" declline="375" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1gac3e50c155e6c83bbea514b08667679dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_log_lock_set</definition>
+        <argsstring>(vrna_log_lock_f cb, void *data)</argsstring>
+        <name>vrna_log_lock_set</name>
+        <param>
+          <type><ref refid="group__utils__log_1gade7fb3fd3cb72285b6d54433110dc6ef" kindref="member">vrna_log_lock_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Specify a lock function to be used for the logging system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To prevent undefined behavior in multi-threaded calls to the log system, each log message should be issued as an atomic block. For this to happen, a locking-/unlocking mechanism is required that ensures that log messages from other threads will be blocked until the current log message has been finalized. By default, we use pthreads mutex locking. Using this function, the locking mechanism can be changed to something else, or implemented after all if the ViennaRNA Package was compiled without pthreads support.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gade7fb3fd3cb72285b6d54433110dc6ef" kindref="member">vrna_log_lock_f</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The locking-/unlocking callback </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary data pointer passed through to the callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="397" column="1" declfile="ViennaRNA/utils/log.h" declline="397" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_log_reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>vrna_log_reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reset the logging system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This resets the logging system and restores default settings </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="407" column="1" declfile="ViennaRNA/utils/log.h" declline="407" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__utils__log_1ga39502c130a07cf1e09973aeb78d4c7b5" prot="public" static="no">
+        <name>VRNA_LOG_LEVEL_DEFAULT</name>
+        <initializer><ref refid="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a61d49fcf37e5e038c408848bf8accfea" kindref="member">VRNA_LOG_LEVEL_ERROR</ref></initializer>
+        <briefdescription>
+<para>Default log level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" kindref="member">vrna_log_level_set()</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref>, <ref refid="group__utils__log_1ga2292e9291581033e9b85b9eac2b912fb" kindref="member">vrna_log_level()</ref>, <ref refid="group__utils__log_1ga88c978555ea5e5ad45c3c6a364b481b5" kindref="member">vrna_log_levels_e</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="89" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1gaff999d3136dec0e925f3fb13ce35f0e9" prot="public" static="no">
+        <name>VRNA_LOG_OPTION_QUIET</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+<para>Log option to turn off internal logging. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When this option is set via <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref> the internal logging system will be deactivated and only user-defined callbacks will be seeing any logs.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1gaa0a7d1ded4b90393b30f5846678164eb" kindref="member">vrna_log_options()</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref>, <ref refid="group__utils__log_1gac04736ea32823851f207a787f12f3a7e" kindref="member">VRNA_LOG_OPTION_TRACE_CALL</ref>, <ref refid="group__utils__log_1ga4de8a041041d9a3348aa691390720aa4" kindref="member">VRNA_LOG_OPTION_TRACE_TIME</ref>, <ref refid="group__utils__log_1ga677e6803a3701e8c6038c71831564d07" kindref="member">VRNA_LOG_OPTION_DEFAULT</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="103" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1gac04736ea32823851f207a787f12f3a7e" prot="public" static="no">
+        <name>VRNA_LOG_OPTION_TRACE_CALL</name>
+        <initializer>2U</initializer>
+        <briefdescription>
+<para>Log option to turn on call tracing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When this option is set via <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref> the internal logging system will include a call trace to the log output, i.e. the source code file and line numbers will be included in the log message.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1gaa0a7d1ded4b90393b30f5846678164eb" kindref="member">vrna_log_options()</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref>, <ref refid="group__utils__log_1gaff999d3136dec0e925f3fb13ce35f0e9" kindref="member">VRNA_LOG_OPTION_QUIET</ref>, <ref refid="group__utils__log_1ga4de8a041041d9a3348aa691390720aa4" kindref="member">VRNA_LOG_OPTION_TRACE_TIME</ref>, <ref refid="group__utils__log_1ga677e6803a3701e8c6038c71831564d07" kindref="member">VRNA_LOG_OPTION_DEFAULT</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="118" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1ga4de8a041041d9a3348aa691390720aa4" prot="public" static="no">
+        <name>VRNA_LOG_OPTION_TRACE_TIME</name>
+        <initializer>4U</initializer>
+        <briefdescription>
+<para>Log option to turn on time stamp. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When this option is set via <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref> the internal logging system will include a time stamp to the log output, i.e. the time when the log message was issued will be included in the log message.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1gaa0a7d1ded4b90393b30f5846678164eb" kindref="member">vrna_log_options()</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref>, <ref refid="group__utils__log_1gaff999d3136dec0e925f3fb13ce35f0e9" kindref="member">VRNA_LOG_OPTION_QUIET</ref>, <ref refid="group__utils__log_1gac04736ea32823851f207a787f12f3a7e" kindref="member">VRNA_LOG_OPTION_TRACE_CALL</ref>, <ref refid="group__utils__log_1ga677e6803a3701e8c6038c71831564d07" kindref="member">VRNA_LOG_OPTION_DEFAULT</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="133" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1ga677e6803a3701e8c6038c71831564d07" prot="public" static="no">
+        <name>VRNA_LOG_OPTION_DEFAULT</name>
+        <initializer>0U</initializer>
+        <briefdescription>
+<para>Log option representing the default options. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When this option is set via <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref> the default options will be set.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1gaa0a7d1ded4b90393b30f5846678164eb" kindref="member">vrna_log_options()</ref>, <ref refid="group__utils__log_1ga6225950643983a22f9e5fc1b271968fb" kindref="member">vrna_log_reset()</ref>, <ref refid="group__utils__log_1gaff999d3136dec0e925f3fb13ce35f0e9" kindref="member">VRNA_LOG_OPTION_QUIET</ref>, <ref refid="group__utils__log_1gac04736ea32823851f207a787f12f3a7e" kindref="member">VRNA_LOG_OPTION_TRACE_CALL</ref>, <ref refid="group__utils__log_1ga4de8a041041d9a3348aa691390720aa4" kindref="member">VRNA_LOG_OPTION_TRACE_TIME</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="146" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1gaedb368d5ebfe358fd5a342f8fafc99a5" prot="public" static="no">
+        <name>vrna_log_debug</name>
+        <param><defname>...</defname></param>
+        <initializer>        do { \
+          <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log</ref>(<ref refid="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a2651d575907d3749dbd453d026c2411f" kindref="member">VRNA_LOG_LEVEL_DEBUG</ref>, __FILE__, __LINE__, __VA_ARGS__); \
+        } while (0)</initializer>
+        <briefdescription>
+<para>Issue a debug log message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro expects a printf-like format string followed by a variable list of arguments for the format string and passes this content to the log system.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1ga74ffae709f4db9d02cbd07b1e09b8f50" kindref="member">vrna_log_info</ref>, <ref refid="group__utils__log_1ga0cd0cd19f100942b3a0e3911b9aa94b9" kindref="member">vrna_log_warning</ref>, <ref refid="group__utils__log_1ga8da5560f12f62e4afc523e3ee26e8017" kindref="member">vrna_log_error</ref>, <ref refid="group__utils__log_1ga3e7827622006ced28203eb4a4bb8ff11" kindref="member">vrna_log_critical</ref>, <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log()</ref>, <ref refid="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" kindref="member">vrna_log_level_set()</ref>, <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1ga0d44217cabbef157eedfc43568a762fb" kindref="member">vrna_log_fp_set()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="159" column="10" bodyfile="ViennaRNA/utils/log.h" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1ga74ffae709f4db9d02cbd07b1e09b8f50" prot="public" static="no">
+        <name>vrna_log_info</name>
+        <param><defname>...</defname></param>
+        <initializer>        do { \
+          <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log</ref>(<ref refid="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a16ed934eb3a5e5574d0c5a8cf67d8844" kindref="member">VRNA_LOG_LEVEL_INFO</ref>, __FILE__, __LINE__, __VA_ARGS__); \
+        } while (0)</initializer>
+        <briefdescription>
+<para>Issue an info log message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro expects a printf-like format string followed by a variable list of arguments for the format string and passes this content to the log system.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gaedb368d5ebfe358fd5a342f8fafc99a5" kindref="member">vrna_log_debug</ref>, <ref refid="group__utils__log_1ga0cd0cd19f100942b3a0e3911b9aa94b9" kindref="member">vrna_log_warning</ref>, <ref refid="group__utils__log_1ga8da5560f12f62e4afc523e3ee26e8017" kindref="member">vrna_log_error</ref>, <ref refid="group__utils__log_1ga3e7827622006ced28203eb4a4bb8ff11" kindref="member">vrna_log_critical</ref>, <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log()</ref>, <ref refid="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" kindref="member">vrna_log_level_set()</ref>, <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1ga0d44217cabbef157eedfc43568a762fb" kindref="member">vrna_log_fp_set()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="175" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="175" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1ga0cd0cd19f100942b3a0e3911b9aa94b9" prot="public" static="no">
+        <name>vrna_log_warning</name>
+        <param><defname>...</defname></param>
+        <initializer>        do { \
+          <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log</ref>(<ref refid="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5ac65a94f879c32ea9cba6f802282e1782" kindref="member">VRNA_LOG_LEVEL_WARNING</ref>, __FILE__, __LINE__, __VA_ARGS__); \
+        } while (0)</initializer>
+        <briefdescription>
+<para>Issue a warning log message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro expects a printf-like format string followed by a variable list of arguments for the format string and passes this content to the log system.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gaedb368d5ebfe358fd5a342f8fafc99a5" kindref="member">vrna_log_debug</ref>, <ref refid="group__utils__log_1ga74ffae709f4db9d02cbd07b1e09b8f50" kindref="member">vrna_log_info</ref>, <ref refid="group__utils__log_1ga8da5560f12f62e4afc523e3ee26e8017" kindref="member">vrna_log_error</ref>, <ref refid="group__utils__log_1ga3e7827622006ced28203eb4a4bb8ff11" kindref="member">vrna_log_critical</ref>, <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log()</ref>, <ref refid="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" kindref="member">vrna_log_level_set()</ref>, <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1ga0d44217cabbef157eedfc43568a762fb" kindref="member">vrna_log_fp_set()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="189" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1ga8da5560f12f62e4afc523e3ee26e8017" prot="public" static="no">
+        <name>vrna_log_error</name>
+        <param><defname>...</defname></param>
+        <initializer>        do { \
+          <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log</ref>(<ref refid="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5a61d49fcf37e5e038c408848bf8accfea" kindref="member">VRNA_LOG_LEVEL_ERROR</ref>, __FILE__, __LINE__, __VA_ARGS__); \
+        } while (0)</initializer>
+        <briefdescription>
+<para>Issue an error log message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro expects a printf-like format string followed by a variable list of arguments for the format string and passes this content to the log system.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gaedb368d5ebfe358fd5a342f8fafc99a5" kindref="member">vrna_log_debug</ref>, <ref refid="group__utils__log_1ga74ffae709f4db9d02cbd07b1e09b8f50" kindref="member">vrna_log_info</ref>, <ref refid="group__utils__log_1ga0cd0cd19f100942b3a0e3911b9aa94b9" kindref="member">vrna_log_warning</ref>, <ref refid="group__utils__log_1ga3e7827622006ced28203eb4a4bb8ff11" kindref="member">vrna_log_critical</ref>, <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log()</ref>, <ref refid="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" kindref="member">vrna_log_level_set()</ref>, <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1ga0d44217cabbef157eedfc43568a762fb" kindref="member">vrna_log_fp_set()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="203" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="define" id="group__utils__log_1ga3e7827622006ced28203eb4a4bb8ff11" prot="public" static="no">
+        <name>vrna_log_critical</name>
+        <param><defname>...</defname></param>
+        <initializer>        do { \
+          <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log</ref>(<ref refid="group__utils__log_1gga88c978555ea5e5ad45c3c6a364b481b5af5c0086c8b657fb6f864e51ee72891f0" kindref="member">VRNA_LOG_LEVEL_CRITICAL</ref>, __FILE__, __LINE__, __VA_ARGS__); \
+        } while (0)</initializer>
+        <briefdescription>
+<para>Issue a critical log message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro expects a printf-like format string followed by a variable list of arguments for the format string and passes this content to the log system.</para>
+<para><simplesect kind="see"><para><ref refid="group__utils__log_1gaedb368d5ebfe358fd5a342f8fafc99a5" kindref="member">vrna_log_debug</ref>, <ref refid="group__utils__log_1ga74ffae709f4db9d02cbd07b1e09b8f50" kindref="member">vrna_log_info</ref>, <ref refid="group__utils__log_1ga0cd0cd19f100942b3a0e3911b9aa94b9" kindref="member">vrna_log_warning</ref>, <ref refid="group__utils__log_1ga8da5560f12f62e4afc523e3ee26e8017" kindref="member">vrna_log_error</ref>, <ref refid="group__utils__log_1ga17d2b4996e757fdb61d1300043c46c1f" kindref="member">vrna_log()</ref>, <ref refid="group__utils__log_1gadd2ac04a3860ffca5d3ada89eaadcf19" kindref="member">vrna_log_level_set()</ref>, <ref refid="group__utils__log_1ga1eb76b4b6d37a1d09a9602098647385e" kindref="member">vrna_log_options_set()</ref>, <ref refid="group__utils__log_1ga0d44217cabbef157eedfc43568a762fb" kindref="member">vrna_log_fp_set()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/utils/log.h" line="217" column="9" bodyfile="ViennaRNA/utils/log.h" bodystart="217" bodyend="220"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

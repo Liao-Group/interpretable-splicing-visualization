@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_7c6b443cdfa832a17d16f8f2e7887ebc" kind="dir">
+    <compoundname>ViennaRNA/mfe</compoundname>
+    <innerfile refid="mfe_2exterior_8h">exterior.h</innerfile>
+    <innerfile refid="mfe_2global_8h">global.h</innerfile>
+    <innerfile refid="mfe_2gquad_8h">gquad.h</innerfile>
+    <innerfile refid="mfe_2internal_8h">internal.h</innerfile>
+    <innerfile refid="mfe_2local_8h">local.h</innerfile>
+    <innerfile refid="mfe_2multibranch_8h">multibranch.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/mfe/"/>
+  </compounddef>
+</doxygen>

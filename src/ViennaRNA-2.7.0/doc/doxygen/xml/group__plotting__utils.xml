@@ -1,0 +1,878 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__plotting__utils" kind="group">
+    <compoundname>plotting_utils</compoundname>
+    <title>Plotting</title>
+    <innerfile refid="plotting_2alignments_8h">alignments.h</innerfile>
+    <innerfile refid="layouts_8h">layouts.h</innerfile>
+    <innerfile refid="probabilities_8h">probabilities.h</innerfile>
+    <innerfile refid="plotting_2structures_8h">structures.h</innerfile>
+    <innerfile refid="plotting_2utils_8h">utils.h</innerfile>
+    <innerfile refid="RNApuzzler_8h">RNApuzzler.h</innerfile>
+    <innerfile refid="RNAturtle_8h">RNAturtle.h</innerfile>
+    <innerclass refid="structvrna__plot__data__s" prot="public">vrna_plot_data_s</innerclass>
+    <innergroup refid="group__plot__layout__utils">Layouts and Coordinates</innergroup>
+    <innergroup refid="group__annotation__utils">Annotation</innergroup>
+    <innergroup refid="group__plot__probabilities">Probabilities</innergroup>
+    <innergroup refid="group__alignment__plots">Alignment Plots</innergroup>
+    <innergroup refid="group__plotting__utils__deprecated">Deprecated Interface for Plotting Utilities</innergroup>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__plotting__utils_1ga201dbca535495a7727828cace23a9198" prot="public" static="no">
+        <type>struct <ref refid="structvrna__plot__data__s" kindref="compound">vrna_plot_data_s</ref></type>
+        <definition>typedef struct vrna_plot_data_s vrna_plot_data_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_plot_data_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="39" column="31" bodyfile="ViennaRNA/plotting/structures.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__plotting__utils_1gae8f72f3e0062af6d6216f3936695140c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_plot_structure</definition>
+        <argsstring>(const char *filename, const char *sequence, const char *structure, unsigned int file_format, vrna_plot_layout_t *layout, vrna_plot_data_t *aux_data)</argsstring>
+        <name>vrna_plot_structure</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>file_format</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plot__layout__utils_1gac986fe092abc2a6a93ceb5141e4dd28b" kindref="member">vrna_plot_layout_t</ref> *</type>
+          <declname>layout</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__plot__data__s" kindref="compound">vrna_plot_data_t</ref> *</type>
+          <declname>aux_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="51" column="1" declfile="ViennaRNA/plotting/structures.h" declline="51" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1gaa4c4f2feb1b68519403a7d9b61bbf171" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_plot_structure_svg</definition>
+        <argsstring>(const char *filename, const char *sequence, const char *structure, vrna_plot_layout_t *layout, vrna_plot_data_t *data)</argsstring>
+        <name>vrna_plot_structure_svg</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plot__layout__utils_1gac986fe092abc2a6a93ceb5141e4dd28b" kindref="member">vrna_plot_layout_t</ref> *</type>
+          <declname>layout</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__plot__data__s" kindref="compound">vrna_plot_data_t</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="60" column="1" declfile="ViennaRNA/plotting/structures.h" declline="60" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1gaed9aca968b794b27ea257044d753cc02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_plot_structure_eps</definition>
+        <argsstring>(const char *filename, const char *sequence, const char *structure, vrna_plot_layout_t *layout, vrna_plot_data_t *data)</argsstring>
+        <name>vrna_plot_structure_eps</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plot__layout__utils_1gac986fe092abc2a6a93ceb5141e4dd28b" kindref="member">vrna_plot_layout_t</ref> *</type>
+          <declname>layout</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__plot__data__s" kindref="compound">vrna_plot_data_t</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="68" column="1" declfile="ViennaRNA/plotting/structures.h" declline="68" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga97471fe55c3cbb0ef7ca1e064d5d9ad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_plot_structure_gml</definition>
+        <argsstring>(const char *filename, const char *sequence, const char *structure, vrna_plot_layout_t *layout, vrna_plot_data_t *data, char option)</argsstring>
+        <name>vrna_plot_structure_gml</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plot__layout__utils_1gac986fe092abc2a6a93ceb5141e4dd28b" kindref="member">vrna_plot_layout_t</ref> *</type>
+          <declname>layout</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__plot__data__s" kindref="compound">vrna_plot_data_t</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="76" column="1" declfile="ViennaRNA/plotting/structures.h" declline="76" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga6142b43d7e935204ae11619cd9421f5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_plot_structure_ssv</definition>
+        <argsstring>(const char *filename, const char *sequence, const char *structure, vrna_plot_layout_t *layout, vrna_plot_data_t *data)</argsstring>
+        <name>vrna_plot_structure_ssv</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plot__layout__utils_1gac986fe092abc2a6a93ceb5141e4dd28b" kindref="member">vrna_plot_layout_t</ref> *</type>
+          <declname>layout</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__plot__data__s" kindref="compound">vrna_plot_data_t</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="85" column="1" declfile="ViennaRNA/plotting/structures.h" declline="85" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1gac8ea43c46ff10a55d28f7b9f7428c34b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_plot_structure_xrna</definition>
+        <argsstring>(const char *filename, const char *sequence, const char *structure, vrna_plot_layout_t *layout, vrna_plot_data_t *data)</argsstring>
+        <name>vrna_plot_structure_xrna</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plot__layout__utils_1gac986fe092abc2a6a93ceb5141e4dd28b" kindref="member">vrna_plot_layout_t</ref> *</type>
+          <declname>layout</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__plot__data__s" kindref="compound">vrna_plot_data_t</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="93" column="1" declfile="ViennaRNA/plotting/structures.h" declline="93" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1gabdc8f6548ba4a3bc3cd868ccbcfdb86a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_file_PS_rnaplot</definition>
+        <argsstring>(const char *seq, const char *structure, const char *file, vrna_md_t *md_p)</argsstring>
+        <name>vrna_file_PS_rnaplot</name>
+        <param>
+          <type>const char *</type>
+          <declname>seq</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="group__model__details_1ga1f8a10e12a0a1915f2a4eff0b28ea17c" kindref="member">vrna_md_t</ref> *</type>
+          <declname>md_p</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure graph in PostScript and write it to &apos;filename&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Note that this function has changed from previous versions and now expects the structure to be plotted in dot-bracket notation as an argument. It does not make use of the global <ref refid="fold__vars_8h_1a0244a629b5ab4f58b77590c3dfd130dc" kindref="member">base_pair</ref> array anymore.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNA sequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secondary structure in dot-bracket notation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the postscript output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Model parameters used to generate a commandline option string in the output (Maybe NULL) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="113" column="1" declfile="ViennaRNA/plotting/structures.h" declline="113" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga139a31dd0ba9fc6612431f67de901c31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_file_PS_rnaplot_a</definition>
+        <argsstring>(const char *seq, const char *structure, const char *file, const char *pre, const char *post, vrna_md_t *md_p)</argsstring>
+        <name>vrna_file_PS_rnaplot_a</name>
+        <param>
+          <type>const char *</type>
+          <declname>seq</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pre</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>post</declname>
+        </param>
+        <param>
+          <type><ref refid="group__model__details_1ga1f8a10e12a0a1915f2a4eff0b28ea17c" kindref="member">vrna_md_t</ref> *</type>
+          <declname>md_p</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure graph in PostScript including additional annotation macros and write it to &apos;filename&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Same as <ref refid="group__plotting__utils_1gabdc8f6548ba4a3bc3cd868ccbcfdb86a" kindref="member">vrna_file_PS_rnaplot()</ref> but adds extra PostScript macros for various annotations (see generated PS code). The &apos;pre&apos; and &apos;post&apos; variables contain PostScript code that is verbatim copied in the resulting PS file just before and after the structure plot. If both arguments (&apos;pre&apos; and &apos;post&apos;) are NULL, no additional macros will be printed into the PostScript.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNA sequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secondary structure in dot-bracket notation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the postscript output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PostScript code to appear before the secondary structure plot </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>post</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PostScript code to appear after the secondary structure plot </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Model parameters used to generate a commandline option string in the output (Maybe NULL) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="138" column="5" declfile="ViennaRNA/plotting/structures.h" declline="138" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga170bae75ff28e84edd4d9c32b86083e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_file_PS_rnaplot_layout</definition>
+        <argsstring>(const char *seq, const char *structure, const char *ssfile, const char *pre, const char *post, vrna_md_t *md_p, vrna_plot_layout_t *layout)</argsstring>
+        <name>vrna_file_PS_rnaplot_layout</name>
+        <param>
+          <type>const char *</type>
+          <declname>seq</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>ssfile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pre</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>post</declname>
+        </param>
+        <param>
+          <type><ref refid="group__model__details_1ga1f8a10e12a0a1915f2a4eff0b28ea17c" kindref="member">vrna_md_t</ref> *</type>
+          <declname>md_p</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plot__layout__utils_1gac986fe092abc2a6a93ceb5141e4dd28b" kindref="member">vrna_plot_layout_t</ref> *</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="147" column="1" declfile="ViennaRNA/plotting/structures.h" declline="147" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga6d0abe209468084b5a24c837e2d222a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PS_rna_plot_snoop_a</definition>
+        <argsstring>(const char *string, const char *structure, const char *ssfile, int *relative_access, const char *seqs[])</argsstring>
+        <name>PS_rna_plot_snoop_a</name>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>ssfile</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>relative_access</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>seqs</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="159" column="1" declfile="ViennaRNA/plotting/structures.h" declline="159" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga70834bc8c0aad4fe6824ff76ccb8f329" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gmlRNA</definition>
+        <argsstring>(char *string, char *structure, char *ssfile, char option)</argsstring>
+        <name>gmlRNA</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>ssfile</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure graph in Graph Meta Language (gml) and write it to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If &apos;option&apos; is an uppercase letter the RNA sequence is used to label nodes, if &apos;option&apos; equals <emphasis>&apos;X&apos;</emphasis> or <emphasis>&apos;x&apos;</emphasis> the resulting file will coordinates for an initial layout of the graph.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNA sequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secondary structure in dot-bracket notation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ssfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the gml output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="179" column="1" declfile="ViennaRNA/plotting/structures.h" declline="179" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1gadd368528755f9a830727b680243541df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssv_rna_plot</definition>
+        <argsstring>(char *string, char *structure, char *ssfile)</argsstring>
+        <name>ssv_rna_plot</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>ssfile</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure graph in SStructView format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Write coord file for SStructView</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNA sequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secondary structure in dot-bracket notation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ssfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the ssv output </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="196" column="1" declfile="ViennaRNA/plotting/structures.h" declline="196" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1gae7853539b5df98f294b4af434e979304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int svg_rna_plot</definition>
+        <argsstring>(char *string, char *structure, char *ssfile)</argsstring>
+        <name>svg_rna_plot</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>ssfile</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure plot in SVG format and write it to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNA sequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secondary structure in dot-bracket notation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ssfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the svg output </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="210" column="1" declfile="ViennaRNA/plotting/structures.h" declline="210" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga2f6d5953e6a323df898896b8d6614483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xrna_plot</definition>
+        <argsstring>(char *string, char *structure, char *ssfile)</argsstring>
+        <name>xrna_plot</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>ssfile</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure plot for further editing in XRNA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNA sequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secondary structure in dot-bracket notation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ssfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the xrna output </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="224" column="1" declfile="ViennaRNA/plotting/structures.h" declline="224" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga0873c7cc4cd7a11c9a2cea19dde7e9c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PS_rna_plot</definition>
+        <argsstring>(char *string, char *structure, char *file)</argsstring>
+        <name>PS_rna_plot</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure graph in PostScript and write it to &apos;filename&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000204"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__plotting__utils_1gabdc8f6548ba4a3bc3cd868ccbcfdb86a" kindref="member">vrna_file_PS_rnaplot()</ref> instead! </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="237" column="6" declfile="ViennaRNA/plotting/structures.h" declline="237" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga47856b2504b566588785597b6ebb8271" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PS_rna_plot_a</definition>
+        <argsstring>(char *string, char *structure, char *file, char *pre, char *post)</argsstring>
+        <name>PS_rna_plot_a</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>pre</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>post</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure graph in PostScript including additional annotation macros and write it to &apos;filename&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000205"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__plotting__utils_1ga139a31dd0ba9fc6612431f67de901c31" kindref="member">vrna_file_PS_rnaplot_a()</ref> instead! </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="250" column="6" declfile="ViennaRNA/plotting/structures.h" declline="250" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plotting__utils_1ga32fa0f97625119e9d24dd2e7153abc4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PS_rna_plot_a_gquad</definition>
+        <argsstring>(char *string, char *structure, char *ssfile, char *pre, char *post)</argsstring>
+        <name>PS_rna_plot_a_gquad</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>ssfile</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>pre</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>post</declname>
+        </param>
+        <briefdescription>
+<para>Produce a secondary structure graph in PostScript including additional annotation macros and write it to &apos;filename&apos; (detect and draw g-quadruplexes) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000206"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__plotting__utils_1ga139a31dd0ba9fc6612431f67de901c31" kindref="member">vrna_file_PS_rnaplot_a()</ref> instead! </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="263" column="6" declfile="ViennaRNA/plotting/structures.h" declline="263" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__plotting__utils_1ga871bcfde693d283f84f3c99b39a7eba1" prot="public" static="no">
+        <name>VRNA_FILE_FORMAT_EPS</name>
+        <initializer>0U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="31" column="9" bodyfile="ViennaRNA/plotting/structures.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__plotting__utils_1ga7e6988112a13762629d263429249b8b4" prot="public" static="no">
+        <name>VRNA_FILE_FORMAT_SVG</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="32" column="9" bodyfile="ViennaRNA/plotting/structures.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__plotting__utils_1gab69c92149df9526af14095ecf0822540" prot="public" static="no">
+        <name>VRNA_FILE_FORMAT_GML</name>
+        <initializer>2U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="33" column="9" bodyfile="ViennaRNA/plotting/structures.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__plotting__utils_1ga6919ce89b337138f40f9850fd2128994" prot="public" static="no">
+        <name>VRNA_FILE_FORMAT_SSV</name>
+        <initializer>3U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="34" column="9" bodyfile="ViennaRNA/plotting/structures.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__plotting__utils_1ga17c33113d04ac5637a3d544492d0df8e" prot="public" static="no">
+        <name>VRNA_FILE_FORMAT_XRNA</name>
+        <initializer>4U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="35" column="9" bodyfile="ViennaRNA/plotting/structures.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__plotting__utils_1ga55cacdf2c5a9170ba454c1229b4cfc38" prot="public" static="no">
+        <name>VRNA_FILE_FORMAT_PLOT_DEFAULT</name>
+        <initializer>VRNA_FILE_FORMAT_EPS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="36" column="9" bodyfile="ViennaRNA/plotting/structures.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

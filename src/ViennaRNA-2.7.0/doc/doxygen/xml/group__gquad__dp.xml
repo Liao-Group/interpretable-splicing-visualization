@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__gquad__dp" kind="group">
+    <compoundname>gquad_dp</compoundname>
+    <title>Construction of G-quadruplex Dynamic Programming Matrices</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__gquad__dp_1gaf4400fdc6c626db0110a950e5ed80eb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vrna_smx_csr_FLT_OR_DBL_t *</type>
+        <definition>vrna_smx_csr_FLT_OR_DBL_t * vrna_gq_pos_pf</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_gq_pos_pf</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="36" column="1" declfile="ViennaRNA/partfunc/gquad.h" declline="36" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,750 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="eval_2structures_8h" kind="file" language="C++">
+    <compoundname>structures.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="datastructures_2basic_8h" local="no">ViennaRNA/datastructures/basic.h</includes>
+    <includes refid="fold__compound_8h" local="no">ViennaRNA/fold_compound.h</includes>
+    <includes refid="datastructures_2char__stream_8h" local="no">ViennaRNA/datastructures/char_stream.h</includes>
+    <includes refid="move_8h" local="no">ViennaRNA/landscape/move.h</includes>
+    <includes refid="params_2basic_8h" local="no">ViennaRNA/params/basic.h</includes>
+    <includes refid="eval_2basic_8h" local="no">ViennaRNA/eval/basic.h</includes>
+    <includedby refid="eval_8h" local="no">ViennaRNA/eval.h</includedby>
+    <includedby refid="fold_8h" local="no">ViennaRNA/fold.h</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>ViennaRNA/constraints/basic.h</label>
+        <link refid="constraints_2basic_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ViennaRNA/constraints/hard.h</label>
+        <link refid="hard_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ViennaRNA/constraints/soft.h</label>
+        <link refid="soft_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ViennaRNA/datastructures/array.h</label>
+        <link refid="array_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/datastructures/basic.h</label>
+        <link refid="datastructures_2basic_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ViennaRNA/datastructures/char_stream.h</label>
+        <link refid="datastructures_2char__stream_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ViennaRNA/datastructures/dp_matrices.h</label>
+        <link refid="datastructures_2dp__matrices_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ViennaRNA/datastructures/sparse_mx.h</label>
+        <link refid="sparse__mx_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>ViennaRNA/eval/basic.h</label>
+        <link refid="eval_2basic_8h"/>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/eval/structures.h</label>
+        <link refid="eval_2structures_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ViennaRNA/fold_compound.h</label>
+        <link refid="fold__compound_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>ViennaRNA/grammar/basic.h</label>
+        <link refid="grammar_2basic_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>ViennaRNA/landscape/move.h</label>
+        <link refid="move_8h"/>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/model.h</label>
+        <link refid="model_8h"/>
+      </node>
+      <node id="8">
+        <label>ViennaRNA/params/basic.h</label>
+        <link refid="params_2basic_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/params/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/sequences/sequence.h</label>
+        <link refid="sequences_2sequence_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ViennaRNA/structured_domains.h</label>
+        <link refid="structured__domains_8h"/>
+      </node>
+      <node id="27">
+        <label>ViennaRNA/structures/dotbracket.h</label>
+        <link refid="dotbracket_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>ViennaRNA/structures/helix.h</label>
+        <link refid="helix_8h"/>
+      </node>
+      <node id="29">
+        <label>ViennaRNA/structures/metrics.h</label>
+        <link refid="metrics_8h"/>
+      </node>
+      <node id="26">
+        <label>ViennaRNA/structures/pairtable.h</label>
+        <link refid="pairtable_8h"/>
+      </node>
+      <node id="24">
+        <label>ViennaRNA/structures/problist.h</label>
+        <link refid="problist_8h"/>
+      </node>
+      <node id="28">
+        <label>ViennaRNA/structures/utils.h</label>
+        <link refid="structures_2utils_8h"/>
+      </node>
+      <node id="23">
+        <label>ViennaRNA/unstructured_domains.h</label>
+        <link refid="unstructured__domains_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ViennaRNA/utils/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ViennaRNA/zscore/basic.h</label>
+        <link refid="zscore_2basic_8h_source"/>
+      </node>
+      <node id="5">
+        <label>limits.h</label>
+      </node>
+      <node id="16">
+        <label>stdarg.h</label>
+      </node>
+      <node id="14">
+        <label>stddef.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="17">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ViennaRNA/eval.h</label>
+        <link refid="eval_8h"/>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/eval/structures.h</label>
+        <link refid="eval_2structures_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/fold.h</label>
+        <link refid="fold_8h"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="user-defined">
+      <header>Basic Energy Evaluation Interface with Dot-Bracket Structure String</header>
+      <member refid="group__eval_1ga06985672a4c73f0e56e1c5722e0aa88e" kind="function"><name>vrna_eval_structure</name></member>
+      <member refid="group__eval_1ga40ebcb27ac05241944b570bc7ffd8409" kind="function"><name>vrna_eval_covar_structure</name></member>
+      <member refid="group__eval_1ga4078d8889e54c1f2e832f6c558399498" kind="function"><name>vrna_eval_structure_verbose</name></member>
+      <member refid="group__eval_1gaf1fe5f30df6a7a9a1a6c137edcf173d2" kind="function"><name>vrna_eval_structure_v</name></member>
+      <member refid="group__eval_1gad1e50a7f48773295e9da8a789fa43474" kind="function"><name>vrna_eval_structure_cstr</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Basic Energy Evaluation Interface with Structure Pair Table</header>
+      <member refid="group__eval_1gaf7227a536cfa4bfd35bf015c865863f6" kind="function"><name>vrna_eval_structure_pt</name></member>
+      <member refid="group__eval_1ga9e8775770750783304d24fe0c4b15293" kind="function"><name>vrna_eval_structure_pt_verbose</name></member>
+      <member refid="group__eval_1ga2573093f1546389c1d56cf7ee9d206fb" kind="function"><name>vrna_eval_structure_pt_v</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Simplified Energy Evaluation with Sequence and Dot-Bracket Strings</header>
+      <member refid="group__eval_1gab6930f446d04761454d033680fbf7909" kind="function"><name>vrna_eval_structure_simple</name></member>
+      <member refid="group__eval_1gabea8429fcdd8c1ad549572dcc852fb42" kind="function"><name>vrna_eval_circ_structure</name></member>
+      <member refid="group__eval_1ga0e7e11f55f95f9c76fb8cc902b02f842" kind="function"><name>vrna_eval_gquad_structure</name></member>
+      <member refid="group__eval_1gac4c97791523b4f222f0b49dc184b06fd" kind="function"><name>vrna_eval_circ_gquad_structure</name></member>
+      <member refid="group__eval_1ga4c2895a7dcd756ef2dc7f76db7c4c53e" kind="function"><name>vrna_eval_structure_simple_verbose</name></member>
+      <member refid="group__eval_1gaddb30ac265f1a39557170e7acac4930f" kind="function"><name>vrna_eval_structure_simple_v</name></member>
+      <member refid="group__eval_1ga8a56347a94dd85facde5985b9c206426" kind="function"><name>vrna_eval_circ_structure_v</name></member>
+      <member refid="group__eval_1ga2acd501f014d3829a26e8c8fece3f876" kind="function"><name>vrna_eval_gquad_structure_v</name></member>
+      <member refid="group__eval_1ga7fd7d128b415f8b87ee1f1c8050a0579" kind="function"><name>vrna_eval_circ_gquad_structure_v</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Simplified Energy Evaluation with Sequence Alignments and Consensus Structure Dot-Bracket String</header>
+      <member refid="group__eval_1ga25d4bc5510e31a2d2d4ac44b060f2272" kind="function"><name>vrna_eval_consensus_structure_simple</name></member>
+      <member refid="group__eval_1gae621c4da20e78df6c374e65eede4a313" kind="function"><name>vrna_eval_circ_consensus_structure</name></member>
+      <member refid="group__eval_1ga998a676020cf1464cf65d683e2acdaa8" kind="function"><name>vrna_eval_gquad_consensus_structure</name></member>
+      <member refid="group__eval_1ga15234ede0f328e28f4075f2a1b177022" kind="function"><name>vrna_eval_circ_gquad_consensus_structure</name></member>
+      <member refid="group__eval_1ga3e7e57b9b4fafcf739eb6646d45be881" kind="function"><name>vrna_eval_consensus_structure_simple_verbose</name></member>
+      <member refid="group__eval_1gaa313c2f6a06e48671f7a2ff6a3227653" kind="function"><name>vrna_eval_consensus_structure_simple_v</name></member>
+      <member refid="group__eval_1gae924c5f0d1b132e64271b16e700457e1" kind="function"><name>vrna_eval_circ_consensus_structure_v</name></member>
+      <member refid="group__eval_1ga3b236c1487fcfd1c95daa36a04bace38" kind="function"><name>vrna_eval_gquad_consensus_structure_v</name></member>
+      <member refid="group__eval_1ga8835380ac51903da01dc3656f2387a9f" kind="function"><name>vrna_eval_circ_gquad_consensus_structure_v</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Simplified Energy Evaluation with Sequence String and Structure Pair Table</header>
+      <member refid="group__eval_1ga0bba59b4d6e53461088666ff4aece7b0" kind="function"><name>vrna_eval_structure_pt_simple</name></member>
+      <member refid="group__eval_1ga76e152ee9a02be23da14cdddf52b4e44" kind="function"><name>vrna_eval_structure_pt_simple_verbose</name></member>
+      <member refid="group__eval_1gac40b813d35289da9816d0c1eec94faa5" kind="function"><name>vrna_eval_structure_pt_simple_v</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Simplified Energy Evaluation with Sequence Alignment and Consensus Structure Pair Table</header>
+      <member refid="group__eval_1gabbb4d2a7aa324ec9cce8f47ce61ab8af" kind="function"><name>vrna_eval_consensus_structure_pt_simple</name></member>
+      <member refid="group__eval_1ga2769e4369d023ad2d5c5f4d2ee825c23" kind="function"><name>vrna_eval_consensus_structure_pt_simple_verbose</name></member>
+      <member refid="group__eval_1gaf2d227b3d54bf9b693a3df52faf5e2e4" kind="function"><name>vrna_eval_consensus_structure_pt_simple_v</name></member>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="eval_2structures_8h_1aab347a3c03fbe8e7319551b9fa0cce4a" prot="public" static="no">
+        <name>DEPRECATED</name>
+        <param><defname>func   </defname></param>
+        <param><defname>msg</defname></param>
+        <initializer>func</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/structures.h" line="21" column="11" bodyfile="ViennaRNA/eval/structures.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__eval__loops_1ga5f9fe7c27d0b628a3efc2d725f52853e" kind="function"><name>vrna_eval_loop_pt</name></member>
+      <member refid="group__eval__loops_1ga905758a7e1320638345f1ef793769f57" kind="function"><name>vrna_eval_loop_pt_v</name></member>
+      <member refid="group__eval__move_1ga2e542ea644f28d33b05ec81b7cd60ae5" kind="function"><name>vrna_eval_move</name></member>
+      <member refid="group__eval__move_1ga03995d1cd83b3881af7c89dd4ddbdefc" kind="function"><name>vrna_eval_move_pt</name></member>
+      <member refid="group__eval__move_1ga8bd14b548874366b8a2a9c65eff08888" kind="function"><name>vrna_eval_move_pt_simple</name></member>
+      <member refid="group__eval__move_1ga7b651856d7b37cede016a2c6ebd8d9b7" kind="function"><name>vrna_eval_move_shift_pt</name></member>
+      <member refid="group__eval__deprecated_1gaf93986cb3cb29770ec9cca69c9fab8cf" kind="function"><name>energy_of_structure</name></member>
+      <member refid="group__eval__deprecated_1gaf9d064d3c496de42eca6734a96fd2090" kind="function"><name>energy_of_struct_par</name></member>
+      <member refid="group__eval__deprecated_1gaeb14f3664aec67fc03268ac75253f0f8" kind="function"><name>energy_of_circ_structure</name></member>
+      <member refid="group__eval__deprecated_1ga3f01f9744ba6a40555eb4d81fc77f6df" kind="function"><name>energy_of_circ_struct_par</name></member>
+      <member refid="group__eval__deprecated_1ga30687ad32835b9894875940958e3eb9a" kind="function"><name>energy_of_gquad_structure</name></member>
+      <member refid="group__eval__deprecated_1ga7d8e18eab7bdc45744b063c81a25ca78" kind="function"><name>energy_of_gquad_struct_par</name></member>
+      <member refid="group__eval__deprecated_1ga8831445966b761417e713360791299d8" kind="function"><name>energy_of_structure_pt</name></member>
+      <member refid="group__eval__deprecated_1ga49acb3d5627dc6823a7ce12d116d4c69" kind="function"><name>energy_of_struct_pt_par</name></member>
+      <member refid="group__eval__deprecated_1ga539ecaed89730f7644c202f304d7529b" kind="function"><name>energy_of_move</name></member>
+      <member refid="group__eval__deprecated_1ga49e0ee561be69faf0568213546f6a53f" kind="function"><name>energy_of_move_pt</name></member>
+      <member refid="group__eval__deprecated_1ga507d4fd93f4b398d793ba2402731388d" kind="function"><name>loop_energy</name></member>
+      <member refid="group__eval__deprecated_1gac2b37fea2145c94d925a3f33378ef87b" kind="function"><name>energy_of_struct</name></member>
+      <member refid="group__eval__deprecated_1ga27ce6f68512d43bf1fe14a06c9d76d5c" kind="function"><name>energy_of_struct_pt</name></member>
+      <member refid="group__eval__deprecated_1ga657222e2758c46bf13b416ef3032e417" kind="function"><name>energy_of_circ_struct</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Functions and variables related to energy evaluation of sequence/structure pairs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_EVAL_STRUCTURES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_EVAL_STRUCTURES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="datastructures_2basic_8h" kindref="compound">ViennaRNA/datastructures/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fold__compound_8h" kindref="compound">ViennaRNA/fold_compound.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="datastructures_2char__stream_8h" kindref="compound">ViennaRNA/datastructures/char_stream.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="move_8h" kindref="compound">ViennaRNA/landscape/move.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="params_2basic_8h" kindref="compound">ViennaRNA/params/basic.h</ref>&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>deprecated<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="eval_2basic_8h" kindref="compound">ViennaRNA/eval/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>VRNA_WARN_DEPRECATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>if<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func<sp/>__attribute__<sp/>((deprecated(&quot;&quot;,<sp/>msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>elif<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func<sp/>__attribute__<sp/>((deprecated(msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="group__eval_1ga06985672a4c73f0e56e1c5722e0aa88e" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga06985672a4c73f0e56e1c5722e0aa88e" kindref="member">vrna_eval_structure</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*structure);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="group__eval_1ga40ebcb27ac05241944b570bc7ffd8409" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga40ebcb27ac05241944b570bc7ffd8409" kindref="member">vrna_eval_covar_structure</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*structure);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="group__eval_1ga4078d8889e54c1f2e832f6c558399498" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga4078d8889e54c1f2e832f6c558399498" kindref="member">vrna_eval_structure_verbose</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="group__eval_1gaf1fe5f30df6a7a9a1a6c137edcf173d2" refkind="member"><highlight class="normal"><ref refid="group__eval_1gaf1fe5f30df6a7a9a1a6c137edcf173d2" kindref="member">vrna_eval_structure_v</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">vrna_eval_structure_cstr(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrna_cstr_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_stream);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>basic<sp/>eval<sp/>interface<sp/>*/</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="group__eval_1gaf7227a536cfa4bfd35bf015c865863f6" refkind="member"><highlight class="normal"><ref refid="group__eval_1gaf7227a536cfa4bfd35bf015c865863f6" kindref="member">vrna_eval_structure_pt</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pt);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="group__eval_1ga9e8775770750783304d24fe0c4b15293" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga9e8775770750783304d24fe0c4b15293" kindref="member">vrna_eval_structure_pt_verbose</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pt,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="group__eval_1ga2573093f1546389c1d56cf7ee9d206fb" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga2573093f1546389c1d56cf7ee9d206fb" kindref="member">vrna_eval_structure_pt_v</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pt,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>basic<sp/>eval<sp/>interface<sp/>with<sp/>pair<sp/>table<sp/>*/</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="group__eval_1gab6930f446d04761454d033680fbf7909" refkind="member"><highlight class="normal"><ref refid="group__eval_1gab6930f446d04761454d033680fbf7909" kindref="member">vrna_eval_structure_simple</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="group__eval_1gabea8429fcdd8c1ad549572dcc852fb42" refkind="member"><highlight class="normal"><ref refid="group__eval_1gabea8429fcdd8c1ad549572dcc852fb42" kindref="member">vrna_eval_circ_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="group__eval_1ga0e7e11f55f95f9c76fb8cc902b02f842" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga0e7e11f55f95f9c76fb8cc902b02f842" kindref="member">vrna_eval_gquad_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*structure);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320" refid="group__eval_1gac4c97791523b4f222f0b49dc184b06fd" refkind="member"><highlight class="normal"><ref refid="group__eval_1gac4c97791523b4f222f0b49dc184b06fd" kindref="member">vrna_eval_circ_gquad_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339" refid="group__eval_1ga4c2895a7dcd756ef2dc7f76db7c4c53e" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga4c2895a7dcd756ef2dc7f76db7c4c53e" kindref="member">vrna_eval_structure_simple_verbose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="group__eval_1gaddb30ac265f1a39557170e7acac4930f" refkind="member"><highlight class="normal"><ref refid="group__eval_1gaddb30ac265f1a39557170e7acac4930f" kindref="member">vrna_eval_structure_simple_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390" refid="group__eval_1ga8a56347a94dd85facde5985b9c206426" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga8a56347a94dd85facde5985b9c206426" kindref="member">vrna_eval_circ_structure_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419" refid="group__eval_1ga2acd501f014d3829a26e8c8fece3f876" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga2acd501f014d3829a26e8c8fece3f876" kindref="member">vrna_eval_gquad_structure_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446" refid="group__eval_1ga7fd7d128b415f8b87ee1f1c8050a0579" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga7fd7d128b415f8b87ee1f1c8050a0579" kindref="member">vrna_eval_circ_gquad_structure_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>simplified<sp/>eval<sp/>interface<sp/>*/</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="483" refid="group__eval_1ga25d4bc5510e31a2d2d4ac44b060f2272" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga25d4bc5510e31a2d2d4ac44b060f2272" kindref="member">vrna_eval_consensus_structure_simple</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**alignment,</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure);</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="503" refid="group__eval_1gae621c4da20e78df6c374e65eede4a313" refkind="member"><highlight class="normal"><ref refid="group__eval_1gae621c4da20e78df6c374e65eede4a313" kindref="member">vrna_eval_circ_consensus_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**alignment,</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure);</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="530" refid="group__eval_1ga998a676020cf1464cf65d683e2acdaa8" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga998a676020cf1464cf65d683e2acdaa8" kindref="member">vrna_eval_gquad_consensus_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>**alignment,</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*structure);</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight></codeline>
+<codeline lineno="533"><highlight class="normal"></highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="557" refid="group__eval_1ga15234ede0f328e28f4075f2a1b177022" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga15234ede0f328e28f4075f2a1b177022" kindref="member">vrna_eval_circ_gquad_consensus_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**alignment,</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure);</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="560"><highlight class="normal"></highlight></codeline>
+<codeline lineno="580"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="581" refid="group__eval_1ga3e7e57b9b4fafcf739eb6646d45be881" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga3e7e57b9b4fafcf739eb6646d45be881" kindref="member">vrna_eval_consensus_structure_simple_verbose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**alignment,</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="584"><highlight class="normal"></highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="611" refid="group__eval_1gaa313c2f6a06e48671f7a2ff6a3227653" refkind="member"><highlight class="normal"><ref refid="group__eval_1gaa313c2f6a06e48671f7a2ff6a3227653" kindref="member">vrna_eval_consensus_structure_simple_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**alignment,</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="615"><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="637" refid="group__eval_1gae924c5f0d1b132e64271b16e700457e1" refkind="member"><highlight class="normal"><ref refid="group__eval_1gae924c5f0d1b132e64271b16e700457e1" kindref="member">vrna_eval_circ_consensus_structure_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**alignment,</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"></highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight></codeline>
+<codeline lineno="669"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="670" refid="group__eval_1ga3b236c1487fcfd1c95daa36a04bace38" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga3b236c1487fcfd1c95daa36a04bace38" kindref="member">vrna_eval_gquad_consensus_structure_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>**alignment,</highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"></highlight></codeline>
+<codeline lineno="675"><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="703" refid="group__eval_1ga8835380ac51903da01dc3656f2387a9f" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga8835380ac51903da01dc3656f2387a9f" kindref="member">vrna_eval_circ_gquad_consensus_structure_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**alignment,</highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="707"><highlight class="normal"></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>simplified<sp/>comparative<sp/>eval<sp/>interface<sp/>*/</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="733" refid="group__eval_1ga0bba59b4d6e53461088666ff4aece7b0" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga0bba59b4d6e53461088666ff4aece7b0" kindref="member">vrna_eval_structure_pt_simple</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>*pt);</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"></highlight></codeline>
+<codeline lineno="750"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="751" refid="group__eval_1ga76e152ee9a02be23da14cdddf52b4e44" refkind="member"><highlight class="normal"><ref refid="group__eval_1ga76e152ee9a02be23da14cdddf52b4e44" kindref="member">vrna_eval_structure_pt_simple_verbose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>*pt,</highlight></codeline>
+<codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="780"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="781" refid="group__eval_1gac40b813d35289da9816d0c1eec94faa5" refkind="member"><highlight class="normal"><ref refid="group__eval_1gac40b813d35289da9816d0c1eec94faa5" kindref="member">vrna_eval_structure_pt_simple_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>*pt,</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"></highlight></codeline>
+<codeline lineno="786"><highlight class="normal"></highlight></codeline>
+<codeline lineno="787"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>simplified<sp/>eval<sp/>interface<sp/>with<sp/>pair<sp/>table<sp/>*/</highlight></codeline>
+<codeline lineno="809"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="810" refid="group__eval_1gabbb4d2a7aa324ec9cce8f47ce61ab8af" refkind="member"><highlight class="normal"><ref refid="group__eval_1gabbb4d2a7aa324ec9cce8f47ce61ab8af" kindref="member">vrna_eval_consensus_structure_pt_simple</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>**alignment,</highlight></codeline>
+<codeline lineno="811"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>*pt);</highlight></codeline>
+<codeline lineno="812"><highlight class="normal"></highlight></codeline>
+<codeline lineno="813"><highlight class="normal"></highlight></codeline>
+<codeline lineno="814"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="815"><highlight class="normal">vrna_eval_consensus_structure_pt_simple_verbose(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>**alignment,</highlight></codeline>
+<codeline lineno="816"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>*pt,</highlight></codeline>
+<codeline lineno="817"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="818"><highlight class="normal"></highlight></codeline>
+<codeline lineno="819"><highlight class="normal"></highlight></codeline>
+<codeline lineno="820"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="821" refid="group__eval_1gaf2d227b3d54bf9b693a3df52faf5e2e4" refkind="member"><highlight class="normal"><ref refid="group__eval_1gaf2d227b3d54bf9b693a3df52faf5e2e4" kindref="member">vrna_eval_consensus_structure_pt_simple_v</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>**alignment,</highlight></codeline>
+<codeline lineno="822"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>*pt,</highlight></codeline>
+<codeline lineno="823"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level,</highlight></codeline>
+<codeline lineno="824"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*file);</highlight></codeline>
+<codeline lineno="825"><highlight class="normal"></highlight></codeline>
+<codeline lineno="826"><highlight class="normal"></highlight></codeline>
+<codeline lineno="827"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>simplified<sp/>eval<sp/>interface<sp/>with<sp/>pair<sp/>table<sp/>*/</highlight></codeline>
+<codeline lineno="851"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="852" refid="group__eval__loops_1ga5f9fe7c27d0b628a3efc2d725f52853e" refkind="member"><highlight class="normal"><ref refid="group__eval__loops_1ga5f9fe7c27d0b628a3efc2d725f52853e" kindref="member">vrna_eval_loop_pt</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="853"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i,</highlight></codeline>
+<codeline lineno="854"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pt);</highlight></codeline>
+<codeline lineno="855"><highlight class="normal"></highlight></codeline>
+<codeline lineno="856"><highlight class="normal"></highlight></codeline>
+<codeline lineno="866"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="867" refid="group__eval__loops_1ga905758a7e1320638345f1ef793769f57" refkind="member"><highlight class="normal"><ref refid="group__eval__loops_1ga905758a7e1320638345f1ef793769f57" kindref="member">vrna_eval_loop_pt_v</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="868"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i,</highlight></codeline>
+<codeline lineno="869"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pt,</highlight></codeline>
+<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level);</highlight></codeline>
+<codeline lineno="871"><highlight class="normal"></highlight></codeline>
+<codeline lineno="872"><highlight class="normal"></highlight></codeline>
+<codeline lineno="897"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="898" refid="group__eval__move_1ga2e542ea644f28d33b05ec81b7cd60ae5" refkind="member"><highlight class="normal"><ref refid="group__eval__move_1ga2e542ea644f28d33b05ec81b7cd60ae5" kindref="member">vrna_eval_move</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc,</highlight></codeline>
+<codeline lineno="899"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="900"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1,</highlight></codeline>
+<codeline lineno="901"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m2);</highlight></codeline>
+<codeline lineno="902"><highlight class="normal"></highlight></codeline>
+<codeline lineno="903"><highlight class="normal"></highlight></codeline>
+<codeline lineno="919"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="920" refid="group__eval__move_1ga03995d1cd83b3881af7c89dd4ddbdefc" refkind="member"><highlight class="normal"><ref refid="group__eval__move_1ga03995d1cd83b3881af7c89dd4ddbdefc" kindref="member">vrna_eval_move_pt</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="921"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pt,</highlight></codeline>
+<codeline lineno="922"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1,</highlight></codeline>
+<codeline lineno="923"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m2);</highlight></codeline>
+<codeline lineno="924"><highlight class="normal"></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="927"><highlight class="normal">vrna_eval_move_pt_simple(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="928"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*pt,</highlight></codeline>
+<codeline lineno="929"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1,</highlight></codeline>
+<codeline lineno="930"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m2);</highlight></codeline>
+<codeline lineno="931"><highlight class="normal"></highlight></codeline>
+<codeline lineno="932"><highlight class="normal"></highlight></codeline>
+<codeline lineno="933"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="934"><highlight class="normal">vrna_eval_move_shift_pt(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvrna__move__s" kindref="compound">vrna_move_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*m,</highlight></codeline>
+<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*structure);</highlight></codeline>
+<codeline lineno="937"><highlight class="normal"></highlight></codeline>
+<codeline lineno="938"><highlight class="normal"></highlight></codeline>
+<codeline lineno="943"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_BACKWARD_COMPATIBILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="944"><highlight class="normal"></highlight></codeline>
+<codeline lineno="968"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="969"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1gaf93986cb3cb29770ec9cca69c9fab8cf" kindref="member">energy_of_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="970"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="971"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level),</highlight></codeline>
+<codeline lineno="972" refid="group__eval__deprecated_1gaf93986cb3cb29770ec9cca69c9fab8cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure_simple()<sp/>and<sp/>vrna_eval_structure()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="973"><highlight class="normal"></highlight></codeline>
+<codeline lineno="989"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="990"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1gaf9d064d3c496de42eca6734a96fd2090" kindref="member">energy_of_struct_par</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="991"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="992"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvrna__param__s" kindref="compound">vrna_param_t</ref><sp/><sp/>*parameters,</highlight></codeline>
+<codeline lineno="993"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level),</highlight></codeline>
+<codeline lineno="994" refid="group__eval__deprecated_1gaf9d064d3c496de42eca6734a96fd2090" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="995"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1014"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1015"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1gaeb14f3664aec67fc03268ac75253f0f8" kindref="member">energy_of_circ_structure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1016"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="1017"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level),</highlight></codeline>
+<codeline lineno="1018" refid="group__eval__deprecated_1gaeb14f3664aec67fc03268ac75253f0f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_circ_structure_simple()<sp/>and<sp/>vrna_eval_structure()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1019"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1035"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1036"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1ga3f01f9744ba6a40555eb4d81fc77f6df" kindref="member">energy_of_circ_struct_par</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1037"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="1038"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvrna__param__s" kindref="compound">vrna_param_t</ref><sp/>*parameters,</highlight></codeline>
+<codeline lineno="1039"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level),</highlight></codeline>
+<codeline lineno="1040" refid="group__eval__deprecated_1ga3f01f9744ba6a40555eb4d81fc77f6df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1041"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1042"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1043"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1044"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energy_of_gquad_structure(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1045"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,</highlight></codeline>
+<codeline lineno="1046"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level),</highlight></codeline>
+<codeline lineno="1047"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure_simple()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1048"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1049"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1050"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energy_of_gquad_struct_par(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1051"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="1052"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvrna__param__s" kindref="compound">vrna_param_t</ref><sp/><sp/>*parameters,</highlight></codeline>
+<codeline lineno="1053"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level),</highlight></codeline>
+<codeline lineno="1054"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1055"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1056"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1077"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1078"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1ga8831445966b761417e713360791299d8" kindref="member">energy_of_structure_pt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1079"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ptable,</highlight></codeline>
+<codeline lineno="1080"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*s,</highlight></codeline>
+<codeline lineno="1081"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*s1,</highlight></codeline>
+<codeline lineno="1082"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level),</highlight></codeline>
+<codeline lineno="1083" refid="group__eval__deprecated_1ga8831445966b761417e713360791299d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure_pt_simple()<sp/>and<sp/>vrna_eval_structure_pt()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1084"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1102"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1ga49acb3d5627dc6823a7ce12d116d4c69" kindref="member">energy_of_struct_pt_par</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ptable,</highlight></codeline>
+<codeline lineno="1105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*s,</highlight></codeline>
+<codeline lineno="1106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*s1,</highlight></codeline>
+<codeline lineno="1107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvrna__param__s" kindref="compound">vrna_param_t</ref><sp/>*parameters,</highlight></codeline>
+<codeline lineno="1108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbosity_level),</highlight></codeline>
+<codeline lineno="1109" refid="group__eval__deprecated_1ga49acb3d5627dc6823a7ce12d116d4c69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure_pt()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1128"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1ga539ecaed89730f7644c202f304d7529b" kindref="member">energy_of_move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*structure,</highlight></codeline>
+<codeline lineno="1131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1,</highlight></codeline>
+<codeline lineno="1132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m2),</highlight></codeline>
+<codeline lineno="1133" refid="group__eval__deprecated_1ga539ecaed89730f7644c202f304d7529b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_move()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1154"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1ga49e0ee561be69faf0568213546f6a53f" kindref="member">energy_of_move_pt</ref>(</highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/>*pt,</highlight></codeline>
+<codeline lineno="1156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/>*s,</highlight></codeline>
+<codeline lineno="1157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/>*s1,</highlight></codeline>
+<codeline lineno="1158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>m1,</highlight></codeline>
+<codeline lineno="1159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>m2),</highlight></codeline>
+<codeline lineno="1160" refid="group__eval__deprecated_1ga49e0ee561be69faf0568213546f6a53f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_move_pt_simple()<sp/>and<sp/>vrna_eval_move_pt()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1175"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1ga507d4fd93f4b398d793ba2402731388d" kindref="member">loop_energy</ref>(</highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/>*ptable,</highlight></codeline>
+<codeline lineno="1177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/>*s,</highlight></codeline>
+<codeline lineno="1178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/>*s1,</highlight></codeline>
+<codeline lineno="1179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>i),</highlight></codeline>
+<codeline lineno="1180" refid="group__eval__deprecated_1ga507d4fd93f4b398d793ba2402731388d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_loop_pt()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1197"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1gac2b37fea2145c94d925a3f33378ef87b" kindref="member">energy_of_struct</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*structure),</highlight></codeline>
+<codeline lineno="1200" refid="group__eval__deprecated_1gac2b37fea2145c94d925a3f33378ef87b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure_simple()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1219"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1ga27ce6f68512d43bf1fe14a06c9d76d5c" kindref="member">energy_of_struct_pt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*ptable,</highlight></codeline>
+<codeline lineno="1222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*s,</highlight></codeline>
+<codeline lineno="1223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*s1),</highlight></codeline>
+<codeline lineno="1224" refid="group__eval__deprecated_1ga27ce6f68512d43bf1fe14a06c9d76d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_structure_pt_simple()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1241"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__eval__deprecated_1ga657222e2758c46bf13b416ef3032e417" kindref="member">energy_of_circ_struct</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="1243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure),</highlight></codeline>
+<codeline lineno="1244" refid="group__eval__deprecated_1ga657222e2758c46bf13b416ef3032e417" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_eval_circ_structure_simple()<sp/>and<sp/>vrna_eval_structure()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1246"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1252"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/eval/structures.h"/>
+  </compounddef>
+</doxygen>

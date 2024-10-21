@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__struct__utils" kind="group">
+    <compoundname>struct_utils</compoundname>
+    <title>Secondary Structure Utilities</title>
+    <innerfile refid="benchmark_8h">benchmark.h</innerfile>
+    <innerfile refid="dotbracket_8h">dotbracket.h</innerfile>
+    <innerfile refid="helix_8h">helix.h</innerfile>
+    <innerfile refid="metrics_8h">metrics.h</innerfile>
+    <innerfile refid="pairtable_8h">pairtable.h</innerfile>
+    <innerfile refid="problist_8h">problist.h</innerfile>
+    <innerfile refid="shapes_8h">shapes.h</innerfile>
+    <innerfile refid="tree_8h">tree.h</innerfile>
+    <innerfile refid="structures_2utils_8h">utils.h</innerfile>
+    <innergroup refid="group__struct__utils__dot__bracket">Dot-Bracket Notation of Secondary Structures</innergroup>
+    <innergroup refid="group__struct__utils__wuss">Washington University Secondary Structure (WUSS) notation</innergroup>
+    <innergroup refid="group__struct__utils__pair__table">Pair Table Representation of Secondary Structures</innergroup>
+    <innergroup refid="group__struct__utils__plist">Pair List Representation of Secondary Structures</innergroup>
+    <innergroup refid="group__struct__utils__abstract__shapes">Abstract Shapes Representation of Secondary Structures</innergroup>
+    <innergroup refid="group__struct__utils__helix__list">Helix List Representation of Secondary Structures</innergroup>
+    <innergroup refid="group__struct__utils__tree">Tree Representation of Secondary Structures</innergroup>
+    <innergroup refid="group__struct__utils__metrics">Distance measures between Secondary Structures</innergroup>
+    <innergroup refid="group__struct__utils__benchmark">Benchmark measures for Secondary Structure Predictions</innergroup>
+    <innergroup refid="group__struct__utils__deprecated">Deprecated Interface for Secondary Structure Utilities</innergroup>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__struct__utils_1ga8a2c825d6a9c2d73329b6c09320a6a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int *</type>
+        <definition>int * vrna_loopidx_from_ptable</definition>
+        <argsstring>(const short *pt)</argsstring>
+        <name>vrna_loopidx_from_ptable</name>
+        <param>
+          <type>const short *</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Get a loop index representation of a structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="297" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="297" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils_1gacb5f1fafaf20eaf6a63052153499f0bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * vrna_db_from_probs</definition>
+        <argsstring>(const FLT_OR_DBL *pr, unsigned int length)</argsstring>
+        <name>vrna_db_from_probs</name>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>pr</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Create a dot-bracket like structure string from base pair probability matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="wrappers_1_wrappers000179"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is available as parameter-less method <bold>db_from_probs()</bold> bound to objects of type <emphasis>fold_compound</emphasis>. Parameters <computeroutput>pr</computeroutput> and <computeroutput>length</computeroutput> are implicitely taken from the <emphasis>fold_compound</emphasis> object the method is bound to. Upon missing base pair probabilities, this method returns an empty string. See, e.g.  <verbatim>embed:rst:inline :py:func:`RNA.db_from_probs()` in the :doc:`/api_python`</verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="311" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="311" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils_1gabcfce39809bcb24487841fb430d8ef1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * vrna_pairing_tendency</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_pairing_tendency</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="315" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="315" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils_1ga025bff1b27fa46534c8fae6980f64bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char vrna_bpp_symbol</definition>
+        <argsstring>(const float *x)</argsstring>
+        <name>vrna_bpp_symbol</name>
+        <param>
+          <type>const float *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Get a pseudo dot bracket notation for a given probability information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="322" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="322" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils_1ga29d5a2517277a5b7eba6c8a101555ef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * vrna_db_from_bps</definition>
+        <argsstring>(vrna_bps_t bp_stack, unsigned int length)</argsstring>
+        <name>vrna_db_from_bps</name>
+        <param>
+          <type><ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref></type>
+          <declname>bp_stack</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Create a dot-backet/parenthesis structure from backtracking stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is capable to create dot-bracket structures from base pairs stored within the base pair stack <computeroutput>bp_stack</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bp_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base pair stack containing the traced base pairs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The secondary structure in dot-bracket notation as provided in the input </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="337" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="337" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils_1ga807dbe2fdefa8a482cdad46520908464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * vrna_db_from_bp_stack</definition>
+        <argsstring>(vrna_bp_stack_t *bp, unsigned int length)</argsstring>
+        <name>vrna_db_from_bp_stack</name>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Create a dot-backet/parenthesis structure from backtracking stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is capable to create dot-bracket structures from suboptimal structure prediction sensu M. Zuker</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base pair stack containing the traced base pairs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The secondary structure in dot-bracket notation as provided in the input </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="352" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="352" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils_1ga6708519ddf10f1420016ad47b5a3baea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_letter_structure</definition>
+        <argsstring>(char *structure, vrna_bp_stack_t *bp, unsigned int length)</argsstring>
+        <name>vrna_letter_structure</name>
+        <param>
+          <type>char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type><ref refid="structvrna__bp__stack__t" kindref="compound">vrna_bp_stack_t</ref> *</type>
+          <declname>bp</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="357" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="357" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils_1gad5e50b8d4f6837ad15ab784738682147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int *</type>
+        <definition>unsigned int * vrna_refBPcnt_matrix</definition>
+        <argsstring>(const short *reference_pt, unsigned int turn)</argsstring>
+        <name>vrna_refBPcnt_matrix</name>
+        <param>
+          <type>const short *</type>
+          <declname>reference_pt</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>turn</declname>
+        </param>
+        <briefdescription>
+<para>Make a reference base pair count matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an upper triangular matrix containing the number of basepairs of a reference structure for each interval [i,j] with i&lt;j. Access it via iindx!!! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/utils.h" line="34" column="1" declfile="ViennaRNA/structures/utils.h" declline="34" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__struct__utils_1ga7f4b0443a4fb67c924532895757d9496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int *</type>
+        <definition>unsigned int * vrna_refBPdist_matrix</definition>
+        <argsstring>(const short *pt1, const short *pt2, unsigned int turn)</argsstring>
+        <name>vrna_refBPdist_matrix</name>
+        <param>
+          <type>const short *</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const short *</type>
+          <declname>pt2</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>turn</declname>
+        </param>
+        <briefdescription>
+<para>Make a reference base pair distance matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an upper triangular matrix containing the base pair distance of two reference structures for each interval [i,j] with i&lt;j. Access it via iindx!!! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/utils.h" line="46" column="1" declfile="ViennaRNA/structures/utils.h" declline="46" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

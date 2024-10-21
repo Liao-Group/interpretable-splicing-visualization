@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__gquad__eval" kind="group">
+    <compoundname>gquad_eval</compoundname>
+    <title>Energy Evaluation for G-quadruplexes</title>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="group__gquad__eval_1gac8936188af0c1d2f8b9d0cd25fde43b2" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/gquad.h" line="20" column="51" bodyfile="ViennaRNA/subopt/gquad.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__gquad__eval_1ga91987e5c353e383e19752470ba07fd02" prot="public" static="no" mutable="no">
+        <type>unsigned int unsigned int</type>
+        <definition>unsigned int unsigned int j</definition>
+        <argsstring></argsstring>
+        <name>j</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/gquad.h" line="21" column="51" bodyfile="ViennaRNA/subopt/gquad.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__gquad__eval_1ga087bd9245b41288266b8401c8b4b45eb" prot="public" static="no" mutable="no">
+        <type>unsigned int unsigned int int</type>
+        <definition>unsigned int unsigned int int threshold</definition>
+        <argsstring></argsstring>
+        <name>threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/gquad.h" line="24" column="51" bodyfile="ViennaRNA/subopt/gquad.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__gquad__eval_1ga6099c24a2d443663900a0d760d316adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_gquad</definition>
+        <argsstring>(unsigned int L, unsigned int l[3], vrna_param_t *P)</argsstring>
+        <name>vrna_E_gquad</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/gquad.h" line="45" column="1" declfile="ViennaRNA/eval/gquad.h" declline="45" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1ga1daa2f705ee53a594bfb152f1b1a3fb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_gquad</definition>
+        <argsstring>(unsigned int L, unsigned int l[3], vrna_exp_param_t *pf)</argsstring>
+        <name>vrna_exp_E_gquad</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>pf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/gquad.h" line="51" column="1" declfile="ViennaRNA/eval/gquad.h" declline="51" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1gacb841661b5b9c317075867257d3d1930" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_E_consensus_gquad</definition>
+        <argsstring>(unsigned int L, unsigned int l[3], unsigned int position, unsigned int length, unsigned int n_seq, const short **S, const unsigned int **a2s, vrna_param_t *P, int en[2])</argsstring>
+        <name>vrna_E_consensus_gquad</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type>const short **</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>const unsigned int **</type>
+          <declname>a2s</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>en</declname>
+          <array>[2]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/gquad.h" line="57" column="1" declfile="ViennaRNA/eval/gquad.h" declline="57" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1ga6ed678416327818e0a138c1345064f57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_consensus_gquad</definition>
+        <argsstring>(unsigned int L, unsigned int l[3], vrna_exp_param_t *pf, unsigned int position, unsigned int length, unsigned int n_seq, const short **S, const unsigned int **a2s)</argsstring>
+        <name>vrna_exp_E_consensus_gquad</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>pf</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n_seq</declname>
+        </param>
+        <param>
+          <type>const short **</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>const unsigned int **</type>
+          <declname>a2s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/gquad.h" line="69" column="1" declfile="ViennaRNA/eval/gquad.h" declline="69" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1ga0e8f6ff0e41e3357793aa708ac333548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_gquad_internal_loop</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j)</argsstring>
+        <name>vrna_mfe_gquad_internal_loop</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/gquad.h" line="47" column="1" declfile="ViennaRNA/mfe/gquad.h" declline="47" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1gaa7160e13dd918148218eb6fe9e12d7f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_gq_int_loop_pf</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j)</argsstring>
+        <name>vrna_gq_int_loop_pf</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="20" column="1" declfile="ViennaRNA/partfunc/gquad.h" declline="20" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1ga4f36fa702f3093b40608739b301aea4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vrna_array</definition>
+        <argsstring>(int) vrna_gq_int_loop_subopt(vrna_fold_compound_t *fc</argsstring>
+        <name>vrna_array</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/gquad.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1ga130361cb32eef69a9328d3905204e7ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int unsigned int</type>
+        <definition>unsigned int unsigned int vrna_array</definition>
+        <argsstring>(unsigned int) *p_p</argsstring>
+        <name>vrna_array</name>
+        <param>
+          <type>unsigned int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/gquad.h" line="22" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1ga923f5fdb6c20d10173de569ff12e0cb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_gquad_pattern_exhaustive</definition>
+        <argsstring>(short *S, unsigned int i, unsigned int j, vrna_param_t *P, unsigned int *L, unsigned int *l, int threshold)</argsstring>
+        <name>get_gquad_pattern_exhaustive</name>
+        <param>
+          <type>short *</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/gquad.h" line="27" column="1" declfile="ViennaRNA/subopt/gquad.h" declline="27" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__eval_1gadb40cbddf9b804f2d66dcdf1e949e218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int get_gquad_count</definition>
+        <argsstring>(short *S, unsigned int i, unsigned int j)</argsstring>
+        <name>get_gquad_count</name>
+        <param>
+          <type>short *</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/gquad.h" line="38" column="1" declfile="ViennaRNA/subopt/gquad.h" declline="38" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

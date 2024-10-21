@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__soft__constraints" kind="group">
+    <compoundname>soft_constraints</compoundname>
+    <title>Soft Constraints</title>
+    <innerfile refid="soft_8h">soft.h</innerfile>
+    <innerfile refid="soft__special_8h">soft_special.h</innerfile>
+    <innerclass refid="structvrna__sc__bp__storage__t" prot="public">vrna_sc_bp_storage_t</innerclass>
+    <innerclass refid="structvrna__sc__s" prot="public">vrna_sc_s</innerclass>
+    <innergroup refid="group__soft__constraints__up">Soft Constraints (unpaired positions)</innergroup>
+    <innergroup refid="group__soft__constraints__bp">Soft Constraints (base pairs)</innergroup>
+    <innergroup refid="group__soft__constraints__st">Soft Constraints (base pair stacks)</innergroup>
+    <innergroup refid="group__soft__constraints__generic">Soft Constraints (generic implementation)</innergroup>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__soft__constraints_1gab926b4d8c342aa5fb2f8f007200635a8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vrna_sc_type_e</name>
+        <enumvalue id="group__soft__constraints_1ggab926b4d8c342aa5fb2f8f007200635a8a0bd84aa58715eb7fb12cd385c7d27201" prot="public">
+          <name>VRNA_SC_DEFAULT</name>
+          <briefdescription>
+<para>Default Soft Constraints. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__soft__constraints_1ggab926b4d8c342aa5fb2f8f007200635a8a4a982ee6f7310949a504cc9f75f34581" prot="public">
+          <name>VRNA_SC_WINDOW</name>
+          <briefdescription>
+<para>Soft Constraints suitable for local structure prediction using window approach. </para>
+          </briefdescription>
+          <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__mfe__window_1gacdbc049dcfc7a0e2eb37a327efab91e2" kindref="member">vrna_mfe_window()</ref>, <ref refid="group__mfe__window_1ga90d3756f07aa78a47ffac187ead3c0aa" kindref="member">vrna_mfe_window_zscore()</ref>, <ref refid="group__part__func__window__deprecated_1gaf6d77f10775c1d58c8199d5ec95d4228" kindref="member">pfl_fold()</ref> </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The type of a soft constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="207" column="1" bodyfile="ViennaRNA/constraints/soft.h" bodystart="207" bodyend="213"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__soft__constraints_1ga75401ce219ef8dbcceb672db82d434c6" prot="public" static="no">
+        <type>struct <ref refid="structvrna__sc__s" kindref="compound">vrna_sc_s</ref></type>
+        <definition>typedef struct vrna_sc_s vrna_sc_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_sc_t</name>
+        <briefdescription>
+<para>Typename for the soft constraints data structure <ref refid="structvrna__sc__s" kindref="compound">vrna_sc_s</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="16" column="24" bodyfile="ViennaRNA/constraints/soft.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__soft__constraints_1gab8e024c40f167496df65adfa0db9a9b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_sc_init</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_sc_init</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+<para>Initialize an empty soft constraints data structure within a <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function adds a proper soft constraints data structure to the <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> data structure. If soft constraints already exist within the fold compound, they are removed.</para>
+<para><simplesect kind="note"><para>Accepts vrna_fold_compound_t of type <ref refid="group__fold__compound_1gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6" kindref="member">VRNA_FC_TYPE_SINGLE</ref> and <ref refid="group__fold__compound_1gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023" kindref="member">VRNA_FC_TYPE_COMPARATIVE</ref></para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__soft__constraints__bp_1ga68900a8a15c83ff352f576b8a298e371" kindref="member">vrna_sc_set_bp()</ref>, <ref refid="group__soft__constraints__up_1gaf6634fa9249945b7cb0e325942d2771b" kindref="member">vrna_sc_set_up()</ref>, <ref refid="group__SHAPE__reactivities_1gad609895467d59ea53faac4f98b71c099" kindref="member">vrna_sc_add_SHAPE_deigan()</ref>, <ref refid="group__SHAPE__reactivities_1ga5a673837ebe42d790bdf3ccf8982d3dc" kindref="member">vrna_sc_add_SHAPE_zarringhalam()</ref>, <ref refid="group__soft__constraints_1gac81478a33880029ca9975bd89cc26fa9" kindref="member">vrna_sc_remove()</ref>, <ref refid="group__soft__constraints__generic_1ga4fdbb3b492d2343d827715a7a7a0f689" kindref="member">vrna_sc_add_f()</ref>, <ref refid="group__soft__constraints__generic_1ga42ae58b56fb10e75a6ee3e131a6ae30e" kindref="member">vrna_sc_add_exp_f()</ref>, vrna_sc_add_pre(), vrna_sc_add_post()</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> where an empty soft constraint feature is to be added to</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="wrappers_1_wrappers000042"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is attached as method <computeroutput>sc_init()</computeroutput> to objects of type <computeroutput>fold_compound</computeroutput>. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.fold_compound.sc_init()` in the :doc:`/api_python` </verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="344" column="1" declfile="ViennaRNA/constraints/soft.h" declline="344" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints_1ga347f033ce99fb61acda3407cac324497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_prepare</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int options)</argsstring>
+        <name>vrna_sc_prepare</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Prepare soft constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="357" column="1" declfile="ViennaRNA/constraints/soft.h" declline="357" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints_1ga95646ff864de191e3a3fee158d85ad59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_update</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int options)</argsstring>
+        <name>vrna_sc_update</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Update/prepare soft constraints for sliding-window computations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="367" column="1" declfile="ViennaRNA/constraints/soft.h" declline="367" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints_1gac81478a33880029ca9975bd89cc26fa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_sc_remove</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_sc_remove</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+<para>Remove soft constraints from <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Accepts <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> of type <ref refid="group__fold__compound_1gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6" kindref="member">VRNA_FC_TYPE_SINGLE</ref> and <ref refid="group__fold__compound_1gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023" kindref="member">VRNA_FC_TYPE_COMPARATIVE</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> possibly containing soft constraints</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="wrappers_1_wrappers000043"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is attached as method <computeroutput>sc_remove()</computeroutput> to objects of type <computeroutput>fold_compound</computeroutput>. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.fold_compound.sc_remove()` in the :doc:`/api_python` </verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="382" column="1" declfile="ViennaRNA/constraints/soft.h" declline="382" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints_1ga6d55446448d69346fc313b993c4fb3e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_sc_free</definition>
+        <argsstring>(vrna_sc_t *sc)</argsstring>
+        <name>vrna_sc_free</name>
+        <param>
+          <type><ref refid="group__soft__constraints_1ga75401ce219ef8dbcceb672db82d434c6" kindref="member">vrna_sc_t</ref> *</type>
+          <declname>sc</declname>
+        </param>
+        <briefdescription>
+<para>Free memory occupied by a <ref refid="group__soft__constraints_1ga75401ce219ef8dbcceb672db82d434c6" kindref="member">vrna_sc_t</ref> data structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data structure to free from memory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="393" column="1" declfile="ViennaRNA/constraints/soft.h" declline="393" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

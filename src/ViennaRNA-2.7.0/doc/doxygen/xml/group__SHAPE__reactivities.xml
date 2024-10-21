@@ -1,0 +1,528 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__SHAPE__reactivities" kind="group">
+    <compoundname>SHAPE_reactivities</compoundname>
+    <title>SHAPE Reactivity Data</title>
+    <innerfile refid="probing_2SHAPE_8h">SHAPE.h</innerfile>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__SHAPE__reactivities_1ga67675b3ed48744489a3bcfa4174197cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_SHAPE_to_pr</definition>
+        <argsstring>(const char *shape_conversion, double *values, int length, double default_value)</argsstring>
+        <name>vrna_sc_SHAPE_to_pr</name>
+        <param>
+          <type>const char *</type>
+          <declname>shape_conversion</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+<para>Convert SHAPE reactivity values to probabilities for being unpaired. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function parses the informations from a given file and stores the result in the pre-allocated string sequence and the <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> array values.</para>
+<para><simplesect kind="see"><para><ref refid="group__file__formats_1ga646ebf45450a69a7f2533f9ecd283a32" kindref="member">vrna_file_SHAPE_read()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shape_conversion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String defining the method used for the conversion process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the array of SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Result used for position with invalid/missing reactivity values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/basic.h" line="496" column="1" declfile="ViennaRNA/probing/basic.h" declline="496" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SHAPE__reactivities_1ga2fc1bede8b6ccf153c2a2bbbb0c08646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_constraints_add_SHAPE</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const char *shape_file, const char *shape_method, const char *shape_conversion, int verbose, unsigned int constraint_type)</argsstring>
+        <name>vrna_constraints_add_SHAPE</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>shape_file</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>shape_method</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>shape_conversion</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>constraint_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/SHAPE.h" line="20" column="1" declfile="ViennaRNA/probing/SHAPE.h" declline="20" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SHAPE__reactivities_1ga1b402c8ff2d77abc957faca66da9378d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_constraints_add_SHAPE_ali</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const char *shape_method, const char **shape_files, const int *shape_file_association, int verbose, unsigned int constraint_type)</argsstring>
+        <name>vrna_constraints_add_SHAPE_ali</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>shape_method</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>shape_files</declname>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>shape_file_association</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>constraint_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/SHAPE.h" line="32" column="1" declfile="ViennaRNA/probing/SHAPE.h" declline="32" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SHAPE__reactivities_1gad609895467d59ea53faac4f98b71c099" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_SHAPE_deigan</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const double *reactivities, double m, double b, unsigned int options)</argsstring>
+        <name>vrna_sc_add_SHAPE_deigan</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Add SHAPE reactivity data as soft constraints (Deigan et al. method) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This approach of SHAPE directed RNA folding uses the simple linear ansatz</para>
+<para><formula id="116">\[ \Delta G_{\text{SHAPE}}(i) = m \ln(\text{SHAPE reactivity}(i)+1)+ b \]</formula></para>
+<para>to convert SHAPE reactivity values to pseudo energies whenever a nucleotide <formula id="42">$ i $</formula> contributes to a stacked pair. A positive slope <formula id="117">$ m $</formula> penalizes high reactivities in paired regions, while a negative intercept <formula id="118">$ b $</formula> results in a confirmatory `<lsquo/>bonus<rsquo/>&apos; free energy for correctly predicted base pairs. Since the energy evaluation of a base pair stack involves two pairs, the pseudo energies are added for all four contributing nucleotides. Consequently, the energy term is applied twice for pairs inside a helix and only once for pairs adjacent to other structures. For all other loop types the energy model remains unchanged even when the experimental data highly disagrees with a certain motif.</para>
+<para><simplesect kind="note"><para>For further details, we refer to  <verbatim>embed:rst:inline  :cite:t:`deigan:2009` </verbatim>.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__soft__constraints_1gac81478a33880029ca9975bd89cc26fa9" kindref="member">vrna_sc_remove()</ref>, <ref refid="group__SHAPE__reactivities_1ga5a673837ebe42d790bdf3ccf8982d3dc" kindref="member">vrna_sc_add_SHAPE_zarringhalam()</ref>, <ref refid="group__perturbation_1ga64d7137ab57964928e7cd1be96d2e1ea" kindref="member">vrna_sc_minimize_pertubation()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of normalized SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slope of the conversion function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The intercept of the conversion function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on successful extraction of the method, 0 on errors</para>
+</simplesect>
+<xrefsect id="wrappers_1_wrappers000166"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is attached as method <computeroutput>sc_add_SHAPE_deigan()</computeroutput> to objects of type <computeroutput>fold_compound</computeroutput>. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.fold_compound.sc_add_SHAPE_deigan()` in the :doc:`/api_python` </verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/SHAPE.h" line="70" column="1" declfile="ViennaRNA/probing/SHAPE.h" declline="70" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SHAPE__reactivities_1ga2a3fbf037d5e2844792997a92ef36285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_SHAPE_deigan_ali</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const char **shape_files, const int *shape_file_association, double m, double b, unsigned int options)</argsstring>
+        <name>vrna_sc_add_SHAPE_deigan_ali</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>shape_files</declname>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>shape_file_association</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Add SHAPE reactivity data from files as soft constraints for consensus structure prediction (Deigan et al. method) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shape_files</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A set of filenames that contain normalized SHAPE reactivity data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shape_file_association</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of integers that associate the files with sequences in the alignment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slope of the conversion function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The intercept of the conversion function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on successful extraction of the method, 0 on errors</para>
+</simplesect>
+<xrefsect id="wrappers_1_wrappers000167"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is attached as method <computeroutput>sc_add_SHAPE_deigan_ali()</computeroutput> to objects of type <computeroutput>fold_compound</computeroutput>. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.fold_compound.sc_add_SHAPE_deigan_ali()` in the :doc:`/api_python` </verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/SHAPE.h" line="90" column="1" declfile="ViennaRNA/probing/SHAPE.h" declline="90" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SHAPE__reactivities_1ga5a673837ebe42d790bdf3ccf8982d3dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_SHAPE_zarringhalam</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const double *reactivities, double b, double default_value, const char *shape_conversion, unsigned int options)</argsstring>
+        <name>vrna_sc_add_SHAPE_zarringhalam</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>shape_conversion</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Add SHAPE reactivity data as soft constraints (Zarringhalam et al. method) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method first converts the observed SHAPE reactivity of nucleotide <formula id="42">$ i $</formula> into a probability <formula id="119">$ q_i $</formula> that position <formula id="42">$ i $</formula> is unpaired by means of a non-linear map. Then pseudo-energies of the form</para>
+<para><formula id="120">\[ \Delta G_{\text{SHAPE}}(x,i) = \beta\ |x_i - q_i| \]</formula></para>
+<para>are computed, where <formula id="121">$ x_i=0 $</formula> if position <formula id="42">$ i $</formula> is unpaired and <formula id="122">$ x_i=1 $</formula> if <formula id="42">$ i $</formula> is paired in a given secondary structure. The parameter <formula id="123">$ \beta $</formula> serves as scaling factor. The magnitude of discrepancy between prediction and experimental observation is represented by <formula id="124">$ |x_i - q_i| $</formula>.</para>
+<para><simplesect kind="note"><para>For further details, we refer to  <verbatim>embed:rst:inline  :cite:t:`zarringhalam:2012` </verbatim></para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__soft__constraints_1gac81478a33880029ca9975bd89cc26fa9" kindref="member">vrna_sc_remove()</ref>, <ref refid="group__SHAPE__reactivities_1gad609895467d59ea53faac4f98b71c099" kindref="member">vrna_sc_add_SHAPE_deigan()</ref>, <ref refid="group__perturbation_1ga64d7137ab57964928e7cd1be96d2e1ea" kindref="member">vrna_sc_minimize_pertubation()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of normalized SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scaling factor <formula id="123">$ \beta $</formula> of the conversion function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value for a nucleotide where reactivity data is missing for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shape_conversion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A flag that specifies how to convert reactivities to probabilities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on successful extraction of the method, 0 on errors</para>
+</simplesect>
+<xrefsect id="wrappers_1_wrappers000168"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is attached as method <computeroutput>sc_add_SHAPE_zarringhalam()</computeroutput> to objects of type <computeroutput>fold_compound</computeroutput>. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.fold_compound.sc_add_SHAPE_zarringhalam()` in the :doc:`/api_python` </verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/SHAPE.h" line="126" column="1" declfile="ViennaRNA/probing/SHAPE.h" declline="126" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SHAPE__reactivities_1ga41b1e8f2f4c82d7bd515ec452b4024cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_SHAPE_eddy_2</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const double *reactivities, int unpaired_nb, const double *unpaired_data, int paired_nb, const double *paired_data)</argsstring>
+        <name>vrna_sc_add_SHAPE_eddy_2</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>reactivities</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>unpaired_nb</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>unpaired_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>paired_nb</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>paired_data</declname>
+        </param>
+        <briefdescription>
+<para>Add SHAPE reactivity data as soft constraints (Eddy/RNAprob-2 method) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This approach of SHAPE directed RNA folding uses the probability framework proposed by Eddy</para>
+<para><formula id="132">\[ \Delta G_{\text{SHAPE}}(i) = - RT\ln(\mathbb{P}(\text{SHAPE reactivity}(i)\mid x_i\pi_i))+ \]</formula></para>
+<para>to convert SHAPE reactivity values to pseudo energies for given nucleotide <formula id="127">$ x_i $</formula> and pairedness <formula id="128">$ \pi_i $</formula> at position <formula id="42">$ i $</formula>. The reactivity distribution is computed using Gaussian kernel density estimation (KDE) with bandwidth <formula id="129">$ h $</formula> computed using Scott factor</para>
+<para><formula id="130">\[ h = n^{-\frac{1}{5}} \]</formula></para>
+<para>where <formula id="131">$ n $</formula> is the number of data points.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reactivities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of normalized SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unpaired_nb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the array of unpaired SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unpaired_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of unpaired SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paired_nb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the array of paired SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paired_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of paired SHAPE reactivities </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on successful extraction of the method, 0 on errors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/probing/SHAPE.h" line="181" column="1" declfile="ViennaRNA/probing/SHAPE.h" declline="181" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

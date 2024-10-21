@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="eval_2basic_8h" kind="file" language="C++">
+    <compoundname>basic.h</compoundname>
+    <includedby refid="eval_2exterior_8h" local="no">ViennaRNA/eval/exterior.h</includedby>
+    <includedby refid="eval_2hairpin_8h" local="no">ViennaRNA/eval/hairpin.h</includedby>
+    <includedby refid="eval_2internal_8h" local="no">ViennaRNA/eval/internal.h</includedby>
+    <includedby refid="eval_2multibranch_8h" local="no">ViennaRNA/eval/multibranch.h</includedby>
+    <includedby refid="eval_2structures_8h" local="no">ViennaRNA/eval/structures.h</includedby>
+    <invincdepgraph>
+      <node id="17">
+        <label>ViennaRNA/eval.h</label>
+        <link refid="eval_8h"/>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/eval/basic.h</label>
+        <link refid="eval_2basic_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ViennaRNA/eval/exterior.h</label>
+        <link refid="eval_2exterior_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/eval/hairpin.h</label>
+        <link refid="eval_2hairpin_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ViennaRNA/eval/internal.h</label>
+        <link refid="eval_2internal_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ViennaRNA/eval/multibranch.h</label>
+        <link refid="eval_2multibranch_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ViennaRNA/eval/structures.h</label>
+        <link refid="eval_2structures_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/exterior_loops.h</label>
+        <link refid="exterior__loops_8h"/>
+      </node>
+      <node id="18">
+        <label>ViennaRNA/fold.h</label>
+        <link refid="fold_8h"/>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/hairpin_loops.h</label>
+        <link refid="hairpin__loops_8h"/>
+      </node>
+      <node id="12">
+        <label>ViennaRNA/interior_loops.h</label>
+        <link refid="interior__loops_8h"/>
+      </node>
+      <node id="6">
+        <label>ViennaRNA/loop_energies.h</label>
+        <link refid="loop__energies_8h"/>
+      </node>
+      <node id="5">
+        <label>ViennaRNA/loops/all.h</label>
+        <link refid="all_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/loops/external.h</label>
+        <link refid="external_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ViennaRNA/loops/hairpin.h</label>
+        <link refid="loops_2hairpin_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ViennaRNA/loops/internal.h</label>
+        <link refid="loops_2internal_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ViennaRNA/loops/multibranch.h</label>
+        <link refid="loops_2multibranch_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ViennaRNA/multibranch_loops.h</label>
+        <link refid="multibranch__loops_8h"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <member refid="group__eval_1gaf4afe19780b61b4962c613bde324128b" kind="define"><name>VRNA_VERBOSITY_QUIET</name></member>
+      <member refid="group__eval_1ga47430d9e875084cfb983b22612e3abdf" kind="define"><name>VRNA_VERBOSITY_DEFAULT</name></member>
+      <member refid="group__eval_1gae647cf494a8b80274f63e9921e379c1b" kind="define"><name>VRNA_EVAL_LOOP_DEFAULT</name></member>
+      <member refid="group__eval_1gabf464e57b705137b553431ae88b5f276" kind="define"><name>VRNA_EVAL_LOOP_NO_HC</name></member>
+      <member refid="group__eval_1gabfc2f7e81ec9ec64ccc9ef6b2b5aac2a" kind="define"><name>VRNA_EVAL_LOOP_NO_SC</name></member>
+      <member refid="group__eval_1gaafb5b0c04bc9f522b7a2e7909bd56d23" kind="define"><name>VRNA_EVAL_LOOP_NO_CONSTRAINTS</name></member>
+    </sectiondef>
+    <sectiondef kind="var">
+      <member refid="group__eval__deprecated_1gab9b2c3a37a5516614c06d0ab54b97cda" kind="variable"><name>cut_point</name></member>
+      <member refid="group__eval__deprecated_1ga567530678f6260a1a649a5beca5da4c5" kind="variable"><name>eos_debug</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Declarations that are essential for many energy evaluation functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_EVAL_BASIC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_EVAL_BASIC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="group__eval_1gaf4afe19780b61b4962c613bde324128b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_VERBOSITY_QUIET<sp/><sp/><sp/><sp/><sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="group__eval_1ga47430d9e875084cfb983b22612e3abdf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_VERBOSITY_DEFAULT<sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_EVAL_LOOP_DEFAULT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_EVAL_LOOP_NO_HC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_EVAL_LOOP_NO_SC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_EVAL_LOOP_NO_CONSTRAINTS<sp/><sp/><sp/>(VRNA_EVAL_LOOP_NO_HC<sp/>|<sp/>VRNA_EVAL_LOOP_NO_SC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_BACKWARD_COMPATIBILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="group__eval__deprecated_1gab9b2c3a37a5516614c06d0ab54b97cda" kindref="member">cut_point</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="group__eval__deprecated_1ga567530678f6260a1a649a5beca5da4c5" kindref="member">eos_debug</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/eval/basic.h"/>
+  </compounddef>
+</doxygen>

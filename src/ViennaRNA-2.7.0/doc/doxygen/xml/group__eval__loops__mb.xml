@@ -1,0 +1,559 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__eval__loops__mb" kind="group">
+    <compoundname>eval_loops_mb</compoundname>
+    <title>Multibranch Loops</title>
+    <innerfile refid="eval_2multibranch_8h">multibranch.h</innerfile>
+    <innerfile refid="partfunc_2multibranch_8h">multibranch.h</innerfile>
+    <sectiondef kind="user-defined">
+      <header>Minimum Free Energy API</header>
+      <memberdef kind="typedef" id="group__eval__loops__mb_1ga00a8e1daa266e9ef39967308a082cc0e" prot="public" static="no">
+        <type>struct vrna_mx_mfe_aux_ml_s *</type>
+        <definition>typedef struct vrna_mx_mfe_aux_ml_s* vrna_mx_mfe_aux_ml_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_mx_mfe_aux_ml_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="43" column="35" bodyfile="ViennaRNA/mfe/multibranch.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga6ecc64214c66fa1a264bcd554ddad0da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vrna_mx_mfe_aux_ml_t</type>
+        <definition>vrna_mx_mfe_aux_ml_t vrna_mfe_multibranch_fast_init</definition>
+        <argsstring>(unsigned int length)</argsstring>
+        <name>vrna_mfe_multibranch_fast_init</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="46" column="1" declfile="ViennaRNA/mfe/multibranch.h" declline="46" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga71b8aa0fcf1531761ffa8c79c2e42de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_mfe_multibranch_fast_rotate</definition>
+        <argsstring>(vrna_mx_mfe_aux_ml_t aux)</argsstring>
+        <name>vrna_mfe_multibranch_fast_rotate</name>
+        <param>
+          <type>vrna_mx_mfe_aux_ml_t</type>
+          <declname>aux</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="50" column="1" declfile="ViennaRNA/mfe/multibranch.h" declline="50" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1gaf8a318287851f5c2cac5e3cfa92e54a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_mfe_multibranch_fast_free</definition>
+        <argsstring>(vrna_mx_mfe_aux_ml_t aux)</argsstring>
+        <name>vrna_mfe_multibranch_fast_free</name>
+        <param>
+          <type>vrna_mx_mfe_aux_ml_t</type>
+          <declname>aux</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="54" column="1" declfile="ViennaRNA/mfe/multibranch.h" declline="54" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1gaffcbfc75d9bdceeda6b796998e804e51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_multibranch_loop_fast</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, vrna_mx_mfe_aux_ml_t helpers)</argsstring>
+        <name>vrna_mfe_multibranch_loop_fast</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>vrna_mx_mfe_aux_ml_t</type>
+          <declname>helpers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="58" column="1" declfile="ViennaRNA/mfe/multibranch.h" declline="58" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1gaf0c4590388adb6ff5b730bbbd8afcc73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_multibranch_stems_fast</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, struct vrna_mx_mfe_aux_ml_s *helpers)</argsstring>
+        <name>vrna_mfe_multibranch_stems_fast</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>struct vrna_mx_mfe_aux_ml_s *</type>
+          <declname>helpers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="65" column="1" declfile="ViennaRNA/mfe/multibranch.h" declline="65" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga244d5c28ba8d6c86344850080cd7a86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_multibranch_m2_fast</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, struct vrna_mx_mfe_aux_ml_s *helpers)</argsstring>
+        <name>vrna_mfe_multibranch_m2_fast</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>struct vrna_mx_mfe_aux_ml_s *</type>
+          <declname>helpers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="72" column="1" declfile="ViennaRNA/mfe/multibranch.h" declline="72" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga8b7f1b9714b713c2ebeb37c3d3e5d653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_multibranch_loop_stack</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j)</argsstring>
+        <name>vrna_mfe_multibranch_loop_stack</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate energy of multi branch loop helices stacking onto closing pair (i,j) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes total free energy for coaxial stacking of (i.j) with (i+1.k) or (k+1.j-1) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="84" column="1" declfile="ViennaRNA/mfe/multibranch.h" declline="84" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga7401e61de5a7e48538f822af1ce2eae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_multibranch_m1</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j)</argsstring>
+        <name>vrna_mfe_multibranch_m1</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/multibranch.h" line="90" column="1" declfile="ViennaRNA/mfe/multibranch.h" declline="90" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Boltzmann weight (partition function) interface</header>
+      <memberdef kind="typedef" id="group__eval__loops__mb_1ga39a8cc1385dcb542a60a9393cde6a1e3" prot="public" static="no">
+        <type>struct vrna_mx_pf_aux_ml_s *</type>
+        <definition>typedef struct vrna_mx_pf_aux_ml_s* vrna_mx_pf_aux_ml_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_mx_pf_aux_ml_t</name>
+        <briefdescription>
+<para>Auxiliary helper arrays for fast exterior loop computations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>vrna_exp_E_ml_fast_init(), vrna_exp_E_ml_fast_rotate(), vrna_exp_E_ml_fast_free(), vrna_exp_E_ml_fast() </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="56" column="34" bodyfile="ViennaRNA/partfunc/multibranch.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1gac4a6acc1fded0e89460692ef9f62a6c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_mb_loop_fast</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j, vrna_mx_pf_aux_ml_t aux_mx)</argsstring>
+        <name>vrna_exp_E_mb_loop_fast</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="group__eval__loops__mb_1ga39a8cc1385dcb542a60a9393cde6a1e3" kindref="member">vrna_mx_pf_aux_ml_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="60" column="1" declfile="ViennaRNA/partfunc/multibranch.h" declline="60" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1gab4ec400cb861b8102ca9974406d9de9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__eval__loops__mb_1ga39a8cc1385dcb542a60a9393cde6a1e3" kindref="member">vrna_mx_pf_aux_ml_t</ref></type>
+        <definition>vrna_mx_pf_aux_ml_t vrna_exp_E_ml_fast_init</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_exp_E_ml_fast_init</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="67" column="1" declfile="ViennaRNA/partfunc/multibranch.h" declline="67" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1gabc73c029027ba09bfe70e2318052f0ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_exp_E_ml_fast_rotate</definition>
+        <argsstring>(vrna_mx_pf_aux_ml_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ml_fast_rotate</name>
+        <param>
+          <type><ref refid="group__eval__loops__mb_1ga39a8cc1385dcb542a60a9393cde6a1e3" kindref="member">vrna_mx_pf_aux_ml_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="71" column="1" declfile="ViennaRNA/partfunc/multibranch.h" declline="71" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga3bbc24b3950867b039104ce8b4f39346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_exp_E_ml_fast_free</definition>
+        <argsstring>(vrna_mx_pf_aux_ml_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ml_fast_free</name>
+        <param>
+          <type><ref refid="group__eval__loops__mb_1ga39a8cc1385dcb542a60a9393cde6a1e3" kindref="member">vrna_mx_pf_aux_ml_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="75" column="1" declfile="ViennaRNA/partfunc/multibranch.h" declline="75" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga738d28f9b0a546e01a98c7a309709be8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+        <definition>const FLT_OR_DBL * vrna_exp_E_ml_fast_qqm</definition>
+        <argsstring>(vrna_mx_pf_aux_ml_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ml_fast_qqm</name>
+        <param>
+          <type><ref refid="group__eval__loops__mb_1ga39a8cc1385dcb542a60a9393cde6a1e3" kindref="member">vrna_mx_pf_aux_ml_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="79" column="1" declfile="ViennaRNA/partfunc/multibranch.h" declline="79" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga460bda434012ac0507c8daec778a4c12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+        <definition>const FLT_OR_DBL * vrna_exp_E_ml_fast_qqm1</definition>
+        <argsstring>(vrna_mx_pf_aux_ml_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ml_fast_qqm1</name>
+        <param>
+          <type><ref refid="group__eval__loops__mb_1ga39a8cc1385dcb542a60a9393cde6a1e3" kindref="member">vrna_mx_pf_aux_ml_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="83" column="1" declfile="ViennaRNA/partfunc/multibranch.h" declline="83" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1gaf688fa4e6331403debb9802f3fda8bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_ml_fast</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j, vrna_mx_pf_aux_ml_t aux_mx)</argsstring>
+        <name>vrna_exp_E_ml_fast</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="group__eval__loops__mb_1ga39a8cc1385dcb542a60a9393cde6a1e3" kindref="member">vrna_mx_pf_aux_ml_t</ref></type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="87" column="1" declfile="ViennaRNA/partfunc/multibranch.h" declline="87" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga9c439fb66f5ebbac7fd09ad7dac1e160" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_m2_fast</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j, struct vrna_mx_pf_aux_ml_s *aux_mx)</argsstring>
+        <name>vrna_exp_E_m2_fast</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>struct vrna_mx_pf_aux_ml_s *</type>
+          <declname>aux_mx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/multibranch.h" line="94" column="1" declfile="ViennaRNA/partfunc/multibranch.h" declline="94" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Basic free energy interface</header>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga4df9d02217343b879549725fcebbc9ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_multibranch_stem</definition>
+        <argsstring>(unsigned int type, int si1, int sj1, vrna_param_t *P)</argsstring>
+        <name>vrna_E_multibranch_stem</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>si1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sj1</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the free energy contribution of a stem branching off a multibranch loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function yields the free energy contribution for the terminal base pairs of a stem branching off a multibranch loop. In essence, this consists of (i) a terminal mismatch or dangling end contribution, (ii) the score for a stem according to the affine multibranch loop model, and (iii) a terminal AU/GU penalty, if applicable.</para>
+<para><simplesect kind="note"><para>By default, terminal mismatch energies are applied that correspond to the neighboring nucleotides provided by their encodings <computeroutput>n5d</computeroutput> and <computeroutput>n3d</computeroutput>. Whenever the encodings are negative, the implementation switches to usage of dangling end energies (for the non-negative base). If both encodings are negative, no terminal mismatch contributions are added.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__eval__loops__mb_1ga059fc821ba1f35df583d33d9c13322d1" kindref="member">vrna_exp_E_multibranch_stem()</ref>, <ref refid="group__eval__loops__ext_1gad15211d536d971e3c335813a75897a26" kindref="member">vrna_E_exterior_stem()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair encoding </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>si1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded nucleotide directly adjacent at the 5&apos; side of the base pair (may be -1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sj1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded nucleotide directly adjacent at the 3&apos; side of the base pair (may be -1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pre-computed energy parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The energy contribution of the introduced mutlibranch loop stem </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/multibranch.h" line="74" column="1" declfile="ViennaRNA/eval/multibranch.h" declline="74" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Boltzmann weight (partition function) interface</header>
+      <memberdef kind="function" id="group__eval__loops__mb_1ga059fc821ba1f35df583d33d9c13322d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_multibranch_stem</definition>
+        <argsstring>(unsigned int type, int si1, int sj1, vrna_exp_param_t *P)</argsstring>
+        <name>vrna_exp_E_multibranch_stem</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>si1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sj1</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the free energy contribution of a stem branching off a multibranch loop (Boltzmann factor version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function yields the free energy contribution as Boltzmann factor <formula id="60">$ exp(-E/kT) $</formula> for the terminal base pairs of a stem branching off a multibranch loop. In essence, this consists of (i) a terminal mismatch or dangling end contribution, (ii) the score for a stem according to the affine multibranch loop model, and (iii) a terminal AU/GU penalty, if applicable.</para>
+<para><simplesect kind="note"><para>By default, terminal mismatch energies are applied that correspond to the neighboring nucleotides provided by their encodings <computeroutput>n5d</computeroutput> and <computeroutput>n3d</computeroutput>. Whenever the encodings are negative, the implementation switches to usage of dangling end energies (for the non-negative base). If both encodings are negative, no terminal mismatch contributions are added.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__eval__loops__mb_1ga4df9d02217343b879549725fcebbc9ec" kindref="member">vrna_E_multibranch_stem()</ref>, <ref refid="group__eval__loops__ext_1ga70e734a0dc46f049ff2de13d38d6ea69" kindref="member">vrna_exp_E_exterior_stem()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair encoding </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>si1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded nucleotide directly adjacent at the 5&apos; side of the base pair (may be -1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sj1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded nucleotide directly adjacent at the 3&apos; side of the base pair (may be -1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pre-computed energy parameters (Boltzmann factor version) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Boltzmann factor of the energy contribution for the introduced mutlibranch loop stem </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/multibranch.h" line="114" column="1" declfile="ViennaRNA/eval/multibranch.h" declline="114" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_389bbe4535a803badec504a35866daf0" kind="dir">
+    <compoundname>ViennaRNA/probabilities</compoundname>
+    <innerfile refid="basepairs_8h">basepairs.h</innerfile>
+    <innerfile refid="probabilities_2structures_8h">structures.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/probabilities/"/>
+  </compounddef>
+</doxygen>

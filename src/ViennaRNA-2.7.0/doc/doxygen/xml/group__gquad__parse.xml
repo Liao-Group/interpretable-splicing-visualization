@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__gquad__parse" kind="group">
+    <compoundname>gquad_parse</compoundname>
+    <title>Parsing of G-quadruplexes</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__gquad__parse_1gaafaf18c4a262d12f6698df72c071f641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_gquad_pattern_pf</definition>
+        <argsstring>(short *S, int i, int j, vrna_exp_param_t *pf, int *L, int l[3])</argsstring>
+        <name>get_gquad_pattern_pf</name>
+        <param>
+          <type>short *</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>pf</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="48" column="1" declfile="ViennaRNA/partfunc/gquad.h" declline="48" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__parse_1ga35b2caacf5a95f0a69351680524a8a1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_get_gquad_pattern_pf</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, unsigned int *L, unsigned int[3])</argsstring>
+        <name>vrna_get_gquad_pattern_pf</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="57" column="1" declfile="ViennaRNA/partfunc/gquad.h" declline="57" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__parse_1gaef509be75de5e229c3e710cd819dc4ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gq_parse</definition>
+        <argsstring>(const char *db_string, unsigned int *L, unsigned int l[3])</argsstring>
+        <name>vrna_gq_parse</name>
+        <param>
+          <type>const char *</type>
+          <declname>db_string</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Parse a G-Quadruplex from a dot-bracket structure string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a dot-bracket structure (possibly) containing gquads encoded by &apos;+&apos; signs (and an optional &apos;~&apos; end sign, find first gquad, return end position (1-based) or 0 if none found. Upon return L and l[] contain the number of stacked layers, as well as the lengths of the linker regions.</para>
+<para><simplesect kind="note"><para>For circular RNAs and G-Quadruplexes spanning the n,1-junction the sum of linkers and g-runs is lower than the end position. This condition can be used to check whether or not to accept a G-Quadruplex parsed from the dot-bracket string. Also note, that such n,1-junction spanning G-Quadruplexes must end with a <computeroutput>~</computeroutput> sign, to be unambigous.</para>
+</simplesect>
+To parse a string with many gquads, call <ref refid="group__gquad__parse_1gaef509be75de5e229c3e710cd819dc4ca" kindref="member">vrna_gq_parse()</ref> repeatedly e.g.</para>
+<para><programlisting><codeline><highlight class="normal">end1<sp/>=<sp/>vrna_gq_parse(struc,<sp/>&amp;L,<sp/>l);<sp/>...<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">end2<sp/>=<sp/>vrna_gq_parse(struc+end1,<sp/>&amp;L,<sp/>l);<sp/>end2+=end1;<sp/>...<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">end3<sp/>=<sp/>vrna_gq_parse(struc+end2,<sp/>&amp;L,<sp/>l);<sp/>end3+=end2;<sp/>...<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db_string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input structure in dot-bracket notation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an unsigned integer to store the layer (stack) size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of three values to store the respective linker lenghts </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The end position of the G-Quadruplex (1-based) or 0 if not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="399" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="399" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__parse_1ga6f638cdadc96a4f3b9f7cce77ad44bfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_db_insert_gq</definition>
+        <argsstring>(char *db, unsigned int i, unsigned int L, unsigned int l[3], unsigned int n)</argsstring>
+        <name>vrna_db_insert_gq</name>
+        <param>
+          <type>char *</type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/dotbracket.h" line="404" column="1" declfile="ViennaRNA/structures/dotbracket.h" declline="404" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__parse_1ga402d9d287ceec5161c5be65b721eec8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga9608eed021ebfbdd7a901cfdc446c8e9" kindref="member">plist</ref> *</type>
+        <definition>plist * get_plist_gquad_from_db</definition>
+        <argsstring>(const char *structure, float pr)</argsstring>
+        <name>get_plist_gquad_from_db</name>
+        <param>
+          <type>const char *</type>
+          <declname>structure</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/structures/problist.h" line="151" column="1" declfile="ViennaRNA/structures/problist.h" declline="151" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

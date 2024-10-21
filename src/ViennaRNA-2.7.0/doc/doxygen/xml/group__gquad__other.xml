@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__gquad__other" kind="group">
+    <compoundname>gquad_other</compoundname>
+    <title>Ungrouped functions related to G-quadruplexes</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__gquad__other_1gad01f5003335cfcd6416777a322600a3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga9608eed021ebfbdd7a901cfdc446c8e9" kindref="member">plist</ref> *</type>
+        <definition>plist * get_plist_gquad_from_pr</definition>
+        <argsstring>(short *S, int gi, int gj, vrna_smx_csr(FLT_OR_DBL) *q_gq, FLT_OR_DBL *probs, FLT_OR_DBL *scale, vrna_exp_param_t *pf)</argsstring>
+        <name>get_plist_gquad_from_pr</name>
+        <param>
+          <type>short *</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gj</declname>
+        </param>
+        <param>
+          <type>vrna_smx_csr(<ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref>) *</type>
+          <declname>q_gq</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>probs</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>pf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="73" column="3" declfile="ViennaRNA/partfunc/gquad.h" declline="73" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__other_1ga3051b222f25a1b657b477b1f312a910b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__struct__utils__plist_1gab9ac98ab55ded9fb90043b024b915aca" kindref="member">vrna_ep_t</ref> *</type>
+        <definition>vrna_ep_t * vrna_plist_gquad_from_pr</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int gi, int gj)</argsstring>
+        <name>vrna_plist_gquad_from_pr</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="83" column="1" declfile="ViennaRNA/partfunc/gquad.h" declline="83" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__other_1gae07258394eadce6c706dad5574978757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga9608eed021ebfbdd7a901cfdc446c8e9" kindref="member">plist</ref> *</type>
+        <definition>plist * get_plist_gquad_from_pr_max</definition>
+        <argsstring>(short *S, int gi, int gj, vrna_smx_csr(FLT_OR_DBL) *q_gq, FLT_OR_DBL *probs, FLT_OR_DBL *scale, int *L, int l[3], vrna_exp_param_t *pf)</argsstring>
+        <name>get_plist_gquad_from_pr_max</name>
+        <param>
+          <type>short *</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gj</declname>
+        </param>
+        <param>
+          <type>vrna_smx_csr(<ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref>) *</type>
+          <declname>q_gq</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>probs</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>pf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="89" column="3" declfile="ViennaRNA/partfunc/gquad.h" declline="89" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gquad__other_1gad4770d540c1fbd44edf58d30b1889eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__struct__utils__plist_1gab9ac98ab55ded9fb90043b024b915aca" kindref="member">vrna_ep_t</ref> *</type>
+        <definition>vrna_ep_t * vrna_plist_gquad_from_pr_max</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int gi, unsigned int gj, unsigned int *Lmax, unsigned int lmax[3])</argsstring>
+        <name>vrna_plist_gquad_from_pr_max</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>gi</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>gj</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>Lmax</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>lmax</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/gquad.h" line="101" column="1" declfile="ViennaRNA/partfunc/gquad.h" declline="101" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

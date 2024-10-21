@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__soft__constraints__up" kind="group">
+    <compoundname>soft_constraints_up</compoundname>
+    <title>Soft Constraints (unpaired positions)</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__soft__constraints__up_1gaf6634fa9249945b7cb0e325942d2771b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_set_up</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const FLT_OR_DBL *constraints, unsigned int options)</argsstring>
+        <name>vrna_sc_set_up</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>constraints</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Set soft constraints for unpaired nucleotides. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function replaces any pre-exisitng soft constraints with the ones supplied in <computeroutput>constraints</computeroutput>.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__soft__constraints__up_1ga490da5feb307560552e5e44aa4a92a9a" kindref="member">vrna_sc_add_up()</ref>, <ref refid="group__soft__constraints__bp_1ga68900a8a15c83ff352f576b8a298e371" kindref="member">vrna_sc_set_bp()</ref>, <ref refid="group__soft__constraints__bp_1ga1ae32cbdaa58dec6b453245a10b05f31" kindref="member">vrna_sc_add_bp()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>constraints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of pseudo free energies in <formula id="37">$ kcal / mol $</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero on successful application of the constraint, 0 otherwise.</para>
+</simplesect>
+<xrefsect id="wrappers_1_wrappers000046"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is attached as method <computeroutput>sc_set_up()</computeroutput> to objects of type <computeroutput>fold_compound</computeroutput>. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.fold_compound.sc_set_up()` in the :doc:`/api_python` </verbatim>. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="596" column="1" declfile="ViennaRNA/constraints/soft.h" declline="596" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__up_1ga36e1b68ffb6394d8c8f057ee72103b1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_set_up_comparative</definition>
+        <argsstring>(vrna_fold_compound_t *fc, const FLT_OR_DBL **constraints, unsigned int options)</argsstring>
+        <name>vrna_sc_set_up_comparative</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> **</type>
+          <declname>constraints</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Set soft constraints for unpaired nucleotides in comparative structure predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this function to set soft constraints for unpaired nucleotides for each sequence in the multiple sequence alignment (MSA). The constraints are provided as 0-based array of 1-based array with the actual pseudo energies, where the first dimension corresponds to the number (0-based) of the respective sequence in the alignment. If no constraints are provided for a particular sequence <formula id="41">$ s $</formula> in the MSA, the corresponding entry must be set to <bold>NULL</bold>.</para>
+<para><simplesect kind="note"><para>This function replaces any pre-exisitng soft constraints with the ones supplied in <computeroutput>constraints</computeroutput>.</para>
+</simplesect>
+<simplesect kind="warning"><para>Pseudo energies for all sequences must be provided in sequence coordinates rather than alignment coordinates!</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__soft__constraints__up_1ga8c1743250a357aaf19177d26ee9124be" kindref="member">vrna_sc_set_up_comparative_seq()</ref>, <ref refid="group__soft__constraints__up_1ga65ea9a47f2ef86599fee5717bb49ab9e" kindref="member">vrna_sc_add_up_comparative()</ref>, <ref refid="group__soft__constraints__bp_1gaaf0a6acb3cec7680cd0c64e3172d82c0" kindref="member">vrna_sc_set_bp_comparative()</ref>, vrna_sc_add_stack_comparative(), vrna_sc_set_stack_comparative(), <ref refid="group__soft__constraints__up_1gaf6634fa9249945b7cb0e325942d2771b" kindref="member">vrna_sc_set_up()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>constraints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 0-based array of 1-based arrays with pseudo free energies in <formula id="37">$ kcal / mol $</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of sequences in the MSA constraints have been applied to </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="628" column="1" declfile="ViennaRNA/constraints/soft.h" declline="628" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__up_1ga8c1743250a357aaf19177d26ee9124be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_set_up_comparative_seq</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int s, const FLT_OR_DBL *constraints, unsigned int options)</argsstring>
+        <name>vrna_sc_set_up_comparative_seq</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>constraints</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Set soft constraints for unpaired nucleotides in comparative structure predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a convenience wrapper for <ref refid="group__soft__constraints__up_1ga36e1b68ffb6394d8c8f057ee72103b1b" kindref="member">vrna_sc_set_up_comparative()</ref> where only one particular sequence <computeroutput>s</computeroutput> is provided with constraints.</para>
+<para><simplesect kind="note"><para>This function replaces any pre-exisitng soft constraints with the ones supplied in <computeroutput>constraints</computeroutput>.</para>
+</simplesect>
+<simplesect kind="warning"><para>Pseudo energies for all sequences must be provided in sequence coordinates rather than alignment coordinates!</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__soft__constraints__up_1ga36e1b68ffb6394d8c8f057ee72103b1b" kindref="member">vrna_sc_set_up_comparative()</ref>, <ref refid="group__soft__constraints__up_1ga52acb8db0ce6ae43b28c37775f6455b0" kindref="member">vrna_sc_add_up_comparative_seq()</ref>, <ref refid="group__soft__constraints__bp_1gab66ab4741f52df9586f51bd0858ecad9" kindref="member">vrna_sc_set_bp_comparative_seq()</ref>, vrna_sc_add_stack_comparative_seq(), vrna_sc_set_stack_comparative_seq(), <ref refid="group__soft__constraints__up_1gaf6634fa9249945b7cb0e325942d2771b" kindref="member">vrna_sc_set_up()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 0-based number of the sequence in the alignment the constraints are provided for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>constraints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 1-based arrays with pseudo free energies in <formula id="37">$ kcal / mol $</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of sequences in the MSA constraints have been applied to </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="657" column="1" declfile="ViennaRNA/constraints/soft.h" declline="657" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__up_1ga490da5feb307560552e5e44aa4a92a9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_up</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, FLT_OR_DBL energy, unsigned int options)</argsstring>
+        <name>vrna_sc_add_up</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Add soft constraints for unpaired nucleotides. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__soft__constraints__up_1gaf6634fa9249945b7cb0e325942d2771b" kindref="member">vrna_sc_set_up()</ref>, <ref refid="group__soft__constraints__bp_1ga1ae32cbdaa58dec6b453245a10b05f31" kindref="member">vrna_sc_add_bp()</ref>, <ref refid="group__soft__constraints__bp_1ga68900a8a15c83ff352f576b8a298e371" kindref="member">vrna_sc_set_bp()</ref>, <ref refid="group__soft__constraints__up_1ga65ea9a47f2ef86599fee5717bb49ab9e" kindref="member">vrna_sc_add_up_comparative()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The nucleotide position the soft constraint is added for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The free energy (soft-constraint) in <formula id="37">$ kcal / mol $</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero on successful application of the constraint, 0 otherwise.</para>
+</simplesect>
+<xrefsect id="wrappers_1_wrappers000047"><xreftitle>SWIG Wrapper Notes</xreftitle><xrefdescription><para><parblock><para>This function is attached as an overloaded method <computeroutput>sc_add_up()</computeroutput> to objects of type <computeroutput>fold_compound</computeroutput>. The method either takes arguments for a single nucleotide <formula id="176">$i $</formula> with the corresponding energy value: </para>
+</parblock></para>
+</xrefdescription></xrefsect><programlisting><codeline><highlight class="normal">fold_compound.sc_add_up(i,<sp/>energy,<sp/>options)</highlight></codeline>
+</programlisting> or an entire vector that stores free energy contributions for each nucleotide <formula id="176">$i $</formula> with <formula id="177">$ 1 \leq i \leq n $</formula>: <programlisting><codeline><highlight class="normal">fold_compound.sc_add_bp(vector,<sp/>options)</highlight></codeline>
+</programlisting> In both variants, the optional argument <computeroutput>options</computeroutput> defaults to <ref refid="group__fold__compound_1gacea5b7ee6181c485f36e2afa0e9089e4" kindref="member">VRNA_OPTION_DEFAULT</ref>. See, e.g.  <verbatim>embed:rst:inline  :py:meth:`RNA.fold_compound.sc_add_up()` in the :doc:`/api_python` </verbatim>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="676" column="1" declfile="ViennaRNA/constraints/soft.h" declline="676" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__up_1ga65ea9a47f2ef86599fee5717bb49ab9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_up_comparative</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int *is, const FLT_OR_DBL *energies, unsigned int options)</argsstring>
+        <name>vrna_sc_add_up_comparative</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref> *</type>
+          <declname>energies</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Add soft constraints for unpaired nucleotides in comparative structure predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this function to add soft constraints for unpaired nucleotides for each sequence in the multiple sequence alignment (MSA). The constraints are provided as 0-based array of pseudo energies, one for each sequence in the MSA. If no constraints are provided for a particular sequence, the corrsponding <computeroutput>is</computeroutput> value must be 0.</para>
+<para><simplesect kind="warning"><para>Pseudo energies for all sequences must be provided in sequence coordinates rather than alignment coordinates!</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__soft__constraints__up_1ga8c1743250a357aaf19177d26ee9124be" kindref="member">vrna_sc_set_up_comparative_seq()</ref>, <ref refid="group__soft__constraints__up_1ga65ea9a47f2ef86599fee5717bb49ab9e" kindref="member">vrna_sc_add_up_comparative()</ref>, <ref refid="group__soft__constraints__bp_1gaaf0a6acb3cec7680cd0c64e3172d82c0" kindref="member">vrna_sc_set_bp_comparative()</ref>, vrna_sc_add_stack_comparative(), vrna_sc_set_stack_comparative(), <ref refid="group__soft__constraints__up_1ga490da5feb307560552e5e44aa4a92a9a" kindref="member">vrna_sc_add_up()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 0-based array of nucleotide positions the soft constraint is added for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 0-based array of free energies (soft-constraint) in <formula id="37">$ kcal / mol $</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero on successful application of the constraint, 0 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="705" column="1" declfile="ViennaRNA/constraints/soft.h" declline="705" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__soft__constraints__up_1ga52acb8db0ce6ae43b28c37775f6455b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_sc_add_up_comparative_seq</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int s, unsigned int i, const FLT_OR_DBL energy, unsigned int options)</argsstring>
+        <name>vrna_sc_add_up_comparative_seq</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Add soft constraints for unpaired nucleotides in comparative structure predictions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a convenience wrapper for <ref refid="group__soft__constraints__up_1ga65ea9a47f2ef86599fee5717bb49ab9e" kindref="member">vrna_sc_add_up_comparative()</ref> where only one particular sequence <computeroutput>s</computeroutput> is provided with constraints.</para>
+<para><simplesect kind="warning"><para>Pseudo energies for all sequences must be provided in sequence coordinates rather than alignment coordinates!</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__soft__constraints__up_1ga8c1743250a357aaf19177d26ee9124be" kindref="member">vrna_sc_set_up_comparative_seq()</ref>, <ref refid="group__soft__constraints__up_1ga65ea9a47f2ef86599fee5717bb49ab9e" kindref="member">vrna_sc_add_up_comparative()</ref>, <ref refid="group__soft__constraints__bp_1gaaf0a6acb3cec7680cd0c64e3172d82c0" kindref="member">vrna_sc_set_bp_comparative()</ref>, vrna_sc_add_stack_comparative(), vrna_sc_set_stack_comparative(), <ref refid="group__soft__constraints__up_1ga490da5feb307560552e5e44aa4a92a9a" kindref="member">vrna_sc_add_up()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> the soft constraints are associated with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 0-based number of the sequence in the alignment the constraints are provided for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 1-based nucleotide position the soft constraint is added for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The free energies (soft-constraint) in <formula id="37">$ kcal / mol $</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options flag indicating how/where to store the soft constraints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero on successful application of the constraint, 0 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/constraints/soft.h" line="733" column="1" declfile="ViennaRNA/constraints/soft.h" declline="733" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

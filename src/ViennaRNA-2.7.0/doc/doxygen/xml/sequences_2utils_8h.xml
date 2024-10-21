@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="sequences_2utils_8h" kind="file" language="C++">
+    <compoundname>utils.h</compoundname>
+    <includedby refid="strings_8h" local="no">ViennaRNA/utils/strings.h</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>ViennaRNA/sequences/utils.h</label>
+        <link refid="sequences_2utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/string_utils.h</label>
+        <link refid="string__utils_8h"/>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="2">
+        <label>ViennaRNA/utils/strings.h</label>
+        <link refid="strings_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="sequences_2utils_8h_1aab347a3c03fbe8e7319551b9fa0cce4a" prot="public" static="no">
+        <name>DEPRECATED</name>
+        <param><defname>func   </defname></param>
+        <param><defname>msg</defname></param>
+        <initializer>func</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/sequences/utils.h" line="13" column="11" bodyfile="ViennaRNA/sequences/utils.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__string__utils_1gacfed92cba77064f6c743f9118d079bfc" kind="function"><name>vrna_seq_toRNA</name></member>
+      <member refid="group__string__utils_1ga561e1c63199adbd7de38ed394e098d95" kind="function"><name>vrna_DNA_complement</name></member>
+      <member refid="group__string__utils_1ga593320caa8245a446efdd391215bdfc9" kind="function"><name>vrna_seq_ungapped</name></member>
+      <memberdef kind="function" id="sequences_2utils_8h_1ad3f18dd83f958f18b2f26ecb99305208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void str_DNA2RNA</definition>
+        <argsstring>(char *sequence)</argsstring>
+        <name>str_DNA2RNA</name>
+        <param>
+          <type>char *</type>
+          <declname>sequence</declname>
+        </param>
+        <briefdescription>
+<para>Convert a DNA input sequence to RNA alphabet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000209"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__string__utils_1gacfed92cba77064f6c743f9118d079bfc" kindref="member">vrna_seq_toRNA()</ref> instead! </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/sequences/utils.h" line="83" column="18" declfile="ViennaRNA/sequences/utils.h" declline="83" declcolumn="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>General utility- and helper-functions for RNA sequences used throughout the ViennaRNA Package. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>, </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_SEQUENCES_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_SEQUENCES_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>VRNA_WARN_DEPRECATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>if<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func<sp/>__attribute__<sp/>((deprecated(&quot;&quot;,<sp/>msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>elif<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func<sp/>__attribute__<sp/>((deprecated(msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="group__string__utils_1gacfed92cba77064f6c743f9118d079bfc" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1gacfed92cba77064f6c743f9118d079bfc" kindref="member">vrna_seq_toRNA</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sequence);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="57" refid="group__string__utils_1ga561e1c63199adbd7de38ed394e098d95" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga561e1c63199adbd7de38ed394e098d95" kindref="member">vrna_DNA_complement</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sequence);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="67" refid="group__string__utils_1ga593320caa8245a446efdd391215bdfc9" refkind="member"><highlight class="normal"><ref refid="group__string__utils_1ga593320caa8245a446efdd391215bdfc9" kindref="member">vrna_seq_ungapped</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sequence);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_BACKWARD_COMPATIBILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">DEPRECATED(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sequences_2utils_8h_1ad3f18dd83f958f18b2f26ecb99305208" kindref="member">str_DNA2RNA</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sequence),</highlight></codeline>
+<codeline lineno="83" refid="sequences_2utils_8h_1ad3f18dd83f958f18b2f26ecb99305208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_seq_toRNA()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/sequences/utils.h"/>
+  </compounddef>
+</doxygen>

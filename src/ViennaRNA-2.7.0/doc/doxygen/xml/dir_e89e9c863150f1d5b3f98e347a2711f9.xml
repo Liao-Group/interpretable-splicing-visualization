@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_e89e9c863150f1d5b3f98e347a2711f9" kind="dir">
+    <compoundname>ViennaRNA/subopt</compoundname>
+    <innerfile refid="subopt_2basic_8h">basic.h</innerfile>
+    <innerfile refid="subopt_2gquad_8h">gquad.h</innerfile>
+    <innerfile refid="wuchty_8h">wuchty.h</innerfile>
+    <innerfile refid="zuker_8h">zuker.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/subopt/"/>
+  </compounddef>
+</doxygen>

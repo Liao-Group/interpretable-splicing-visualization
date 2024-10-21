@@ -1,0 +1,113 @@
+% draws Vienna RNA like colored boxes
+/box { % x1 y1 x2 y2 hue saturation
+  gsave
+  dup 0.3 mul 1 exch sub sethsbcolor
+  exch 3 index sub exch 2 index sub rectfill
+  grestore
+} def
+% draws a box in current color
+/box2 { % x1 y1 x2 y2
+  exch 3 index sub exch 2 index sub rectfill
+} def
+/str { % (Text) x y str
+ 6 add
+ moveto
+  show
+} def
+
+/hsb {
+  dup 0.3 mul 1 exch sub sethsbcolor
+} bind def
+
+/min { 2 copy gt { exch } if pop } bind def
+/max { 2 copy lt { exch } if pop } bind def
+
+/ConsLegend { % xloc yloc tics range ConsLegend -> []
+  /STR 8 string def
+  /colshift 0.16 def
+  /sep 0.1 def
+  /ymax exch def
+  /xmax exch def
+  /ymin 0 def
+  /xmin 0 def
+  /range exch def
+  /sizex {xmax xmin sub} bind def
+  /sizey {ymax ymin sub} bind def
+  /size {sizex sizey max} bind def
+  % precompute number of tics but leave one tics for range numbers
+  dup /tics exch dup 1 le { pop 42 } if def
+  /lasttick exch dup 1 eq { pop 1.0 } { dup 1 gt { cvi } if  } ifelse def
+
+  gsave
+    /Helvetica findfont 10 scalefont setfont
+    % coordinate transformation to achieve relative coordinates
+    % from 0...1
+    xmin xmax add sizex sub 2 div
+    ymin ymax add sizey sub 2 div translate
+    sizex sizey scale
+    % apply actual position of the legend
+    % according to xloc yloc
+    translate
+    % re-scale
+    1 sizex div 1 sizey div scale
+    sizex dup scale
+    0.015 dup scale
+    % legend lines
+    gsave 
+    0.5 setgray
+    0.05 setlinewidth
+    newpath
+    1.5 -0.5 moveto 13.1 -0.5 lineto
+    stroke
+    newpath
+    1.5 -1.9 moveto 13.1 -1.9 lineto
+    stroke
+    newpath
+    1.5 -0.5 moveto 1.5 -8 -6 sep mul add lineto
+    stroke
+    newpath
+    13.1 -1.9 moveto 13.1 -8 -6 sep mul add lineto
+    stroke
+    newpath
+    2.9 -1.9 moveto 2.9 -8 -6 sep mul add lineto
+    stroke
+    newpath
+    2.9 -8 -6 sep mul add moveto 13.1 -8 -6 sep mul add lineto
+    stroke
+    grestore
+    gsave
+    3 -3 translate
+    % color gradients
+      6 -1 1
+      {
+        % get current number of different base pairs
+        dup 1 sub 6 exch sub /curnum exch STR cvs def
+        % compute y-position
+        dup 6 sub dup sep mul add /ypos exch def
+        % draw number of different base pairs
+        -1 ypos moveto gsave 0.1 dup scale curnum show grestore
+        % compute current color
+        6 exch sub colshift mul
+        /curcol exch def
+        % draw gradient for counter examples
+        gsave
+        10 tics 1 add div 1 scale
+        0 1 tics
+        {
+            dup ypos moveto
+            tics div range mul 1 exch sub
+            curcol exch hsb
+            1 0 rlineto 0 1 rlineto -1 0 rlineto closepath fill
+        } for
+        grestore
+      } for
+    grestore
+    0 setgray
+    % legend labels
+    3.1 -1.8 sep add moveto (0) gsave 0.1 dup scale show grestore
+    12.4 -1.8 sep add moveto lasttick STR cvs gsave 0.1 dup scale show grestore
+    4 0 moveto (counter examples) gsave 0.1 dup scale show grestore
+    1 -7.5 moveto 90 rotate (base pairs)  gsave 0.1 dup scale show grestore
+%    gsave 0.1 dup scale dup stringwidth pop -2 div 0 rmoveto show grestore
+  grestore
+} bind def

@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="salt_8h" kind="file" language="C++">
+    <compoundname>salt.h</compoundname>
+    <includes local="no">math.h</includes>
+    <includes refid="utils_2basic_8h" local="yes">ViennaRNA/utils/basic.h</includes>
+    <includes refid="model_8h" local="yes">ViennaRNA/model.h</includes>
+    <includedby refid="eval_2hairpin_8h" local="no">ViennaRNA/eval/hairpin.h</includedby>
+    <includedby refid="eval_2internal_8h" local="no">ViennaRNA/eval/internal.h</includedby>
+    <includedby refid="partfunc_2internal_8h" local="no">ViennaRNA/partfunc/internal.h</includedby>
+    <incdepgraph>
+      <node id="21">
+        <label>ViennaRNA/constraints/basic.h</label>
+        <link refid="constraints_2basic_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ViennaRNA/constraints/hard.h</label>
+        <link refid="hard_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ViennaRNA/constraints/soft.h</label>
+        <link refid="soft_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ViennaRNA/datastructures/array.h</label>
+        <link refid="array_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ViennaRNA/datastructures/basic.h</label>
+        <link refid="datastructures_2basic_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ViennaRNA/datastructures/dp_matrices.h</label>
+        <link refid="datastructures_2dp__matrices_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ViennaRNA/datastructures/sparse_mx.h</label>
+        <link refid="sparse__mx_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/fold_compound.h</label>
+        <link refid="fold__compound_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>ViennaRNA/grammar/basic.h</label>
+        <link refid="grammar_2basic_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ViennaRNA/model.h</label>
+        <link refid="model_8h"/>
+      </node>
+      <node id="11">
+        <label>ViennaRNA/params/basic.h</label>
+        <link refid="params_2basic_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/params/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/params/salt.h</label>
+        <link refid="salt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ViennaRNA/sequences/sequence.h</label>
+        <link refid="sequences_2sequence_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ViennaRNA/structured_domains.h</label>
+        <link refid="structured__domains_8h"/>
+      </node>
+      <node id="29">
+        <label>ViennaRNA/structures/dotbracket.h</label>
+        <link refid="dotbracket_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>ViennaRNA/structures/helix.h</label>
+        <link refid="helix_8h"/>
+      </node>
+      <node id="31">
+        <label>ViennaRNA/structures/metrics.h</label>
+        <link refid="metrics_8h"/>
+      </node>
+      <node id="28">
+        <label>ViennaRNA/structures/pairtable.h</label>
+        <link refid="pairtable_8h"/>
+      </node>
+      <node id="26">
+        <label>ViennaRNA/structures/problist.h</label>
+        <link refid="problist_8h"/>
+      </node>
+      <node id="30">
+        <label>ViennaRNA/structures/utils.h</label>
+        <link refid="structures_2utils_8h"/>
+      </node>
+      <node id="25">
+        <label>ViennaRNA/unstructured_domains.h</label>
+        <link refid="unstructured__domains_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/utils/basic.h</label>
+        <link refid="utils_2basic_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ViennaRNA/utils/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>ViennaRNA/zscore/basic.h</label>
+        <link refid="zscore_2basic_8h_source"/>
+      </node>
+      <node id="8">
+        <label>limits.h</label>
+      </node>
+      <node id="2">
+        <label>math.h</label>
+      </node>
+      <node id="5">
+        <label>stdarg.h</label>
+      </node>
+      <node id="17">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="15">
+        <label>stdlib.h</label>
+      </node>
+      <node id="19">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ViennaRNA/eval/hairpin.h</label>
+        <link refid="eval_2hairpin_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/eval/internal.h</label>
+        <link refid="eval_2internal_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/hairpin_loops.h</label>
+        <link refid="hairpin__loops_8h"/>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/interior_loops.h</label>
+        <link refid="interior__loops_8h"/>
+      </node>
+      <node id="6">
+        <label>ViennaRNA/loop_energies.h</label>
+        <link refid="loop__energies_8h"/>
+      </node>
+      <node id="5">
+        <label>ViennaRNA/loops/all.h</label>
+        <link refid="all_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/loops/hairpin.h</label>
+        <link refid="loops_2hairpin_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ViennaRNA/loops/internal.h</label>
+        <link refid="loops_2internal_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/params/salt.h</label>
+        <link refid="salt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ViennaRNA/partfunc/internal.h</label>
+        <link refid="partfunc_2internal_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <member refid="group__energy__parameters__salt_1gae83764d58e98e05ea49530775bcba104" kind="function"><name>vrna_salt_loop</name></member>
+      <member refid="group__energy__parameters__salt_1ga79eb7c0dcb7e08dd37437c19be4a7751" kind="function"><name>vrna_salt_loop_int</name></member>
+      <member refid="group__energy__parameters__salt_1gab1b3e5d8995b1688765e4244038f157f" kind="function"><name>vrna_salt_stack</name></member>
+      <member refid="group__energy__parameters__salt_1ga1099cd74de693d0aecc7b471342e1a31" kind="function"><name>vrna_salt_ml</name></member>
+      <member refid="group__energy__parameters__salt_1ga157f362ca309f306c66bc668edb3aceb" kind="function"><name>vrna_salt_duplex_init</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Functions to compute salt correction. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_LOOPS_SALT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_LOOPS_SALT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_2basic_8h" kindref="compound">ViennaRNA/utils/basic.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="model_8h" kindref="compound">ViennaRNA/model.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="group__energy__parameters__salt_1gae83764d58e98e05ea49530775bcba104" refkind="member"><highlight class="normal"><ref refid="group__energy__parameters__salt_1gae83764d58e98e05ea49530775bcba104" kindref="member">vrna_salt_loop</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="group__model__details_1ga59bc4fe917f2ad11376d083260e289da" kindref="member">salt</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>backbonelen);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="group__energy__parameters__salt_1ga79eb7c0dcb7e08dd37437c19be4a7751" refkind="member"><highlight class="normal"><ref refid="group__energy__parameters__salt_1ga79eb7c0dcb7e08dd37437c19be4a7751" kindref="member">vrna_salt_loop_int</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>L,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="group__model__details_1ga59bc4fe917f2ad11376d083260e289da" kindref="member">salt</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>backbonelen);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="group__energy__parameters__salt_1gab1b3e5d8995b1688765e4244038f157f" refkind="member"><highlight class="normal"><ref refid="group__energy__parameters__salt_1gab1b3e5d8995b1688765e4244038f157f" kindref="member">vrna_salt_stack</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="group__model__details_1ga59bc4fe917f2ad11376d083260e289da" kindref="member">salt</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>hrise);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="group__energy__parameters__salt_1ga1099cd74de693d0aecc7b471342e1a31" refkind="member"><highlight class="normal"><ref refid="group__energy__parameters__salt_1ga1099cd74de693d0aecc7b471342e1a31" kindref="member">vrna_salt_ml</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>saltLoop[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lower,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>upper,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*m,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="group__energy__parameters__salt_1ga157f362ca309f306c66bc668edb3aceb" refkind="member"><highlight class="normal"><ref refid="group__energy__parameters__salt_1ga157f362ca309f306c66bc668edb3aceb" kindref="member">vrna_salt_duplex_init</ref>(<ref refid="structvrna__md__s" kindref="compound">vrna_md_t</ref><sp/>*md);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/params/salt.h"/>
+  </compounddef>
+</doxygen>

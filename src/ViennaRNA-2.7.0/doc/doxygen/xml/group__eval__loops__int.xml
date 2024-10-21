@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__eval__loops__int" kind="group">
+    <compoundname>eval_loops_int</compoundname>
+    <title>Internal Loops</title>
+    <innerfile refid="eval_2internal_8h">internal.h</innerfile>
+    <innerfile refid="partfunc_2internal_8h">internal.h</innerfile>
+    <sectiondef kind="user-defined">
+      <header>Basic free energy interface</header>
+      <memberdef kind="function" id="group__eval__loops__int_1gaaaa6eb5605d1c843af1269c6f23cb53c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_internal</definition>
+        <argsstring>(unsigned int n1, unsigned int n2, unsigned int type, unsigned int type_2, int si1, int sj1, int sp1, int sq1, vrna_param_t *P)</argsstring>
+        <name>vrna_E_internal</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>type_2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>si1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sj1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sp1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sq1</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga8a69ca7d787e4fd6079914f5343a1f35" kindref="member">vrna_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>Compute the Energy of an internal loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes the free energy <formula id="48">$ E $</formula> of an internal-loop with the following structure: <linebreak/>
+ <preformatted>
+      3&apos;  5&apos;
+      |   |
+      U - V
+  a_n       b_1
+   .        .
+   .        .
+   .        .
+  a_1       b_m
+      X - Y
+      |   |
+      5&apos;  3&apos;
+</preformatted> This general structure depicts an internal-loop that is closed by the base pair (X,Y). The enclosed base pair is (V,U) which leaves the unpaired bases a_1-a_n and b_1-b_n that constitute the loop. In this example, the length of the internal-loop is <formula id="58">$(n+m)$</formula> where n or m may be 0 resulting in a bulge-loop or base pair stack. The mismatching nucleotides for the closing pair (X,Y) are:<linebreak/>
+ 5&apos;-mismatch: a_1<linebreak/>
+ 3&apos;-mismatch: b_m<linebreak/>
+ and for the enclosed base pair (V,U):<linebreak/>
+ 5&apos;-mismatch: b_1<linebreak/>
+ 3&apos;-mismatch: a_n<linebreak/>
+</para>
+<para><simplesect kind="note"><para>Base pairs are always denoted in 5&apos;-&gt;3&apos; direction. Thus the enclosed base pair must be &apos;turned arround&apos; when evaluating the free energy of the internal-loop<linebreak/>
+ This function is threadsafe</para>
+</simplesect>
+<simplesect kind="see"><para>vrna_exp_E_internal()</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the &apos;left&apos;-loop (number of unpaired nucleotides) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the &apos;right&apos;-loop (number of unpaired nucleotides) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pair type of the base pair closing the internal loop </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pair type of the enclosed base pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>si1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 5&apos;-mismatching nucleotide of the closing pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sj1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3&apos;-mismatching nucleotide of the closing pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sp1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3&apos;-mismatching nucleotide of the enclosed pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sq1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 5&apos;-mismatching nucleotide of the enclosed pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The datastructure containing scaled energy parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Free energy of the internal loop in dcal/mol </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/internal.h" line="102" column="1" declfile="ViennaRNA/eval/internal.h" declline="102" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__int_1ga89b62e8fafa81514c6bd58a16e90d00a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_eval_internal</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, unsigned int k, unsigned int l, unsigned int options)</argsstring>
+        <name>vrna_eval_internal</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the free energy contribution of an internal loop with delimiting base pairs <formula id="22">$(i,j)$</formula> and <formula id="23">$(k,l)$</formula>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is polymorphic, i.e. it accepts <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> of type <ref refid="group__fold__compound_1gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6" kindref="member">VRNA_FC_TYPE_SINGLE</ref> as well as <ref refid="group__fold__compound_1gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023" kindref="member">VRNA_FC_TYPE_COMPARATIVE</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/internal.h" line="121" column="1" declfile="ViennaRNA/eval/internal.h" declline="121" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__int_1gaf2fac131b5006708be6daec2dcec6c13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_eval_stack</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, unsigned int options)</argsstring>
+        <name>vrna_eval_stack</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/internal.h" line="130" column="1" declfile="ViennaRNA/eval/internal.h" declline="130" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Boltzmann weight (partition function) interface</header>
+      <memberdef kind="function" id="group__eval__loops__int_1gad02e49086e29c6c2d08aed18205e2538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_internal</definition>
+        <argsstring>(unsigned int n1, unsigned int n2, unsigned int type, unsigned int type_2, int si1, int sj1, int sp1, int sq1, vrna_exp_param_t *P)</argsstring>
+        <name>vrna_exp_E_internal</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>type_2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>si1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sj1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sp1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sq1</declname>
+        </param>
+        <param>
+          <type><ref refid="group__energy__parameters_1ga01d8b92fe734df8d79a6169482c7d8d8" kindref="member">vrna_exp_param_t</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/internal.h" line="147" column="1" declfile="ViennaRNA/eval/internal.h" declline="147" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__int_1ga7aea8d7ecea66138d321e72354fa18f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_eval_internal</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, unsigned int k, unsigned int l, unsigned int options)</argsstring>
+        <name>vrna_exp_eval_internal</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/eval/internal.h" line="159" column="1" declfile="ViennaRNA/eval/internal.h" declline="159" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Minimum Free Energy API</header>
+      <memberdef kind="function" id="group__eval__loops__int_1ga0d86be5951f448d44d15c5180a259c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_internal</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j)</argsstring>
+        <name>vrna_mfe_internal</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/internal.h" line="44" column="1" declfile="ViennaRNA/mfe/internal.h" declline="44" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__int_1ga281de352394fd2c35bf23f837da63f76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_mfe_internal_ext</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, unsigned int *ip, unsigned int *iq)</argsstring>
+        <name>vrna_mfe_internal_ext</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>iq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/internal.h" line="50" column="1" declfile="ViennaRNA/mfe/internal.h" declline="50" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Boltzmann weight (partition function) interface</header>
+      <memberdef kind="function" id="group__eval__loops__int_1gaa64bb3e28f557985a4d448f8fd86a115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref></type>
+        <definition>FLT_OR_DBL vrna_exp_E_int_loop</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j)</argsstring>
+        <name>vrna_exp_E_int_loop</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/partfunc/internal.h" line="58" column="1" declfile="ViennaRNA/partfunc/internal.h" declline="58" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__eval__loops__int_1gab927db1b264b253a9acd5e63ab5404a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_int_loop</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j)</argsstring>
+        <name>vrna_E_int_loop</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/internal.h" line="65" column="17" declfile="ViennaRNA/mfe/internal.h" declline="65" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__eval__loops__int_1gadad05dffc71e28377acdcedde9a3d9fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vrna_E_ext_int_loop</definition>
+        <argsstring>(vrna_fold_compound_t *fc, int i, int j, int *ip, int *iq)</argsstring>
+        <name>vrna_E_ext_int_loop</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>iq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/mfe/internal.h" line="74" column="17" declfile="ViennaRNA/mfe/internal.h" declline="74" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

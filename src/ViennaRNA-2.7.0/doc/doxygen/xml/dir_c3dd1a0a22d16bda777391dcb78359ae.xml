@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_c3dd1a0a22d16bda777391dcb78359ae" kind="dir">
+    <compoundname>ViennaRNA/structures</compoundname>
+    <innerfile refid="benchmark_8h">benchmark.h</innerfile>
+    <innerfile refid="structures_2centroid_8h">centroid.h</innerfile>
+    <innerfile refid="dotbracket_8h">dotbracket.h</innerfile>
+    <innerfile refid="helix_8h">helix.h</innerfile>
+    <innerfile refid="mea_8h">mea.h</innerfile>
+    <innerfile refid="metrics_8h">metrics.h</innerfile>
+    <innerfile refid="pairtable_8h">pairtable.h</innerfile>
+    <innerfile refid="problist_8h">problist.h</innerfile>
+    <innerfile refid="shapes_8h">shapes.h</innerfile>
+    <innerfile refid="tree_8h">tree.h</innerfile>
+    <innerfile refid="structures_2utils_8h">utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/structures/"/>
+  </compounddef>
+</doxygen>

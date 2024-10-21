@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="wuchty_8h" kind="file" language="C++">
+    <compoundname>wuchty.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="datastructures_2basic_8h" local="no">ViennaRNA/datastructures/basic.h</includes>
+    <includes refid="fold__compound_8h" local="no">ViennaRNA/fold_compound.h</includes>
+    <includes refid="params_2basic_8h" local="no">ViennaRNA/params/basic.h</includes>
+    <includes refid="subopt_2basic_8h" local="no">ViennaRNA/subopt/basic.h</includes>
+    <includedby refid="subopt_8h" local="no">ViennaRNA/subopt.h</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>ViennaRNA/constraints/basic.h</label>
+        <link refid="constraints_2basic_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ViennaRNA/constraints/hard.h</label>
+        <link refid="hard_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ViennaRNA/constraints/soft.h</label>
+        <link refid="soft_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ViennaRNA/datastructures/array.h</label>
+        <link refid="array_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViennaRNA/datastructures/basic.h</label>
+        <link refid="datastructures_2basic_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ViennaRNA/datastructures/dp_matrices.h</label>
+        <link refid="datastructures_2dp__matrices_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ViennaRNA/datastructures/sparse_mx.h</label>
+        <link refid="sparse__mx_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ViennaRNA/fold_compound.h</label>
+        <link refid="fold__compound_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>ViennaRNA/grammar/basic.h</label>
+        <link refid="grammar_2basic_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ViennaRNA/model.h</label>
+        <link refid="model_8h"/>
+      </node>
+      <node id="8">
+        <label>ViennaRNA/params/basic.h</label>
+        <link refid="params_2basic_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ViennaRNA/params/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ViennaRNA/sequences/sequence.h</label>
+        <link refid="sequences_2sequence_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ViennaRNA/structured_domains.h</label>
+        <link refid="structured__domains_8h"/>
+      </node>
+      <node id="27">
+        <label>ViennaRNA/structures/dotbracket.h</label>
+        <link refid="dotbracket_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>ViennaRNA/structures/helix.h</label>
+        <link refid="helix_8h"/>
+      </node>
+      <node id="29">
+        <label>ViennaRNA/structures/metrics.h</label>
+        <link refid="metrics_8h"/>
+      </node>
+      <node id="26">
+        <label>ViennaRNA/structures/pairtable.h</label>
+        <link refid="pairtable_8h"/>
+      </node>
+      <node id="24">
+        <label>ViennaRNA/structures/problist.h</label>
+        <link refid="problist_8h"/>
+      </node>
+      <node id="28">
+        <label>ViennaRNA/structures/utils.h</label>
+        <link refid="structures_2utils_8h"/>
+      </node>
+      <node id="31">
+        <label>ViennaRNA/subopt/basic.h</label>
+        <link refid="subopt_2basic_8h"/>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/subopt/wuchty.h</label>
+        <link refid="wuchty_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>ViennaRNA/unstructured_domains.h</label>
+        <link refid="unstructured__domains_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ViennaRNA/utils/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ViennaRNA/zscore/basic.h</label>
+        <link refid="zscore_2basic_8h_source"/>
+      </node>
+      <node id="5">
+        <label>limits.h</label>
+      </node>
+      <node id="16">
+        <label>stdarg.h</label>
+      </node>
+      <node id="14">
+        <label>stddef.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="17">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ViennaRNA/subopt.h</label>
+        <link refid="subopt_8h"/>
+      </node>
+      <node id="1">
+        <label>ViennaRNA/subopt/wuchty.h</label>
+        <link refid="wuchty_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="wuchty_8h_1aab347a3c03fbe8e7319551b9fa0cce4a" prot="public" static="no">
+        <name>DEPRECATED</name>
+        <param><defname>func   </defname></param>
+        <param><defname>msg</defname></param>
+        <initializer>func</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/wuchty.h" line="14" column="11" bodyfile="ViennaRNA/subopt/wuchty.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="wuchty_8h_1a5ec740b80afb4906ba4311dbd8ddbd89" prot="public" static="no">
+        <name>MAXDOS</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+<para>Maximum density of states discretization for subopt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/wuchty.h" line="34" column="9" bodyfile="ViennaRNA/subopt/wuchty.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="wuchty_8h_1a523d1d3720ba75e0b7c38e14156e0658" prot="public" static="no">
+        <name>VRNA_UNSORTED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/wuchty.h" line="35" column="9" bodyfile="ViennaRNA/subopt/wuchty.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="wuchty_8h_1ab563f6f1f74414db0f234ceffb3ff37b" prot="public" static="no">
+        <name>VRNA_SORT_BY_ENERGY_LEXICOGRAPHIC_ASC</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/wuchty.h" line="36" column="9" bodyfile="ViennaRNA/subopt/wuchty.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="wuchty_8h_1a60f6145a1bdfd74e0e82a4dec6414065" prot="public" static="no">
+        <name>VRNA_SORT_BY_ENERGY_ASC</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/subopt/wuchty.h" line="37" column="9" bodyfile="ViennaRNA/subopt/wuchty.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <member refid="group__subopt__wuchty_1ga5e57d914bcb5feeecdf520e25313fcfe" kind="variable"><name>print_energy</name></member>
+      <member refid="group__subopt__wuchty_1ga873cf8ed69e0437f8efa8b1fec854a0e" kind="variable"><name>subopt_sorted</name></member>
+      <member refid="group__dos_1ga937634a76b46a22530a74906f1957a9e" kind="variable"><name>density_of_states</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__subopt__wuchty_1gad0cce16455fda0737873d8e1c5846480" kind="function"><name>vrna_subopt</name></member>
+      <member refid="group__subopt__wuchty_1ga92c2e415167f9e2b0341989a74d24e41" kind="function"><name>vrna_subopt_cb</name></member>
+      <member refid="group__subopt__wuchty_1ga9913b3a58b8d315be3f4f7f4dbe3c481" kind="function"><name>subopt</name></member>
+      <member refid="group__subopt__wuchty_1gaf3597f13ed0e7dba00185f3336312f7c" kind="function"><name>subopt_par</name></member>
+      <member refid="group__subopt__wuchty_1ga72ed97775f3e2ce2159fdcb994da383e" kind="function"><name>subopt_circ</name></member>
+      <member refid="group__subopt__zuker_1ga6b9eca4eb5772eecee76a6bb188063c0" kind="function"><name>zukersubopt</name></member>
+      <member refid="group__subopt__zuker_1gaf8d33bb499d66ef758db9c62cb0f6caa" kind="function"><name>zukersubopt_par</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>RNAsubopt and density of states declarations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>subopt.h<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VIENNA_RNA_PACKAGE_SUBOPT_WUCHTY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VIENNA_RNA_PACKAGE_SUBOPT_WUCHTY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>VRNA_WARN_DEPRECATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>if<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func<sp/>__attribute__<sp/>((deprecated(&quot;&quot;,<sp/>msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>elif<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func<sp/>__attribute__<sp/>((deprecated(msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>DEPRECATED(func,<sp/>msg)<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="datastructures_2basic_8h" kindref="compound">ViennaRNA/datastructures/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fold__compound_8h" kindref="compound">ViennaRNA/fold_compound.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="params_2basic_8h" kindref="compound">ViennaRNA/params/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="subopt_2basic_8h" kindref="compound">ViennaRNA/subopt/basic.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="wuchty_8h_1a5ec740b80afb4906ba4311dbd8ddbd89" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXDOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_UNSORTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_SORT_BY_ENERGY_LEXICOGRAPHIC_ASC<sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VRNA_SORT_BY_ENERGY_ASC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="structvrna__subopt__sol__s" kindref="compound">vrna_subopt_solution_t</ref><sp/>*</highlight></codeline>
+<codeline lineno="71" refid="group__subopt__wuchty_1gad0cce16455fda0737873d8e1c5846480" refkind="member"><highlight class="normal"><ref refid="group__subopt__wuchty_1gad0cce16455fda0737873d8e1c5846480" kindref="member">vrna_subopt</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/><sp/>*fc,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delta,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sorted,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*fp);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="group__subopt__wuchty_1ga92c2e415167f9e2b0341989a74d24e41" refkind="member"><highlight class="normal"><ref refid="group__subopt__wuchty_1ga92c2e415167f9e2b0341989a74d24e41" kindref="member">vrna_subopt_cb</ref>(<ref refid="structvrna__fc__s" kindref="compound">vrna_fold_compound_t</ref><sp/>*fc,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delta,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__subopt__wuchty_1ga760ee7f326a411565f9e9f0cf44b2ff8" kindref="member">vrna_subopt_result_f</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="group__subopt__wuchty_1ga5e57d914bcb5feeecdf520e25313fcfe" kindref="member">print_energy</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__subopt__wuchty_1ga873cf8ed69e0437f8efa8b1fec854a0e" kindref="member">subopt_sorted</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__dos_1ga937634a76b46a22530a74906f1957a9e" kindref="member">density_of_states</ref>[<ref refid="wuchty_8h_1a5ec740b80afb4906ba4311dbd8ddbd89" kindref="member">MAXDOS</ref><sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>group<sp/>dos<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VRNA_DISABLE_BACKWARD_COMPATIBILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">DEPRECATED(<ref refid="structvrna__subopt__sol__s" kindref="compound">SOLUTION</ref><sp/>*<sp/><ref refid="group__subopt__wuchty_1ga9913b3a58b8d315be3f4f7f4dbe3c481" kindref="member">subopt</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*seq,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta,<sp/>FILE<sp/>*<sp/>fp),</highlight></codeline>
+<codeline lineno="176" refid="group__subopt__wuchty_1ga9913b3a58b8d315be3f4f7f4dbe3c481" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_subopt()<sp/>or<sp/>vrna_subopt_cb()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">DEPRECATED(<ref refid="structvrna__subopt__sol__s" kindref="compound">SOLUTION</ref><sp/>*</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__subopt__wuchty_1gaf3597f13ed0e7dba00185f3336312f7c" kindref="member">subopt_par</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*seq,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*structure,<sp/><ref refid="structvrna__param__s" kindref="compound">vrna_param_t</ref><sp/>*<sp/>parameters,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_constrained,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_circular,<sp/>FILE<sp/>*<sp/>fp),</highlight></codeline>
+<codeline lineno="187" refid="group__subopt__wuchty_1gaf3597f13ed0e7dba00185f3336312f7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_subopt()<sp/>or<sp/>vrna_subopt_cb()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal">DEPRECATED(<ref refid="structvrna__subopt__sol__s" kindref="compound">SOLUTION</ref><sp/>*<sp/><ref refid="group__subopt__wuchty_1ga72ed97775f3e2ce2159fdcb994da383e" kindref="member">subopt_circ</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*seq,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sequence,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta,<sp/>FILE<sp/>*<sp/>fp),</highlight></codeline>
+<codeline lineno="204" refid="group__subopt__wuchty_1ga72ed97775f3e2ce2159fdcb994da383e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_subopt()<sp/>or<sp/>vrna_subopt_cb()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal">DEPRECATED(<ref refid="structvrna__subopt__sol__s" kindref="compound">SOLUTION</ref><sp/>*<sp/><ref refid="group__subopt__zuker_1ga6b9eca4eb5772eecee76a6bb188063c0" kindref="member">zukersubopt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="221" refid="group__subopt__zuker_1ga6b9eca4eb5772eecee76a6bb188063c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_subopt_zuker()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">DEPRECATED(<ref refid="structvrna__subopt__sol__s" kindref="compound">SOLUTION</ref><sp/>*<sp/><ref refid="group__subopt__zuker_1gaf8d33bb499d66ef758db9c62cb0f6caa" kindref="member">zukersubopt_par</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><ref refid="structvrna__param__s" kindref="compound">vrna_param_t</ref><sp/>*<sp/>parameters),</highlight></codeline>
+<codeline lineno="232" refid="group__subopt__zuker_1gaf8d33bb499d66ef758db9c62cb0f6caa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>vrna_subopt_zuker()<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ViennaRNA/subopt/wuchty.h"/>
+  </compounddef>
+</doxygen>

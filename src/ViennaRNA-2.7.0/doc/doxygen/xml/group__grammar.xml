@@ -1,0 +1,1675 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="group__grammar" kind="group">
+    <compoundname>grammar</compoundname>
+    <title>The RNA Folding Grammar</title>
+    <innerfile refid="grammar_2basic_8h">basic.h</innerfile>
+    <innerfile refid="grammar_2mfe_8h">mfe.h</innerfile>
+    <innerfile refid="partfunc_8h">partfunc.h</innerfile>
+    <innergroup refid="group__model__details">Fine-tuning of the Implemented Models</innergroup>
+    <innergroup refid="group__energy__parameters">Energy Parameters</innergroup>
+    <innergroup refid="group__domains">Extending the Folding Grammar with Additional Domains</innergroup>
+    <innergroup refid="group__constraints">Constraining the RNA Folding Grammar</innergroup>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__grammar_1gab771519c88455091fff89211cc8b1f97" prot="public" static="no">
+        <type>struct vrna_gr_aux_s *</type>
+        <definition>typedef struct vrna_gr_aux_s* vrna_gr_aux_t</definition>
+        <argsstring></argsstring>
+        <name>vrna_gr_aux_t</name>
+        <briefdescription>
+<para>A pointer to the auxiliary grammar data structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/basic.h" line="22" column="28" bodyfile="ViennaRNA/grammar/basic.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__grammar_1gadbb62f9eda06defb039fbc99199d2158" prot="public" static="no">
+        <type>char *(*</type>
+        <definition>typedef char *(* vrna_gr_serialize_bp_f) (vrna_fold_compound_t *fc, vrna_bps_t bp_stack, void *data)</definition>
+        <argsstring>)(vrna_fold_compound_t *fc, vrna_bps_t bp_stack, void *data)</argsstring>
+        <name>vrna_gr_serialize_bp_f</name>
+        <briefdescription>
+<para>Function prototype for serializing backtracked base pairs and structure elements into a dot-bracket string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called after backtracking in the MFE predictions to convert collected base pairs and other information into a dot-bracket-like structure string.</para>
+<para><xrefsect id="callbacks_1_callbacks000014"><xreftitle>Notes on Callback Functions</xreftitle><xrefdescription><para><parblock><para>This callback allows for changing the way how base pairs (and other types of data) obtained from the default and extended grammar are converted back into a dot-bracket string. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__struct__utils_1ga29d5a2517277a5b7eba6c8a101555ef4" kindref="member">vrna_db_from_bps()</ref>, <ref refid="group__grammar_1gac4341849c5eefb4317f62915467eba63" kindref="member">vrna_gr_add_aux()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound to work on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bp_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair stack </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary user-provided data pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A &apos;\0&apos;-terminated dot-bracket-like string representing the structure from <computeroutput>bp_stack</computeroutput> (and <computeroutput>data</computeroutput>) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/basic.h" line="45" column="9" bodyfile="ViennaRNA/grammar/basic.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* vrna_gr_inside_f) (vrna_fold_compound_t *fc, unsigned int i, unsigned int j, void *data)</definition>
+        <argsstring>)(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, void *data)</argsstring>
+        <name>vrna_gr_inside_f</name>
+        <briefdescription>
+<para>Function prototype for auxiliary grammar rules (inside version, MFE) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called during the inside recursions of MFE predictions for subsequences from position <computeroutput>i</computeroutput> to <computeroutput>j</computeroutput> and is supposed to return an energy contribution in dekacal/mol.</para>
+<para><xrefsect id="callbacks_1_callbacks000015"><xreftitle>Notes on Callback Functions</xreftitle><xrefdescription><para><parblock><para>This callback allows for extending the MFE secondary structure decomposition with additional rules. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref>, <ref refid="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" kindref="member">vrna_gr_add_aux_c()</ref>, <ref refid="group__grammar_1ga70e501fdcfee7f982d137788645bf164" kindref="member">vrna_gr_add_aux_m()</ref>, <ref refid="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" kindref="member">vrna_gr_add_aux_m1()</ref>, vrna_gr_add_aux_aux(), <ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound to work on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 5&apos; delimiter of the sequence segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3&apos; delimiter of the sequence segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary user-provided data pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The free energy computed by the auxiliary grammar rule in dekacal/mol </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/mfe.h" line="42" column="9" bodyfile="ViennaRNA/grammar/mfe.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* vrna_gr_outside_f) (vrna_fold_compound_t *fc, unsigned int i, unsigned int j, int e, vrna_bps_t bp_stack, vrna_bts_t bt_stack, void *data)</definition>
+        <argsstring>)(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, int e, vrna_bps_t bp_stack, vrna_bts_t bt_stack, void *data)</argsstring>
+        <name>vrna_gr_outside_f</name>
+        <briefdescription>
+<para>Function prototype for auxiliary grammar rules (outside version, MFE) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called during the backtracking stage of MFE predictions for subsequences from position <computeroutput>i</computeroutput> to <computeroutput>j</computeroutput> and is supposed to identify the the structure components that give rise to the corresponding energy contribution <computeroutput>e</computeroutput> as determined in the inside (forward) step.</para>
+<para>For that purpose, the function may modify the base pair stack (<computeroutput>bp_stack</computeroutput>) by adding all base pairs identified through the additional rule. In addition, when the rule sub-divides the sequence segment into smaller pieces, these pieces can be put onto the backtracking (<computeroutput>bt_stack</computeroutput>) stack. On successful backtrack, the function returns non-zero, and exactly zero (0) when the backtracking failed.</para>
+<para><xrefsect id="callbacks_1_callbacks000016"><xreftitle>Notes on Callback Functions</xreftitle><xrefdescription><para><parblock><para>This callback allows for backtracking (sub)structures obtained from extending the MFE secondary structure decomposition with additional rules. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref>, <ref refid="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" kindref="member">vrna_gr_add_aux_c()</ref>, <ref refid="group__grammar_1ga70e501fdcfee7f982d137788645bf164" kindref="member">vrna_gr_add_aux_m()</ref>, <ref refid="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" kindref="member">vrna_gr_add_aux_m1()</ref>, vrna_gr_add_aux_aux(), <ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound to work on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 5&apos; delimiter of the sequence segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3&apos; delimiter of the sequence segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The energy of the segment [i:j] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bp_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base pair stack </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bt_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backtracking stack (all segments that need to be further investigated) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary user-provided data pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The free energy computed by the auxiliary grammar rule in dekacal/mol </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/mfe.h" line="81" column="9" bodyfile="ViennaRNA/grammar/mfe.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" prot="public" static="no">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref>(*</type>
+        <definition>typedef FLT_OR_DBL(* vrna_gr_inside_exp_f) (vrna_fold_compound_t *fc, unsigned int i, unsigned int j, void *data)</definition>
+        <argsstring>)(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, void *data)</argsstring>
+        <name>vrna_gr_inside_exp_f</name>
+        <briefdescription>
+<para>Function prototype for auxiliary grammar rules (inside version, partition function) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called during the inside recursions of partition function predictions for subsequences from position <computeroutput>i</computeroutput> to <computeroutput>j</computeroutput> and is supposed to return a Boltzmann factor with energy contribution in cal/mol.</para>
+<para><xrefsect id="callbacks_1_callbacks000017"><xreftitle>Notes on Callback Functions</xreftitle><xrefdescription><para><parblock><para>This callback allows for extending the partition function secondary structure decomposition with additional rules. </para>
+</parblock></para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref>, <ref refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kindref="member">vrna_gr_add_aux_exp_c()</ref>, <ref refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kindref="member">vrna_gr_add_aux_exp_m()</ref>, <ref refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kindref="member">vrna_gr_add_aux_exp_m1()</ref>, <ref refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kindref="member">vrna_gr_add_aux_exp()</ref>, <ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound to work on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 5&apos; delimiter of the sequence segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3&apos; delimiter of the sequence segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary user-provided data pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The partition function omputed by the auxiliary grammar rule with energies in cal/mol </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/partfunc.h" line="43" column="9" bodyfile="ViennaRNA/grammar/partfunc.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__grammar_1gabb020faa05e85ab50ef339f0c41b6d07" prot="public" static="no">
+        <type><ref refid="group__data__structures_1ga31125aeace516926bf7f251f759b6126" kindref="member">FLT_OR_DBL</ref>(*</type>
+        <definition>typedef FLT_OR_DBL(* vrna_gr_outside_exp_f) (vrna_fold_compound_t *fc, unsigned int i, unsigned int j, void *data)</definition>
+        <argsstring>)(vrna_fold_compound_t *fc, unsigned int i, unsigned int j, void *data)</argsstring>
+        <name>vrna_gr_outside_exp_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/partfunc.h" line="49" column="9" bodyfile="ViennaRNA/grammar/partfunc.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__grammar_1gad8a3f9ed2e84e2b2b7803043b539b9d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_prepare</definition>
+        <argsstring>(vrna_fold_compound_t *fc, unsigned int options)</argsstring>
+        <name>vrna_gr_prepare</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Prepare the auxiliary grammar rule data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is mainly for internal use. Users of the auxiliary grammar API usually do not need to call this function except for debugging purposes.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound storing the auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Options flag(s) that denote what needs to be prepared </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>non-zero on success, 0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/basic.h" line="61" column="1" declfile="ViennaRNA/grammar/basic.h" declline="61" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1ga64fd382fd5b2a3f87c472230c3ce5d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_status</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_recursion_status_f cb, void *data, vrna_auxdata_prepare_f prepare_cb, vrna_auxdata_free_f free_cb)</argsstring>
+        <name>vrna_gr_add_status</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gabc02e2d02dad91e66eca6656c68987c1" kindref="member">vrna_recursion_status_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>prepare_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>free_cb</declname>
+        </param>
+        <briefdescription>
+<para>Add status event based data preparation callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds additional data structures and corresponding callback functions for the auxiliary grammar extension API. This might be helpful whenever certain preparation steps need to be done prior and/or after the actual run of the prediction algorithms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The recursion status callback that performs the preparation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data pointer the <computeroutput>cb</computeroutput> callback is working on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prepare_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A preparation callback function for parameter <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to release memory for <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of status function callbacks bound to the fold compound or 0 on error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/basic.h" line="81" column="1" declfile="ViennaRNA/grammar/basic.h" declline="81" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1gad85a9bb3b077eeeb23a8cfeac7024711" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_set_serialize_bp</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_serialize_bp_f cb, void *data, vrna_auxdata_prepare_f prepare_cb, vrna_auxdata_free_f free_cb)</argsstring>
+        <name>vrna_gr_set_serialize_bp</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gadbb62f9eda06defb039fbc99199d2158" kindref="member">vrna_gr_serialize_bp_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>prepare_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>free_cb</declname>
+        </param>
+        <briefdescription>
+<para>Set base pair stack to dot-bracket string serialization function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>After backtracking secondary structures, e.g. in MFE predictions, the outside algorithm usually collects a set of base pairs that then need to be converted into a dot-bracket string. By default, this conversion is done using the <ref refid="group__struct__utils_1ga29d5a2517277a5b7eba6c8a101555ef4" kindref="member">vrna_db_from_bps()</ref> function. However, this function only considers nested base pairs and no other type of secondary structure elements.</para>
+<para>When extending the recursions by additional rules, the default conversion may not suffice, e.g. because the grammar extension adds 2.5D modules or pseudoknots. In such cases the user should implement its own dot-bracket string conversion strategy that may use additional symbols.</para>
+<para>This function binds a user-implemented conversion function that must return a &apos;\0&apos; terminated dot-bracket-like string the same length as the input sequence. The conversion function will then be used instead of the default one. In addition to the base pair stack <ref refid="group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655" kindref="member">vrna_bps_t</ref>, the user-defined conversion function may keep track of whatever information is neccessary to properly convert the backtracked structure into a dot-bracket string. For that purpose, the <computeroutput>data</computeroutput> pointer can be used, e.g. it can point to the same data as used in any of the grammar extension rules. The <computeroutput>prepare_cb</computeroutput> and <computeroutput>free_cb</computeroutput> callbacks can again be used to control preparation and release of the memory <computeroutput>data</computeroutput> points to. The <computeroutput>prepare_cb</computeroutput> will be called after all the preparations for the grammar extensions and prior the actual inside-recursions. The conversion function callback <computeroutput>cb</computeroutput> will be called after backtracking.</para>
+<para><simplesect kind="see"><para><ref refid="group__struct__utils_1ga29d5a2517277a5b7eba6c8a101555ef4" kindref="member">vrna_db_from_bps()</ref>, <ref refid="group__grammar_1gac4341849c5eefb4317f62915467eba63" kindref="member">vrna_gr_add_aux()</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the conversion callback function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to arbitrary data that will be passed through to <computeroutput>cb</computeroutput> (may be <bold>NULL</bold>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prepare_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A function pointer to prepare <computeroutput>data</computeroutput> (may be <bold>NULL</bold>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A function pointer to release memory occupied by <computeroutput>data</computeroutput> (may be <bold>NULL</bold>) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/basic.h" line="125" column="1" declfile="ViennaRNA/grammar/basic.h" declline="125" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1ga33c347bb8a5b4664f10f952e5f4a8dc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vrna_gr_reset</definition>
+        <argsstring>(vrna_fold_compound_t *fc)</argsstring>
+        <name>vrna_gr_reset</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <briefdescription>
+<para>Remove all auxiliary grammar rules. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function re-sets the fold compound to the default rules by removing all auxiliary grammar rules</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/basic.h" line="141" column="1" declfile="ViennaRNA/grammar/basic.h" declline="141" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_f</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_f cb, vrna_gr_outside_f cb_bt, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_f</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref></type>
+          <declname>cb_bt</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the F-decomposition (MFE version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the F-decomposition, i.e. the external loop decomposition stage.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes a minimum free energy contribution for any subsequence the outside rule (<computeroutput>cb_bt</computeroutput>) is used for backtracking the corresponding structure.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" kindref="member">vrna_gr_add_aux_c()</ref>, <ref refid="group__grammar_1ga70e501fdcfee7f982d137788645bf164" kindref="member">vrna_gr_add_aux_m()</ref>, <ref refid="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" kindref="member">vrna_gr_add_aux_m1()</ref>, <ref refid="group__grammar_1gac4341849c5eefb4317f62915467eba63" kindref="member">vrna_gr_add_aux()</ref>, <ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref>, <ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref>, <ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref>, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_bt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (backtracking) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the MFE F-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/mfe.h" line="121" column="1" declfile="ViennaRNA/grammar/mfe.h" declline="121" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_c</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_f cb, vrna_gr_outside_f cb_bt, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_c</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref></type>
+          <declname>cb_bt</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the C-decomposition (MFE version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the C-decomposition, i.e. the base pair decomposition stage.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes a minimum free energy contribution for any subsequence the outside rule (<computeroutput>cb_bt</computeroutput>) is used for backtracking the corresponding structure.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref>, <ref refid="group__grammar_1ga70e501fdcfee7f982d137788645bf164" kindref="member">vrna_gr_add_aux_m()</ref>, <ref refid="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" kindref="member">vrna_gr_add_aux_m1()</ref>, <ref refid="group__grammar_1gac4341849c5eefb4317f62915467eba63" kindref="member">vrna_gr_add_aux()</ref>, <ref refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kindref="member">vrna_gr_add_aux_exp_c()</ref>, <ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref>, <ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref>, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_bt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (backtracking) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the MFE C-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/mfe.h" line="160" column="1" declfile="ViennaRNA/grammar/mfe.h" declline="160" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1ga70e501fdcfee7f982d137788645bf164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_m</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_f cb, vrna_gr_outside_f cb_bt, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_m</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref></type>
+          <declname>cb_bt</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the M-decomposition (MFE version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M-decomposition, i.e. the multibranch loop decomposition stage.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes a minimum free energy contribution for any subsequence the outside rule (<computeroutput>cb_bt</computeroutput>) is used for backtracking the corresponding structure.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref>, <ref refid="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" kindref="member">vrna_gr_add_aux_c()</ref>, <ref refid="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" kindref="member">vrna_gr_add_aux_m1()</ref>, <ref refid="group__grammar_1gac4341849c5eefb4317f62915467eba63" kindref="member">vrna_gr_add_aux()</ref>, <ref refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kindref="member">vrna_gr_add_aux_exp_m()</ref>, <ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref>, <ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref>, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_bt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (backtracking) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the MFE M-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/mfe.h" line="199" column="1" declfile="ViennaRNA/grammar/mfe.h" declline="199" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_m1</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_f cb, vrna_gr_outside_f cb_bt, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_m1</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref></type>
+          <declname>cb_bt</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the M1-decomposition (MFE version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M1-decomposition, i.e. the multibranch loop components with exactly one branch decomposition stage.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes a minimum free energy contribution for any subsequence the outside rule (<computeroutput>cb_bt</computeroutput>) is used for backtracking the corresponding structure.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref>, <ref refid="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" kindref="member">vrna_gr_add_aux_c()</ref>, <ref refid="group__grammar_1ga70e501fdcfee7f982d137788645bf164" kindref="member">vrna_gr_add_aux_m()</ref>, <ref refid="group__grammar_1gac4341849c5eefb4317f62915467eba63" kindref="member">vrna_gr_add_aux()</ref>, <ref refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kindref="member">vrna_gr_add_aux_exp_m1()</ref>, <ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref>, <ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref>, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_bt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (backtracking) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the MFE M1-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/mfe.h" line="239" column="1" declfile="ViennaRNA/grammar/mfe.h" declline="239" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1ga0f795ce370ef4ffba88ef3b30f9c1511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_m2</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_f cb, vrna_gr_outside_f cb_bt, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_m2</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref></type>
+          <declname>cb_bt</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the M2-decomposition (MFE version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M2-decomposition, i.e. the multibranch loop components with at least two branches.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes a minimum free energy contribution for any subsequence the outside rule (<computeroutput>cb_bt</computeroutput>) is used for backtracking the corresponding structure.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref>, <ref refid="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" kindref="member">vrna_gr_add_aux_c()</ref>, <ref refid="group__grammar_1ga70e501fdcfee7f982d137788645bf164" kindref="member">vrna_gr_add_aux_m()</ref>, <ref refid="group__grammar_1gac4341849c5eefb4317f62915467eba63" kindref="member">vrna_gr_add_aux()</ref>, <ref refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kindref="member">vrna_gr_add_aux_exp_m1()</ref>, <ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref>, <ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref>, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_bt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (backtracking) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the MFE M2-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/mfe.h" line="278" column="1" declfile="ViennaRNA/grammar/mfe.h" declline="278" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1gac4341849c5eefb4317f62915467eba63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_f cb, vrna_gr_outside_f cb_bt, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref></type>
+          <declname>cb_bt</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule (MFE version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) as additional, independent decomposition steps.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes a minimum free energy contribution for any subsequence the outside rule (<computeroutput>cb_bt</computeroutput>) is used for backtracking the corresponding structure.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref>, <ref refid="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" kindref="member">vrna_gr_add_aux_c()</ref>, <ref refid="group__grammar_1ga70e501fdcfee7f982d137788645bf164" kindref="member">vrna_gr_add_aux_m()</ref>, <ref refid="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" kindref="member">vrna_gr_add_aux_m1()</ref>, <ref refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kindref="member">vrna_gr_add_aux_exp()</ref>, <ref refid="group__grammar_1gac7113454f6ec1bbd043f632756ae7224" kindref="member">vrna_gr_inside_f</ref>, <ref refid="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6" kindref="member">vrna_gr_outside_f</ref>, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_bt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (backtracking) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for MFE predictions, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/mfe.h" line="317" column="1" declfile="ViennaRNA/grammar/mfe.h" declline="317" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_exp_f</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_exp_f cb, vrna_gr_outside_exp_f cb_out, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_exp_f</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>vrna_gr_outside_exp_f</type>
+          <declname>cb_out</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the F-decomposition (partition function version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the F-decomposition, i.e. the external loop decomposition stage.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes the partition function for any subsequence, the outside rule (<computeroutput>cb_out</computeroutput>) is used for (base pairing) probabilities.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><xrefsect id="bug_1_bug000001"><xreftitle>Bug</xreftitle><xrefdescription><para>Calling the <computeroutput>cb_out</computeroutput> callback is not implemented yet!</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kindref="member">vrna_gr_add_aux_exp_c()</ref>, <ref refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kindref="member">vrna_gr_add_aux_exp_m()</ref>, <ref refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kindref="member">vrna_gr_add_aux_exp_m1()</ref>, <ref refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kindref="member">vrna_gr_add_aux_exp()</ref>, <ref refid="group__grammar_1ga50591ba118b08df367cf93643f6e62e4" kindref="member">vrna_gr_add_aux_f()</ref>, <ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref>, vrna_gr_outside_exp_f, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (probability) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the partition function F-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/partfunc.h" line="87" column="1" declfile="ViennaRNA/grammar/partfunc.h" declline="87" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1ga1926c136d684aac820bb3d2829766588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_exp_c</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_exp_f cb, vrna_gr_outside_exp_f cb_out, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_exp_c</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>vrna_gr_outside_exp_f</type>
+          <declname>cb_out</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the C-decomposition (partition function version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the C-decomposition, i.e. the base pair decomposition stage.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes the partition function for any subsequence, the outside rule (<computeroutput>cb_out</computeroutput>) is used for (base pairing) probabilities.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><xrefsect id="bug_1_bug000002"><xreftitle>Bug</xreftitle><xrefdescription><para>Calling the <computeroutput>cb_out</computeroutput> callback is not implemented yet!</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref>, <ref refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kindref="member">vrna_gr_add_aux_exp_m()</ref>, <ref refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kindref="member">vrna_gr_add_aux_exp_m1()</ref>, <ref refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kindref="member">vrna_gr_add_aux_exp()</ref>, <ref refid="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77" kindref="member">vrna_gr_add_aux_c()</ref>, <ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref>, vrna_gr_outside_exp_f, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (probability) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the partition function C-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/partfunc.h" line="127" column="1" declfile="ViennaRNA/grammar/partfunc.h" declline="127" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_exp_m</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_exp_f cb, vrna_gr_outside_exp_f cb_out, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_exp_m</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>vrna_gr_outside_exp_f</type>
+          <declname>cb_out</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the M-decomposition (partition function version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M-decomposition, i.e. the multibranch loop decomposition stage.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes the partition function for any subsequence, the outside rule (<computeroutput>cb_out</computeroutput>) is used for (base pairing) probabilities.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><xrefsect id="bug_1_bug000003"><xreftitle>Bug</xreftitle><xrefdescription><para>Calling the <computeroutput>cb_out</computeroutput> callback is not implemented yet!</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref>, <ref refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kindref="member">vrna_gr_add_aux_exp_c()</ref>, <ref refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kindref="member">vrna_gr_add_aux_exp_m1()</ref>, <ref refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kindref="member">vrna_gr_add_aux_exp()</ref>, <ref refid="group__grammar_1ga70e501fdcfee7f982d137788645bf164" kindref="member">vrna_gr_add_aux_m()</ref>, <ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref>, vrna_gr_outside_exp_f, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (probability) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the partition function M-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/partfunc.h" line="167" column="1" declfile="ViennaRNA/grammar/partfunc.h" declline="167" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_exp_m1</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_exp_f cb, vrna_gr_outside_exp_f cb_out, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_exp_m1</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>vrna_gr_outside_exp_f</type>
+          <declname>cb_out</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the M1-decomposition (partition function version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M1-decomposition, i.e. the multibranch loop components with exactly one branch decomposition stage.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes the partition function for any subsequence, the outside rule (<computeroutput>cb_out</computeroutput>) is used for (base pairing) probabilities.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><xrefsect id="bug_1_bug000004"><xreftitle>Bug</xreftitle><xrefdescription><para>Calling the <computeroutput>cb_out</computeroutput> callback is not implemented yet!</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref>, <ref refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kindref="member">vrna_gr_add_aux_exp_c()</ref>, <ref refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kindref="member">vrna_gr_add_aux_exp_m()</ref>, <ref refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kindref="member">vrna_gr_add_aux_exp()</ref>, <ref refid="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" kindref="member">vrna_gr_add_aux_m1()</ref>, <ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref>, vrna_gr_outside_exp_f, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (probability) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the partition function M1-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/partfunc.h" line="208" column="1" declfile="ViennaRNA/grammar/partfunc.h" declline="208" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1gafdef70e67cd64016ccbe24085d88a0ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_exp_m2</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_exp_f cb, vrna_gr_outside_exp_f cb_out, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_exp_m2</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>vrna_gr_outside_exp_f</type>
+          <declname>cb_out</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule for the M2-decomposition (partition function version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M2-decomposition, i.e. the multibranch loop components with at least two branches.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes the partition function for any subsequence, the outside rule (<computeroutput>cb_out</computeroutput>) is used for (base pairing) probabilities.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><xrefsect id="bug_1_bug000005"><xreftitle>Bug</xreftitle><xrefdescription><para>Calling the <computeroutput>cb_out</computeroutput> callback is not implemented yet!</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref>, <ref refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kindref="member">vrna_gr_add_aux_exp_c()</ref>, <ref refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kindref="member">vrna_gr_add_aux_exp_m()</ref>, <ref refid="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" kindref="member">vrna_gr_add_aux_exp()</ref>, <ref refid="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5" kindref="member">vrna_gr_add_aux_m1()</ref>, <ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref>, vrna_gr_outside_exp_f, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (probability) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for the partition function M2-decomposition stage, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/partfunc.h" line="248" column="1" declfile="ViennaRNA/grammar/partfunc.h" declline="248" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_gr_add_aux_exp</definition>
+        <argsstring>(vrna_fold_compound_t *fc, vrna_gr_inside_exp_f cb, vrna_gr_outside_exp_f cb_out, void *data, vrna_auxdata_prepare_f data_prepare, vrna_auxdata_free_f data_release)</argsstring>
+        <name>vrna_gr_add_aux_exp</name>
+        <param>
+          <type><ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref> *</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>vrna_gr_outside_exp_f</type>
+          <declname>cb_out</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref></type>
+          <declname>data_prepare</declname>
+        </param>
+        <param>
+          <type><ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></type>
+          <declname>data_release</declname>
+        </param>
+        <briefdescription>
+<para>Add an auxiliary grammar rule (partition function version) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function binds callback functions for auxiliary grammar rules (inside and outside) as additional, independent decomposition steps.</para>
+<para>While the inside rule (<computeroutput>cb</computeroutput>) computes the partition function for any subsequence, the outside rule (<computeroutput>cb_out</computeroutput>) is used for (base pairing) probabilities.</para>
+<para>Both callbacks will be provided with the <computeroutput>data</computeroutput> pointer that can be used to store whatever data is needed in the callback evaluations. The <computeroutput>data_prepare</computeroutput> callback may be used to prepare the <computeroutput>data</computeroutput> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <computeroutput>data_release</computeroutput> callback to properly free the memory of <computeroutput>data</computeroutput> once it is not required anymore. Hence, it serves as a kind of destructor for <computeroutput>data</computeroutput> which will be called as soon as the grammar rules of <computeroutput>fc</computeroutput> are re-set to defaults or if the <computeroutput>fc</computeroutput> is destroyed.</para>
+<para><xrefsect id="bug_1_bug000006"><xreftitle>Bug</xreftitle><xrefdescription><para>Calling the <computeroutput>cb_out</computeroutput> callback is not implemented yet!</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="see"><para><ref refid="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28" kindref="member">vrna_gr_add_aux_exp_f()</ref>, <ref refid="group__grammar_1ga1926c136d684aac820bb3d2829766588" kindref="member">vrna_gr_add_aux_exp_c()</ref>, <ref refid="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c" kindref="member">vrna_gr_add_aux_exp_m()</ref>, <ref refid="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df" kindref="member">vrna_gr_add_aux_exp_m1()</ref>, <ref refid="group__grammar_1gac4341849c5eefb4317f62915467eba63" kindref="member">vrna_gr_add_aux()</ref>, <ref refid="group__grammar_1ga43d1c010a22991a657603c0a21435ea6" kindref="member">vrna_gr_inside_exp_f</ref>, vrna_gr_outside_exp_f, <ref refid="group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166" kindref="member">vrna_fold_compound_t</ref>, <ref refid="group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3" kindref="member">vrna_auxdata_prepare_f</ref>, <ref refid="group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a" kindref="member">vrna_auxdata_free_f</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fold compound that is to be extended by auxiliary grammar rules </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the inside step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The auxiliary grammar callback for the outside (probability) step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to some data that will be passed through to the inside and outside callbacks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_prepare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to prepare <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_release</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback to free-up memory occupied by <computeroutput>data</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The current number of auxiliary grammar rules for partition function predictions, or 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/grammar/partfunc.h" line="288" column="1" declfile="ViennaRNA/grammar/partfunc.h" declline="288" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

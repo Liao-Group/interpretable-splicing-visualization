@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_870d58fa54604e645f635efdebec79cc" kind="dir">
+    <compoundname>ViennaRNA/partfunc</compoundname>
+    <innerfile refid="partfunc_2exterior_8h">exterior.h</innerfile>
+    <innerfile refid="partfunc_2global_8h">global.h</innerfile>
+    <innerfile refid="partfunc_2gquad_8h">gquad.h</innerfile>
+    <innerfile refid="partfunc_2internal_8h">internal.h</innerfile>
+    <innerfile refid="partfunc_2local_8h">local.h</innerfile>
+    <innerfile refid="partfunc_2multibranch_8h">multibranch.h</innerfile>
+    <innerfile refid="multifold_8h">multifold.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/partfunc/"/>
+  </compounddef>
+</doxygen>

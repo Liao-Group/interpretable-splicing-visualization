@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structvrna__aln__opt__t" kind="struct" language="C++" prot="public">
+    <compoundname>vrna_aln_opt_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvrna__aln__opt__t_1aaa82682e95e7cf29a5d752f85e38910b" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_aln_opt_t::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <qualifiedname>vrna_aln_opt_t::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/alignments.h" line="28" column="16" bodyfile="ViennaRNA/plotting/alignments.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__aln__opt__t_1a117ad2b78ecd7077a4902efb148cf297" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_aln_opt_t::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <qualifiedname>vrna_aln_opt_t::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/alignments.h" line="29" column="16" bodyfile="ViennaRNA/plotting/alignments.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__aln__opt__t_1a68aa2cf08e6f4a703cb72ebb74781162" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_aln_opt_t::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>vrna_aln_opt_t::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/alignments.h" line="30" column="16" bodyfile="ViennaRNA/plotting/alignments.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__aln__opt__t_1a2ad9552903b95c1006618a397cfdad5f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_aln_opt_t::columns</definition>
+        <argsstring></argsstring>
+        <name>columns</name>
+        <qualifiedname>vrna_aln_opt_t::columns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/alignments.h" line="31" column="16" bodyfile="ViennaRNA/plotting/alignments.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__aln__opt__t_1afc0bec6a11f03e86ddc7bc6db28f3354" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vrna_aln_opt_t::color_threshold</definition>
+        <argsstring></argsstring>
+        <name>color_threshold</name>
+        <qualifiedname>vrna_aln_opt_t::color_threshold</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/alignments.h" line="32" column="16" bodyfile="ViennaRNA/plotting/alignments.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__aln__opt__t_1aeab6f09301ed4321cbe7f44591f6d756" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vrna_aln_opt_t::color_min_sat</definition>
+        <argsstring></argsstring>
+        <name>color_min_sat</name>
+        <qualifiedname>vrna_aln_opt_t::color_min_sat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/alignments.h" line="33" column="16" bodyfile="ViennaRNA/plotting/alignments.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/plotting/alignments.h" line="27" column="1" bodyfile="ViennaRNA/plotting/alignments.h" bodystart="27" bodyend="34"/>
+    <listofallmembers>
+      <member refid="structvrna__aln__opt__t_1aeab6f09301ed4321cbe7f44591f6d756" prot="public" virt="non-virtual"><scope>vrna_aln_opt_t</scope><name>color_min_sat</name></member>
+      <member refid="structvrna__aln__opt__t_1afc0bec6a11f03e86ddc7bc6db28f3354" prot="public" virt="non-virtual"><scope>vrna_aln_opt_t</scope><name>color_threshold</name></member>
+      <member refid="structvrna__aln__opt__t_1a2ad9552903b95c1006618a397cfdad5f" prot="public" virt="non-virtual"><scope>vrna_aln_opt_t</scope><name>columns</name></member>
+      <member refid="structvrna__aln__opt__t_1a117ad2b78ecd7077a4902efb148cf297" prot="public" virt="non-virtual"><scope>vrna_aln_opt_t</scope><name>end</name></member>
+      <member refid="structvrna__aln__opt__t_1a68aa2cf08e6f4a703cb72ebb74781162" prot="public" virt="non-virtual"><scope>vrna_aln_opt_t</scope><name>offset</name></member>
+      <member refid="structvrna__aln__opt__t_1aaa82682e95e7cf29a5d752f85e38910b" prot="public" virt="non-virtual"><scope>vrna_aln_opt_t</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

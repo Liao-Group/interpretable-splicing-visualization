@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_52c8e4adde91714e2f3af5a7b69f1d4f" kind="dir">
+    <compoundname>ViennaRNA/eval</compoundname>
+    <innerfile refid="eval_2basic_8h">basic.h</innerfile>
+    <innerfile refid="eval_2exterior_8h">exterior.h</innerfile>
+    <innerfile refid="eval_2gquad_8h">gquad.h</innerfile>
+    <innerfile refid="eval_2hairpin_8h">hairpin.h</innerfile>
+    <innerfile refid="eval_2internal_8h">internal.h</innerfile>
+    <innerfile refid="eval_2multibranch_8h">multibranch.h</innerfile>
+    <innerfile refid="eval_2structures_8h">structures.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ViennaRNA/eval/"/>
+  </compounddef>
+</doxygen>

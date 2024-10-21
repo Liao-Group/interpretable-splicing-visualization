@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The RNA Folding Grammar &mdash; ViennaRNA Package</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=c1a09ec4" />
+
+  
+    <link rel="shortcut icon" href="_static/vrna_32.png"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=dfec817d"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
+        <script defer="defer" src="_static/js/mathjax/tex-chtml.js?v=20daa33d"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Fine-tuning of the Implemented Models" href="grammar/model_details.html" />
+    <link rel="prev" title="Deprecated Interface for Free Energy Evaluation" href="eval/eval_deprecated.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ViennaRNA
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Usage and Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manpages.html">Manpages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_rnalib.html">Using RNAlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io.html">I/O Formats</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RNAlib API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">Concepts and Algorithms</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="eval.html">Free Energy Evaluation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">The RNA Folding Grammar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="grammar/model_details.html">Fine-tuning of the Implemented Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grammar/constraints.html">Secondary Structure Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grammar/domains_up.html">Unstructured Domains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grammar/domains_struc.html">Structured Domains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-structural-domains">Additional Structural Domains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extending-the-rna-folding-grammar">Extending the RNA Folding Grammar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rna-folding-grammar-extension-api">RNA Folding Grammar Extension API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="landscape.html">The RNA Secondary Structure Landscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mfe.html">Minimum Free Energy (MFE) Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pf_fold.html">Partition Function and Equilibrium Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subopt_and_representatives.html">Suboptimals and Representative Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cofold.html">RNA-RNA Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_fold.html">Classified Dynamic Programming Variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inverse.html">Inverse Folding (Design)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="probing_data.html">Experimental Structure Probing Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ligand_binding.html">Ligands Binding to RNA Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paired_modules.html">Structure Modules and Pseudoknots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modified_bases.html">Post-transcriptional Base Modifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vrna_3.0.html">RNAlib API v3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="callbacks.html">Callback Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecated.html">Deprecated List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wrappers.html">SWIG Wrappers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_python.html">Python API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="news.html">What's new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citing.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Links
+            
+            </span>
+        </p>
+        <ul>
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/ViennaRNA/ViennaRNA"><i class="fa fa-github fa-fw"></i> Source code</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/ViennaRNA/ViennaRNA/issues"><i class="fa fa-bug fa-fw"></i> Issue tracker</a></li>
+                
+            
+        </ul>
+    
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ViennaRNA</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="api.html">Concepts and Algorithms</a></li>
+      <li class="breadcrumb-item active">The RNA Folding Grammar</li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-rna-folding-grammar">
+<h1>The RNA Folding Grammar<a class="headerlink" href="#the-rna-folding-grammar" title="Link to this heading"></a></h1>
+<p>The RNA folding grammar as implemented in RNAlib</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Specialized Modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="grammar/model_details.html">Fine-tuning of the Implemented Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grammar/constraints.html">Secondary Structure Constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grammar/domains_up.html">Unstructured Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grammar/domains_struc.html">Structured Domains</a></li>
+</ul>
+</div>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>To predict secondary structures composed of the four distinguished loop types
+introduced before, all algorithms implemented in <em>RNAlib</em> follow a specific
+recursive decomposition scheme, also known as the <em>RNA folding grammar</em>, or
+<em>Secondary Structure Folding Recurrences</em>.</p>
+<img alt="_images/recursions.png" src="_images/recursions.png" />
+<p>However, compared to other RNA secondary structure prediction libraries, our
+implementation allows for a fine-grained control of the above recursions through:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="grammar/constraints.html"><span class="doc">Secondary Structure Constraints</span></a>, that may be applied to both, the individual
+derivations of the grammar (<a class="reference internal" href="grammar/constraints/hard.html"><span class="doc">Hard Constraints</span></a>) as well as
+the evaluation of particular loop contributions (<a class="reference internal" href="grammar/constraints/soft.html"><span class="doc">Soft Constraints</span></a>)</p></li>
+<li><p><strong>Extension of the RNA folding grammar rule set</strong>. Here, users may provide
+additional rules for each of the decomposition stages <code class="docutils literal notranslate"><span class="pre">F</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">M</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">M1</span></code>, as well further auxiliary rules.</p></li>
+<li><p><a class="reference internal" href="grammar/domains_struc.html"><span class="doc">Structured Domains</span></a> and <a class="reference internal" href="grammar/domains_up.html"><span class="doc">Unstructured Domains</span></a> that already implement
+efficient grammar extensions for self-enclosed structures and unpaired sequence
+segments, respectively.</p></li>
+</ul>
+</section>
+<section id="additional-structural-domains">
+<h2>Additional Structural Domains<a class="headerlink" href="#additional-structural-domains" title="Link to this heading"></a></h2>
+<p>Some applications of RNA secondary structure prediction require an extension
+of the <em>regular RNA folding grammar</em>. For instance one would like to include
+proteins and other ligands binding to unpaired loop regions while competing
+with conventional base pairing. Another application could be that one may
+want to include the formation of self-enclosed structural modules, such as
+<em>G-quadruplexes</em>. For such applications, we provide a pair of additional domains
+that extend the regular RNA folding grammar, <a class="reference internal" href="grammar/domains_struc.html"><span class="doc">Structured Domains</span></a> and
+<a class="reference internal" href="grammar/domains_up.html"><span class="doc">Unstructured Domains</span></a>.</p>
+<img alt="_images/GCrecursion.png" src="_images/GCrecursion.png" />
+<p>While unstructured domains are usually determined by a more or less precise
+sequence motif, e.g. the binding site for a protein, structured domains are
+considered self-enclosed modules with a more or less complex pairing pattern.
+Our extension with these two domains introduces two production rules to fill
+additional dynamic processing matrices <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">U</span></code> where we store the
+pre-computed contributions of structured domains (<code class="docutils literal notranslate"><span class="pre">S</span></code>), and unstructured
+domains (<code class="docutils literal notranslate"><span class="pre">U</span></code>).</p>
+</section>
+<section id="extending-the-rna-folding-grammar">
+<h2>Extending the RNA Folding Grammar<a class="headerlink" href="#extending-the-rna-folding-grammar" title="Link to this heading"></a></h2>
+<p>The RNA folding grammar can be easily extended by additional user-provided
+rules. For that purpose, we implement a generic callback-based machinery, that
+allows one to add rules to the existing decomposition stages <code class="docutils literal notranslate"><span class="pre">F</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">M</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">M1</span></code>. If such an extension is not sufficient, users may even extend the
+grammar by arbitrary additional derivations.</p>
+<p>Additional rules can be supplied for both, MFE and partition function computations.
+Here, a set of two callback functions must be provided, one for the <em>inside</em>, and
+another for the <em>outside</em> recursions. The functions will then be called at appropriate
+steps in the recursions automatically. Each function will be provided with a
+set of parameters for the decomposition step and a user-defined data pointer that
+may point to some memory storing any additional data required for the grammar rule.</p>
+<p>The detailed API for this mechanism can be found below.</p>
+</section>
+<section id="rna-folding-grammar-extension-api">
+<h2>RNA Folding Grammar Extension API<a class="headerlink" href="#rna-folding-grammar-extension-api" title="Link to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group__grammar"></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.vrna_gr_aux_t">
+<span class="target" id="group__grammar_1gab771519c88455091fff89211cc8b1f97"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">vrna_gr_aux_s</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_aux_t</span></span></span><a class="headerlink" href="#c.vrna_gr_aux_t" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/basic.h&gt;</em><p>A pointer to the auxiliary grammar data structure. </p>
+</dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.vrna_gr_serialize_bp_f">
+<span class="target" id="group__grammar_1gadbb62f9eda06defb039fbc99199d2158"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_serialize_bp_f</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="utils/data_structures.html#c.vrna_bps_t" title="vrna_bps_t"><span class="n"><span class="pre">vrna_bps_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">bp_stack</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#c.vrna_gr_serialize_bp_f" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/basic.h&gt;</em><p>Function prototype for serializing backtracked base pairs and structure elements into a dot-bracket string. </p>
+<p>This function will be called after backtracking in the MFE predictions to convert collected base pairs and other information into a dot-bracket-like structure string.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<a class="reference internal" href="callbacks.html#callbacks_1_callbacks000014"><span class="std std-ref"><span class="pre">Notes</span> <span class="pre">on</span> <span class="pre">Callback</span> <span class="pre">Functions:</span></span></a></dt>
+<dd><p>This callback allows for changing the way how base pairs (and other types of data) obtained from the default and extended grammar are converted back into a dot-bracket string. </p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="utils/structures.html#group__struct__utils_1ga29d5a2517277a5b7eba6c8a101555ef4"><span class="std std-ref">vrna_db_from_bps()</span></a>, <a class="reference internal" href="#group__grammar_1gac4341849c5eefb4317f62915467eba63"><span class="std std-ref">vrna_gr_add_aux()</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param fc<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The fold compound to work on </p>
+</dd>
+<dt class="field-even">Param bp_stack<span class="colon">:</span></dt>
+<dd class="field-even"><p>The base pair stack </p>
+</dd>
+<dt class="field-odd">Param data<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An arbitrary user-provided data pointer </p>
+</dd>
+<dt class="field-even">Return<span class="colon">:</span></dt>
+<dd class="field-even"><p>A ‘\0’-terminated dot-bracket-like string representing the structure from <code class="docutils literal notranslate"><span class="pre">bp_stack</span></code> (and <code class="docutils literal notranslate"><span class="pre">data</span></code>) </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.vrna_gr_inside_f">
+<span class="target" id="group__grammar_1gac7113454f6ec1bbd043f632756ae7224"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_inside_f</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#c.vrna_gr_inside_f" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/mfe.h&gt;</em><p>Function prototype for auxiliary grammar rules (inside version, MFE) </p>
+<p>This function will be called during the inside recursions of MFE predictions for subsequences from position <code class="docutils literal notranslate"><span class="pre">i</span></code> to <code class="docutils literal notranslate"><span class="pre">j</span></code> and is supposed to return an energy contribution in dekacal/mol.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<a class="reference internal" href="callbacks.html#callbacks_1_callbacks000015"><span class="std std-ref"><span class="pre">Notes</span> <span class="pre">on</span> <span class="pre">Callback</span> <span class="pre">Functions:</span></span></a></dt>
+<dd><p>This callback allows for extending the MFE secondary structure decomposition with additional rules. </p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"><span class="std std-ref">vrna_gr_add_aux_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga70e501fdcfee7f982d137788645bf164"><span class="std std-ref">vrna_gr_add_aux_m()</span></a>, <a class="reference internal" href="#group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"><span class="std std-ref">vrna_gr_add_aux_m1()</span></a>, vrna_gr_add_aux_aux(), <a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param fc<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The fold compound to work on </p>
+</dd>
+<dt class="field-even">Param i<span class="colon">:</span></dt>
+<dd class="field-even"><p>The 5’ delimiter of the sequence segment </p>
+</dd>
+<dt class="field-odd">Param j<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The 3’ delimiter of the sequence segment </p>
+</dd>
+<dt class="field-even">Param data<span class="colon">:</span></dt>
+<dd class="field-even"><p>An arbitrary user-provided data pointer </p>
+</dd>
+<dt class="field-odd">Return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The free energy computed by the auxiliary grammar rule in dekacal/mol </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.vrna_gr_outside_f">
+<span class="target" id="group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_outside_f</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">e</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="utils/data_structures.html#c.vrna_bps_t" title="vrna_bps_t"><span class="n"><span class="pre">vrna_bps_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">bp_stack</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="utils/data_structures.html#c.vrna_bts_t" title="vrna_bts_t"><span class="n"><span class="pre">vrna_bts_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">bt_stack</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#c.vrna_gr_outside_f" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/mfe.h&gt;</em><p>Function prototype for auxiliary grammar rules (outside version, MFE) </p>
+<p>This function will be called during the backtracking stage of MFE predictions for subsequences from position <code class="docutils literal notranslate"><span class="pre">i</span></code> to <code class="docutils literal notranslate"><span class="pre">j</span></code> and is supposed to identify the the structure components that give rise to the corresponding energy contribution <code class="docutils literal notranslate"><span class="pre">e</span></code> as determined in the inside (forward) step.</p>
+<p>For that purpose, the function may modify the base pair stack (<code class="docutils literal notranslate"><span class="pre">bp_stack</span></code>) by adding all base pairs identified through the additional rule. In addition, when the rule sub-divides the sequence segment into smaller pieces, these pieces can be put onto the backtracking (<code class="docutils literal notranslate"><span class="pre">bt_stack</span></code>) stack. On successful backtrack, the function returns non-zero, and exactly zero (0) when the backtracking failed.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<a class="reference internal" href="callbacks.html#callbacks_1_callbacks000016"><span class="std std-ref"><span class="pre">Notes</span> <span class="pre">on</span> <span class="pre">Callback</span> <span class="pre">Functions:</span></span></a></dt>
+<dd><p>This callback allows for backtracking (sub)structures obtained from extending the MFE secondary structure decomposition with additional rules. </p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"><span class="std std-ref">vrna_gr_add_aux_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga70e501fdcfee7f982d137788645bf164"><span class="std std-ref">vrna_gr_add_aux_m()</span></a>, <a class="reference internal" href="#group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"><span class="std std-ref">vrna_gr_add_aux_m1()</span></a>, vrna_gr_add_aux_aux(), <a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param fc<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The fold compound to work on </p>
+</dd>
+<dt class="field-even">Param i<span class="colon">:</span></dt>
+<dd class="field-even"><p>The 5’ delimiter of the sequence segment </p>
+</dd>
+<dt class="field-odd">Param j<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The 3’ delimiter of the sequence segment </p>
+</dd>
+<dt class="field-even">Param e<span class="colon">:</span></dt>
+<dd class="field-even"><p>The energy of the segment [i:j] </p>
+</dd>
+<dt class="field-odd">Param bp_stack<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The base pair stack </p>
+</dd>
+<dt class="field-even">Param bt_stack<span class="colon">:</span></dt>
+<dd class="field-even"><p>The backtracking stack (all segments that need to be further investigated) </p>
+</dd>
+<dt class="field-odd">Param data<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An arbitrary user-provided data pointer </p>
+</dd>
+<dt class="field-even">Return<span class="colon">:</span></dt>
+<dd class="field-even"><p>The free energy computed by the auxiliary grammar rule in dekacal/mol </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.vrna_gr_inside_exp_f">
+<span class="target" id="group__grammar_1ga43d1c010a22991a657603c0a21435ea6"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="utils/data_structures.html#c.FLT_OR_DBL" title="FLT_OR_DBL"><span class="n"><span class="pre">FLT_OR_DBL</span></span></a><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_inside_exp_f</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#c.vrna_gr_inside_exp_f" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/partfunc.h&gt;</em><p>Function prototype for auxiliary grammar rules (inside version, partition function) </p>
+<p>This function will be called during the inside recursions of partition function predictions for subsequences from position <code class="docutils literal notranslate"><span class="pre">i</span></code> to <code class="docutils literal notranslate"><span class="pre">j</span></code> and is supposed to return a Boltzmann factor with energy contribution in cal/mol.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<a class="reference internal" href="callbacks.html#callbacks_1_callbacks000017"><span class="std std-ref"><span class="pre">Notes</span> <span class="pre">on</span> <span class="pre">Callback</span> <span class="pre">Functions:</span></span></a></dt>
+<dd><p>This callback allows for extending the partition function secondary structure decomposition with additional rules. </p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga1926c136d684aac820bb3d2829766588"><span class="std std-ref">vrna_gr_add_aux_exp_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c"><span class="std std-ref">vrna_gr_add_aux_exp_m()</span></a>, <a class="reference internal" href="#group__grammar_1gabfab49a5d7dc75011e4abbce376a63df"><span class="std std-ref">vrna_gr_add_aux_exp_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8"><span class="std std-ref">vrna_gr_add_aux_exp()</span></a>, <a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param fc<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The fold compound to work on </p>
+</dd>
+<dt class="field-even">Param i<span class="colon">:</span></dt>
+<dd class="field-even"><p>The 5’ delimiter of the sequence segment </p>
+</dd>
+<dt class="field-odd">Param j<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The 3’ delimiter of the sequence segment </p>
+</dd>
+<dt class="field-even">Param data<span class="colon">:</span></dt>
+<dd class="field-even"><p>An arbitrary user-provided data pointer </p>
+</dd>
+<dt class="field-odd">Return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The partition function omputed by the auxiliary grammar rule with energies in cal/mol </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c type">
+<dt class="sig sig-object c" id="c.vrna_gr_outside_exp_f">
+<span class="target" id="group__grammar_1gabb020faa05e85ab50ef339f0c41b6d07"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="utils/data_structures.html#c.FLT_OR_DBL" title="FLT_OR_DBL"><span class="n"><span class="pre">FLT_OR_DBL</span></span></a><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_outside_exp_f</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#c.vrna_gr_outside_exp_f" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/partfunc.h&gt;</em></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_prepare">
+<span class="target" id="group__grammar_1gad8a3f9ed2e84e2b2b7803043b539b9d8"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_prepare</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">options</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_prepare" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/basic.h&gt;</em><p>Prepare the auxiliary grammar rule data. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is mainly for internal use. Users of the auxiliary grammar API usually do not need to call this function except for debugging purposes.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound storing the auxiliary grammar rules </p></li>
+<li><p><strong>options</strong> – Options flag(s) that denote what needs to be prepared </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>non-zero on success, 0 otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_status">
+<span class="target" id="group__grammar_1ga64fd382fd5b2a3f87c472230c3ce5d08"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_status</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_recursion_status_f" title="vrna_recursion_status_f"><span class="n"><span class="pre">vrna_recursion_status_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">prepare_cb</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">free_cb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_status" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/basic.h&gt;</em><p>Add status event based data preparation callbacks. </p>
+<p>This function binds additional data structures and corresponding callback functions for the auxiliary grammar extension API. This might be helpful whenever certain preparation steps need to be done prior and/or after the actual run of the prediction algorithms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound </p></li>
+<li><p><strong>cb</strong> – The recursion status callback that performs the preparation </p></li>
+<li><p><strong>data</strong> – The data pointer the <code class="docutils literal notranslate"><span class="pre">cb</span></code> callback is working on </p></li>
+<li><p><strong>prepare_cb</strong> – A preparation callback function for parameter <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>free_cb</strong> – A callback to release memory for <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of status function callbacks bound to the fold compound or 0 on error </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_set_serialize_bp">
+<span class="target" id="group__grammar_1gad85a9bb3b077eeeb23a8cfeac7024711"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_set_serialize_bp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_serialize_bp_f" title="vrna_gr_serialize_bp_f"><span class="n"><span class="pre">vrna_gr_serialize_bp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">prepare_cb</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">free_cb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_set_serialize_bp" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/basic.h&gt;</em><p>Set base pair stack to dot-bracket string serialization function. </p>
+<p>After backtracking secondary structures, e.g. in MFE predictions, the outside algorithm usually collects a set of base pairs that then need to be converted into a dot-bracket string. By default, this conversion is done using the <a class="reference internal" href="utils/structures.html#group__struct__utils_1ga29d5a2517277a5b7eba6c8a101555ef4"><span class="std std-ref">vrna_db_from_bps()</span></a> function. However, this function only considers nested base pairs and no other type of secondary structure elements.</p>
+<p>When extending the recursions by additional rules, the default conversion may not suffice, e.g. because the grammar extension adds 2.5D modules or pseudoknots. In such cases the user should implement its own dot-bracket string conversion strategy that may use additional symbols.</p>
+<p>This function binds a user-implemented conversion function that must return a ‘\0’ terminated dot-bracket-like string the same length as the input sequence. The conversion function will then be used instead of the default one. In addition to the base pair stack <a class="reference internal" href="utils/data_structures.html#group__data__structures__bt_1ga9452b56292759e4264eb888ed3cc8655"><span class="std std-ref">vrna_bps_t</span></a>, the user-defined conversion function may keep track of whatever information is neccessary to properly convert the backtracked structure into a dot-bracket string. For that purpose, the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer can be used, e.g. it can point to the same data as used in any of the grammar extension rules. The <code class="docutils literal notranslate"><span class="pre">prepare_cb</span></code> and <code class="docutils literal notranslate"><span class="pre">free_cb</span></code> callbacks can again be used to control preparation and release of the memory <code class="docutils literal notranslate"><span class="pre">data</span></code> points to. The <code class="docutils literal notranslate"><span class="pre">prepare_cb</span></code> will be called after all the preparations for the grammar extensions and prior the actual inside-recursions. The conversion function callback <code class="docutils literal notranslate"><span class="pre">cb</span></code> will be called after backtracking.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="utils/structures.html#group__struct__utils_1ga29d5a2517277a5b7eba6c8a101555ef4"><span class="std std-ref">vrna_db_from_bps()</span></a>, <a class="reference internal" href="#group__grammar_1gac4341849c5eefb4317f62915467eba63"><span class="std std-ref">vrna_gr_add_aux()</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound </p></li>
+<li><p><strong>cb</strong> – A pointer to the conversion callback function </p></li>
+<li><p><strong>data</strong> – A pointer to arbitrary data that will be passed through to <code class="docutils literal notranslate"><span class="pre">cb</span></code> (may be <strong>NULL</strong>) </p></li>
+<li><p><strong>prepare_cb</strong> – A function pointer to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code> (may be <strong>NULL</strong>) </p></li>
+<li><p><strong>free_cb</strong> – A function pointer to release memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code> (may be <strong>NULL</strong>) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_reset">
+<span class="target" id="group__grammar_1ga33c347bb8a5b4664f10f952e5f4a8dc6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_reset</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_reset" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/basic.h&gt;</em><p>Remove all auxiliary grammar rules. </p>
+<p>This function re-sets the fold compound to the default rules by removing all auxiliary grammar rules</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_f">
+<span class="target" id="group__grammar_1ga50591ba118b08df367cf93643f6e62e4"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_f</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_f" title="vrna_gr_inside_f"><span class="n"><span class="pre">vrna_gr_inside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_f" title="vrna_gr_outside_f"><span class="n"><span class="pre">vrna_gr_outside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_bt</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_f" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/mfe.h&gt;</em><p>Add an auxiliary grammar rule for the F-decomposition (MFE version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the F-decomposition, i.e. the external loop decomposition stage.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes a minimum free energy contribution for any subsequence the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_bt</span></code>) is used for backtracking the corresponding structure.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"><span class="std std-ref">vrna_gr_add_aux_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga70e501fdcfee7f982d137788645bf164"><span class="std std-ref">vrna_gr_add_aux_m()</span></a>, <a class="reference internal" href="#group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"><span class="std std-ref">vrna_gr_add_aux_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gac4341849c5eefb4317f62915467eba63"><span class="std std-ref">vrna_gr_add_aux()</span></a>, <a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a>, <a class="reference internal" href="#group__grammar_1gac7113454f6ec1bbd043f632756ae7224"><span class="std std-ref">vrna_gr_inside_f</span></a>, <a class="reference internal" href="#group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6"><span class="std std-ref">vrna_gr_outside_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_bt</strong> – The auxiliary grammar callback for the outside (backtracking) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the MFE F-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_c">
+<span class="target" id="group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_c</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_f" title="vrna_gr_inside_f"><span class="n"><span class="pre">vrna_gr_inside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_f" title="vrna_gr_outside_f"><span class="n"><span class="pre">vrna_gr_outside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_bt</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_c" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/mfe.h&gt;</em><p>Add an auxiliary grammar rule for the C-decomposition (MFE version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the C-decomposition, i.e. the base pair decomposition stage.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes a minimum free energy contribution for any subsequence the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_bt</span></code>) is used for backtracking the corresponding structure.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga70e501fdcfee7f982d137788645bf164"><span class="std std-ref">vrna_gr_add_aux_m()</span></a>, <a class="reference internal" href="#group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"><span class="std std-ref">vrna_gr_add_aux_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gac4341849c5eefb4317f62915467eba63"><span class="std std-ref">vrna_gr_add_aux()</span></a>, <a class="reference internal" href="#group__grammar_1ga1926c136d684aac820bb3d2829766588"><span class="std std-ref">vrna_gr_add_aux_exp_c()</span></a>, <a class="reference internal" href="#group__grammar_1gac7113454f6ec1bbd043f632756ae7224"><span class="std std-ref">vrna_gr_inside_f</span></a>, <a class="reference internal" href="#group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6"><span class="std std-ref">vrna_gr_outside_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_bt</strong> – The auxiliary grammar callback for the outside (backtracking) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the MFE C-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_m">
+<span class="target" id="group__grammar_1ga70e501fdcfee7f982d137788645bf164"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_m</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_f" title="vrna_gr_inside_f"><span class="n"><span class="pre">vrna_gr_inside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_f" title="vrna_gr_outside_f"><span class="n"><span class="pre">vrna_gr_outside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_bt</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_m" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/mfe.h&gt;</em><p>Add an auxiliary grammar rule for the M-decomposition (MFE version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M-decomposition, i.e. the multibranch loop decomposition stage.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes a minimum free energy contribution for any subsequence the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_bt</span></code>) is used for backtracking the corresponding structure.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"><span class="std std-ref">vrna_gr_add_aux_c()</span></a>, <a class="reference internal" href="#group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"><span class="std std-ref">vrna_gr_add_aux_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gac4341849c5eefb4317f62915467eba63"><span class="std std-ref">vrna_gr_add_aux()</span></a>, <a class="reference internal" href="#group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c"><span class="std std-ref">vrna_gr_add_aux_exp_m()</span></a>, <a class="reference internal" href="#group__grammar_1gac7113454f6ec1bbd043f632756ae7224"><span class="std std-ref">vrna_gr_inside_f</span></a>, <a class="reference internal" href="#group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6"><span class="std std-ref">vrna_gr_outside_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_bt</strong> – The auxiliary grammar callback for the outside (backtracking) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the MFE M-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_m1">
+<span class="target" id="group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_m1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_f" title="vrna_gr_inside_f"><span class="n"><span class="pre">vrna_gr_inside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_f" title="vrna_gr_outside_f"><span class="n"><span class="pre">vrna_gr_outside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_bt</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_m1" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/mfe.h&gt;</em><p>Add an auxiliary grammar rule for the M1-decomposition (MFE version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M1-decomposition, i.e. the multibranch loop components with exactly one branch decomposition stage.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes a minimum free energy contribution for any subsequence the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_bt</span></code>) is used for backtracking the corresponding structure.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"><span class="std std-ref">vrna_gr_add_aux_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga70e501fdcfee7f982d137788645bf164"><span class="std std-ref">vrna_gr_add_aux_m()</span></a>, <a class="reference internal" href="#group__grammar_1gac4341849c5eefb4317f62915467eba63"><span class="std std-ref">vrna_gr_add_aux()</span></a>, <a class="reference internal" href="#group__grammar_1gabfab49a5d7dc75011e4abbce376a63df"><span class="std std-ref">vrna_gr_add_aux_exp_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gac7113454f6ec1bbd043f632756ae7224"><span class="std std-ref">vrna_gr_inside_f</span></a>, <a class="reference internal" href="#group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6"><span class="std std-ref">vrna_gr_outside_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_bt</strong> – The auxiliary grammar callback for the outside (backtracking) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the MFE M1-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_m2">
+<span class="target" id="group__grammar_1ga0f795ce370ef4ffba88ef3b30f9c1511"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_m2</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_f" title="vrna_gr_inside_f"><span class="n"><span class="pre">vrna_gr_inside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_f" title="vrna_gr_outside_f"><span class="n"><span class="pre">vrna_gr_outside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_bt</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_m2" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/mfe.h&gt;</em><p>Add an auxiliary grammar rule for the M2-decomposition (MFE version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M2-decomposition, i.e. the multibranch loop components with at least two branches.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes a minimum free energy contribution for any subsequence the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_bt</span></code>) is used for backtracking the corresponding structure.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"><span class="std std-ref">vrna_gr_add_aux_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga70e501fdcfee7f982d137788645bf164"><span class="std std-ref">vrna_gr_add_aux_m()</span></a>, <a class="reference internal" href="#group__grammar_1gac4341849c5eefb4317f62915467eba63"><span class="std std-ref">vrna_gr_add_aux()</span></a>, <a class="reference internal" href="#group__grammar_1gabfab49a5d7dc75011e4abbce376a63df"><span class="std std-ref">vrna_gr_add_aux_exp_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gac7113454f6ec1bbd043f632756ae7224"><span class="std std-ref">vrna_gr_inside_f</span></a>, <a class="reference internal" href="#group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6"><span class="std std-ref">vrna_gr_outside_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_bt</strong> – The auxiliary grammar callback for the outside (backtracking) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the MFE M2-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux">
+<span class="target" id="group__grammar_1gac4341849c5eefb4317f62915467eba63"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_f" title="vrna_gr_inside_f"><span class="n"><span class="pre">vrna_gr_inside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_f" title="vrna_gr_outside_f"><span class="n"><span class="pre">vrna_gr_outside_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_bt</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/mfe.h&gt;</em><p>Add an auxiliary grammar rule (MFE version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) as additional, independent decomposition steps.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes a minimum free energy contribution for any subsequence the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_bt</span></code>) is used for backtracking the corresponding structure.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"><span class="std std-ref">vrna_gr_add_aux_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga70e501fdcfee7f982d137788645bf164"><span class="std std-ref">vrna_gr_add_aux_m()</span></a>, <a class="reference internal" href="#group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"><span class="std std-ref">vrna_gr_add_aux_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8"><span class="std std-ref">vrna_gr_add_aux_exp()</span></a>, <a class="reference internal" href="#group__grammar_1gac7113454f6ec1bbd043f632756ae7224"><span class="std std-ref">vrna_gr_inside_f</span></a>, <a class="reference internal" href="#group__grammar_1gaa74a3d39ef2ce6a65b112377ae1d98e6"><span class="std std-ref">vrna_gr_outside_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_bt</strong> – The auxiliary grammar callback for the outside (backtracking) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for MFE predictions, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_exp_f">
+<span class="target" id="group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_exp_f</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_exp_f" title="vrna_gr_inside_exp_f"><span class="n"><span class="pre">vrna_gr_inside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_exp_f" title="vrna_gr_outside_exp_f"><span class="n"><span class="pre">vrna_gr_outside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_out</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_exp_f" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/partfunc.h&gt;</em><p>Add an auxiliary grammar rule for the F-decomposition (partition function version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the F-decomposition, i.e. the external loop decomposition stage.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes the partition function for any subsequence, the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_out</span></code>) is used for (base pairing) probabilities.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Bug:</span></em></dt>
+<dd><p>Calling the <code class="docutils literal notranslate"><span class="pre">cb_out</span></code> callback is not implemented yet!</p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1ga1926c136d684aac820bb3d2829766588"><span class="std std-ref">vrna_gr_add_aux_exp_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c"><span class="std std-ref">vrna_gr_add_aux_exp_m()</span></a>, <a class="reference internal" href="#group__grammar_1gabfab49a5d7dc75011e4abbce376a63df"><span class="std std-ref">vrna_gr_add_aux_exp_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8"><span class="std std-ref">vrna_gr_add_aux_exp()</span></a>, <a class="reference internal" href="#group__grammar_1ga50591ba118b08df367cf93643f6e62e4"><span class="std std-ref">vrna_gr_add_aux_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga43d1c010a22991a657603c0a21435ea6"><span class="std std-ref">vrna_gr_inside_exp_f</span></a>, vrna_gr_outside_exp_f, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_out</strong> – The auxiliary grammar callback for the outside (probability) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the partition function F-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_exp_c">
+<span class="target" id="group__grammar_1ga1926c136d684aac820bb3d2829766588"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_exp_c</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_exp_f" title="vrna_gr_inside_exp_f"><span class="n"><span class="pre">vrna_gr_inside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_exp_f" title="vrna_gr_outside_exp_f"><span class="n"><span class="pre">vrna_gr_outside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_out</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_exp_c" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/partfunc.h&gt;</em><p>Add an auxiliary grammar rule for the C-decomposition (partition function version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the C-decomposition, i.e. the base pair decomposition stage.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes the partition function for any subsequence, the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_out</span></code>) is used for (base pairing) probabilities.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Bug:</span></em></dt>
+<dd><p>Calling the <code class="docutils literal notranslate"><span class="pre">cb_out</span></code> callback is not implemented yet!</p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c"><span class="std std-ref">vrna_gr_add_aux_exp_m()</span></a>, <a class="reference internal" href="#group__grammar_1gabfab49a5d7dc75011e4abbce376a63df"><span class="std std-ref">vrna_gr_add_aux_exp_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8"><span class="std std-ref">vrna_gr_add_aux_exp()</span></a>, <a class="reference internal" href="#group__grammar_1ga6fc02aefc88cca07936be34a59f55e77"><span class="std std-ref">vrna_gr_add_aux_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga43d1c010a22991a657603c0a21435ea6"><span class="std std-ref">vrna_gr_inside_exp_f</span></a>, vrna_gr_outside_exp_f, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_out</strong> – The auxiliary grammar callback for the outside (probability) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the partition function C-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_exp_m">
+<span class="target" id="group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_exp_m</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_exp_f" title="vrna_gr_inside_exp_f"><span class="n"><span class="pre">vrna_gr_inside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_exp_f" title="vrna_gr_outside_exp_f"><span class="n"><span class="pre">vrna_gr_outside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_out</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_exp_m" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/partfunc.h&gt;</em><p>Add an auxiliary grammar rule for the M-decomposition (partition function version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M-decomposition, i.e. the multibranch loop decomposition stage.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes the partition function for any subsequence, the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_out</span></code>) is used for (base pairing) probabilities.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Bug:</span></em></dt>
+<dd><p>Calling the <code class="docutils literal notranslate"><span class="pre">cb_out</span></code> callback is not implemented yet!</p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga1926c136d684aac820bb3d2829766588"><span class="std std-ref">vrna_gr_add_aux_exp_c()</span></a>, <a class="reference internal" href="#group__grammar_1gabfab49a5d7dc75011e4abbce376a63df"><span class="std std-ref">vrna_gr_add_aux_exp_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8"><span class="std std-ref">vrna_gr_add_aux_exp()</span></a>, <a class="reference internal" href="#group__grammar_1ga70e501fdcfee7f982d137788645bf164"><span class="std std-ref">vrna_gr_add_aux_m()</span></a>, <a class="reference internal" href="#group__grammar_1ga43d1c010a22991a657603c0a21435ea6"><span class="std std-ref">vrna_gr_inside_exp_f</span></a>, vrna_gr_outside_exp_f, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_out</strong> – The auxiliary grammar callback for the outside (probability) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the partition function M-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_exp_m1">
+<span class="target" id="group__grammar_1gabfab49a5d7dc75011e4abbce376a63df"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_exp_m1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_exp_f" title="vrna_gr_inside_exp_f"><span class="n"><span class="pre">vrna_gr_inside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_exp_f" title="vrna_gr_outside_exp_f"><span class="n"><span class="pre">vrna_gr_outside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_out</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_exp_m1" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/partfunc.h&gt;</em><p>Add an auxiliary grammar rule for the M1-decomposition (partition function version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M1-decomposition, i.e. the multibranch loop components with exactly one branch decomposition stage.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes the partition function for any subsequence, the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_out</span></code>) is used for (base pairing) probabilities.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Bug:</span></em></dt>
+<dd><p>Calling the <code class="docutils literal notranslate"><span class="pre">cb_out</span></code> callback is not implemented yet!</p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga1926c136d684aac820bb3d2829766588"><span class="std std-ref">vrna_gr_add_aux_exp_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c"><span class="std std-ref">vrna_gr_add_aux_exp_m()</span></a>, <a class="reference internal" href="#group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8"><span class="std std-ref">vrna_gr_add_aux_exp()</span></a>, <a class="reference internal" href="#group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"><span class="std std-ref">vrna_gr_add_aux_m1()</span></a>, <a class="reference internal" href="#group__grammar_1ga43d1c010a22991a657603c0a21435ea6"><span class="std std-ref">vrna_gr_inside_exp_f</span></a>, vrna_gr_outside_exp_f, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_out</strong> – The auxiliary grammar callback for the outside (probability) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the partition function M1-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_exp_m2">
+<span class="target" id="group__grammar_1gafdef70e67cd64016ccbe24085d88a0ea"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_exp_m2</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_exp_f" title="vrna_gr_inside_exp_f"><span class="n"><span class="pre">vrna_gr_inside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_exp_f" title="vrna_gr_outside_exp_f"><span class="n"><span class="pre">vrna_gr_outside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_out</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_exp_m2" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/partfunc.h&gt;</em><p>Add an auxiliary grammar rule for the M2-decomposition (partition function version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) in the M2-decomposition, i.e. the multibranch loop components with at least two branches.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes the partition function for any subsequence, the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_out</span></code>) is used for (base pairing) probabilities.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Bug:</span></em></dt>
+<dd><p>Calling the <code class="docutils literal notranslate"><span class="pre">cb_out</span></code> callback is not implemented yet!</p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga1926c136d684aac820bb3d2829766588"><span class="std std-ref">vrna_gr_add_aux_exp_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c"><span class="std std-ref">vrna_gr_add_aux_exp_m()</span></a>, <a class="reference internal" href="#group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8"><span class="std std-ref">vrna_gr_add_aux_exp()</span></a>, <a class="reference internal" href="#group__grammar_1gaaed0fddbb48006a8f3efc3a6d9e8f9c5"><span class="std std-ref">vrna_gr_add_aux_m1()</span></a>, <a class="reference internal" href="#group__grammar_1ga43d1c010a22991a657603c0a21435ea6"><span class="std std-ref">vrna_gr_inside_exp_f</span></a>, vrna_gr_outside_exp_f, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_out</strong> – The auxiliary grammar callback for the outside (probability) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for the partition function M2-decomposition stage, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.vrna_gr_add_aux_exp">
+<span class="target" id="group__grammar_1gae7c41211cae3f0ecf7d19c6e79760ad8"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vrna_gr_add_aux_exp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_fold_compound_t" title="vrna_fold_compound_t"><span class="n"><span class="pre">vrna_fold_compound_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fc</span></span>, <a class="reference internal" href="#c.vrna_gr_inside_exp_f" title="vrna_gr_inside_exp_f"><span class="n"><span class="pre">vrna_gr_inside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb</span></span>, <a class="reference internal" href="#c.vrna_gr_outside_exp_f" title="vrna_gr_outside_exp_f"><span class="n"><span class="pre">vrna_gr_outside_exp_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">cb_out</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_prepare_f" title="vrna_auxdata_prepare_f"><span class="n"><span class="pre">vrna_auxdata_prepare_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_prepare</span></span>, <a class="reference internal" href="utils/datastructures/fold_compound.html#c.vrna_auxdata_free_f" title="vrna_auxdata_free_f"><span class="n"><span class="pre">vrna_auxdata_free_f</span></span></a><span class="w"> </span><span class="n"><span class="pre">data_release</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.vrna_gr_add_aux_exp" title="Link to this definition"></a><br /></dt>
+<dd><em>#include &lt;ViennaRNA/grammar/partfunc.h&gt;</em><p>Add an auxiliary grammar rule (partition function version) </p>
+<p>This function binds callback functions for auxiliary grammar rules (inside and outside) as additional, independent decomposition steps.</p>
+<p>While the inside rule (<code class="docutils literal notranslate"><span class="pre">cb</span></code>) computes the partition function for any subsequence, the outside rule (<code class="docutils literal notranslate"><span class="pre">cb_out</span></code>) is used for (base pairing) probabilities.</p>
+<p>Both callbacks will be provided with the <code class="docutils literal notranslate"><span class="pre">data</span></code> pointer that can be used to store whatever data is needed in the callback evaluations. The <code class="docutils literal notranslate"><span class="pre">data_prepare</span></code> callback may be used to prepare the <code class="docutils literal notranslate"><span class="pre">data</span></code> just before the start of the recursions. If present, it will be called prior the actual decompositions automatically. You may use the <code class="docutils literal notranslate"><span class="pre">data_release</span></code> callback to properly free the memory of <code class="docutils literal notranslate"><span class="pre">data</span></code> once it is not required anymore. Hence, it serves as a kind of destructor for <code class="docutils literal notranslate"><span class="pre">data</span></code> which will be called as soon as the grammar rules of <code class="docutils literal notranslate"><span class="pre">fc</span></code> are re-set to defaults or if the <code class="docutils literal notranslate"><span class="pre">fc</span></code> is destroyed.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Bug:</span></em></dt>
+<dd><p>Calling the <code class="docutils literal notranslate"><span class="pre">cb_out</span></code> callback is not implemented yet!</p>
+</dd></dl>
+
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#group__grammar_1gae6cd3eb044afeb21c9967cc4a03c6d28"><span class="std std-ref">vrna_gr_add_aux_exp_f()</span></a>, <a class="reference internal" href="#group__grammar_1ga1926c136d684aac820bb3d2829766588"><span class="std std-ref">vrna_gr_add_aux_exp_c()</span></a>, <a class="reference internal" href="#group__grammar_1ga7e3d34fc13194c18ff9d02d00ed5b96c"><span class="std std-ref">vrna_gr_add_aux_exp_m()</span></a>, <a class="reference internal" href="#group__grammar_1gabfab49a5d7dc75011e4abbce376a63df"><span class="std std-ref">vrna_gr_add_aux_exp_m1()</span></a>, <a class="reference internal" href="#group__grammar_1gac4341849c5eefb4317f62915467eba63"><span class="std std-ref">vrna_gr_add_aux()</span></a>, <a class="reference internal" href="#group__grammar_1ga43d1c010a22991a657603c0a21435ea6"><span class="std std-ref">vrna_gr_inside_exp_f</span></a>, vrna_gr_outside_exp_f, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1ga1b0cef17fd40466cef5968eaeeff6166"><span class="std std-ref">vrna_fold_compound_t</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab78664b2ef71ae6d147d6e74bf2862d3"><span class="std std-ref">vrna_auxdata_prepare_f</span></a>, <a class="reference internal" href="utils/datastructures/fold_compound.html#group__fold__compound_1gab4e75b7511179095ef41dc1a8656433a"><span class="std std-ref">vrna_auxdata_free_f</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fc</strong> – The fold compound that is to be extended by auxiliary grammar rules </p></li>
+<li><p><strong>cb</strong> – The auxiliary grammar callback for the inside step </p></li>
+<li><p><strong>cb_out</strong> – The auxiliary grammar callback for the outside (probability) step </p></li>
+<li><p><strong>data</strong> – A pointer to some data that will be passed through to the inside and outside callbacks </p></li>
+<li><p><strong>data_prepare</strong> – A callback to prepare <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><strong>data_release</strong> – A callback to free-up memory occupied by <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current number of auxiliary grammar rules for partition function predictions, or 0 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="eval/eval_deprecated.html" class="btn btn-neutral float-left" title="Deprecated Interface for Free Energy Evaluation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="grammar/model_details.html" class="btn btn-neutral float-right" title="Fine-tuning of the Implemented Models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 1994 - 2024, Ronny Lorenz, Ivo L. Hofacker, et al..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

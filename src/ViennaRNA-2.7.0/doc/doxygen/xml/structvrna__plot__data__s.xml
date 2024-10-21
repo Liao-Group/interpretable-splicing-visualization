@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structvrna__plot__data__s" kind="struct" language="C++" prot="public">
+    <compoundname>vrna_plot_data_s</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvrna__plot__data__s_1aac4cb61b6b514f88e4b9e7b5c36e2026" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* vrna_plot_data_s::pre</definition>
+        <argsstring></argsstring>
+        <name>pre</name>
+        <qualifiedname>vrna_plot_data_s::pre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="43" column="17" bodyfile="ViennaRNA/plotting/structures.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__plot__data__s_1ade97356863a5c4b01015ab0c86315038" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* vrna_plot_data_s::post</definition>
+        <argsstring></argsstring>
+        <name>post</name>
+        <qualifiedname>vrna_plot_data_s::post</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="44" column="17" bodyfile="ViennaRNA/plotting/structures.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__plot__data__s_1a84c051f94d02017c3cb7c1939b1cf1c8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__model__details_1ga1f8a10e12a0a1915f2a4eff0b28ea17c" kindref="member">vrna_md_t</ref> *</type>
+        <definition>vrna_md_t* vrna_plot_data_s::md</definition>
+        <argsstring></argsstring>
+        <name>md</name>
+        <qualifiedname>vrna_plot_data_s::md</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="45" column="17" bodyfile="ViennaRNA/plotting/structures.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvrna__plot__data__s_1a9dc875d06344c8e4a65304c50aa2fa38" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int vrna_plot_data_s::options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <qualifiedname>vrna_plot_data_s::options</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ViennaRNA/plotting/structures.h" line="46" column="17" bodyfile="ViennaRNA/plotting/structures.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>vrna_md_s</label>
+        <link refid="structvrna__md__s"/>
+      </node>
+      <node id="1">
+        <label>vrna_plot_data_s</label>
+        <link refid="structvrna__plot__data__s"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>md</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ViennaRNA/plotting/structures.h" line="42" column="1" bodyfile="ViennaRNA/plotting/structures.h" bodystart="42" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structvrna__plot__data__s_1a84c051f94d02017c3cb7c1939b1cf1c8" prot="public" virt="non-virtual"><scope>vrna_plot_data_s</scope><name>md</name></member>
+      <member refid="structvrna__plot__data__s_1a9dc875d06344c8e4a65304c50aa2fa38" prot="public" virt="non-virtual"><scope>vrna_plot_data_s</scope><name>options</name></member>
+      <member refid="structvrna__plot__data__s_1ade97356863a5c4b01015ab0c86315038" prot="public" virt="non-virtual"><scope>vrna_plot_data_s</scope><name>post</name></member>
+      <member refid="structvrna__plot__data__s_1aac4cb61b6b514f88e4b9e7b5c36e2026" prot="public" virt="non-virtual"><scope>vrna_plot_data_s</scope><name>pre</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
