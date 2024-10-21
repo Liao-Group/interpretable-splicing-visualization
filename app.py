@@ -51,5 +51,5 @@ def prediction():
         logging.error(f"Failed to process exon data: {e}")
         return jsonify({"error": "Failed to process data"}), 500
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=5001,debug=True)
+    app.run(host='0.0.0.0',debug=True)
 
